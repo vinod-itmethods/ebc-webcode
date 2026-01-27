@@ -48,7 +48,7 @@ export default function Index() {
       </section>
 
       {/* WHAT THIS IS SECTION */}
-      <section id="what" className="py-20 lg:py-28 bg-white border-t border-border/30">
+      <section id="what" className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-4xl mx-auto px-4">
           <div className="space-y-8">
             <div>
@@ -70,7 +70,7 @@ export default function Index() {
       </section>
 
       {/* WHO IT'S FOR SECTION */}
-      <section className="py-20 lg:py-28 bg-slate-50/50">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50/60 via-teal-50/30 to-white">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">Who it's for</h2>
           
@@ -112,7 +112,7 @@ export default function Index() {
       </section>
 
       {/* HOW THE BRIEFING WORKS SECTION */}
-      <section id="how" className="py-20 lg:py-28 bg-white">
+      <section id="how" className="py-20 lg:py-28 bg-gradient-to-b from-white via-purple-50/30 to-blue-50/40">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">How the briefing works</h2>
           
@@ -181,7 +181,7 @@ export default function Index() {
       </section>
 
       {/* TECHNOLOGY PARTNERS SECTION */}
-      <section className="py-20 lg:py-28 bg-slate-50/50 border-t border-border/30">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white via-emerald-50/30 to-cyan-50/40">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Technology partners</h2>
 
@@ -229,7 +229,7 @@ export default function Index() {
       </section>
 
       {/* LOCATIONS SECTION */}
-      <section id="locations" className="py-20 lg:py-28 bg-white">
+      <section id="locations" className="py-20 lg:py-28 bg-gradient-to-b from-cyan-50/30 via-white to-white">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Where briefings take place</h2>
           
@@ -265,7 +265,7 @@ export default function Index() {
       </section>
 
       {/* REQUEST A BRIEFING CTA SECTION */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-50 to-slate-50 border-t border-border/30">
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-white">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Ready to schedule a briefing?</h2>
           <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
