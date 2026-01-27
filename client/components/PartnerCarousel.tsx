@@ -68,9 +68,8 @@ export default function PartnerCarousel() {
                 width: "100%",
                 height: "100%",
                 objectFit: "contain",
-                opacity: 0.7,
               }}
-              className="hover:opacity-100 transition-opacity"
+              className="opacity-60 hover:opacity-100 transition-opacity"
               onError={(e) => {
                 const el = e.currentTarget;
                 el.style.display = "none";
