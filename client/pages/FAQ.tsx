@@ -97,7 +97,7 @@ export default function FAQ() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50 border-t border-border/30">
+      <section className="py-16 bg-gradient-to-br from-purple-50/40 via-blue-50/30 to-white">
         <div className="container max-w-2xl mx-auto px-4 text-center space-y-4">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
             Still have questions?
