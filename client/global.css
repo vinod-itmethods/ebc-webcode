@@ -22,7 +22,7 @@
     --popover-foreground: 222 33% 20%;
 
     --primary: 190 55% 40%;
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 218 15% 90%;
     --secondary-foreground: 222 33% 20%;
@@ -31,7 +31,20 @@
     --muted-foreground: 216 10% 45%;
 
     --accent: 200 100% 53%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
+
+    /* Additional brand colors */
+    --color-blue: 210 70% 48%;
+    --color-blue-foreground: 0 0% 100%;
+
+    --color-emerald: 160 60% 45%;
+    --color-emerald-foreground: 0 0% 100%;
+
+    --color-orange: 30 85% 50%;
+    --color-orange-foreground: 0 0% 0%;
+
+    --color-indigo: 250 70% 50%;
+    --color-indigo-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
