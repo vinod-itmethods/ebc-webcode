@@ -12,7 +12,7 @@ export const partners: Partner[] = [
   {
     id: "anthropic",
     name: "Anthropic",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Anthropic_logo.svg/1200px-Anthropic_logo.svg.png?sanitize=true",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F494f9c781be44edab1fb873012b7c00e?format=webp&width=800&height=1200",
     tagline: "Enterprise adoption of safe, governed AI in software development.",
     description: "Anthropic builds AI systems that are safe, beneficial, and understandable. Their work spans research, development, and deployment of advanced AI technologies.",
     topics: ["AI governance and risk controls", "Secure AI usage in development workflows", "Policy, compliance, and data boundaries", "Measuring value from AI adoption"],
@@ -93,7 +93,7 @@ export const partners: Partner[] = [
   {
     id: "cursor",
     name: "Cursor",
-    logo: "https://cursor.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb5686129a03042029b8e00300c546133?format=webp&width=800&height=1200",
     tagline: "AI-first code editor for modern development.",
     description: "Cursor is a code editor built from the ground up for AI, providing powerful AI-assisted development capabilities.",
     topics: ["AI-powered editing", "Code generation", "Intelligent refactoring", "Developer experience"],
@@ -102,7 +102,7 @@ export const partners: Partner[] = [
   {
     id: "github",
     name: "GitHub",
-    logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F0593f34b9429422994a95d4feba42d11?format=webp&width=800&height=1200",
     tagline: "Platform for software development and collaboration.",
     description: "GitHub is the leading platform for version control, collaboration, and DevOps with millions of developers worldwide.",
     topics: ["Version control", "Collaboration", "DevOps workflows", "Security scanning"],
@@ -111,7 +111,7 @@ export const partners: Partner[] = [
   {
     id: "gitlab",
     name: "GitLab",
-    logo: "https://about.gitlab.com/images/press/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F68665a3a661f4f568508070e267f798e?format=webp&width=800&height=1200",
     tagline: "Complete DevOps platform.",
     description: "GitLab provides an integrated platform for the entire DevOps lifecycle, from planning through monitoring and security.",
     topics: ["DevOps platform", "Full SDLC", "Security and compliance", "Enterprise governance"],
@@ -120,7 +120,7 @@ export const partners: Partner[] = [
   {
     id: "harness",
     name: "Harness",
-    logo: "https://harness.io/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F99046f142b78461fbd6998ae1a8da6d1?format=webp&width=800&height=1200",
     tagline: "Continuous delivery platform for enterprises.",
     description: "Harness simplifies and automates continuous delivery, enabling teams to deploy with confidence at enterprise scale.",
     topics: ["Continuous delivery", "Deployment automation", "Infrastructure changes", "Risk management"],
@@ -129,7 +129,7 @@ export const partners: Partner[] = [
   {
     id: "jfrog",
     name: "JFrog",
-    logo: "https://jfrog.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fd40580468cf54f7da903b1f6703b5093?format=webp&width=800&height=1200",
     tagline: "DevOps platform for software delivery.",
     description: "JFrog provides tools and platforms for managing the software release process, from build to deployment to monitoring.",
     topics: ["Artifact management", "CI/CD", "Release orchestration", "Software supply chain"],
