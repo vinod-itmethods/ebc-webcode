@@ -261,8 +261,8 @@ export default function Index() {
           <div className="text-center">
             <Button
               asChild
-              variant="ghost"
-              className="text-primary hover:text-primary/80 font-semibold"
+              variant="outline"
+              className="font-semibold"
             >
               <Link to="/request-briefing">Request a briefing in your city<ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
