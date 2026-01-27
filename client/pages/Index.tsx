@@ -21,7 +21,7 @@ export default function Index() {
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-6">
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Executive Briefings for Enterprise Technology Leaders
+              Executive briefings for enterprise technology leaders
             </h1>
             <p className="text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
               Confidential, curated briefings designed to help IT and business executives navigate complex decisions across AI, DevOps, and modern infrastructure.
