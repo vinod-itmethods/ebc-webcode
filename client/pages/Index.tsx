@@ -53,19 +53,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* FEATURED IMAGE - Post Hero */}
-      <section className="py-12 lg:py-16 bg-white">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="relative">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F02e85313131c4c76bb1e29d1ea89c0a2?format=webp&width=1200&height=600"
-              alt="Executive briefing session with diverse leadership team"
-              className="w-full rounded-2xl object-cover h-96 lg:h-[500px]"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* WHAT THIS IS SECTION */}
       <section id="what" className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-4xl mx-auto px-4">
