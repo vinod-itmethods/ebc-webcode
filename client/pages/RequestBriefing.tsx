@@ -144,7 +144,7 @@ export default function RequestBriefing() {
       </section>
 
       {/* Form Section */}
-      <section className="py-12 lg:py-20">
+      <section className="py-12 lg:py-20 bg-gradient-to-b from-blue-50/20 to-white">
         <div className="container max-w-2xl mx-auto px-4">
           {/* Progress Bar */}
           <div className="mb-12 space-y-4">
