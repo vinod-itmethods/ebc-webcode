@@ -250,8 +250,8 @@ export default function Index() {
           </div>
 
           {/* Locations Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-            {['New York', 'San Francisco', 'London', 'Toronto', 'Austin'].map((location) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-12">
+            {['New York', 'San Francisco', 'London', 'Toronto', 'Austin', 'Dublin'].map((location) => (
               <div key={location} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow">
                 <div className="flex justify-center mb-3">
                   <MapPin className="w-5 h-5 icon-secondary" strokeWidth={1.5} />
