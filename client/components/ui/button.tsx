@@ -22,6 +22,7 @@ const buttonVariants = cva(
         emerald: "bg-[hsl(var(--color-emerald))] text-[hsl(var(--color-emerald-foreground))] hover:bg-[hsl(160_60%_35%)]",
         orange: "bg-[hsl(var(--color-orange))] text-[hsl(var(--color-orange-foreground))] hover:bg-[hsl(30_85%_40%)]",
         indigo: "bg-[hsl(var(--color-indigo))] text-[hsl(var(--color-indigo-foreground))] hover:bg-[hsl(250_70%_40%)]",
+        amber: "bg-[hsl(var(--color-amber))] text-[hsl(var(--color-amber-foreground))] hover:bg-[hsl(40_95%_40%)]",
       },
       size: {
         default: "h-10 px-4 py-2",
