@@ -163,7 +163,7 @@ export default function RequestBriefing() {
           </div>
 
           {/* Form Card */}
-          <div className="bg-white border border-border/30 rounded-lg p-8 lg:p-10">
+          <div className="bg-white rounded-lg p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow">
             {/* Step 1: Areas of Interest */}
             {currentStep === 1 && (
               <Step1
