@@ -22,9 +22,8 @@ export default function Index() {
 
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-8">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-[1.15] tracking-tight max-w-4xl mx-auto">
-              <span className="block">Executive briefings for enterprise</span>
-              <span className="block">technology leaders</span>
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tight max-w-5xl mx-auto">
+              Executive briefings for enterprise<br className="hidden lg:block" /> technology leaders
             </h1>
             <p className="text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
               <span className="block">Confidential, curated briefings designed to help IT</span>
