@@ -514,7 +514,7 @@ function Step6({
             type="text"
             value={name}
             onChange={(e) => onUpdate("name", e.target.value)}
-            className="w-full px-4 py-3 border border-border/30 rounded-lg focus:outline-none focus:border-primary"
+            className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
           />
         </div>
 
@@ -524,7 +524,7 @@ function Step6({
             type="text"
             value={role}
             onChange={(e) => onUpdate("role", e.target.value)}
-            className="w-full px-4 py-3 border border-border/30 rounded-lg focus:outline-none focus:border-primary"
+            className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
           />
         </div>
 
@@ -534,7 +534,7 @@ function Step6({
             type="text"
             value={company}
             onChange={(e) => onUpdate("company", e.target.value)}
-            className="w-full px-4 py-3 border border-border/30 rounded-lg focus:outline-none focus:border-primary"
+            className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
           />
         </div>
 
@@ -544,7 +544,7 @@ function Step6({
             type="email"
             value={email}
             onChange={(e) => onUpdate("email", e.target.value)}
-            className="w-full px-4 py-3 border border-border/30 rounded-lg focus:outline-none focus:border-primary"
+            className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
           />
         </div>
 
@@ -557,7 +557,7 @@ function Step6({
             value={assistant || ""}
             onChange={(e) => onUpdate("assistant", e.target.value)}
             placeholder="Name and email, if applicable"
-            className="w-full px-4 py-3 border border-border/30 rounded-lg focus:outline-none focus:border-primary"
+            className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
           />
         </div>
       </div>
