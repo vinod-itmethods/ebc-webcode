@@ -287,13 +287,13 @@ function Step1({
         {options.map((option) => (
           <label
             key={option}
-            className="flex items-center gap-3 p-4 border border-border/30 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer"
+            className="flex items-center gap-3 p-4 border border-border/15 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer"
           >
             <input
               type="checkbox"
               checked={interests.includes(option)}
               onChange={() => onToggle(option)}
-              className="w-5 h-5 rounded border-border"
+              className="w-5 h-5 rounded border-border/30"
             />
             <span className="font-medium text-foreground">{option}</span>
           </label>
@@ -301,12 +301,12 @@ function Step1({
 
         {/* Other Option */}
         <div className="space-y-2 pt-2">
-          <label className="flex items-center gap-3 p-4 border border-border/30 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer">
+          <label className="flex items-center gap-3 p-4 border border-border/15 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer">
             <input
               type="checkbox"
               checked={interests.includes("Other")}
               onChange={() => onToggle("Other")}
-              className="w-5 h-5 rounded border-border"
+              className="w-5 h-5 rounded border-border/30"
             />
             <span className="font-medium text-foreground">Other</span>
           </label>
@@ -317,7 +317,7 @@ function Step1({
               placeholder="Please describe..."
               value={interestOther || ""}
               onChange={(e) => onUpdate("interestOther", e.target.value)}
-              className="w-full px-4 py-3 border border-border/30 rounded-lg focus:outline-none focus:border-primary"
+              className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
             />
           )}
         </div>
