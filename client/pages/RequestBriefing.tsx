@@ -448,14 +448,14 @@ function Step4({
       <div className="space-y-3">
         <label className="block text-sm font-semibold text-foreground/80">Format</label>
         {formats.map((fmt) => (
-          <label key={fmt} className="flex items-center gap-3 p-4 border border-border/30 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer">
+          <label key={fmt} className="flex items-center gap-3 p-4 border border-border/15 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer">
             <input
               type="radio"
               name="format"
               value={fmt}
               checked={format === fmt}
               onChange={(e) => onUpdate("format", e.target.value)}
-              className="w-5 h-5 rounded-full border-border"
+              className="w-5 h-5 rounded-full border-border/30"
             />
             <span className="font-medium text-foreground">{fmt}</span>
           </label>
