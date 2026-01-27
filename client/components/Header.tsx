@@ -1,0 +1,66 @@
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
+export default function Header() {
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 max-w-7xl items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+            <span className="text-white font-bold text-sm">E</span>
+          </div>
+          <span className="font-bold text-lg text-foreground hidden sm:inline">EBC</span>
+        </Link>
+
+        {/* Nav Links */}
+        <nav className="hidden md:flex items-center gap-8">
+          <Link
+            to="/"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/")
+                ? "text-primary"
+                : "text-foreground/60 hover:text-foreground"
+            }`}
+          >
+            Home
+          </Link>
+          <Link
+            to="/partners"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/partners")
+                ? "text-primary"
+                : "text-foreground/60 hover:text-foreground"
+            }`}
+          >
+            Technology Partners
+          </Link>
+          <Link
+            to="/faq"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/faq")
+                ? "text-primary"
+                : "text-foreground/60 hover:text-foreground"
+            }`}
+          >
+            FAQ
+          </Link>
+        </nav>
+
+        {/* CTA Button */}
+        <Button
+          asChild
+          className="ml-auto bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg"
+        >
+          <Link to="/request-briefing">Request a Briefing</Link>
+        </Button>
+      </div>
+    </header>
+  );
+}
