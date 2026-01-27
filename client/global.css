@@ -33,22 +33,6 @@
     --accent: 200 100% 53%;
     --accent-foreground: 0 0% 0%;
 
-    /* Additional brand colors */
-    --color-blue: 210 70% 48%;
-    --color-blue-foreground: 0 0% 100%;
-
-    --color-emerald: 160 60% 45%;
-    --color-emerald-foreground: 0 0% 100%;
-
-    --color-orange: 30 85% 50%;
-    --color-orange-foreground: 0 0% 0%;
-
-    --color-indigo: 250 70% 50%;
-    --color-indigo-foreground: 0 0% 100%;
-
-    --color-amber: 40 95% 50%;
-    --color-amber-foreground: 0 0% 0%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
@@ -59,36 +43,40 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 222 33% 20%;
-
     --sidebar-primary: 190 55% 40%;
-
     --sidebar-primary-foreground: 0 0% 0%;
-
     --sidebar-accent: 200 100% 53%;
-
     --sidebar-accent-foreground: 0 0% 0%;
-
     --sidebar-border: 218 15% 88%;
-
     --sidebar-ring: 200 100% 53%;
 
-    /* Gradient colors for visual interest */
-    --gradient-blue: 222 100% 65%;
-    --gradient-purple: 280 85% 60%;
-    --gradient-teal: 180 85% 50%;
-    --gradient-cyan: 185 100% 55%;
+    /* Design System - Primary Button (Warm Gradient) */
+    --button-primary-start: 45 82% 52%;    /* #d4ac35 */
+    --button-primary-end: 38 92% 50%;      /* #f59e0b */
+    --button-primary-text: 224 25% 10%;    /* #0a0e1a */
+    --button-primary-hover-start: 45 82% 45%;
+    --button-primary-hover-end: 38 92% 43%;
 
-    /* Vibrant colors for maximum impact */
-    --vibrant-purple: 270 100% 55%;
-    --vibrant-blue: 210 100% 50%;
-    --vibrant-cyan: 180 100% 50%;
-    --vibrant-magenta: 320 100% 50%;
+    /* Design System - Secondary Button (Cool Gradient) */
+    --button-secondary-start: 187 100% 55%; /* #22d3ee */
+    --button-secondary-end: 186 100% 42%;   /* #06b6d4 */
+    --button-secondary-text: 187 100% 20%;
+    --button-secondary-hover: 187 100% 55%;
 
-    /* Button hover state */
-    --primary-light: 190 55% 50%;
-    --primary-dark: 190 55% 30%;
+    /* Design System - Icon Colors (Accent) */
+    --icon-cool: 187 100% 55%;     /* #22d3ee - cool, modern, technical */
+    --icon-growth: 134 65% 42%;    /* #10b981 - progress, growth */
+    --icon-leadership: 45 82% 52%; /* #d4ac35 - importance, leadership */
+
+    /* Icon Background Colors (8-12% opacity) */
+    --icon-cool-bg: 187 100% 55%;
+    --icon-growth-bg: 134 65% 42%;
+    --icon-leadership-bg: 45 82% 52%;
+
+    /* Tertiary/Text Link Colors */
+    --text-secondary: 205 45% 48%;  /* #5c738a */
+    --text-muted: 217 33% 56%;      /* #94a3b8 */
   }
 
   .dark {
