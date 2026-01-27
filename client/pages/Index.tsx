@@ -166,6 +166,17 @@ export default function Index() {
               </div>
             </div>
 
+            {/* Image Accent - Mid Section */}
+            <div className="my-12 lg:my-16">
+              <div className="bg-slate-100 rounded-2xl overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fceee32d080cd46b4b0a88786f61e700a?format=webp&width=800&height=500"
+                  alt="Executive team in collaborative discussion"
+                  className="w-full object-cover h-80 lg:h-96"
+                />
+              </div>
+            </div>
+
             {/* Step 3 */}
             <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/10 last:border-b-0">
               <div className="flex-shrink-0">
