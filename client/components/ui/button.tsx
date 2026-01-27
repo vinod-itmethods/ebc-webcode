@@ -9,20 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-dark))]",
+        default: "btn-primary",
+        secondary: "btn-secondary",
+        "secondary-outline": "btn-secondary-outline",
+        tertiary: "btn-tertiary",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border-2 border-primary text-primary bg-background hover:bg-primary/10",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        blue: "bg-[hsl(var(--color-blue))] text-[hsl(var(--color-blue-foreground))] hover:bg-[hsl(210_70%_38%)]",
-        emerald: "bg-[hsl(var(--color-emerald))] text-[hsl(var(--color-emerald-foreground))] hover:bg-[hsl(160_60%_35%)]",
-        orange: "bg-[hsl(var(--color-orange))] text-[hsl(var(--color-orange-foreground))] hover:bg-[hsl(30_85%_40%)]",
-        indigo: "bg-[hsl(var(--color-indigo))] text-[hsl(var(--color-indigo-foreground))] hover:bg-[hsl(250_70%_40%)]",
-        amber: "bg-[hsl(var(--color-amber))] text-[hsl(var(--color-amber-foreground))] hover:bg-[hsl(40_95%_40%)]",
       },
       size: {
         default: "h-10 px-4 py-2",
