@@ -101,8 +101,8 @@ export default function Index() {
 
             {/* Executive Teams */}
             <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 icon-neutral-bg">
-                <Users className="w-6 h-6 icon-neutral" strokeWidth={1.5} />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: 'rgb(20, 184, 166, 0.12)' }}>
+                <Users className="w-6 h-6" style={{ color: 'rgb(20, 184, 166)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Executive teams</h3>
               <p className="text-foreground/70 leading-relaxed">
