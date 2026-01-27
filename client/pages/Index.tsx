@@ -82,7 +82,7 @@ export default function Index() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Enterprise Leaders */}
-            <div className="bg-white rounded-lg p-8 border border-border/30 hover:border-border transition-colors">
+            <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 icon-cool-bg">
                 <Briefcase className="w-6 h-6 icon-cool" strokeWidth={1.5} />
               </div>
@@ -93,7 +93,7 @@ export default function Index() {
             </div>
 
             {/* Active Decision Makers */}
-            <div className="bg-white rounded-lg p-8 border border-border/30 hover:border-border transition-colors">
+            <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 icon-cool-bg">
                 <CheckCircle2 className="w-6 h-6 icon-cool" strokeWidth={1.5} />
               </div>
@@ -104,7 +104,7 @@ export default function Index() {
             </div>
 
             {/* Executive Teams */}
-            <div className="bg-white rounded-lg p-8 border border-border/30 hover:border-border transition-colors">
+            <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 icon-cool-bg">
                 <Users className="w-6 h-6 icon-cool" strokeWidth={1.5} />
               </div>
