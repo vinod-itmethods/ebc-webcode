@@ -247,9 +247,9 @@ export default function Index() {
           {/* Locations Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
             {['New York', 'San Francisco', 'London', 'Toronto', 'Austin'].map((location) => (
-              <div key={location} className="bg-slate-50 rounded-lg border border-border/30 p-6 text-center hover:bg-slate-100 transition-colors">
+              <div key={location} className="bg-white rounded-lg border border-border/30 p-6 text-center hover:border-border/50 transition-colors">
                 <div className="flex justify-center mb-3">
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <MapPin className="w-5 h-5 icon-growth" strokeWidth={1.5} />
                 </div>
                 <p className="font-semibold text-foreground">{location}</p>
               </div>
