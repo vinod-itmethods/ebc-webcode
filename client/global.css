@@ -71,8 +71,8 @@
     --vibrant-magenta: 320 100% 50%;
 
     /* Button hover state */
-    --primary-light: 190 65% 52%;
-    --primary-dark: 190 65% 32%;
+    --primary-light: 190 55% 50%;
+    --primary-dark: 190 55% 30%;
   }
 
   .dark {
