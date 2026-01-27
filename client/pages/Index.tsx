@@ -41,9 +41,9 @@ export default function Index() {
                 <Link to="/request-briefing">Request a briefing</Link>
               </Button>
               <Button
-                variant="ghost"
+                variant="outline"
                 size="lg"
-                className="text-primary hover:text-primary/80 font-semibold"
+                className="font-semibold"
                 asChild
               >
                 <a href="#how">How it works</a>
