@@ -151,7 +151,7 @@ export default function Partners() {
             </div>
 
             {/* Modal Footer */}
-            <div className="sticky bottom-0 border-t border-border/30 bg-white p-6">
+            <div className="sticky bottom-0 border-t border-border/10 bg-white p-6">
               <Button
                 asChild
                 className="w-full font-semibold rounded-lg"
