@@ -14,7 +14,7 @@ export default function Partners() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-24 overflow-hidden border-b border-border/30">
+      <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-blue-50/40">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50"></div>
         </div>
@@ -164,7 +164,7 @@ export default function Partners() {
       )}
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50 border-t border-border/30">
+      <section className="py-16 bg-gradient-to-br from-teal-50/40 via-blue-50/30 to-white">
         <div className="container max-w-2xl mx-auto px-4 text-center space-y-4">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
             Ready to plan your briefing?
