@@ -91,7 +91,7 @@ export default function RequestBriefing() {
               </div>
 
               <div className="space-y-3">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Thank you for your request.</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Thank you for your request</h2>
                 <p className="text-lg text-foreground/70 leading-relaxed">
                   A member of our team will review your input and follow up to confirm relevance, alignment, and next
                   steps. Briefings are curated based on active decision areas and availability.
@@ -99,7 +99,7 @@ export default function RequestBriefing() {
               </div>
 
               <div className="bg-slate-50 rounded-lg border border-border/30 p-6 space-y-3">
-                <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">What Happens Next</p>
+                <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">What happens next</p>
                 <ul className="space-y-2 text-left text-foreground/70">
                   <li className="flex gap-3">
                     <span className="text-primary font-bold">1</span>
@@ -136,7 +136,7 @@ export default function RequestBriefing() {
 
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-3">
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">Request an Executive Briefing</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">Request an executive briefing</h1>
             <p className="text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto">
               Use this form to outline your areas of interest and briefing preferences. A member of our team will
               follow up to confirm alignment and next steps.
@@ -244,7 +244,7 @@ export default function RequestBriefing() {
                 onClick={currentStep === 6 ? handleSubmit : handleNext}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg"
               >
-                {currentStep === 6 ? "Request Briefing" : "Continue"}
+                {currentStep === 6 ? "Request briefing" : "Continue"}
               </Button>
             </div>
           </div>
