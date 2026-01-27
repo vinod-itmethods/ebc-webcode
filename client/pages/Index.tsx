@@ -205,14 +205,21 @@ export default function Index() {
               <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Areas of Partnership</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
-                  { title: "Cloud & Infrastructure", description: "Cloud providers and infrastructure platforms" },
-                  { title: "AI & Machine Learning", description: "AI platforms and ML operations" },
-                  { title: "DevOps & Continuous Delivery", description: "CI/CD platforms and automation" },
-                  { title: "Platform & Architecture", description: "Platform engineering and microservices" },
-                  { title: "Security & Compliance", description: "Security and governance solutions" },
-                  { title: "Data & Analytics", description: "Data platforms and analytics" },
+                  { title: "Cloud & Infrastructure", description: "Cloud providers and infrastructure platforms", tint: "warm" },
+                  { title: "AI & Machine Learning", description: "AI platforms and ML operations", tint: "cool" },
+                  { title: "DevOps & Continuous Delivery", description: "CI/CD platforms and automation", tint: "warm" },
+                  { title: "Platform & Architecture", description: "Platform engineering and microservices", tint: "cool" },
+                  { title: "Security & Compliance", description: "Security and governance solutions", tint: "warm" },
+                  { title: "Data & Analytics", description: "Data platforms and analytics", tint: "cool" },
                 ].map((category, index) => (
-                  <div key={index} className="bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
+                  <div
+                    key={index}
+                    className={`rounded-lg p-6 hover:shadow-md transition-shadow ${
+                      category.tint === "warm"
+                        ? "bg-[hsl(45_82%_52%/4%)]"
+                        : "bg-[hsl(217_13%_46%/4%)]"
+                    }`}
+                  >
                     <h4 className="font-semibold text-foreground mb-2">{category.title}</h4>
                     <p className="text-foreground/70 text-sm">{category.description}</p>
                   </div>
