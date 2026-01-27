@@ -58,21 +58,21 @@
     --button-primary-hover-start: 45 82% 45%;
     --button-primary-hover-end: 38 92% 43%;
 
-    /* Design System - Secondary Button (Cool Gradient) */
-    --button-secondary-start: 187 100% 55%; /* #22d3ee */
-    --button-secondary-end: 186 100% 42%;   /* #06b6d4 */
-    --button-secondary-text: 187 100% 20%;
-    --button-secondary-hover: 187 100% 55%;
+    /* Design System - Secondary Button (Gold Outline) */
+    --button-secondary-start: 45 82% 52%;  /* #d4ac35 */
+    --button-secondary-end: 38 92% 50%;    /* #f59e0b */
+    --button-secondary-text: 45 82% 52%;
+    --button-secondary-hover: 45 82% 52%;
 
-    /* Design System - Icon Colors (Accent) */
-    --icon-cool: 187 100% 55%;     /* #22d3ee - cool, modern, technical */
-    --icon-growth: 134 65% 42%;    /* #10b981 - progress, growth */
-    --icon-leadership: 45 82% 52%; /* #d4ac35 - importance, leadership */
+    /* Design System - Icon Colors (Neutral) */
+    --icon-neutral: 217 13% 46%;    /* #64748b - neutral slate */
+    --icon-secondary: 220 8% 56%;   /* #78849e - secondary gray */
+    --icon-muted: 220 10% 72%;      /* #a0aec0 - light gray */
 
     /* Icon Background Colors (8-12% opacity) */
-    --icon-cool-bg: 187 100% 55%;
-    --icon-growth-bg: 134 65% 42%;
-    --icon-leadership-bg: 45 82% 52%;
+    --icon-neutral-bg: 217 13% 46%;
+    --icon-secondary-bg: 220 8% 56%;
+    --icon-muted-bg: 220 10% 72%;
 
     /* Tertiary/Text Link Colors */
     --text-secondary: 205 45% 48%;  /* #5c738a */
