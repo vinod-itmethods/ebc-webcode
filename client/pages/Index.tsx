@@ -224,8 +224,7 @@ export default function Index() {
             <div className="text-center">
               <Button
                 asChild
-                variant="outline"
-                className="border-border hover:bg-white"
+                variant="secondary-outline"
               >
                 <Link to="/partners">View all technology partners</Link>
               </Button>
