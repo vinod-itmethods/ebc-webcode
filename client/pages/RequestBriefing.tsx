@@ -240,7 +240,6 @@ export default function RequestBriefing() {
 
               <Button
                 onClick={currentStep === 6 ? handleSubmit : handleNext}
-                variant="default"
                 className="font-semibold rounded-lg"
               >
                 {currentStep === 6 ? "Request briefing" : "Continue"}
