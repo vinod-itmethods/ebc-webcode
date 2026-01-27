@@ -16,10 +16,6 @@ export default function Index() {
           linear-gradient(180deg, #ffffff 0%, #f9fafb 100%)
         `
       }}>
-        {/* Multi-color glow blend positioned bottom-right */}
-        <div className="absolute -bottom-40 -right-32 w-[500px] h-[500px] rounded-full opacity-25" style={{
-          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, rgba(168, 85, 247, 0.4) 40%, rgba(20, 184, 166, 0.3) 100%)'
-        }}></div>
 
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-8">
