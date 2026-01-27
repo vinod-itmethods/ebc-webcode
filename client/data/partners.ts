@@ -48,7 +48,7 @@ export const partners: Partner[] = [
   {
     id: "cloudbees",
     name: "CloudBees",
-    logo: "https://www.cloudbees.com/sites/default/files/cb-icon.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F17381ce3a5784a5684e4d4cabee4da8f?format=webp&width=800&height=1200",
     tagline: "Enterprise Jenkins and CI/CD solutions.",
     description: "CloudBees provides enterprise-grade CI/CD solutions built on Jenkins, with additional governance and scalability features.",
     topics: ["Enterprise CI/CD", "Jenkins governance", "Pipeline automation", "DevOps at scale"],
@@ -57,7 +57,7 @@ export const partners: Partner[] = [
   {
     id: "coder",
     name: "Coder",
-    logo: "https://coder.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F322daae0f0fa4feca9b7f28be5f83a8f?format=webp&width=800&height=1200",
     tagline: "Developer workspaces in the cloud.",
     description: "Coder enables remote development environments, allowing developers to code from anywhere with consistent, powerful workspaces.",
     topics: ["Remote development", "Developer experience", "Infrastructure consistency", "Team collaboration"],
@@ -66,7 +66,7 @@ export const partners: Partner[] = [
   {
     id: "cognition",
     name: "Cognition",
-    logo: "https://www.cognition.ai/images/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fad703dc47a484e75bc729c1769bda884?format=webp&width=800&height=1200",
     tagline: "AI-powered software development.",
     description: "Cognition develops AI agents designed to assist with complex software engineering tasks, augmenting developer capabilities.",
     topics: ["AI-assisted development", "Code generation", "Developer augmentation", "Intelligent automation"],
@@ -84,7 +84,7 @@ export const partners: Partner[] = [
   {
     id: "continuai",
     name: "Continue AI",
-    logo: "https://continue.dev/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F2bbe501748314fc180e4007fa3073a28?format=webp&width=800&height=1200",
     tagline: "Open-source IDE plugin for AI-assisted development.",
     description: "Continue brings AI capabilities directly into your IDE, enabling fast and easy integration with coding assistants.",
     topics: ["IDE integration", "AI-assisted coding", "Developer tools", "Open source AI"],
