@@ -79,8 +79,8 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Enterprise Leaders */}
             <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 icon-neutral-bg">
-                <Briefcase className="w-6 h-6 icon-neutral" strokeWidth={1.5} />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: 'rgb(59, 130, 246, 0.12)' }}>
+                <Briefcase className="w-6 h-6" style={{ color: 'rgb(59, 130, 246)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Enterprise leaders</h3>
               <p className="text-foreground/70 leading-relaxed">
