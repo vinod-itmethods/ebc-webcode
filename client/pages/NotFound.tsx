@@ -19,7 +19,7 @@ const NotFound = () => {
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
 
-      <div className="flex-grow flex items-center justify-center">
+      <div className="flex-grow flex items-center justify-center bg-gradient-to-b from-blue-50/40 to-white">
         <div className="text-center space-y-6 px-4">
           <div className="space-y-2">
             <h1 className="text-6xl lg:text-7xl font-bold text-primary">404</h1>
