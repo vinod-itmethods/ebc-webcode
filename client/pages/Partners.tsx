@@ -1,9 +1,14 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { partners, type Partner } from "@/data/partners";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { X } from "lucide-react";
 
 export default function Partners() {
+  const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -18,81 +23,162 @@ export default function Partners() {
           <div className="text-center space-y-4">
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground">Technology Partners</h1>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Executive Briefings bring perspectives from a broad range of leading technology providers, selected for relevance to each organization's strategic priorities.
+              Executive Briefings bring perspectives from a broad range of leading technology providers, selected for relevance to your organization's strategic priorities.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* Partner Grid */}
       <section className="py-20 lg:py-28">
-        <div className="container max-w-4xl mx-auto px-4 space-y-12">
-          {/* Philosophy */}
-          <div className="space-y-6">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Our Partner Approach</h2>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              The Executive Briefing Council is not a vendor showcase or sales platform. Instead, we partner with technology leaders across the industry to support informed, strategic dialogue.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              Partners are selected based on:
-            </p>
-            <ul className="space-y-3 text-lg text-foreground/70">
-              <li className="flex gap-3">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Relevance:</strong> Direct alignment with the topics and decisions your organization is evaluating</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Expertise:</strong> Deep technical and strategic knowledge in their domains</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Ecosystem Perspective:</strong> Ability to discuss trade-offs and alternative approaches, not just their own solutions</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Confidentiality Commitment:</strong> Strict adherence to confidentiality agreements protecting your organization's strategic priorities</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Partner Categories */}
-          <div className="space-y-6 border-t border-border/30 pt-12">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Areas of Partnership</h2>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              Depending on your briefing's focus, we engage partners across a range of technology domains:
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { title: "Cloud & Infrastructure", description: "Cloud providers, infrastructure platforms, and modernization services" },
-                { title: "AI & Machine Learning", description: "AI platforms, ML operations, and intelligent automation technologies" },
-                { title: "DevOps & Continuous Delivery", description: "CI/CD platforms, observability tools, and automation frameworks" },
-                { title: "Platform & Architecture", description: "Platform engineering, microservices, and architecture technologies" },
-                { title: "Security & Compliance", description: "Security platforms, governance, and risk management solutions" },
-                { title: "Data & Analytics", description: "Data platforms, analytics solutions, and data governance tools" },
-              ].map((category, index) => (
-                <div key={index} className="bg-slate-50/50 rounded-lg border border-border/30 p-6">
-                  <h3 className="font-semibold text-foreground mb-2">{category.title}</h3>
-                  <p className="text-foreground/70 text-sm">{category.description}</p>
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+            {partners.map((partner) => (
+              <button
+                key={partner.id}
+                onClick={() => setSelectedPartner(partner)}
+                className="group relative bg-white border border-border/30 rounded-lg p-6 hover:border-primary/50 transition-all duration-200 hover:shadow-lg cursor-pointer hover:-translate-y-1"
+              >
+                {/* Logo */}
+                <div className="flex items-center justify-center h-16 mb-4 bg-slate-50 rounded-md group-hover:bg-blue-50 transition-colors">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-14 max-w-full object-contain"
+                    onError={(e) => {
+                      const el = e.currentTarget;
+                      el.style.display = "none";
+                      el.parentElement!.innerHTML =
+                        '<div class="text-xs font-medium text-slate-400 text-center px-2">' +
+                        partner.name +
+                        "</div>";
+                    }}
+                  />
                 </div>
-              ))}
+
+                {/* Name */}
+                <h3 className="font-semibold text-foreground text-center text-sm group-hover:text-primary transition-colors">
+                  {partner.name}
+                </h3>
+
+                {/* Hover Tagline */}
+                <p className="text-xs text-foreground/60 text-center mt-2 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  {partner.tagline}
+                </p>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Detail Modal */}
+      {selectedPartner && (
+        <div
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedPartner(null)}
+        >
+          <div
+            className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-white border-b border-border/30 p-6 flex items-start justify-between">
+              <div className="flex items-start gap-4">
+                <div className="h-16 w-16 bg-slate-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <img
+                    src={selectedPartner.logo}
+                    alt={selectedPartner.name}
+                    className="max-h-14 max-w-full object-contain"
+                    onError={(e) => {
+                      const el = e.currentTarget;
+                      el.style.display = "none";
+                      el.parentElement!.innerHTML =
+                        '<div class="text-xs font-medium text-slate-400">' +
+                        selectedPartner.name +
+                        "</div>";
+                    }}
+                  />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground">{selectedPartner.name}</h2>
+                  <p className="text-foreground/70 mt-1">{selectedPartner.tagline}</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setSelectedPartner(null)}
+                className="text-foreground/60 hover:text-foreground transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 space-y-6">
+              {/* Description */}
+              <div>
+                <p className="text-foreground/70 leading-relaxed">{selectedPartner.description}</p>
+              </div>
+
+              {/* Example Discussion Topics */}
+              <div>
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wide mb-3">
+                  Example Discussion Topics
+                </h3>
+                <ul className="space-y-2">
+                  {selectedPartner.topics.map((topic, idx) => (
+                    <li key={idx} className="flex gap-3 text-foreground/70">
+                      <span className="text-primary font-bold">•</span>
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* What You'll Get */}
+              <div>
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wide mb-3">
+                  What You'll Get From This Session
+                </h3>
+                <ul className="space-y-2">
+                  {selectedPartner.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex gap-3 text-foreground/70">
+                      <span className="text-primary font-bold">✓</span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="sticky bottom-0 border-t border-border/30 bg-white p-6">
+              <Button
+                asChild
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg"
+              >
+                <Link to="/request-briefing">Include {selectedPartner.name}</Link>
+              </Button>
             </div>
           </div>
+        </div>
+      )}
 
-          {/* CTA */}
-          <div className="border-t border-border/30 pt-12 text-center space-y-6">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Ready for a Briefing?</h2>
-            <p className="text-lg text-foreground/70">
-              When you request a briefing, we'll discuss your priorities and select the most relevant partners to participate.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-lg"
-            >
-              <Link to="/request-briefing">Request a Briefing</Link>
-            </Button>
-          </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50 border-t border-border/30">
+        <div className="container max-w-2xl mx-auto px-4 text-center space-y-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+            Ready to Plan Your Briefing?
+          </h2>
+          <p className="text-foreground/70">
+            Select the technology partners you'd like to engage with and we'll design a briefing around your priorities.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-lg"
+          >
+            <Link to="/request-briefing">Request a Briefing</Link>
+          </Button>
         </div>
       </section>
 
