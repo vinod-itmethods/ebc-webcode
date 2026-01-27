@@ -32,7 +32,7 @@ export default function Index() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-lg"
               >
-                <Link to="/request-briefing">Request a Briefing</Link>
+                <Link to="/request-briefing">Request a briefing</Link>
               </Button>
               <Button
                 variant="ghost"
@@ -40,7 +40,7 @@ export default function Index() {
                 className="text-primary hover:text-primary/80 font-semibold"
                 asChild
               >
-                <a href="#how">How It Works</a>
+                <a href="#how">How it works</a>
               </Button>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Index() {
         <div className="container max-w-4xl mx-auto px-4">
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">What This Is</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">What this is</h2>
               <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
                 <p>
                   This Executive Briefing Council is a structured forum where enterprise technology and business leaders engage in focused discussions around strategic technology decisions.
@@ -72,7 +72,7 @@ export default function Index() {
       {/* WHO IT'S FOR SECTION */}
       <section className="py-20 lg:py-28 bg-slate-50/50">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">Who It's For</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">Who it's for</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Enterprise Leaders */}
@@ -80,7 +80,7 @@ export default function Index() {
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <Briefcase className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Enterprise Leaders</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Enterprise leaders</h3>
               <p className="text-foreground/70 leading-relaxed">
                 CIOs, CTOs, CDOs, and senior business and IT leaders responsible for enterprise-wide technology strategy.
               </p>
@@ -91,7 +91,7 @@ export default function Index() {
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <CheckCircle2 className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Active Decision Makers</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Active decision makers</h3>
               <p className="text-foreground/70 leading-relaxed">
                 Organizations currently evaluating AI initiatives, DevOps modernization, platform architecture, or infrastructure strategy.
               </p>
@@ -102,7 +102,7 @@ export default function Index() {
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Executive Teams</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Executive teams</h3>
               <p className="text-foreground/70 leading-relaxed">
                 Cross-functional leadership teams seeking alignment across technology, operations, and business priorities.
               </p>
@@ -114,7 +114,7 @@ export default function Index() {
       {/* HOW THE BRIEFING WORKS SECTION */}
       <section id="how" className="py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">How the Briefing Works</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">How the briefing works</h2>
           
           <div className="space-y-8">
             {/* Step 1 */}
@@ -125,7 +125,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Pre-Brief Alignment</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Pre-brief alignment</h3>
                 <p className="text-foreground/70 text-lg leading-relaxed">
                   We work with participating organizations to understand priorities, challenges, and the decisions under consideration.
                 </p>
@@ -140,7 +140,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Curated Agenda</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Curated agenda</h3>
                 <p className="text-foreground/70 text-lg leading-relaxed">
                   Each briefing is customized based on the specific topics and outcomes the executive team wants to explore.
                 </p>
@@ -155,7 +155,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Multi-Partner Perspectives</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Multi-partner perspectives</h3>
                 <p className="text-foreground/70 text-lg leading-relaxed">
                   Briefings may include perspectives from multiple technology partners selected for relevance. This enables leaders to compare approaches, surface trade-offs, and ask direct questions across providers in a single forum.
                 </p>
@@ -170,7 +170,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Outcome Focus</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Outcome focus</h3>
                 <p className="text-foreground/70 text-lg leading-relaxed">
                   Sessions conclude with clear takeaways, options, and next-step considerations.
                 </p>
@@ -183,7 +183,7 @@ export default function Index() {
       {/* TECHNOLOGY PARTNERS SECTION */}
       <section className="py-20 lg:py-28 bg-slate-50/50 border-t border-border/30">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Technology Partners</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Technology partners</h2>
 
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Partner Philosophy */}
@@ -221,7 +221,7 @@ export default function Index() {
                 variant="outline"
                 className="border-border hover:bg-white"
               >
-                <Link to="/partners">View All Technology Partners</Link>
+                <Link to="/partners">View all technology partners</Link>
               </Button>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function Index() {
       {/* LOCATIONS SECTION */}
       <section id="locations" className="py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Where Briefings Take Place</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Where briefings take place</h2>
           
           <div className="max-w-3xl mx-auto mb-12">
             <p className="text-lg text-foreground/70 text-center leading-relaxed">
@@ -258,7 +258,7 @@ export default function Index() {
               variant="ghost"
               className="text-primary hover:text-primary/80 font-semibold"
             >
-              <Link to="/request-briefing">Request a briefing in your city <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/request-briefing">Request a briefing in your city<ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function Index() {
       {/* REQUEST A BRIEFING CTA SECTION */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-50 to-slate-50 border-t border-border/30">
         <div className="container max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Ready to Schedule a Briefing?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Ready to schedule a briefing?</h2>
           <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
             Tell us about your organization's priorities and the strategic decisions you're evaluating. We'll work with you to design a briefing tailored to your needs.
           </p>
@@ -276,7 +276,7 @@ export default function Index() {
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-lg"
           >
-            <Link to="/request-briefing">Start Your Briefing Request</Link>
+            <Link to="/request-briefing">Start your briefing request</Link>
           </Button>
         </div>
       </section>
