@@ -122,7 +122,7 @@ export default function Partners() {
               {/* Example Discussion Topics */}
               <div>
                 <h3 className="text-sm font-semibold text-primary uppercase tracking-wide mb-3">
-                  Example Discussion Topics
+                  Example discussion topics
                 </h3>
                 <ul className="space-y-2">
                   {selectedPartner.topics.map((topic, idx) => (
@@ -137,7 +137,7 @@ export default function Partners() {
               {/* What You'll Get */}
               <div>
                 <h3 className="text-sm font-semibold text-primary uppercase tracking-wide mb-3">
-                  What You'll Get From This Session
+                  What you'll get from this session
                 </h3>
                 <ul className="space-y-2">
                   {selectedPartner.benefits.map((benefit, idx) => (
@@ -167,7 +167,7 @@ export default function Partners() {
       <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50 border-t border-border/30">
         <div className="container max-w-2xl mx-auto px-4 text-center space-y-4">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-            Ready to Plan Your Briefing?
+            Ready to plan your briefing?
           </h2>
           <p className="text-foreground/70">
             Select the technology partners you'd like to engage with and we'll design a briefing around your priorities.
@@ -177,7 +177,7 @@ export default function Partners() {
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-lg"
           >
-            <Link to="/request-briefing">Request a Briefing</Link>
+            <Link to="/request-briefing">Request a briefing</Link>
           </Button>
         </div>
       </section>
