@@ -248,12 +248,23 @@ export default function Index() {
 
           {/* Locations Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-12">
-            {['New York', 'San Francisco', 'London', 'Toronto', 'Austin', 'Dublin'].map((location) => (
-              <div key={location} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-                <div className="flex justify-center mb-3">
-                  <MapPin className="w-5 h-5 icon-secondary" strokeWidth={1.5} />
+            {[
+              { name: 'New York', image: 'https://images.pexels.com/photos/32264921/pexels-photo-32264921.jpeg' },
+              { name: 'San Francisco', image: 'https://images.pexels.com/photos/10784419/pexels-photo-10784419.jpeg' },
+              { name: 'London', image: 'https://images.pexels.com/photos/16129257/pexels-photo-16129257.jpeg' },
+              { name: 'Toronto', image: 'https://images.pexels.com/photos/13081827/pexels-photo-13081827.jpeg' },
+              { name: 'Austin', image: 'https://images.pexels.com/photos/15525604/pexels-photo-15525604.jpeg' },
+              { name: 'Dublin', image: 'https://images.pexels.com/photos/439819/pexels-photo-439819.jpeg' }
+            ].map((location) => (
+              <div key={location.name} className="bg-white rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                <img
+                  src={location.image}
+                  alt={location.name}
+                  className="w-full aspect-square object-cover"
+                />
+                <div className="p-4 text-center">
+                  <p className="font-semibold text-foreground">{location.name}</p>
                 </div>
-                <p className="font-semibold text-foreground">{location}</p>
               </div>
             ))}
           </div>
