@@ -37,14 +37,14 @@ export default function Partners() {
               <button
                 key={partner.id}
                 onClick={() => setSelectedPartner(partner)}
-                className="group relative bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 cursor-pointer"
+                className="group relative flex flex-col items-center cursor-pointer"
               >
                 {/* Logo */}
-                <div className="flex items-center justify-center h-16 mb-4 bg-slate-50 rounded-md group-hover:bg-blue-50 transition-colors">
+                <div className="flex items-center justify-center h-20 mb-3">
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-14 max-w-full object-contain"
+                    className="max-h-16 max-w-full object-contain"
                     onError={(e) => {
                       const el = e.currentTarget;
                       el.style.display = "none";
