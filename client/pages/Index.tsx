@@ -279,7 +279,6 @@ export default function Index() {
           <Button
             asChild
             size="lg"
-            variant="amber"
             className="font-semibold px-8 rounded-lg"
           >
             <Link to="/request-briefing">Start your briefing request</Link>
