@@ -223,6 +223,11 @@ export default function Index() {
               </div>
             </div>
 
+            {/* Partner Carousel */}
+            <div>
+              <PartnerCarousel />
+            </div>
+
             {/* View all partners CTA */}
             <div className="text-center">
               <Button
