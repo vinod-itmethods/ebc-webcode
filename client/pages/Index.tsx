@@ -6,16 +6,13 @@ import { ArrowRight, Briefcase, Users, CheckCircle2, MapPin } from "lucide-react
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Header />
 
       {/* HERO SECTION */}
-      <section className="relative py-24 lg:py-40 overflow-hidden">
-        {/* Strong, clearly visible warm gradient background */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[hsl(48_88%_82%)] via-[hsl(45_75%_76%)] to-[hsl(215_25%_92%)]"></div>
-
+      <section className="relative py-24 lg:py-40 overflow-hidden bg-gradient-to-br from-[hsl(48_88%_82%)] via-[hsl(45_75%_76%)] to-[hsl(215_25%_92%)]">
         {/* Prominent radial gradient for visual impact */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0">
           {/* Main radial warm gold gradient - strong and visible */}
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1000px] h-[800px] bg-gradient-to-b from-[hsl(42_82%_58%/40%)] via-[hsl(45_75%_68%/20%)] to-transparent rounded-full blur-3xl -z-10"></div>
 
