@@ -10,29 +10,27 @@ export default function Index() {
       <Header />
 
       {/* HERO SECTION */}
-      <section className="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-br from-white via-blue-50/40 to-teal-50/30">
-        {/* Textured gradient background with geometric elements */}
+      <section className="relative py-24 lg:py-40 overflow-hidden bg-white">
+        {/* Pronounced gradient background centered behind headline */}
         <div className="absolute inset-0 -z-10">
-          {/* Main gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-teal-500/3 to-cyan-500/5"></div>
+          {/* Main radial gradient centered on hero content */}
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-[hsl(45_82%_52%/12%)] via-[hsl(217_13%_46%/6%)] to-transparent rounded-full blur-3xl -z-10"></div>
 
-          {/* Decorative gradient orbs */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-400/15 to-blue-400/10 rounded-full blur-3xl -z-10"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-400/15 to-teal-400/10 rounded-full blur-3xl -z-10"></div>
-
-          {/* Additional texture layer */}
-          <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-br from-blue-300/10 to-teal-300/5 rounded-full blur-2xl -z-10"></div>
+          {/* Subtle vertical gradient base */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/20 to-white"></div>
         </div>
 
         <div className="container max-w-4xl mx-auto px-4">
-          <div className="text-center space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Executive briefings for enterprise technology leaders
+          <div className="text-center space-y-8">
+            <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-[1.2] tracking-tight">
+              <span className="block">Executive briefings for</span>
+              <span className="block">enterprise technology leaders</span>
             </h1>
             <p className="text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              Confidential, curated briefings designed to help IT and business executives navigate complex decisions across AI, DevOps, and modern infrastructure.
+              <span className="block">Confidential, curated briefings designed to help IT</span>
+              <span className="block">and business executives navigate complex decisions</span>
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button
                 asChild
                 size="lg"
