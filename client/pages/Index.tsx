@@ -184,29 +184,46 @@ export default function Index() {
       <section className="py-20 lg:py-28 bg-slate-50/50 border-t border-border/30">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Technology Partners</h2>
-          
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg text-foreground/70 text-center leading-relaxed mb-4">
-              Briefings may include perspectives from a broad range of leading technology providers, selected based on relevance to the topics under discussion.
-            </p>
-            <p className="text-lg text-foreground/70 text-center leading-relaxed">
-              This is not a vendor showcase. Technology perspectives are included to support informed discussion and provide context for real-world decision-making across the enterprise technology landscape.
-            </p>
-          </div>
 
-          {/* Logo Carousel */}
-          <div className="bg-white rounded-lg border border-border/30 p-8 lg:p-12">
-            <div className="flex items-center justify-center gap-8 lg:gap-12 flex-wrap opacity-60 hover:opacity-100 transition-opacity">
-              {/* Placeholder logos */}
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="flex items-center justify-center h-16 w-32 bg-slate-100 rounded text-slate-400 text-sm font-medium">
-                  Partner Logo
-                </div>
-              ))}
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Partner Philosophy */}
+            <div className="space-y-6 bg-white rounded-lg border border-border/30 p-8">
+              <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Our Partner Approach</h3>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                The Executive Briefing Council is not a vendor showcase. Instead, we partner with technology leaders across the industry to support informed, strategic dialogue. Partners are selected based on relevance to your organization's priorities, expertise in their domains, their ability to discuss ecosystem trade-offs, and their commitment to confidentiality.
+              </p>
             </div>
-            <p className="text-center text-sm text-foreground/50 mt-6">
-              Technology partner logos and perspectives to be announced
-            </p>
+
+            {/* Partner Categories */}
+            <div className="space-y-6">
+              <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Areas of Partnership</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  { title: "Cloud & Infrastructure", description: "Cloud providers and infrastructure platforms" },
+                  { title: "AI & Machine Learning", description: "AI platforms and ML operations" },
+                  { title: "DevOps & Continuous Delivery", description: "CI/CD platforms and automation" },
+                  { title: "Platform & Architecture", description: "Platform engineering and microservices" },
+                  { title: "Security & Compliance", description: "Security and governance solutions" },
+                  { title: "Data & Analytics", description: "Data platforms and analytics" },
+                ].map((category, index) => (
+                  <div key={index} className="bg-white rounded-lg border border-border/30 p-6">
+                    <h4 className="font-semibold text-foreground mb-2">{category.title}</h4>
+                    <p className="text-foreground/70 text-sm">{category.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* View all partners CTA */}
+            <div className="text-center">
+              <Button
+                asChild
+                variant="outline"
+                className="border-border hover:bg-white"
+              >
+                <Link to="/partners">View All Technology Partners</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
