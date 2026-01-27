@@ -188,14 +188,6 @@ export default function Index() {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Technology partners</h2>
 
           <div className="max-w-4xl mx-auto space-y-12">
-            {/* Partner Philosophy */}
-            <div className="space-y-6 bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
-              <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Our Partner Approach</h3>
-              <p className="text-lg text-foreground/70 leading-relaxed">
-                The Executive Briefing Council is not a vendor showcase. Instead, we partner with technology leaders across the industry to support informed, strategic dialogue. Partners are selected based on relevance to your organization's priorities, expertise in their domains, their ability to discuss ecosystem trade-offs, and their commitment to confidentiality.
-              </p>
-            </div>
-
             {/* Partner Categories */}
             <div className="space-y-6">
               <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Areas of Partnership</h3>
