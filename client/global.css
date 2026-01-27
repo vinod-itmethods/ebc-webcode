@@ -46,6 +46,9 @@
     --color-indigo: 250 70% 50%;
     --color-indigo-foreground: 0 0% 100%;
 
+    --color-amber: 40 95% 50%;
+    --color-amber-foreground: 0 0% 0%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
