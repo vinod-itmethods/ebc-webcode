@@ -10,15 +10,11 @@ export default function Index() {
       <Header />
 
       {/* HERO SECTION */}
-      <section className="relative py-24 lg:py-40 overflow-hidden bg-gradient-to-br from-[hsl(48_88%_82%)] via-[hsl(45_75%_76%)] to-[hsl(215_25%_92%)]">
-        {/* Prominent radial gradient for visual impact */}
-        <div className="absolute inset-0">
-          {/* Main radial warm gold gradient - strong and visible */}
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1000px] h-[800px] bg-gradient-to-b from-[hsl(42_82%_58%/40%)] via-[hsl(45_75%_68%/20%)] to-transparent rounded-full blur-3xl -z-10"></div>
-
-          {/* Secondary cool accent for balance */}
-          <div className="absolute top-1/4 right-0 w-[750px] h-[650px] bg-gradient-to-bl from-[hsl(215_30%_88%/28%)] to-transparent rounded-full blur-3xl -z-10"></div>
-        </div>
+      <section className="relative py-24 lg:py-40 overflow-hidden bg-white">
+        {/* Subtle radial gradient - soft glow behind headline */}
+        <div className="absolute inset-0 -z-10" style={{
+          backgroundImage: 'radial-gradient(circle at center top, #fff7d6 0%, rgba(249, 231, 168, 0.45) 35%, rgba(255, 255, 255, 0) 70%)'
+        }}></div>
 
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-8">
