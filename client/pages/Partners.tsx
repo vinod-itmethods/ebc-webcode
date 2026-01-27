@@ -40,11 +40,11 @@ export default function Partners() {
                 className="group relative flex flex-col items-center cursor-pointer"
               >
                 {/* Logo */}
-                <div className="flex items-center justify-center mb-3" style={{ width: "140px", height: "60px" }}>
+                <div className="flex items-center justify-center mb-3" style={{ width: "120px", height: "50px" }}>
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    style={{ maxWidth: "140px", maxHeight: "50px", objectFit: "contain" }}
+                    style={{ width: "100%", height: "100%", objectFit: "contain" }}
                     onError={(e) => {
                       const el = e.currentTarget;
                       el.style.display = "none";
