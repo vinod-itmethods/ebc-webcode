@@ -12,12 +12,12 @@ export default function Index() {
       {/* HERO SECTION */}
       <section className="relative py-24 lg:py-40 overflow-hidden" style={{
         background: `
-          linear-gradient(135deg, transparent 0%, rgba(248, 231, 168, 0.15) 60%, rgba(232, 237, 243, 0.12) 100%),
+          linear-gradient(135deg, transparent 0%, rgba(248, 231, 168, 0.25) 60%, rgba(232, 237, 243, 0.22) 100%),
           linear-gradient(180deg, #ffffff 0%, #f9fafb 100%)
         `
       }}>
         {/* Accent glow positioned bottom-right, away from text */}
-        <div className="absolute -bottom-32 -right-40 w-96 h-96 rounded-full opacity-20" style={{
+        <div className="absolute -bottom-32 -right-40 w-96 h-96 rounded-full opacity-35" style={{
           background: 'radial-gradient(circle, #f9e7a8 0%, transparent 70%)'
         }}></div>
 
