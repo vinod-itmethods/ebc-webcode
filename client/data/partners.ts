@@ -39,7 +39,7 @@ export const partners: Partner[] = [
   {
     id: "circleci",
     name: "CircleCI",
-    logo: "https://www.circleci.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fa5253f5536e4471b9b097466eef549d2?format=webp&width=800&height=1200",
     tagline: "CI/CD platform for modern development teams.",
     description: "CircleCI automates the build, test, and deployment pipeline, enabling teams to ship code faster and more reliably.",
     topics: ["Continuous integration", "Automated testing", "Deployment pipelines", "Developer productivity"],
