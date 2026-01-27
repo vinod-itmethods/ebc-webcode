@@ -126,7 +126,7 @@ export default function Index() {
             {/* Step 1 */}
             <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/30 last:border-b-0">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-semibold">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-semibold" style={{background: 'linear-gradient(135deg, hsl(45 82% 52%), hsl(38 92% 50%))'}}>
                   1
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function Index() {
             {/* Step 2 */}
             <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/30 last:border-b-0">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-semibold">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-semibold" style={{background: 'linear-gradient(135deg, hsl(45 82% 52%), hsl(38 92% 50%))'}}>
                   2
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function Index() {
             {/* Step 3 */}
             <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/30 last:border-b-0">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-semibold">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-semibold" style={{background: 'linear-gradient(135deg, hsl(45 82% 52%), hsl(38 92% 50%))'}}>
                   3
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function Index() {
             {/* Step 4 */}
             <div className="flex gap-6 items-start">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-semibold">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-semibold" style={{background: 'linear-gradient(135deg, hsl(45 82% 52%), hsl(38 92% 50%))'}}>
                   4
                 </div>
               </div>
