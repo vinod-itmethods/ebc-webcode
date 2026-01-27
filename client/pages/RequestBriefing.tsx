@@ -477,7 +477,7 @@ function Step5({ goals, onUpdate }: { goals: string; onUpdate: (value: string) =
         value={goals}
         onChange={(e) => onUpdate(e.target.value)}
         placeholder="For example, alignment across leadership, understanding trade-offs, validating assumptions, or exploring options."
-        className="w-full px-4 py-4 border border-border/30 rounded-lg focus:outline-none focus:border-primary min-h-48 resize-none"
+        className="w-full px-4 py-4 border border-border/15 rounded-lg focus:outline-none focus:border-primary min-h-48 resize-none"
       ></textarea>
 
       <p className="text-xs text-foreground/50">This is an important part of planning your briefing. Share as much context as helpful.</p>
