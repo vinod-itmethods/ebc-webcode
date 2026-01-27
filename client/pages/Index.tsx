@@ -12,8 +12,8 @@ export default function Index() {
       {/* HERO SECTION */}
       <section className="relative py-24 lg:py-40 overflow-hidden bg-white">
         {/* Subtle radial gradient - soft glow behind headline */}
-        <div className="absolute inset-0 -z-10" style={{
-          backgroundImage: 'radial-gradient(circle at center top, #fff7d6 0%, rgba(249, 231, 168, 0.45) 35%, rgba(255, 255, 255, 0) 70%)'
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'radial-gradient(circle at center top, #fff7d6 0%, rgba(249, 231, 168, 0.65) 30%, rgba(249, 231, 168, 0.25) 50%, transparent 70%)'
         }}></div>
 
         <div className="container max-w-4xl mx-auto px-4">
