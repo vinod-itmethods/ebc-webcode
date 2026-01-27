@@ -56,7 +56,7 @@ export default function Header() {
         {/* CTA Button */}
         <Button
           asChild
-          className="ml-auto bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg"
+          className="ml-auto font-medium rounded-lg"
         >
           <Link to="/request-briefing">Request a briefing</Link>
         </Button>
