@@ -36,13 +36,12 @@ export default function Index() {
               <Button
                 asChild
                 size="lg"
-                variant="default"
                 className="font-semibold px-8 rounded-lg"
               >
                 <Link to="/request-briefing">Request a briefing</Link>
               </Button>
               <Button
-                variant="outline"
+                variant="secondary-outline"
                 size="lg"
                 className="font-semibold"
                 asChild
