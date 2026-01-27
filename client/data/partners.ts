@@ -57,7 +57,7 @@ export const partners: Partner[] = [
   {
     id: "coder",
     name: "Coder",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F322daae0f0fa4feca9b7f28be5f83a8f?format=webp&width=800&height=1200",
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' overflow='visible' fill='none' viewBox='0.87 0.68 43.35 20'%3E%3Cpath d='M13.323 0.679688C20.534 0.679688 24.5771 4.05833 24.7136 9.03125L18.4861 9.21973C18.322 6.46321 15.8495 4.65298 13.323 4.70703C9.85421 4.77471 7.28687 7.0582 7.28687 10.6797C7.28692 14.3011 9.85425 16.5438 13.323 16.5439C15.8496 16.5439 18.2676 14.8143 18.5408 12.0576L24.7683 12.1934C24.6043 17.2472 20.3153 20.6797 13.323 20.6797C6.3307 20.6796 0.867989 16.7606 0.86792 10.6797C0.86792 4.57172 6.11215 0.679781 13.323 0.679688Z' fill='%23000'/%3E%3Cpath id='cursor' d='M44.2228 1.21875V20.1377H27.8341V1.21875H44.2228Z' fill='%23000'/%3E%3C/svg%3E",
     tagline: "Developer workspaces in the cloud.",
     description: "Coder enables remote development environments, allowing developers to code from anywhere with consistent, powerful workspaces.",
     topics: ["Remote development", "Developer experience", "Infrastructure consistency", "Team collaboration"],
@@ -201,7 +201,7 @@ export const partners: Partner[] = [
   {
     id: "ollama",
     name: "Ollama",
-    logo: "https://ollama.ai/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F86d5c109fa0c4c5ea6478da649f77cf0?format=webp&width=800&height=1200",
     tagline: "Run large language models locally.",
     description: "Ollama simplifies running open-source language models locally, enabling privacy-first AI applications.",
     topics: ["Local LLM deployment", "Privacy-first AI", "Open models", "Edge computing"],
@@ -210,7 +210,7 @@ export const partners: Partner[] = [
   {
     id: "pagerduty",
     name: "PagerDuty",
-    logo: "https://www.pagerduty.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F196af1f748244a0eb4451e0412c67db4?format=webp&width=800&height=1200",
     tagline: "Incident response and on-call management.",
     description: "PagerDuty helps teams respond to incidents faster with intelligent alerting, on-call scheduling, and automation.",
     topics: ["Incident management", "On-call scheduling", "Alert management", "Response automation"],
@@ -219,7 +219,7 @@ export const partners: Partner[] = [
   {
     id: "plane",
     name: "Plane",
-    logo: "https://plane.so/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F66b0d391045f4f8c950cb3eb159a6bf4?format=webp&width=800&height=1200",
     tagline: "Open-source project management for engineers.",
     description: "Plane is an open-source project management tool designed specifically for engineering teams and agile workflows.",
     topics: ["Project management", "Issue tracking", "Agile workflows", "Team collaboration"],
@@ -228,7 +228,7 @@ export const partners: Partner[] = [
   {
     id: "poolside",
     name: "Poolside",
-    logo: "https://poolside.ai/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Ffb48417d7d644662a7d5876393155da9?format=webp&width=800&height=1200",
     tagline: "AI-powered engineering assistance.",
     description: "Poolside provides AI-powered tools for engineering workflows, focused on code generation and problem-solving.",
     topics: ["AI engineering", "Code generation", "Problem solving", "Development tools"],
@@ -237,7 +237,7 @@ export const partners: Partner[] = [
   {
     id: "postman",
     name: "Postman",
-    logo: "https://www.postman.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F87f35b9df1af46238192771f04289efc?format=webp&width=800&height=1200",
     tagline: "API development and testing platform.",
     description: "Postman is the leading platform for API development, testing, and documentation, used by millions of developers.",
     topics: ["API testing", "API documentation", "API mocking", "Collaboration"],
@@ -246,7 +246,7 @@ export const partners: Partner[] = [
   {
     id: "rootly",
     name: "Rootly",
-    logo: "https://rootly.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F493c8e5b3d874d888e19c4eb70346a56?format=webp&width=800&height=1200",
     tagline: "Incident collaboration and management.",
     description: "Rootly provides incident management and collaboration tools designed for modern DevOps teams.",
     topics: ["Incident management", "Team collaboration", "Post-incident reviews", "Automation"],
@@ -255,7 +255,7 @@ export const partners: Partner[] = [
   {
     id: "scaleai",
     name: "Scale AI",
-    logo: "https://scale.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fa9769b612d174bdb8be9997afa3b63f4?format=webp&width=800&height=1200",
     tagline: "Data labeling and preparation for AI.",
     description: "Scale AI provides data labeling, annotation, and preparation services to power machine learning systems at scale.",
     topics: ["Data labeling", "Training data", "Data quality", "ML data pipelines"],
@@ -264,7 +264,7 @@ export const partners: Partner[] = [
   {
     id: "securiti",
     name: "Securiti",
-    logo: "https://securiti.ai/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F9907546d6df943358319141ad989be9c?format=webp&width=800&height=1200",
     tagline: "Data security and privacy governance.",
     description: "Securiti provides data security and privacy governance solutions with AI-powered discovery and compliance automation.",
     topics: ["Data governance", "Privacy compliance", "Security controls", "Risk management"],
@@ -273,7 +273,7 @@ export const partners: Partner[] = [
   {
     id: "snyk",
     name: "Snyk",
-    logo: "https://snyk.io/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fe89f010e7b92458ba25392d9aa520740?format=webp&width=800&height=1200",
     tagline: "Developer security and code scanning.",
     description: "Snyk helps developers find and fix vulnerabilities in code, dependencies, and containers, integrated into workflows.",
     topics: ["Vulnerability scanning", "Dependency management", "Code security", "Compliance"],
@@ -282,7 +282,7 @@ export const partners: Partner[] = [
   {
     id: "sonarsource",
     name: "SonarSource",
-    logo: "https://www.sonarsource.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F3324ba3d739e4cb78141d8338d1cec8d?format=webp&width=800&height=1200",
     tagline: "Code quality and security platform.",
     description: "SonarSource provides code quality analysis and security scanning integrated into development workflows.",
     topics: ["Code quality", "Technical debt", "Security scanning", "Standards compliance"],
@@ -291,7 +291,7 @@ export const partners: Partner[] = [
   {
     id: "sonatype",
     name: "Sonatype",
-    logo: "https://www.sonatype.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fcb13053a365749babcd6fa6c867b881c?format=webp&width=800&height=1200",
     tagline: "Software supply chain security.",
     description: "Sonatype secures software supply chains by managing open-source components and detecting vulnerabilities.",
     topics: ["Component management", "Supply chain security", "Vulnerability detection", "License compliance"],
@@ -300,7 +300,7 @@ export const partners: Partner[] = [
   {
     id: "spacelift",
     name: "Spacelift",
-    logo: "https://spacelift.io/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb71bb59bf80c40afa6f41b0f25f2ebdf?format=webp&width=800&height=1200",
     tagline: "Infrastructure as Code management platform.",
     description: "Spacelift provides a management platform for Infrastructure as Code, with policy enforcement and governance.",
     topics: ["IaC management", "Policy enforcement", "Infrastructure governance", "Multi-cloud"],
@@ -309,7 +309,7 @@ export const partners: Partner[] = [
   {
     id: "tailscale",
     name: "Tailscale",
-    logo: "https://tailscale.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fdad9387fa81d4e51beee01707ceadd95?format=webp&width=800&height=1200",
     tagline: "Secure mesh VPN for teams.",
     description: "Tailscale simplifies secure network access by creating a private mesh network for teams and infrastructure.",
     topics: ["Network security", "VPN", "Zero trust", "Remote access"],
@@ -318,7 +318,7 @@ export const partners: Partner[] = [
   {
     id: "temporal",
     name: "Temporal",
-    logo: "https://temporal.io/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fbda32f2837774d338d23afe28b696055?format=webp&width=800&height=1200",
     tagline: "Microservices orchestration platform.",
     description: "Temporal provides a reliable, scalable platform for orchestrating complex microservices workflows and processes.",
     topics: ["Workflow orchestration", "Microservices", "Distributed systems", "Reliability"],
@@ -327,7 +327,7 @@ export const partners: Partner[] = [
   {
     id: "wandb",
     name: "Weights & Biases",
-    logo: "https://assets.website-files.com/60e6a7f7f0f6a7f7f7f7f7/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F2767a4b17e484128bd3496a0ede0fbba?format=webp&width=800&height=1200",
     tagline: "ML experiment tracking and model management.",
     description: "Weights & Biases provides tools for tracking ML experiments, managing models, and collaborating on ML projects.",
     topics: ["Experiment tracking", "Model management", "ML collaboration", "Reproducibility"],
