@@ -30,7 +30,7 @@ export const partners: Partner[] = [
   {
     id: "baseten",
     name: "Baseten",
-    logo: "https://baseten.co/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F66528ee2da6f42ab9b3278a985cae4d5?format=webp&width=800&height=1200",
     tagline: "Serverless inference platform for machine learning.",
     description: "Baseten simplifies deploying, serving, and scaling machine learning models with a serverless infrastructure.",
     topics: ["ML model deployment", "Inference optimization", "Scaling ML workloads", "MLOps automation"],
