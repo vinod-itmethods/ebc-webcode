@@ -39,7 +39,7 @@ export default function Header() {
                 : "text-foreground/60 hover:text-foreground"
             }`}
           >
-            Technology Partners
+            Technology partners
           </Link>
           <Link
             to="/faq"
@@ -58,7 +58,7 @@ export default function Header() {
           asChild
           className="ml-auto bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg"
         >
-          <Link to="/request-briefing">Request a Briefing</Link>
+          <Link to="/request-briefing">Request a briefing</Link>
         </Button>
       </div>
     </header>
