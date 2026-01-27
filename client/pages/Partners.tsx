@@ -37,7 +37,7 @@ export default function Partners() {
               <button
                 key={partner.id}
                 onClick={() => setSelectedPartner(partner)}
-                className="group relative bg-white border border-border/30 rounded-lg p-6 hover:border-primary/50 transition-all duration-200 hover:shadow-lg cursor-pointer hover:-translate-y-1"
+                className="group relative bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 cursor-pointer"
               >
                 {/* Logo */}
                 <div className="flex items-center justify-center h-16 mb-4 bg-slate-50 rounded-md group-hover:bg-blue-50 transition-colors">
