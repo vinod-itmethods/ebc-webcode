@@ -53,12 +53,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* WHAT THIS IS SECTION */}
+      {/* OUR PROGRAM SECTION */}
       <section id="what" className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-4xl mx-auto px-4">
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">What this is</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our program</h2>
               <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
                 <p>
                   This Executive Briefing Council is a structured forum where enterprise technology and business leaders engage in focused discussions around strategic technology decisions.
