@@ -217,7 +217,7 @@ export default function RequestBriefing() {
             )}
 
             {/* Navigation Buttons */}
-            <div className="flex items-center justify-between gap-4 mt-10 pt-8 border-t border-border/30">
+            <div className="flex items-center justify-between gap-4 mt-10 pt-8 border-t border-border/10">
               <button
                 onClick={handleBack}
                 disabled={currentStep === 1}
