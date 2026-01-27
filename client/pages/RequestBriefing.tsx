@@ -433,7 +433,7 @@ function Step4({
           <select
             value={location}
             onChange={(e) => onUpdate("location", e.target.value)}
-            className="w-full px-4 py-3 border border-border/30 rounded-lg focus:outline-none focus:border-primary bg-white"
+            className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary bg-white"
           >
             <option value="">Select a location...</option>
             {locations.map((loc) => (
