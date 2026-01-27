@@ -268,16 +268,84 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Locations Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-            {['New York', 'San Francisco', 'London', 'Toronto', 'Austin'].map((location) => (
-              <div key={location} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+          {/* Locations Grid with Images */}
+          <div className="grid lg:grid-cols-12 gap-6 mb-12 auto-rows-min">
+            {/* New York - Large Featured */}
+            <div key="ny" className="lg:col-span-5 lg:row-span-2">
+              <div className="bg-white rounded-2xl overflow-hidden h-full hover:shadow-lg transition-shadow">
+                <div className="relative h-80 lg:h-[420px]">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F534158940aae43938c6920e095fa6fec?format=webp&width=600&height=500"
+                    alt="New York - Tower Bridge"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 flex flex-col justify-center">
+                  <div className="flex justify-center mb-3">
+                    <MapPin className="w-5 h-5 icon-secondary" strokeWidth={1.5} />
+                  </div>
+                  <p className="font-semibold text-foreground text-center">New York</p>
+                </div>
+              </div>
+            </div>
+
+            {/* San Francisco */}
+            <div key="sf" className="lg:col-span-3">
+              <div className="bg-white rounded-2xl overflow-hidden h-full hover:shadow-lg transition-shadow">
+                <div className="relative h-56 lg:h-80">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F79e323ce46c840da98aeee07237192ab?format=webp&width=400&height=400"
+                    alt="San Francisco - Beach and Mountain"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <div className="flex justify-center mb-2">
+                    <MapPin className="w-4 h-4 icon-secondary" strokeWidth={1.5} />
+                  </div>
+                  <p className="font-semibold text-foreground text-sm">San Francisco</p>
+                </div>
+              </div>
+            </div>
+
+            {/* London */}
+            <div key="london" className="lg:col-span-4">
+              <div className="bg-white rounded-2xl overflow-hidden h-full hover:shadow-lg transition-shadow">
+                <div className="relative h-56 lg:h-80">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F534158940aae43938c6920e095fa6fec?format=webp&width=400&height=400"
+                    alt="London - Tower Bridge"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <div className="flex justify-center mb-2">
+                    <MapPin className="w-4 h-4 icon-secondary" strokeWidth={1.5} />
+                  </div>
+                  <p className="font-semibold text-foreground text-sm">London</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Toronto */}
+            <div key="toronto" className="lg:col-span-4">
+              <div className="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow flex flex-col justify-center h-full">
                 <div className="flex justify-center mb-3">
                   <MapPin className="w-5 h-5 icon-secondary" strokeWidth={1.5} />
                 </div>
-                <p className="font-semibold text-foreground">{location}</p>
+                <p className="font-semibold text-foreground">Toronto</p>
               </div>
-            ))}
+            </div>
+
+            {/* Austin */}
+            <div key="austin" className="lg:col-span-4">
+              <div className="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow flex flex-col justify-center h-full">
+                <div className="flex justify-center mb-3">
+                  <MapPin className="w-5 h-5 icon-secondary" strokeWidth={1.5} />
+                </div>
+                <p className="font-semibold text-foreground">Austin</p>
+              </div>
+            </div>
           </div>
 
           {/* CTA */}
