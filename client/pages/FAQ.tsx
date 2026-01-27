@@ -59,7 +59,7 @@ export default function FAQ() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-24 overflow-hidden border-b border-border/30">
+      <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-blue-50/40">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50"></div>
         </div>
