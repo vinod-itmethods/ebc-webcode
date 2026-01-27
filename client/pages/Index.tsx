@@ -90,8 +90,8 @@ export default function Index() {
 
             {/* Active Decision Makers */}
             <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 icon-neutral-bg">
-                <CheckCircle2 className="w-6 h-6 icon-neutral" strokeWidth={1.5} />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: 'rgb(168, 85, 247, 0.12)' }}>
+                <CheckCircle2 className="w-6 h-6" style={{ color: 'rgb(168, 85, 247)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Active decision makers</h3>
               <p className="text-foreground/70 leading-relaxed">
