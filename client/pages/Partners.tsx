@@ -163,19 +163,6 @@ export default function Partners() {
         </div>
       )}
 
-      {/* Image Accent */}
-      <section className="py-12 lg:py-16 px-4">
-        <div className="container max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F02e85313131c4c76bb1e29d1ea89c0a2?format=webp&width=1000&height=500"
-              alt="Technology leaders in strategic partnership discussion"
-              className="w-full object-cover h-80 lg:h-96"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-teal-50/40 via-blue-50/30 to-white">
         <div className="container max-w-2xl mx-auto px-4 text-center space-y-4">
