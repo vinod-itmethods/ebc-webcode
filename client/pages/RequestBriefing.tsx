@@ -352,13 +352,13 @@ function Step2({
         {options.map((option) => (
           <label
             key={option}
-            className="flex items-center gap-3 p-4 border border-border/30 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer"
+            className="flex items-center gap-3 p-4 border border-border/15 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer"
           >
             <input
               type="checkbox"
               checked={decisionContext.includes(option)}
               onChange={() => onToggle(option)}
-              className="w-5 h-5 rounded border-border"
+              className="w-5 h-5 rounded border-border/30"
             />
             <span className="font-medium text-foreground">{option}</span>
           </label>
@@ -395,13 +395,13 @@ function Step3({
         {options.map((option) => (
           <label
             key={option}
-            className="flex items-center gap-3 p-4 border border-border/30 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer"
+            className="flex items-center gap-3 p-4 border border-border/15 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer"
           >
             <input
               type="checkbox"
               checked={perspectives.includes(option)}
               onChange={() => onToggle(option)}
-              className="w-5 h-5 rounded border-border"
+              className="w-5 h-5 rounded border-border/30"
             />
             <span className="font-medium text-foreground">{option}</span>
           </label>
