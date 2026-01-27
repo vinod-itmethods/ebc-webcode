@@ -13,10 +13,9 @@ export default function Index() {
       <section className="relative py-20 lg:py-28 overflow-hidden">
         {/* Vibrant gradient background */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-400/10 to-cyan-400/10"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-blue-400/20 rounded-full blur-3xl -z-10"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-400/30 to-blue-400/20 rounded-full blur-3xl -z-10"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/10 via-cyan-400/5 to-blue-400/10 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-blue-400/8 to-cyan-400/8"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-blue-400/15 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-400/20 to-blue-400/15 rounded-full blur-3xl -z-10"></div>
         </div>
 
         <div className="container max-w-4xl mx-auto px-4">
