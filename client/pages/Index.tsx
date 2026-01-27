@@ -193,7 +193,7 @@ export default function Index() {
 
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Partner Philosophy */}
-            <div className="space-y-6 bg-white rounded-lg border border-border/30 p-8">
+            <div className="space-y-6 bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
               <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Our Partner Approach</h3>
               <p className="text-lg text-foreground/70 leading-relaxed">
                 The Executive Briefing Council is not a vendor showcase. Instead, we partner with technology leaders across the industry to support informed, strategic dialogue. Partners are selected based on relevance to your organization's priorities, expertise in their domains, their ability to discuss ecosystem trade-offs, and their commitment to confidentiality.
@@ -212,7 +212,7 @@ export default function Index() {
                   { title: "Security & Compliance", description: "Security and governance solutions" },
                   { title: "Data & Analytics", description: "Data platforms and analytics" },
                 ].map((category, index) => (
-                  <div key={index} className="bg-white rounded-lg border border-border/30 p-6">
+                  <div key={index} className="bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
                     <h4 className="font-semibold text-foreground mb-2">{category.title}</h4>
                     <p className="text-foreground/70 text-sm">{category.description}</p>
                   </div>
