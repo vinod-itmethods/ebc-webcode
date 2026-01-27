@@ -173,28 +173,28 @@
   }
 
   /* Icon with background */
-  .icon-cool {
-    @apply text-[hsl(var(--icon-cool))];
+  .icon-neutral {
+    @apply text-[hsl(var(--icon-neutral))];
   }
 
-  .icon-cool-bg {
-    @apply bg-[hsl(var(--icon-cool-bg)/10%)];
+  .icon-neutral-bg {
+    @apply bg-[hsl(var(--icon-neutral-bg)/10%)];
   }
 
-  .icon-growth {
-    @apply text-[hsl(var(--icon-growth))];
+  .icon-secondary {
+    @apply text-[hsl(var(--icon-secondary))];
   }
 
-  .icon-growth-bg {
-    @apply bg-[hsl(var(--icon-growth-bg)/10%)];
+  .icon-secondary-bg {
+    @apply bg-[hsl(var(--icon-secondary-bg)/10%)];
   }
 
-  .icon-leadership {
-    @apply text-[hsl(var(--icon-leadership))];
+  .icon-muted {
+    @apply text-[hsl(var(--icon-muted))];
   }
 
-  .icon-leadership-bg {
-    @apply bg-[hsl(var(--icon-leadership-bg)/10%)];
+  .icon-muted-bg {
+    @apply bg-[hsl(var(--icon-muted-bg)/10%)];
   }
 }
 
