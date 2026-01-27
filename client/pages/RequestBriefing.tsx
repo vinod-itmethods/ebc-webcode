@@ -77,10 +77,8 @@ export default function RequestBriefing() {
       <div className="min-h-screen bg-white">
         <Header />
 
-        <section className="relative py-20 lg:py-28 overflow-hidden flex-grow flex items-center">
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50"></div>
-          </div>
+        <section className="relative py-20 lg:py-28 overflow-hidden flex-grow flex items-center bg-gradient-to-br from-white via-blue-50/30 to-purple-50/20">
+          <div className="absolute inset-0 -z-10"></div>
 
           <div className="container max-w-2xl mx-auto px-4">
             <div className="bg-white rounded-lg border border-border/30 p-8 lg:p-12 space-y-6 text-center">
@@ -129,7 +127,7 @@ export default function RequestBriefing() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-12 lg:py-16 overflow-hidden border-b border-border/30">
+      <section className="relative py-12 lg:py-16 overflow-hidden bg-gradient-to-b from-white to-blue-50/40">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50"></div>
         </div>
