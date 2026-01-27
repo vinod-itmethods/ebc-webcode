@@ -156,8 +156,11 @@ export default function RequestBriefing() {
             </div>
             <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
               <div
-                className="h-full bg-primary transition-all duration-300"
-                style={{ width: `${(currentStep / STEPS.length) * 100}%` }}
+                className="h-full transition-all duration-300"
+                style={{
+                  width: `${(currentStep / STEPS.length) * 100}%`,
+                  background: 'linear-gradient(90deg, hsl(45 82% 52%), hsl(38 92% 50%))'
+                }}
               ></div>
             </div>
           </div>
