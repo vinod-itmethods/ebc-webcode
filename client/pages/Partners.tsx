@@ -84,7 +84,7 @@ export default function Partners() {
             {/* Modal Header */}
             <div className="sticky top-0 bg-white border-b border-border/10 p-6 flex items-start justify-between">
               <div className="flex items-start gap-4">
-                <div className="h-16 w-16 bg-slate-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="h-16 w-16 rounded-lg flex items-center justify-center flex-shrink-0">
                   <img
                     src={selectedPartner.logo}
                     alt={selectedPartner.name}
