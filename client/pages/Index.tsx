@@ -260,7 +260,7 @@ export default function Index() {
           <div className="text-center">
             <Button
               asChild
-              variant="outline"
+              variant="secondary-outline"
               className="font-semibold"
             >
               <Link to="/request-briefing">Request a briefing in your city<ArrowRight className="ml-2 w-4 h-4" /></Link>
