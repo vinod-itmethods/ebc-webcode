@@ -147,7 +147,7 @@ export const partners: Partner[] = [
   {
     id: "langchain",
     name: "LangChain",
-    logo: "https://langchain.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F8df4ffc603e34efdbc40dcb3c4ba8f4e?format=webp&width=800&height=1200",
     tagline: "Framework for building LLM applications.",
     description: "LangChain provides a framework for developing applications powered by language models, with tools for memory, chains, and agents.",
     topics: ["LLM application development", "AI workflows", "Integration patterns", "Prompt management"],
@@ -156,7 +156,7 @@ export const partners: Partner[] = [
   {
     id: "launchdarkly",
     name: "LaunchDarkly",
-    logo: "https://www.launchdarkly.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F0c3b4d06bc774f1eb75b380b52c48aa5?format=webp&width=800&height=1200",
     tagline: "Feature management and experimentation platform.",
     description: "LaunchDarkly enables teams to manage feature releases safely with progressive rollout, targeting, and experimentation.",
     topics: ["Feature management", "Progressive deployment", "A/B testing", "Risk reduction"],
@@ -165,7 +165,7 @@ export const partners: Partner[] = [
   {
     id: "lyzr",
     name: "Lyzr",
-    logo: "https://lyzr.ai/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F338c5b3a1604475195c7a2f1c143d529?format=webp&width=800&height=1200",
     tagline: "Prompt-based AI application builder.",
     description: "Lyzr enables building AI applications through prompt engineering and low-code interfaces, designed for rapid prototyping.",
     topics: ["AI application development", "Prompt engineering", "No-code AI", "Rapid prototyping"],
@@ -174,7 +174,7 @@ export const partners: Partner[] = [
   {
     id: "mistralai",
     name: "Mistral AI",
-    logo: "https://mistral.ai/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F79718f526b1e4cc68797af2a1e1ca6e8?format=webp&width=800&height=1200",
     tagline: "Open and efficient language models.",
     description: "Mistral AI develops and releases efficient, high-performance language models designed for enterprise deployment.",
     topics: ["Language models", "Open-source AI", "Efficient models", "Enterprise deployment"],
@@ -183,7 +183,7 @@ export const partners: Partner[] = [
   {
     id: "n8n",
     name: "n8n",
-    logo: "https://n8n.io/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Feedef9c55a564a72aa103bd06d165b91?format=webp&width=800&height=1200",
     tagline: "Workflow automation platform.",
     description: "n8n is an open-source workflow automation tool for connecting APIs and services with visual workflows.",
     topics: ["Workflow automation", "API integration", "Process automation", "No-code workflows"],
@@ -192,7 +192,7 @@ export const partners: Partner[] = [
   {
     id: "openai",
     name: "OpenAI",
-    logo: "https://openai.com/logo.svg",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F299bbc86141742a58ca1d61d2424e7e9?format=webp&width=800&height=1200",
     tagline: "AI research and deployment platform.",
     description: "OpenAI develops and deploys advanced AI models, including GPT, with APIs for enterprise integration.",
     topics: ["Advanced AI models", "API access", "Enterprise deployment", "Responsible AI"],
