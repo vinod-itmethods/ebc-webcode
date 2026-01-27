@@ -75,7 +75,7 @@ export const partners: Partner[] = [
   {
     id: "cohere",
     name: "Cohere",
-    logo: "https://cohere.com/logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Cohere_logo.png/1280px-Cohere_logo.png",
     tagline: "Large language models for enterprise applications.",
     description: "Cohere provides enterprise-grade language models and APIs for building intelligent applications, with a focus on enterprise deployment.",
     topics: ["Language model APIs", "Enterprise AI", "NLP applications", "Responsible AI"],
