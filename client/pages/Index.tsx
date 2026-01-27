@@ -10,14 +10,17 @@ export default function Index() {
       <Header />
 
       {/* HERO SECTION */}
-      <section className="relative py-24 lg:py-40 overflow-hidden bg-white">
-        {/* Pronounced gradient background centered behind headline */}
-        <div className="absolute inset-0 -z-10">
-          {/* Main radial gradient centered on hero content */}
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-[hsl(45_82%_52%/12%)] via-[hsl(217_13%_46%/6%)] to-transparent rounded-full blur-3xl -z-10"></div>
+      <section className="relative py-24 lg:py-40 overflow-hidden">
+        {/* Clearly visible warm gradient background */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[hsl(45_82%_93%)] via-[hsl(45_70%_88%)] to-[hsl(217_13%_96%)]"></div>
 
-          {/* Subtle vertical gradient base */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/20 to-white"></div>
+        {/* Pronounced radial gradient for depth */}
+        <div className="absolute inset-0 -z-10">
+          {/* Main radial warm gold gradient centered on hero content */}
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[700px] bg-gradient-to-b from-[hsl(45_82%_68%/28%)] via-[hsl(45_75%_72%/15%)] to-transparent rounded-full blur-3xl -z-10"></div>
+
+          {/* Secondary cool accent for balance */}
+          <div className="absolute top-1/4 right-0 w-[600px] h-[500px] bg-gradient-to-bl from-[hsl(217_13%_92%/20%)] to-transparent rounded-full blur-3xl -z-10"></div>
         </div>
 
         <div className="container max-w-4xl mx-auto px-4">
