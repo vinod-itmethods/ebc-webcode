@@ -175,7 +175,6 @@ export default function Partners() {
           <Button
             asChild
             size="lg"
-            variant="indigo"
             className="font-semibold px-8 rounded-lg"
           >
             <Link to="/request-briefing">Request a briefing</Link>
