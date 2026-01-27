@@ -57,6 +57,12 @@
     --sidebar-border: 218 15% 88%;
 
     --sidebar-ring: 200 100% 53%;
+
+    /* Gradient colors for visual interest */
+    --gradient-blue: 222 100% 65%;
+    --gradient-purple: 280 85% 60%;
+    --gradient-teal: 180 85% 50%;
+    --gradient-cyan: 185 100% 55%;
   }
 
   .dark {
