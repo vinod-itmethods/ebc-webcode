@@ -138,7 +138,7 @@ export const partners: Partner[] = [
   {
     id: "kong",
     name: "Kong",
-    logo: "https://konghq.com/logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Kong_API_gateway_logo.png/1280px-Kong_API_gateway_logo.png",
     tagline: "API gateway and connectivity platform.",
     description: "Kong is an open-source and enterprise API gateway that enables secure, scalable API management.",
     topics: ["API management", "Microservices", "Security", "Performance optimization"],
