@@ -36,7 +36,8 @@ export default function Index() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-lg"
+                variant="default"
+                className="font-semibold px-8 rounded-lg"
               >
                 <Link to="/request-briefing">Request a briefing</Link>
               </Button>
