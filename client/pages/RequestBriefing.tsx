@@ -83,8 +83,8 @@ export default function RequestBriefing() {
           <div className="container max-w-2xl mx-auto px-4">
             <div className="bg-white rounded-lg p-8 lg:p-12 space-y-6 text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center icon-cool-bg">
-                  <CheckCircle2 className="w-8 h-8 icon-cool" strokeWidth={1.5} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center icon-neutral-bg">
+                  <CheckCircle2 className="w-8 h-8 icon-neutral" strokeWidth={1.5} />
                 </div>
               </div>
 
