@@ -51,6 +51,7 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="bg-white">
       {/* OUR PROGRAM SECTION */}
       <section id="what" className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-4xl mx-auto px-4">
@@ -290,6 +291,7 @@ export default function Index() {
           </Button>
         </div>
       </section>
+      </div>
 
       <Footer />
     </div>
