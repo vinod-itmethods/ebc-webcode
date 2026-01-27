@@ -135,22 +135,18 @@
     box-shadow: 0 4px 12px rgba(212, 172, 53, 0.2);
   }
 
-  /* Secondary Button - Cool Gradient */
+  /* Secondary Button - Gold Outline */
   .btn-secondary {
-    @apply text-[hsl(var(--button-secondary-text))];
-    background-image: linear-gradient(
-      to right,
-      hsl(var(--button-secondary-start)),
-      hsl(var(--button-secondary-end))
-    );
-    transition: filter 0.2s ease;
+    @apply border-2 text-[hsl(var(--button-secondary-text))] bg-transparent;
+    border-color: hsl(var(--button-secondary-start));
+    transition: background-color 0.2s ease;
   }
 
   .btn-secondary:hover:not(:disabled) {
-    filter: brightness(0.92);
+    @apply bg-[hsl(45_82%_52%/8%)];
   }
 
-  /* Secondary Button - Outline Option */
+  /* Secondary Button - Outline Option (Same as Secondary) */
   .btn-secondary-outline {
     @apply border-2 text-[hsl(var(--button-secondary-text))] bg-transparent;
     border-color: hsl(var(--button-secondary-start));
@@ -158,7 +154,7 @@
   }
 
   .btn-secondary-outline:hover:not(:disabled) {
-    @apply bg-[hsl(187_100%_55%/10%)];
+    @apply bg-[hsl(45_82%_52%/8%)];
   }
 
   /* Tertiary Button - Text Link */
