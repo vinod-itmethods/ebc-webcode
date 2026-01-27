@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Briefcase, Users, CheckCircle2, MapPin } from "lucide-react";
+import PartnerCarousel from "@/components/PartnerCarousel";
 
 export default function Index() {
   return (
