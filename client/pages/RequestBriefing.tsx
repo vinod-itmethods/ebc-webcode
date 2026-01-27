@@ -235,7 +235,7 @@ export default function RequestBriefing() {
                   <div
                     key={step.number}
                     className={`w-2 h-2 rounded-full transition-colors ${
-                      step.number <= currentStep ? "bg-primary" : "bg-slate-200"
+                      step.number <= currentStep ? "bg-[hsl(45_82%_52%)]" : "bg-slate-200"
                     }`}
                   ></div>
                 ))}
