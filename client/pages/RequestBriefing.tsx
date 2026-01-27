@@ -240,7 +240,8 @@ export default function RequestBriefing() {
 
               <Button
                 onClick={currentStep === 6 ? handleSubmit : handleNext}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg"
+                variant="default"
+                className="font-semibold rounded-lg"
               >
                 {currentStep === 6 ? "Request briefing" : "Continue"}
               </Button>
