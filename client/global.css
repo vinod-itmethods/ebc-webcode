@@ -118,6 +118,86 @@
   }
 }
 
+@layer components {
+  /* Primary Button - Warm Gradient */
+  .btn-primary {
+    @apply bg-gradient-to-r text-[hsl(var(--button-primary-text))];
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--button-primary-start)),
+      hsl(var(--button-primary-end))
+    );
+    transition: filter 0.2s ease;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    filter: brightness(0.92);
+    box-shadow: 0 4px 12px rgba(212, 172, 53, 0.2);
+  }
+
+  /* Secondary Button - Cool Gradient */
+  .btn-secondary {
+    @apply text-[hsl(var(--button-secondary-text))];
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--button-secondary-start)),
+      hsl(var(--button-secondary-end))
+    );
+    transition: filter 0.2s ease;
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    filter: brightness(0.92);
+  }
+
+  /* Secondary Button - Outline Option */
+  .btn-secondary-outline {
+    @apply border-2 text-[hsl(var(--button-secondary-text))] bg-transparent;
+    border-color: hsl(var(--button-secondary-start));
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-secondary-outline:hover:not(:disabled) {
+    @apply bg-[hsl(187_100%_55%/10%)];
+  }
+
+  /* Tertiary Button - Text Link */
+  .btn-tertiary {
+    @apply text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--text-muted))] no-underline;
+    transition: color 0.2s ease;
+  }
+
+  .btn-tertiary:hover:not(:disabled) {
+    text-decoration: underline;
+    @apply text-[hsl(var(--text-muted))];
+  }
+
+  /* Icon with background */
+  .icon-cool {
+    @apply text-[hsl(var(--icon-cool))];
+  }
+
+  .icon-cool-bg {
+    @apply bg-[hsl(var(--icon-cool-bg)/10%)];
+  }
+
+  .icon-growth {
+    @apply text-[hsl(var(--icon-growth))];
+  }
+
+  .icon-growth-bg {
+    @apply bg-[hsl(var(--icon-growth-bg)/10%)];
+  }
+
+  .icon-leadership {
+    @apply text-[hsl(var(--icon-leadership))];
+  }
+
+  .icon-leadership-bg {
+    @apply bg-[hsl(var(--icon-leadership-bg)/10%)];
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
