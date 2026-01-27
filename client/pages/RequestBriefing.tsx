@@ -81,7 +81,7 @@ export default function RequestBriefing() {
           <div className="absolute inset-0 -z-10"></div>
 
           <div className="container max-w-2xl mx-auto px-4">
-            <div className="bg-white rounded-lg border border-border/30 p-8 lg:p-12 space-y-6 text-center">
+            <div className="bg-white rounded-lg p-8 lg:p-12 space-y-6 text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center icon-cool-bg">
                   <CheckCircle2 className="w-8 h-8 icon-cool" strokeWidth={1.5} />
@@ -96,7 +96,7 @@ export default function RequestBriefing() {
                 </p>
               </div>
 
-              <div className="bg-slate-50 rounded-lg border border-border/30 p-6 space-y-3">
+              <div className="bg-slate-50/50 rounded-lg p-6 space-y-3">
                 <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">What happens next</p>
                 <ul className="space-y-2 text-left text-foreground/70">
                   <li className="flex gap-3">
