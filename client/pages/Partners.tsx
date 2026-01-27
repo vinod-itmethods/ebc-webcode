@@ -154,7 +154,8 @@ export default function Partners() {
             <div className="sticky bottom-0 border-t border-border/30 bg-white p-6">
               <Button
                 asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg"
+                variant="emerald"
+                className="w-full font-semibold rounded-lg"
               >
                 <Link to="/request-briefing">Include {selectedPartner.name}</Link>
               </Button>
