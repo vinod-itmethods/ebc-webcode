@@ -19,12 +19,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#what" className="text-foreground/60 hover:text-foreground transition-colors">
-                  What This Is
+                  What this is
                 </a>
               </li>
               <li>
                 <a href="#how" className="text-foreground/60 hover:text-foreground transition-colors">
-                  How It Works
+                  How it works
                 </a>
               </li>
               <li>
