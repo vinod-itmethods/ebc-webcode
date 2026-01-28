@@ -23,7 +23,7 @@ export const partners: Partner[] = [
   {
     id: "archera",
     name: "Archera",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fd665c21cba6c4d7f91bd7d280b517cf6?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fc047dfd9046c4ed789cbbf031a416d67?format=webp&width=800&height=1200",
     tagline: "Cloud cost optimization and financial management.",
     description: "Archera provides unified cloud cost management and optimization solutions, helping enterprises maximize their cloud investments.",
     topics: ["Cloud cost visibility", "Financial governance", "Multi-cloud optimization", "FinOps strategy"],
