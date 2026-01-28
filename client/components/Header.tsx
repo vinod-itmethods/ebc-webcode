@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Briefcase } from "lucide-react";
 
 export default function Header() {
   const location = useLocation();
