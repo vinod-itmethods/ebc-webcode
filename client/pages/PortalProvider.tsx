@@ -28,12 +28,18 @@ const REGISTRATION_STEPS = [
 
 export default function PortalProvider() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [activeTab, setActiveTab] = useState<"profile" | "registration" | "preferences">("profile");
   const [registrationStatus, setRegistrationStatus] = useState<RegistrationStep>("in-progress");
   const [completedSteps, setCompletedSteps] = useState<number[]>([0, 1]);
   const [selectedAreas, setSelectedAreas] = useState<string[]>(["AI & Machine Learning", "Cloud & Infrastructure"]);
   const [availableForBriefings, setAvailableForBriefings] = useState(true);
   const [provideExecutiveSponsor, setProvideExecutiveSponsor] = useState(true);
   const [regions, setRegions] = useState("North America");
+  const [selectedProviderId, setSelectedProviderId] = useState<string>(partners[0].id);
+  const [providerData, setProviderData] = useState<Partner>(partners[0]);
+  const [isSaved, setIsSaved] = useState(false);
+  const [topics, setTopics] = useState<string[]>(partners[0].topics || []);
+  const [additionalTopic, setAdditionalTopic] = useState("");
 
   const navigate = useNavigate();
   const userEmail = localStorage.getItem("userEmail") || "contact@company.com";
