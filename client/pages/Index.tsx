@@ -131,7 +131,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Pre-brief alignment</h3>
-                <p className="text-foreground/70 text-lg leading-relaxed">
+                <p className="text-foreground/80 text-lg leading-relaxed">
                   We work with participating organizations to understand priorities, challenges, and the decisions under consideration.
                 </p>
               </div>
@@ -146,7 +146,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Curated agenda</h3>
-                <p className="text-foreground/70 text-lg leading-relaxed">
+                <p className="text-foreground/80 text-lg leading-relaxed">
                   Each briefing is customized based on the specific topics and outcomes the executive team wants to explore.
                 </p>
               </div>
