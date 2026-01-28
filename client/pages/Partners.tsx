@@ -158,11 +158,11 @@ export default function Partners() {
                   </p>
 
                   {/* Speaker Bio Section */}
-                  <div className="flex gap-4 items-start">
+                  <div className="flex gap-3 items-center">
                     <img
                       src={selectedPartner.speakerImage}
                       alt={selectedPartner.speakerName}
-                      className="w-28 h-28 rounded-lg object-cover flex-shrink-0"
+                      className="w-24 h-24 rounded-lg object-cover flex-shrink-0"
                     />
                     <div className="flex-1 pt-0.5">
                       <div className="mb-2">
