@@ -70,6 +70,15 @@ export default function Index() {
                   Sessions are confidential, outcome-driven, and facilitated to support clear decision-making around topics such as AI adoption, DevOps transformation, platform modernization, and operating model evolution.
                 </p>
               </div>
+
+              {/* Program Image */}
+              <div className="mt-10 lg:mt-12">
+                <img
+                  src="https://images.pexels.com/photos/5439165/pexels-photo-5439165.jpeg"
+                  alt="Diverse executives and business leaders meeting and collaborating in a modern office"
+                  className="w-full rounded-2xl shadow-lg object-cover aspect-video"
+                />
+              </div>
             </div>
           </div>
         </div>
