@@ -12,13 +12,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-1 hover:opacity-80 transition-opacity mr-12">
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity mr-12">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F30e916b3d745426487a83b6ef010cb51?format=webp&width=800&height=1200"
+            src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb708ee6487aa42df951001ea08f04fa4?format=webp&width=800&height=1200"
             alt="EBC Logo"
-            className="w-16 h-16 flex-shrink-0"
+            className="h-10 flex-shrink-0"
           />
-          <span className="text-sm text-foreground hidden sm:inline whitespace-nowrap">| <span className="font-normal">Executive Briefing Council</span></span>
+          <span className="text-sm text-foreground hidden sm:inline whitespace-nowrap"><span className="font-normal">Executive Briefing Council</span></span>
         </Link>
 
         {/* Nav Links - Centered */}
