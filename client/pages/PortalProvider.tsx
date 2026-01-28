@@ -231,16 +231,6 @@ export default function PortalProvider() {
             >
               Program Registration
             </button>
-            <button
-              onClick={() => setActiveTab("preferences")}
-              className={`px-4 py-3 font-medium border-b-2 transition-colors ${
-                activeTab === "preferences"
-                  ? "border-[hsl(45_82%_52%)] text-[hsl(45_82%_52%)]"
-                  : "border-transparent text-foreground/60 hover:text-foreground"
-              }`}
-            >
-              Participation
-            </button>
           </div>
 
           {/* Profile Tab */}
