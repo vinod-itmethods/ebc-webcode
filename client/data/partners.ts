@@ -61,7 +61,7 @@ export const partners: Partner[] = [
   {
     id: "coder",
     name: "Coder",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fc65dbec7453241dd98e6a2c08597ed18?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F6ce019afb1854e1597418b995dec0c91?format=webp&width=800&height=1200",
     tagline: "Developer workspaces in the cloud.",
     description: "Coder enables remote development environments, allowing developers to code from anywhere with consistent, powerful workspaces.",
     topics: ["Remote development", "Developer experience", "Infrastructure consistency", "Team collaboration"],
