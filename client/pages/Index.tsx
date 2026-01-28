@@ -155,7 +155,7 @@ export default function Index() {
             {/* Step 3 */}
             <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/10 last:border-b-0">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-semibold bg-[hsl(217_13%_46%)]">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-semibold" style={{ background: "linear-gradient(135deg, rgba(59, 130, 246, 0.85) 0%, rgba(168, 85, 247, 0.80) 50%, rgba(20, 184, 166, 0.75) 100%)" }}>
                   3
                 </div>
               </div>
