@@ -14,7 +14,7 @@ export const partners: Partner[] = [
   {
     id: "anthropic",
     name: "Anthropic",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F3a71d2bfba5341b8acbec9707cc600bc?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F7614ab60b04c46c6ae102352055c09db?format=webp&width=800&height=1200",
     tagline: "Enterprise adoption of safe, governed AI in software development.",
     description: "Anthropic builds AI systems that are safe, beneficial, and understandable. Their work spans research, development, and deployment of advanced AI technologies.",
     topics: ["AI governance and risk controls", "Secure AI usage in development workflows", "Policy, compliance, and data boundaries", "Measuring value from AI adoption"],
