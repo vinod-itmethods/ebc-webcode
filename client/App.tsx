@@ -25,6 +25,8 @@ export default function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/request-briefing" element={<RequestBriefing />} />
+            <Route path="/partner-login" element={<PartnerLogin />} />
+            <Route path="/partner-dashboard" element={<PartnerDashboard />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
