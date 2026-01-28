@@ -58,7 +58,7 @@ export default function Index() {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our program</h2>
-              <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
+              <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
                 <p>
                   The Executive Briefing Council is a structured forum designed for enterprise technology and business leaders navigating high-impact decisions across AI, DevOps, cloud, and platform engineering.
                 </p>
