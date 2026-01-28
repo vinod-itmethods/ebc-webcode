@@ -13,6 +13,7 @@ export default function PortalLogin() {
   const [role, setRole] = useState<UserRole>("customer");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [selectedCompany, setSelectedCompany] = useState<string>(partners[0].id);
   const [error, setError] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
