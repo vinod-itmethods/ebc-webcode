@@ -73,19 +73,24 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Program Image - Above Testimonials */}
-      <section className="py-12 lg:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-xl lg:max-w-2xl">
-          <img
-            src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
-            alt="Multicultural business executives and professionals discussing strategies in a conference room"
-            className="w-full rounded-2xl shadow-lg object-cover aspect-video"
-          />
+      {/* TESTIMONIALS SECTION WITH IMAGE */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white via-slate-50/40 to-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Testimonials */}
+            <TestimonialCarousel />
+
+            {/* Image */}
+            <div className="hidden lg:block h-full">
+              <img
+                src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
+                alt="Multicultural business executives and professionals discussing strategies in a conference room"
+                className="w-full rounded-2xl shadow-lg object-cover aspect-square"
+              />
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* TESTIMONIALS SECTION */}
-      <TestimonialCarousel />
 
       {/* WHO IT'S FOR SECTION */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50/60 via-teal-50/30 to-white">
