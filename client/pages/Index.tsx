@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Briefcase, Users, CheckCircle2, MapPin, Cloud, Lightbulb, GitBranch, Shield, Database, Box, X } from "lucide-react";
 import PartnerCarousel from "@/components/PartnerCarousel";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { useState } from "react";
 
 export default function Index() {
