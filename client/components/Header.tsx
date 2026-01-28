@@ -52,7 +52,7 @@ export default function Header() {
             className={`hidden md:inline text-sm font-medium transition-colors ${
               isActive("/portal") || isActive("/partner-login") || isActive("/partner-dashboard") || location.pathname.startsWith("/portal")
                 ? "text-primary"
-                : "text-foreground/60 hover:text-foreground"
+                : "text-foreground/60 hover:text-primary"
             }`}
           >
             Login
