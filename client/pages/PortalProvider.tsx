@@ -54,6 +54,31 @@ export default function PortalProvider() {
     }
   }, [navigate]);
 
+  // Load provider profile data when provider selection changes
+  useEffect(() => {
+    const selected = partners.find(p => p.id === selectedProviderId);
+    if (selected) {
+      const savedData = localStorage.getItem(`partner_${selectedProviderId}`);
+      if (savedData) {
+        try {
+          const parsed = JSON.parse(savedData);
+          setProviderData(parsed);
+          setTopics(parsed.topics || []);
+          setAdditionalTopic(parsed.additionalTopic || "");
+        } catch {
+          setProviderData(selected);
+          setTopics(selected.topics || []);
+          setAdditionalTopic("");
+        }
+      } else {
+        setProviderData(selected);
+        setTopics(selected.topics || []);
+        setAdditionalTopic("");
+      }
+    }
+    setIsSaved(false);
+  }, [selectedProviderId]);
+
   const handleLogout = () => {
     localStorage.removeItem("portalAuthenticated");
     localStorage.removeItem("userRole");
