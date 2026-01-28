@@ -42,6 +42,16 @@ export default function Header() {
           >
             FAQ
           </Link>
+          <Link
+            to="/partner-login"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/partner-login") || isActive("/partner-dashboard")
+                ? "text-primary"
+                : "text-foreground/60 hover:text-foreground"
+            }`}
+          >
+            Partner Login
+          </Link>
         </nav>
 
         {/* CTA Button */}
