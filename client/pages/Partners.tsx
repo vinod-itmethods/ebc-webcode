@@ -40,7 +40,7 @@ export default function Partners() {
                 className="group relative flex flex-col items-center cursor-pointer bg-slate-50 rounded-lg p-6 hover:shadow-lg hover:bg-white transition-all"
               >
                 {/* Logo */}
-                <div className="flex items-center justify-center mb-3" style={{ width: "180px", height: "90px" }}>
+                <div className="flex items-center justify-center mb-3" style={{ width: "240px", height: "120px" }}>
                   <img
                     src={partner.logo}
                     alt={partner.name}
