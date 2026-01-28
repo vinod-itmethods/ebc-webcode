@@ -43,25 +43,27 @@ export default function Header() {
           >
             FAQ
           </Link>
+        </nav>
+
+        {/* Right Side - Vendor Login and CTA */}
+        <div className="flex items-center gap-4 ml-auto">
           <Link
             to="/partner-login"
-            className={`text-sm font-medium transition-colors ${
+            className={`hidden md:inline text-sm font-medium transition-colors ${
               isActive("/partner-login") || isActive("/partner-dashboard")
                 ? "text-primary"
                 : "text-foreground/60 hover:text-foreground"
             }`}
           >
-            Partner Login
+            Vendor Login
           </Link>
-        </nav>
-
-        {/* CTA Button */}
-        <Button
-          asChild
-          className="ml-auto font-medium rounded-lg"
-        >
-          <Link to="/request-briefing">Request a briefing</Link>
-        </Button>
+          <Button
+            asChild
+            className="font-medium rounded-lg"
+          >
+            <Link to="/request-briefing">Request a briefing</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );
