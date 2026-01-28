@@ -55,7 +55,7 @@ export default function Header() {
                 : "text-foreground/60 hover:text-foreground"
             }`}
           >
-            Vendor Login
+            Login
           </Link>
           <Button
             asChild
