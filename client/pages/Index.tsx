@@ -186,19 +186,22 @@ export default function Index() {
       {/* TECHNOLOGY PARTNERS SECTION */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-white via-emerald-50/30 to-cyan-50/40">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Technology partners</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Participating technology providers</h2>
 
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Partner Philosophy */}
-            <div className="text-lg text-foreground/70 leading-relaxed">
+            <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
               <p>
-                The Executive Briefing Council is not a vendor showcase. Instead, we partner with technology leaders across the industry to support informed, strategic dialogue. Partners are selected based on relevance to your organization's priorities, expertise in their domains, their ability to discuss ecosystem trade-offs, and their commitment to confidentiality.
+                The Executive Briefing Council is not a vendor showcase or a partner-led program. Instead, we provide access to a curated set of technology vendors across the industry, enabling informed, strategic dialogue.
+              </p>
+              <p>
+                Vendors are selected based on relevance to your organization's priorities, depth of domain expertise, ability to discuss ecosystem trade-offs, and commitment to confidentiality. Executive teams engage only with the vendors most aligned to their specific needs and objectives.
               </p>
             </div>
 
             {/* Partner Categories */}
             <div className="space-y-6">
-              <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Areas of Partnership</h3>
+              <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Areas of Coverage</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   { title: "Cloud & Infrastructure", description: "Cloud providers and infrastructure platforms", tint: "warm" },
