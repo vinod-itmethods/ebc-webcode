@@ -165,9 +165,11 @@ export default function Partners() {
                       className="w-28 h-28 rounded-lg object-cover flex-shrink-0"
                     />
                     <div className="flex-1 pt-0.5">
-                      <h4 className="font-bold text-foreground text-base mb-0.5">{selectedPartner.speakerName}</h4>
-                      <p className="text-xs text-primary font-semibold mb-2">{selectedPartner.speakerTitle}</p>
-                      <p className="text-xs text-foreground/70 leading-snug line-clamp-3">
+                      <div className="mb-2">
+                        <h4 className="font-bold text-foreground text-base">{selectedPartner.speakerName}</h4>
+                        <p className="text-xs text-primary font-semibold">{selectedPartner.speakerTitle}</p>
+                      </div>
+                      <p className="text-sm text-foreground/70 leading-relaxed">
                         {selectedPartner.speakerBio}
                       </p>
                     </div>
