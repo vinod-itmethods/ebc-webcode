@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { partners, type Partner } from "@/data/partners";
+import { partners as originalPartners, type Partner } from "@/data/partners";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 
 export default function Partners() {
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
+
+  // Load partners with any edited data from localStorage
+  const partners = useMemo(() => {
+    return originalPartners.map(partner => {
+      const savedData = localStorage.getItem(`partner_${partner.id}`);
+      if (savedData) {
+        try {
+          return JSON.parse(savedData) as Partner;
+        } catch {
+          return partner;
+        }
+      }
+      return partner;
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
