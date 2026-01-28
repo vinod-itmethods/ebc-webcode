@@ -59,7 +59,7 @@ export default function PartnerCarousel() {
           <div
             key={`${partner.id}-${index}`}
             className="flex-shrink-0 flex items-center justify-center"
-            style={{ width: "280px", height: "140px" }}
+            style={{ width: "240px", height: "120px" }}
           >
             <img
               src={partner.logo}
