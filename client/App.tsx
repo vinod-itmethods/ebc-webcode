@@ -9,6 +9,9 @@ import Partners from "./pages/Partners";
 import RequestBriefing from "./pages/RequestBriefing";
 import PartnerLogin from "./pages/PartnerLogin";
 import PartnerDashboard from "./pages/PartnerDashboard";
+import PortalLogin from "./pages/PortalLogin";
+import PortalProvider from "./pages/PortalProvider";
+import PortalCustomer from "./pages/PortalCustomer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
