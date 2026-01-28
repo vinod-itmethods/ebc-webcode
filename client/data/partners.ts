@@ -61,7 +61,7 @@ export const partners: Partner[] = [
   {
     id: "coder",
     name: "Coder",
-    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' overflow='visible' fill='none' viewBox='0.87 0.68 43.35 20'%3E%3Cpath d='M13.323 0.679688C20.534 0.679688 24.5771 4.05833 24.7136 9.03125L18.4861 9.21973C18.322 6.46321 15.8495 4.65298 13.323 4.70703C9.85421 4.77471 7.28687 7.0582 7.28687 10.6797C7.28692 14.3011 9.85425 16.5438 13.323 16.5439C15.8496 16.5439 18.2676 14.8143 18.5408 12.0576L24.7683 12.1934C24.6043 17.2472 20.3153 20.6797 13.323 20.6797C6.3307 20.6796 0.867989 16.7606 0.86792 10.6797C0.86792 4.57172 6.11215 0.679781 13.323 0.679688Z' fill='%23000'/%3E%3Cpath id='cursor' d='M44.2228 1.21875V20.1377H27.8341V1.21875H44.2228Z' fill='%23000'/%3E%3C/svg%3E",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fc65dbec7453241dd98e6a2c08597ed18?format=webp&width=800&height=1200",
     tagline: "Developer workspaces in the cloud.",
     description: "Coder enables remote development environments, allowing developers to code from anywhere with consistent, powerful workspaces.",
     topics: ["Remote development", "Developer experience", "Infrastructure consistency", "Team collaboration"],
