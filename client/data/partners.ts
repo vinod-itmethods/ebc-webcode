@@ -79,7 +79,7 @@ export const partners: Partner[] = [
   {
     id: "cohere",
     name: "Cohere",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Ff0a3852113d64cca9c45f7830b421563?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F0c99c34ecdc9467e8eeb36d3abf28a45?format=webp&width=800&height=1200",
     tagline: "Large language models for enterprise applications.",
     description: "Cohere provides enterprise-grade language models and APIs for building intelligent applications, with a focus on enterprise deployment.",
     topics: ["Language model APIs", "Enterprise AI", "NLP applications", "Responsible AI"],
@@ -142,7 +142,7 @@ export const partners: Partner[] = [
   {
     id: "kong",
     name: "Kong",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fbc53d78f70234367a751b5ce9ee76c93?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fe3a0639ef0da4c17b5f86f31a400c63c?format=webp&width=800&height=1200",
     tagline: "API gateway and connectivity platform.",
     description: "Kong is an open-source and enterprise API gateway that enables secure, scalable API management.",
     topics: ["API management", "Microservices", "Security", "Performance optimization"],
@@ -304,7 +304,7 @@ export const partners: Partner[] = [
   {
     id: "spacelift",
     name: "Spacelift",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F4c50d2e8c8934b5684836e7ef6900f36?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F68105d2d03074d2e8d3a9b835a47ea0e?format=webp&width=800&height=1200",
     tagline: "Infrastructure as Code management platform.",
     description: "Spacelift provides a management platform for Infrastructure as Code, with policy enforcement and governance.",
     topics: ["IaC management", "Policy enforcement", "Infrastructure governance", "Multi-cloud"],
@@ -322,7 +322,7 @@ export const partners: Partner[] = [
   {
     id: "temporal",
     name: "Temporal",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F08a9de5258b34e06b24b34b71cfe78ba?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb7beae3823bd4b94a2978e761cc16cf3?format=webp&width=800&height=1200",
     tagline: "Microservices orchestration platform.",
     description: "Temporal provides a reliable, scalable platform for orchestrating complex microservices workflows and processes.",
     topics: ["Workflow orchestration", "Microservices", "Distributed systems", "Reliability"],
@@ -331,7 +331,7 @@ export const partners: Partner[] = [
   {
     id: "wandb",
     name: "Weights & Biases",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb7beae3823bd4b94a2978e761cc16cf3?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F08a9de5258b34e06b24b34b71cfe78ba?format=webp&width=800&height=1200",
     tagline: "ML experiment tracking and model management.",
     description: "Weights & Biases provides tools for tracking ML experiments, managing models, and collaborating on ML projects.",
     topics: ["Experiment tracking", "Model management", "ML collaboration", "Reproducibility"],
