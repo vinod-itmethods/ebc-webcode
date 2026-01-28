@@ -41,8 +41,11 @@ export default function PortalLogin() {
       localStorage.setItem("portalAuthenticated", "true");
       localStorage.setItem("userRole", role);
       localStorage.setItem("userEmail", email);
+      if (role === "provider") {
+        localStorage.setItem("providerCompanyId", selectedCompany);
+      }
       setIsAuthenticated(true);
-      
+
       if (role === "customer") {
         navigate("/portal/customer");
       } else {
