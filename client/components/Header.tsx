@@ -16,7 +16,7 @@ export default function Header() {
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb708ee6487aa42df951001ea08f04fa4?format=webp&width=800&height=1200"
             alt="EBC Logo"
-            className="h-10 flex-shrink-0"
+            className="h-20 flex-shrink-0"
           />
           <span className="text-sm text-foreground hidden sm:inline whitespace-nowrap"><span className="font-normal">Executive Briefing Council</span></span>
         </Link>
