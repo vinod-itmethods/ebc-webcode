@@ -68,8 +68,8 @@ export default function TestimonialCarousel() {
           </button>
 
           {/* Testimonial */}
-          <div className="flex-1 bg-white rounded-xl p-8 lg:p-10 shadow-sm" style={{ borderLeft: "4px solid hsl(45 82% 52%)" }}>
-            <p className="text-lg lg:text-xl text-foreground/90 leading-relaxed mb-6">
+          <div className="flex-1 bg-white rounded-xl p-8 lg:p-10 shadow-sm">
+            <p className="text-lg lg:text-xl text-foreground/90 leading-relaxed mb-6 italic">
               "{currentTestimonial.quote}"
             </p>
             <p className="text-sm lg:text-base text-primary font-semibold">
