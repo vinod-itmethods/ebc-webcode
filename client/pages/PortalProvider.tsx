@@ -643,10 +643,10 @@ export default function PortalProvider() {
                               <button
                                 onClick={() => setProvideExecutiveSponsor(!provideExecutiveSponsor)}
                                 className={`px-4 py-2 rounded font-medium transition-all ${
-                                  provideExecutiveSponsor
-                                    ? "bg-[hsl(45_82%_52%)] text-white"
-                                    : "bg-slate-300 text-foreground"
-                                }`}
+                                provideExecutiveSponsor
+                                  ? "bg-[hsl(190_55%_40%)] text-white"
+                                  : "bg-slate-300 text-foreground hover:bg-slate-400"
+                              }`}
                               >
                                 {provideExecutiveSponsor ? "Yes" : "No"}
                               </button>
