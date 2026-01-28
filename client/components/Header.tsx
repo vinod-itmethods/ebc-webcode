@@ -14,7 +14,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity mr-12">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F497190d2792b48349fc299e34586fcfb?format=webp&width=800&height=1200"
+            src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F30e916b3d745426487a83b6ef010cb51?format=webp&width=800&height=1200"
             alt="EBC Logo"
             className="w-8 h-8 flex-shrink-0"
           />
