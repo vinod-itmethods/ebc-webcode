@@ -6,6 +6,8 @@ export interface Partner {
   description: string;
   topics: string[];
   benefits: string[];
+  speakerImage?: string;
+  speakerQuote?: string;
 }
 
 export const partners: Partner[] = [
