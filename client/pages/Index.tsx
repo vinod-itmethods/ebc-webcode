@@ -206,28 +206,75 @@ export default function Index() {
               <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Areas of Coverage</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
-                  { title: "Cloud & Infrastructure", description: "Cloud providers and infrastructure platforms", icon: Cloud },
-                  { title: "AI & Machine Learning", description: "AI platforms and ML operations", icon: Lightbulb },
-                  { title: "DevOps & Continuous Delivery", description: "CI/CD platforms and automation", icon: GitBranch },
-                  { title: "Platform & Architecture", description: "Platform engineering and microservices", icon: Box },
-                  { title: "Security & Compliance", description: "Security and governance solutions", icon: Shield },
-                  { title: "Data & Analytics", description: "Data platforms and analytics", icon: Database },
-                ].map((category, index) => {
+                  {
+                    id: "cloud",
+                    title: "Cloud & Infrastructure",
+                    description: "Cloud providers and infrastructure platforms",
+                    details: "We work with leading cloud providers and infrastructure platforms that enable organizations to modernize their data centers, migrate workloads, and scale operations efficiently.",
+                    icon: Cloud
+                  },
+                  {
+                    id: "ai",
+                    title: "AI & Machine Learning",
+                    description: "AI platforms and ML operations",
+                    details: "From large language models to specialized ML operations, we connect leaders with vendors who are advancing AI adoption, responsible AI practices, and production ML infrastructure.",
+                    icon: Lightbulb
+                  },
+                  {
+                    id: "devops",
+                    title: "DevOps & Continuous Delivery",
+                    description: "CI/CD platforms and automation",
+                    details: "We partner with CI/CD platforms, deployment automation tools, and observability solutions that help teams ship faster and with greater confidence.",
+                    icon: GitBranch
+                  },
+                  {
+                    id: "platform",
+                    title: "Platform & Architecture",
+                    description: "Platform engineering and microservices",
+                    details: "Organizations modernizing their architecture benefit from perspectives on platform engineering, microservices patterns, service mesh, and API strategies.",
+                    icon: Box
+                  },
+                  {
+                    id: "security",
+                    title: "Security & Compliance",
+                    description: "Security and governance solutions",
+                    details: "Security, compliance, and governance vendors help executives understand threat landscapes, vendor risk management, and regulatory compliance strategies.",
+                    icon: Shield
+                  },
+                  {
+                    id: "data",
+                    title: "Data & Analytics",
+                    description: "Data platforms and analytics",
+                    details: "From data warehouses to real-time analytics and business intelligence, we connect leaders with vendors advancing data strategy and analytics maturity.",
+                    icon: Database
+                  },
+                ].map((category) => {
                   const IconComponent = category.icon;
+                  const isSelected = selectedCategory === category.id;
                   return (
-                    <div
-                      key={index}
-                      className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow border-2"
+                    <button
+                      key={category.id}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className="text-left bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all cursor-pointer relative overflow-hidden group"
                       style={{
-                        borderImage: "linear-gradient(135deg, #22d3ee 0%, #10b981 33%, #f59e0b 66%, #d4ac35 100%) 1",
+                        border: "1px solid",
+                        borderColor: "rgba(59, 130, 246, 0.15)",
+                        background: isSelected
+                          ? "linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(168, 85, 247, 0.02) 50%, rgba(20, 184, 166, 0.02) 100%), white"
+                          : "white"
                       }}
                     >
                       <div className="flex items-start gap-3 mb-3">
-                        <IconComponent className="w-5 h-5 text-slate-700 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                        <IconComponent className="w-5 h-5 text-slate-700 flex-shrink-0 mt-0.5 group-hover:text-slate-900 transition-colors" strokeWidth={1.5} />
                       </div>
                       <h4 className="font-bold text-slate-900 mb-2 text-sm">{category.title}</h4>
                       <p className="text-slate-500 text-sm leading-relaxed">{category.description}</p>
-                    </div>
+                      {isSelected && (
+                        <div className="mt-4 pt-4 border-t border-slate-200">
+                          <p className="text-slate-600 text-sm leading-relaxed">{category.details}</p>
+                        </div>
+                      )}
+                    </button>
                   );
                 })}
               </div>
