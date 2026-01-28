@@ -566,8 +566,8 @@ export default function PortalProvider() {
                               onClick={() => toggleArea(area)}
                               className={`p-3 rounded-lg border-2 transition-all text-left text-sm font-medium ${
                                 selectedAreas.includes(area)
-                                  ? "border-[hsl(45_82%_52%)] bg-[hsl(45_82%_52%/8%)] text-foreground"
-                                  : "border-slate-200 bg-white text-foreground/70 hover:border-slate-300"
+                                  ? "border-[hsl(190_55%_40%)] bg-[hsl(190_55%_40%/8%)] text-foreground"
+                                  : "border-slate-200 bg-white text-foreground/70 hover:border-slate-300 hover:border-[hsl(190_55%_40%)]"
                               }`}
                             >
                               {area}
