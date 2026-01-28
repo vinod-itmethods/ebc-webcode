@@ -7,6 +7,9 @@ export interface Partner {
   topics: string[];
   benefits: string[];
   speakerImage?: string;
+  speakerName?: string;
+  speakerTitle?: string;
+  speakerBio?: string;
   speakerQuote?: string;
 }
 
