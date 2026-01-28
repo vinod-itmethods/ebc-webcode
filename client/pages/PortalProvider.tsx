@@ -508,7 +508,7 @@ export default function PortalProvider() {
                     <div
                       className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                         completedSteps.includes(0)
-                          ? "bg-[hsl(190_55%_40%)] border-[hsl(190_55%_40%)]"
+                          ? "bg-[hsl(193_45%_45%)] border-[hsl(193_45%_45%)]"
                           : "border-slate-300"
                       }`}
                     >
@@ -544,7 +544,7 @@ export default function PortalProvider() {
                     <div
                       className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                         completedSteps.includes(1)
-                          ? "bg-[hsl(190_55%_40%)] border-[hsl(190_55%_40%)]"
+                          ? "bg-[hsl(193_45%_45%)] border-[hsl(193_45%_45%)]"
                           : "border-slate-300"
                       }`}
                     >
@@ -598,7 +598,7 @@ export default function PortalProvider() {
                       <div
                         className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                           completedSteps.includes(stepIndex + 2)
-                            ? "bg-[hsl(190_55%_40%)] border-[hsl(190_55%_40%)]"
+                            ? "bg-[hsl(193_45%_45%)] border-[hsl(193_45%_45%)]"
                             : "border-slate-300"
                         }`}
                       >
