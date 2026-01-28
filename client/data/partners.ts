@@ -49,7 +49,7 @@ export const partners: Partner[] = [
     description: "CircleCI automates the build, test, and deployment pipeline, enabling teams to ship code faster and more reliably.",
     topics: ["Continuous integration", "Automated testing", "Deployment pipelines", "Developer productivity"],
     benefits: ["Faster deployment cycles", "Early bug detection", "Reduced manual work", "Improved code quality"],
-    speakerImage: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F223b375f2aeb415a9e27dd5925dca0c1?format=webp&width=800&height=1200",
+    speakerImage: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F64f04be8b8f34fc98ae3e5282dfd5efc?format=webp&width=800&height=1200",
     speakerName: "Jim Rose",
     speakerTitle: "CEO, CircleCI",
     speakerBio: "Jim Rose is the CEO of CircleCI, the leading continuous integration and continuous delivery (CI/CD) platform trusted by millions of developers and enterprises worldwide. With extensive experience in scaling development operations and DevOps practices, Jim has driven CircleCI's evolution to meet the needs of modern engineering teams. He brings deep insights into how organizations can streamline their software delivery pipelines while maintaining quality and security at scale.",
