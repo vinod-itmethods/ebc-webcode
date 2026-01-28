@@ -13,10 +13,12 @@ export default function Header() {
       <div className="container flex h-16 max-w-7xl items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity mr-12">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
-            <Briefcase className="w-5 h-5 text-white" />
-          </div>
-          <span className="font-bold text-sm text-foreground hidden sm:inline whitespace-nowrap">Executive Business Council</span>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F497190d2792b48349fc299e34586fcfb?format=webp&width=800&height=1200"
+            alt="EBC Logo"
+            className="w-8 h-8 flex-shrink-0"
+          />
+          <span className="font-bold text-sm text-foreground hidden sm:inline whitespace-nowrap">EBC | Executive Briefing Council</span>
         </Link>
 
         {/* Nav Links - Centered */}
