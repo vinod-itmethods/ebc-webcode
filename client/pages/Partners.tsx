@@ -114,6 +114,27 @@ export default function Partners() {
 
             {/* Modal Content */}
             <div className="p-6 space-y-6">
+              {/* Featured Speaker Section */}
+              {selectedPartner.speakerImage && selectedPartner.speakerQuote && (
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-200">
+                  <div className="flex gap-4">
+                    <img
+                      src={selectedPartner.speakerImage}
+                      alt="Speaker"
+                      className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                    />
+                    <div className="flex-1">
+                      <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-2">
+                        Featured Speaker
+                      </p>
+                      <p className="text-foreground leading-relaxed italic">
+                        "{selectedPartner.speakerQuote}"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Description */}
               <div>
                 <p className="text-foreground/70 leading-relaxed">{selectedPartner.description}</p>
