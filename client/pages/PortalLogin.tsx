@@ -66,12 +66,12 @@ export default function PortalLogin() {
     <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white flex flex-col items-center justify-center p-4">
       {/* Hero Header */}
       <div className="w-full max-w-2xl text-center mb-12">
-        <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-3">Executive Briefing Council Portal</h1>
+        <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-3">Executive briefing<br className="hidden sm:block" /> Council portal</h1>
         <p className="text-lg text-foreground/90">Secure access for customers and technology providers participating in Executive Briefing Council briefings.</p>
       </div>
 
       {/* Login Card */}
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-lg">
         <div className="bg-white rounded-xl shadow-sm border border-border p-8 space-y-8">
           
           {/* Role Selector */}
