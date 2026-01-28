@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import FAQ from "./pages/FAQ";
 import Partners from "./pages/Partners";
 import RequestBriefing from "./pages/RequestBriefing";
+import PartnerLogin from "./pages/PartnerLogin";
+import PartnerDashboard from "./pages/PartnerDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
