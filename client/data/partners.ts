@@ -50,7 +50,10 @@ export const partners: Partner[] = [
     topics: ["Continuous integration", "Automated testing", "Deployment pipelines", "Developer productivity"],
     benefits: ["Faster deployment cycles", "Early bug detection", "Reduced manual work", "Improved code quality"],
     speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    speakerQuote: "Hear from Jimmy Jones, CEO of CircleCI, on how CircleCI is driving the next iteration of DevOps with AI — from intelligent automation to robots that can literally bake the future.",
+    speakerName: "Jimmy Jones",
+    speakerTitle: "CEO & Co-Founder, CircleCI",
+    speakerBio: "Jimmy Jones is the CEO and Co-Founder of CircleCI, the leading continuous integration and continuous delivery (CI/CD) platform trusted by millions of developers worldwide. With over two decades of experience in software engineering and DevOps, Jimmy has led CircleCI's mission to simplify and accelerate modern development workflows. He brings deep expertise in scaling development practices for enterprise teams and emerging perspectives on how AI is transforming the future of continuous delivery.",
+    speakerQuote: "Modern development teams need more than automation—they need intelligence built into their pipelines. At CircleCI, we're helping enterprises understand how to integrate AI into their CI/CD practices responsibly, while maintaining speed and reliability at scale."
   },
   {
     id: "cloudbees",
