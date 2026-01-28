@@ -192,7 +192,7 @@ export default function Index() {
 
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Partner Philosophy */}
-            <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
+            <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
               <p>
                 The Executive Briefing Council is not a vendor showcase or a partner-led program. Instead, we provide access to a curated set of technology vendors across the industry, enabling informed, strategic dialogue.
               </p>
