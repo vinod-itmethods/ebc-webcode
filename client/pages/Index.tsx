@@ -60,7 +60,7 @@ export default function Index() {
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">Our program</h2>
             <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
               {/* Program Image - Floated to right */}
-              <div className="float-right lg:w-5/12 lg:ml-8 mb-6 lg:mb-4">
+              <div className="float-right lg:w-7/12 lg:ml-8 mb-6 lg:mb-4">
                 <img
                   src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
                   alt="Multicultural business executives and professionals discussing strategies in a conference room"
