@@ -10,7 +10,9 @@ import Index from "./pages/Index";
 import FAQ from "./pages/FAQ";
 import Partners from "./pages/Partners";
 import RequestBriefing from "./pages/RequestBriefing";
-import PartnerLogin from "./pages/PartnerLogin";
+import PortalLogin from "./pages/PortalLogin";
+import PortalCustomer from "./pages/PortalCustomer";
+import PortalProvider from "./pages/PortalProvider";
 import PartnerDashboard from "./pages/PartnerDashboard";
 import NotFound from "./pages/NotFound";
 
