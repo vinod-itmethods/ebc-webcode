@@ -304,7 +304,7 @@ export default function Index() {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Where briefings take place</h2>
           
           <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg text-foreground/70 text-center leading-relaxed">
+            <p className="text-lg text-foreground/80 text-center leading-relaxed">
               Executive briefings are hosted in select locations and may be conducted in person or in private settings aligned to major industry moments.
             </p>
           </div>
