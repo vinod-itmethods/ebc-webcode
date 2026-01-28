@@ -151,21 +151,31 @@ export default function Partners() {
 
               {/* Featured Speaker Section */}
               {selectedPartner.speakerImage && selectedPartner.speakerQuote && (
-                <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-200">
-                  <div className="flex gap-4">
-                    <img
-                      src={selectedPartner.speakerImage}
-                      alt="Speaker"
-                      className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
-                    />
-                    <div className="flex-1">
-                      <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-2">
-                        Featured Speaker
-                      </p>
-                      <p className="text-foreground leading-relaxed italic">
-                        "{selectedPartner.speakerQuote}"
-                      </p>
+                <div className="space-y-4">
+                  {/* Speaker Bio */}
+                  <div>
+                    <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-3">
+                      Featured Speaker
+                    </p>
+                    <div className="flex gap-4">
+                      <img
+                        src={selectedPartner.speakerImage}
+                        alt={selectedPartner.speakerName}
+                        className="w-24 h-24 rounded-lg object-cover flex-shrink-0"
+                      />
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground text-lg">{selectedPartner.speakerName}</h4>
+                        <p className="text-sm text-primary font-semibold mb-2">{selectedPartner.speakerTitle}</p>
+                        <p className="text-sm text-foreground/70 leading-relaxed">
+                          {selectedPartner.speakerBio}
+                        </p>
+                      </div>
                     </div>
+                  </div>
+
+                  {/* Speaker Quote */}
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-5 border border-blue-200 italic text-foreground">
+                    "{selectedPartner.speakerQuote}"
                   </div>
                 </div>
               )}
