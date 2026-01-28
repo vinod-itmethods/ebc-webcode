@@ -14,7 +14,7 @@ export const partners: Partner[] = [
   {
     id: "anthropic",
     name: "Anthropic",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F7614ab60b04c46c6ae102352055c09db?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F1f245009400744f69e7f57154f362b18?format=webp&width=800&height=1200",
     tagline: "Enterprise adoption of safe, governed AI in software development.",
     description: "Anthropic builds AI systems that are safe, beneficial, and understandable. Their work spans research, development, and deployment of advanced AI technologies.",
     topics: ["AI governance and risk controls", "Secure AI usage in development workflows", "Policy, compliance, and data boundaries", "Measuring value from AI adoption"],
@@ -23,7 +23,7 @@ export const partners: Partner[] = [
   {
     id: "archera",
     name: "Archera",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fc047dfd9046c4ed789cbbf031a416d67?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fc5ac0b8928204a8ea44d58c84aab419e?format=webp&width=800&height=1200",
     tagline: "Cloud cost optimization and financial management.",
     description: "Archera provides unified cloud cost management and optimization solutions, helping enterprises maximize their cloud investments.",
     topics: ["Cloud cost visibility", "Financial governance", "Multi-cloud optimization", "FinOps strategy"],
@@ -32,7 +32,7 @@ export const partners: Partner[] = [
   {
     id: "baseten",
     name: "Baseten",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F66528ee2da6f42ab9b3278a985cae4d5?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F923eb1d4e65144f9a6714eebf6e131da?format=webp&width=800&height=1200",
     tagline: "Serverless inference platform for machine learning.",
     description: "Baseten simplifies deploying, serving, and scaling machine learning models with a serverless infrastructure.",
     topics: ["ML model deployment", "Inference optimization", "Scaling ML workloads", "MLOps automation"],
@@ -41,7 +41,7 @@ export const partners: Partner[] = [
   {
     id: "circleci",
     name: "CircleCI",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fa5253f5536e4471b9b097466eef549d2?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fe166406562e84ce998d01207e7008eb1?format=webp&width=800&height=1200",
     tagline: "CI/CD platform for modern development teams.",
     description: "CircleCI automates the build, test, and deployment pipeline, enabling teams to ship code faster and more reliably.",
     topics: ["Continuous integration", "Automated testing", "Deployment pipelines", "Developer productivity"],
@@ -52,7 +52,7 @@ export const partners: Partner[] = [
   {
     id: "cloudbees",
     name: "CloudBees",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F17381ce3a5784a5684e4d4cabee4da8f?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Ff929238b20e94a548ed66d52dc7572db?format=webp&width=800&height=1200",
     tagline: "Enterprise Jenkins and CI/CD solutions.",
     description: "CloudBees provides enterprise-grade CI/CD solutions built on Jenkins, with additional governance and scalability features.",
     topics: ["Enterprise CI/CD", "Jenkins governance", "Pipeline automation", "DevOps at scale"],
@@ -61,7 +61,7 @@ export const partners: Partner[] = [
   {
     id: "coder",
     name: "Coder",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F6ce019afb1854e1597418b995dec0c91?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Ff10223b1a409476889ad82254f9cc8e3?format=webp&width=800&height=1200",
     tagline: "Developer workspaces in the cloud.",
     description: "Coder enables remote development environments, allowing developers to code from anywhere with consistent, powerful workspaces.",
     topics: ["Remote development", "Developer experience", "Infrastructure consistency", "Team collaboration"],
@@ -70,7 +70,7 @@ export const partners: Partner[] = [
   {
     id: "cognition",
     name: "Cognition",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fad703dc47a484e75bc729c1769bda884?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fde8116b5c7424456a2247211a6bc49c7?format=webp&width=800&height=1200",
     tagline: "AI-powered software development.",
     description: "Cognition develops AI agents designed to assist with complex software engineering tasks, augmenting developer capabilities.",
     topics: ["AI-assisted development", "Code generation", "Developer augmentation", "Intelligent automation"],
@@ -79,7 +79,7 @@ export const partners: Partner[] = [
   {
     id: "cohere",
     name: "Cohere",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Cohere_logo.png/1280px-Cohere_logo.png",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Ff0a3852113d64cca9c45f7830b421563?format=webp&width=800&height=1200",
     tagline: "Large language models for enterprise applications.",
     description: "Cohere provides enterprise-grade language models and APIs for building intelligent applications, with a focus on enterprise deployment.",
     topics: ["Language model APIs", "Enterprise AI", "NLP applications", "Responsible AI"],
@@ -88,7 +88,7 @@ export const partners: Partner[] = [
   {
     id: "continuai",
     name: "Continue AI",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F2bbe501748314fc180e4007fa3073a28?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F32baba4a8a9f4987995f398456826a22?format=webp&width=800&height=1200",
     tagline: "Open-source IDE plugin for AI-assisted development.",
     description: "Continue brings AI capabilities directly into your IDE, enabling fast and easy integration with coding assistants.",
     topics: ["IDE integration", "AI-assisted coding", "Developer tools", "Open source AI"],
@@ -97,7 +97,7 @@ export const partners: Partner[] = [
   {
     id: "cursor",
     name: "Cursor",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb5686129a03042029b8e00300c546133?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fd58baf37445e4545b52b17b20b118eb6?format=webp&width=800&height=1200",
     tagline: "AI-first code editor for modern development.",
     description: "Cursor is a code editor built from the ground up for AI, providing powerful AI-assisted development capabilities.",
     topics: ["AI-powered editing", "Code generation", "Intelligent refactoring", "Developer experience"],
@@ -106,7 +106,7 @@ export const partners: Partner[] = [
   {
     id: "github",
     name: "GitHub",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F0593f34b9429422994a95d4feba42d11?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F83537e96edf94883b1e9725c382f659f?format=webp&width=800&height=1200",
     tagline: "Platform for software development and collaboration.",
     description: "GitHub is the leading platform for version control, collaboration, and DevOps with millions of developers worldwide.",
     topics: ["Version control", "Collaboration", "DevOps workflows", "Security scanning"],
@@ -115,7 +115,7 @@ export const partners: Partner[] = [
   {
     id: "gitlab",
     name: "GitLab",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F68665a3a661f4f568508070e267f798e?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F32c2d2e8f87841c7a294e7624c76295f?format=webp&width=800&height=1200",
     tagline: "Complete DevOps platform.",
     description: "GitLab provides an integrated platform for the entire DevOps lifecycle, from planning through monitoring and security.",
     topics: ["DevOps platform", "Full SDLC", "Security and compliance", "Enterprise governance"],
@@ -124,7 +124,7 @@ export const partners: Partner[] = [
   {
     id: "harness",
     name: "Harness",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F99046f142b78461fbd6998ae1a8da6d1?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F447282a301d74786bcfcdecb93d0ee98?format=webp&width=800&height=1200",
     tagline: "Continuous delivery platform for enterprises.",
     description: "Harness simplifies and automates continuous delivery, enabling teams to deploy with confidence at enterprise scale.",
     topics: ["Continuous delivery", "Deployment automation", "Infrastructure changes", "Risk management"],
@@ -133,7 +133,7 @@ export const partners: Partner[] = [
   {
     id: "jfrog",
     name: "JFrog",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fd40580468cf54f7da903b1f6703b5093?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F8be838cac52d481a8c58977016e8d579?format=webp&width=800&height=1200",
     tagline: "DevOps platform for software delivery.",
     description: "JFrog provides tools and platforms for managing the software release process, from build to deployment to monitoring.",
     topics: ["Artifact management", "CI/CD", "Release orchestration", "Software supply chain"],
@@ -142,7 +142,7 @@ export const partners: Partner[] = [
   {
     id: "kong",
     name: "Kong",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Kong_API_gateway_logo.png/1280px-Kong_API_gateway_logo.png",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fbc53d78f70234367a751b5ce9ee76c93?format=webp&width=800&height=1200",
     tagline: "API gateway and connectivity platform.",
     description: "Kong is an open-source and enterprise API gateway that enables secure, scalable API management.",
     topics: ["API management", "Microservices", "Security", "Performance optimization"],
@@ -151,7 +151,7 @@ export const partners: Partner[] = [
   {
     id: "langchain",
     name: "LangChain",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F8df4ffc603e34efdbc40dcb3c4ba8f4e?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F21133e0fe10b4a168f74d682a82c46bf?format=webp&width=800&height=1200",
     tagline: "Framework for building LLM applications.",
     description: "LangChain provides a framework for developing applications powered by language models, with tools for memory, chains, and agents.",
     topics: ["LLM application development", "AI workflows", "Integration patterns", "Prompt management"],
@@ -160,7 +160,7 @@ export const partners: Partner[] = [
   {
     id: "launchdarkly",
     name: "LaunchDarkly",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F0c3b4d06bc774f1eb75b380b52c48aa5?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fcacbab5c2a02429f9995c2a725f39826?format=webp&width=800&height=1200",
     tagline: "Feature management and experimentation platform.",
     description: "LaunchDarkly enables teams to manage feature releases safely with progressive rollout, targeting, and experimentation.",
     topics: ["Feature management", "Progressive deployment", "A/B testing", "Risk reduction"],
@@ -169,7 +169,7 @@ export const partners: Partner[] = [
   {
     id: "lyzr",
     name: "Lyzr",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F338c5b3a1604475195c7a2f1c143d529?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F8507df0f4f604849b3c254d713e24b4f?format=webp&width=800&height=1200",
     tagline: "Prompt-based AI application builder.",
     description: "Lyzr enables building AI applications through prompt engineering and low-code interfaces, designed for rapid prototyping.",
     topics: ["AI application development", "Prompt engineering", "No-code AI", "Rapid prototyping"],
@@ -178,7 +178,7 @@ export const partners: Partner[] = [
   {
     id: "mistralai",
     name: "Mistral AI",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F79718f526b1e4cc68797af2a1e1ca6e8?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F1bcf18327a0a4295a4246a3db90a5274?format=webp&width=800&height=1200",
     tagline: "Open and efficient language models.",
     description: "Mistral AI develops and releases efficient, high-performance language models designed for enterprise deployment.",
     topics: ["Language models", "Open-source AI", "Efficient models", "Enterprise deployment"],
@@ -187,7 +187,7 @@ export const partners: Partner[] = [
   {
     id: "n8n",
     name: "n8n",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Feedef9c55a564a72aa103bd06d165b91?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F8f86cab1e249407ea4bc531f3f4fd562?format=webp&width=800&height=1200",
     tagline: "Workflow automation platform.",
     description: "n8n is an open-source workflow automation tool for connecting APIs and services with visual workflows.",
     topics: ["Workflow automation", "API integration", "Process automation", "No-code workflows"],
@@ -196,7 +196,7 @@ export const partners: Partner[] = [
   {
     id: "openai",
     name: "OpenAI",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F299bbc86141742a58ca1d61d2424e7e9?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F24435fff12684194980e2593b408f352?format=webp&width=800&height=1200",
     tagline: "AI research and deployment platform.",
     description: "OpenAI develops and deploys advanced AI models, including GPT, with APIs for enterprise integration.",
     topics: ["Advanced AI models", "API access", "Enterprise deployment", "Responsible AI"],
@@ -205,7 +205,7 @@ export const partners: Partner[] = [
   {
     id: "ollama",
     name: "Ollama",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F86d5c109fa0c4c5ea6478da649f77cf0?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F65710b3f9bb34942b68d786de15f3711?format=webp&width=800&height=1200",
     tagline: "Run large language models locally.",
     description: "Ollama simplifies running open-source language models locally, enabling privacy-first AI applications.",
     topics: ["Local LLM deployment", "Privacy-first AI", "Open models", "Edge computing"],
@@ -214,7 +214,7 @@ export const partners: Partner[] = [
   {
     id: "pagerduty",
     name: "PagerDuty",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F196af1f748244a0eb4451e0412c67db4?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F5a2725fa48f943c0971b0fcf57597d51?format=webp&width=800&height=1200",
     tagline: "Incident response and on-call management.",
     description: "PagerDuty helps teams respond to incidents faster with intelligent alerting, on-call scheduling, and automation.",
     topics: ["Incident management", "On-call scheduling", "Alert management", "Response automation"],
@@ -223,7 +223,7 @@ export const partners: Partner[] = [
   {
     id: "plane",
     name: "Plane",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F66b0d391045f4f8c950cb3eb159a6bf4?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fe7d1f97865144595bf9ac8dc471fbd16?format=webp&width=800&height=1200",
     tagline: "Open-source project management for engineers.",
     description: "Plane is an open-source project management tool designed specifically for engineering teams and agile workflows.",
     topics: ["Project management", "Issue tracking", "Agile workflows", "Team collaboration"],
@@ -232,7 +232,7 @@ export const partners: Partner[] = [
   {
     id: "poolside",
     name: "Poolside",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Ffb48417d7d644662a7d5876393155da9?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fffc97ff4e65d43d5b18b84dc05ab216b?format=webp&width=800&height=1200",
     tagline: "AI-powered engineering assistance.",
     description: "Poolside provides AI-powered tools for engineering workflows, focused on code generation and problem-solving.",
     topics: ["AI engineering", "Code generation", "Problem solving", "Development tools"],
@@ -241,7 +241,7 @@ export const partners: Partner[] = [
   {
     id: "postman",
     name: "Postman",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F87f35b9df1af46238192771f04289efc?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fcf886ae5d35e4faf91179b3a4e250ac9?format=webp&width=800&height=1200",
     tagline: "API development and testing platform.",
     description: "Postman is the leading platform for API development, testing, and documentation, used by millions of developers.",
     topics: ["API testing", "API documentation", "API mocking", "Collaboration"],
@@ -250,7 +250,7 @@ export const partners: Partner[] = [
   {
     id: "rootly",
     name: "Rootly",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F493c8e5b3d874d888e19c4eb70346a56?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fa33d24237c3544969eb59eda789430ec?format=webp&width=800&height=1200",
     tagline: "Incident collaboration and management.",
     description: "Rootly provides incident management and collaboration tools designed for modern DevOps teams.",
     topics: ["Incident management", "Team collaboration", "Post-incident reviews", "Automation"],
@@ -259,7 +259,7 @@ export const partners: Partner[] = [
   {
     id: "scaleai",
     name: "Scale AI",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fa9769b612d174bdb8be9997afa3b63f4?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fdc848856c89140358eae4f8eb71aa9d7?format=webp&width=800&height=1200",
     tagline: "Data labeling and preparation for AI.",
     description: "Scale AI provides data labeling, annotation, and preparation services to power machine learning systems at scale.",
     topics: ["Data labeling", "Training data", "Data quality", "ML data pipelines"],
@@ -268,7 +268,7 @@ export const partners: Partner[] = [
   {
     id: "securiti",
     name: "Securiti",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F9907546d6df943358319141ad989be9c?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fe22c0a97813a4df8b733ff47868fa52a?format=webp&width=800&height=1200",
     tagline: "Data security and privacy governance.",
     description: "Securiti provides data security and privacy governance solutions with AI-powered discovery and compliance automation.",
     topics: ["Data governance", "Privacy compliance", "Security controls", "Risk management"],
@@ -277,7 +277,7 @@ export const partners: Partner[] = [
   {
     id: "snyk",
     name: "Snyk",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fe89f010e7b92458ba25392d9aa520740?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F7a9ca833640e470f92b0f0110f4bb975?format=webp&width=800&height=1200",
     tagline: "Developer security and code scanning.",
     description: "Snyk helps developers find and fix vulnerabilities in code, dependencies, and containers, integrated into workflows.",
     topics: ["Vulnerability scanning", "Dependency management", "Code security", "Compliance"],
@@ -286,7 +286,7 @@ export const partners: Partner[] = [
   {
     id: "sonarsource",
     name: "SonarSource",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F3324ba3d739e4cb78141d8338d1cec8d?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F50ee57cc2b474a01bda417db01b40876?format=webp&width=800&height=1200",
     tagline: "Code quality and security platform.",
     description: "SonarSource provides code quality analysis and security scanning integrated into development workflows.",
     topics: ["Code quality", "Technical debt", "Security scanning", "Standards compliance"],
@@ -295,7 +295,7 @@ export const partners: Partner[] = [
   {
     id: "sonatype",
     name: "Sonatype",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fcb13053a365749babcd6fa6c867b881c?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Ff7ef293a7d5642b482f136a6ee665e1e?format=webp&width=800&height=1200",
     tagline: "Software supply chain security.",
     description: "Sonatype secures software supply chains by managing open-source components and detecting vulnerabilities.",
     topics: ["Component management", "Supply chain security", "Vulnerability detection", "License compliance"],
@@ -304,7 +304,7 @@ export const partners: Partner[] = [
   {
     id: "spacelift",
     name: "Spacelift",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb71bb59bf80c40afa6f41b0f25f2ebdf?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F4c50d2e8c8934b5684836e7ef6900f36?format=webp&width=800&height=1200",
     tagline: "Infrastructure as Code management platform.",
     description: "Spacelift provides a management platform for Infrastructure as Code, with policy enforcement and governance.",
     topics: ["IaC management", "Policy enforcement", "Infrastructure governance", "Multi-cloud"],
@@ -313,7 +313,7 @@ export const partners: Partner[] = [
   {
     id: "tailscale",
     name: "Tailscale",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fdad9387fa81d4e51beee01707ceadd95?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb39009c0b3d64eed890a34732211af00?format=webp&width=800&height=1200",
     tagline: "Secure mesh VPN for teams.",
     description: "Tailscale simplifies secure network access by creating a private mesh network for teams and infrastructure.",
     topics: ["Network security", "VPN", "Zero trust", "Remote access"],
@@ -322,7 +322,7 @@ export const partners: Partner[] = [
   {
     id: "temporal",
     name: "Temporal",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fbda32f2837774d338d23afe28b696055?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F08a9de5258b34e06b24b34b71cfe78ba?format=webp&width=800&height=1200",
     tagline: "Microservices orchestration platform.",
     description: "Temporal provides a reliable, scalable platform for orchestrating complex microservices workflows and processes.",
     topics: ["Workflow orchestration", "Microservices", "Distributed systems", "Reliability"],
@@ -331,7 +331,7 @@ export const partners: Partner[] = [
   {
     id: "wandb",
     name: "Weights & Biases",
-    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F2767a4b17e484128bd3496a0ede0fbba?format=webp&width=800&height=1200",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb7beae3823bd4b94a2978e761cc16cf3?format=webp&width=800&height=1200",
     tagline: "ML experiment tracking and model management.",
     description: "Weights & Biases provides tools for tracking ML experiments, managing models, and collaborating on ML projects.",
     topics: ["Experiment tracking", "Model management", "ML collaboration", "Reproducibility"],
