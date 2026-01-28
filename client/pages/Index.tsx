@@ -58,13 +58,13 @@ export default function Index() {
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our program</h2>
               <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
                 <p>
-                  This Executive Briefing Council is a structured forum where enterprise technology and business leaders engage in focused discussions around strategic technology decisions.
+                  The Executive Briefing Council is a structured forum designed for enterprise technology and business leaders navigating high-impact decisions across AI, DevOps, cloud, and platform engineering.
                 </p>
                 <p>
-                  Unlike single-provider executive briefings, sessions are designed to incorporate perspectives from across the technology ecosystem. This allows executive teams to explore options, compare approaches, and understand trade-offs before committing to direction across areas such as AI adoption, DevOps transformation, platform modernization, and operating model change.
+                  Each briefing is curated to the customer's priorities and brings together perspectives from across our vetted technology ecosystem. This gives executive teams the ability to engage with vendors of their choosing, compare strategies, understand trade-offs, and evaluate multiple approaches before committing to a direction.
                 </p>
                 <p>
-                  Briefings are curated around each organization's priorities and facilitated to support productive, outcome-oriented dialogue.
+                  Sessions are confidential, outcome-driven, and facilitated to support clear decision-making around topics such as AI adoption, DevOps transformation, platform modernization, and operating model evolution.
                 </p>
               </div>
             </div>
