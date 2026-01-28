@@ -245,33 +245,24 @@ export default function PortalProvider() {
           {/* Profile Tab */}
           {activeTab === "profile" && (
             <div className="space-y-8">
-              {/* Provider Selection */}
-              <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-4">Select Your Company</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-                  {partners.map(partner => (
-                    <button
-                      key={partner.id}
-                      onClick={() => setSelectedProviderId(partner.id)}
-                      className={`p-3 rounded-lg border-2 transition-all text-center ${
-                        selectedProviderId === partner.id
-                          ? "border-[hsl(45_82%_52%)] bg-blue-50"
-                          : "border-border hover:border-[hsl(45_82%_52%)]/50"
-                      }`}
-                    >
-                      <img
-                        src={partner.logo}
-                        alt={partner.name}
-                        className="w-full h-12 object-contain mb-2"
-                        onError={(e) => {
-                          e.currentTarget.style.display = "none";
-                        }}
-                      />
-                      <p className="text-xs font-medium text-foreground line-clamp-1">
-                        {partner.name}
-                      </p>
-                    </button>
-                  ))}
+              {/* Company Info Header */}
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200 p-6">
+                <p className="text-sm text-foreground/70 mb-3">You are editing profile information for:</p>
+                <div className="flex items-center gap-4">
+                  <div className="h-16 w-16 rounded-lg flex items-center justify-center bg-white border border-border">
+                    <img
+                      src={providerData.logo}
+                      alt={providerData.name}
+                      className="max-h-14 max-w-14 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">{providerData.name}</h3>
+                    <p className="text-sm text-foreground/70 mt-1">{providerData.tagline}</p>
+                  </div>
                 </div>
               </div>
 
