@@ -161,7 +161,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Multi-partner perspectives</h3>
-                <p className="text-foreground/70 text-lg leading-relaxed">
+                <p className="text-foreground/80 text-lg leading-relaxed">
                   Briefings may include perspectives from multiple technology partners selected for relevance. This enables leaders to compare approaches, surface trade-offs, and ask direct questions across providers in a single forum.
                 </p>
               </div>
@@ -176,7 +176,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Outcome focus</h3>
-                <p className="text-foreground/70 text-lg leading-relaxed">
+                <p className="text-foreground/80 text-lg leading-relaxed">
                   Sessions conclude with clear takeaways, options, and next-step considerations.
                 </p>
               </div>
