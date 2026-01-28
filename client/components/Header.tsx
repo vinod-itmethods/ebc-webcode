@@ -28,7 +28,7 @@ export default function Header() {
             className={`text-sm font-medium transition-colors ${
               isActive("/partners")
                 ? "text-primary"
-                : "text-foreground/60 hover:text-foreground"
+                : "text-foreground/60 hover:text-primary"
             }`}
           >
             Technology providers
@@ -38,7 +38,7 @@ export default function Header() {
             className={`text-sm font-medium transition-colors ${
               isActive("/faq")
                 ? "text-primary"
-                : "text-foreground/60 hover:text-foreground"
+                : "text-foreground/60 hover:text-primary"
             }`}
           >
             FAQ
