@@ -154,22 +154,18 @@ export default function Partners() {
                 <div className="space-y-4 pt-2">
                   {/* Speaker Header */}
                   <div>
-                    <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-3">
-                      Featured Speaker
+                    <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-4">
+                      Featured Speaker: <span className="text-foreground font-bold">{selectedPartner.speakerName}, {selectedPartner.speakerTitle?.split(',')[0]}</span>
                     </p>
-                    <div className="flex gap-3">
+                    <div className="flex gap-4 items-start">
                       <img
                         src={selectedPartner.speakerImage}
                         alt={selectedPartner.speakerName}
                         className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
                       />
-                      <div className="flex-1">
-                        <h4 className="font-bold text-foreground text-sm">{selectedPartner.speakerName}</h4>
-                        <p className="text-xs text-primary font-semibold mb-1">{selectedPartner.speakerTitle}</p>
-                        <p className="text-sm text-foreground/70 leading-relaxed">
-                          {selectedPartner.speakerBio}
-                        </p>
-                      </div>
+                      <p className="text-sm text-foreground/70 leading-relaxed">
+                        {selectedPartner.speakerBio}
+                      </p>
                     </div>
                   </div>
 
