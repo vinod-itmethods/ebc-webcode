@@ -26,7 +26,7 @@ export default function Index() {
               <span className="block">Executive briefings for</span>
               <span className="block">enterprise technology leaders</span>
             </h1>
-            <p className="text-lg lg:text-xl text-foreground/85 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
               <span className="block">Confidential, curated briefings that help AI, DevOps, and IT leaders</span>
               <span className="block">navigate complex technology decisions beyond a single vendor's perspective</span>
             </p>
