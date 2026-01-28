@@ -82,7 +82,7 @@ export default function PortalLogin() {
                 onClick={() => setRole("customer")}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
                   role === "customer"
-                    ? "bg-[hsl(45_82%_52%)] text-white"
+                    ? "bg-[hsl(190_55%_40%)] text-white"
                     : "bg-slate-100 text-foreground hover:bg-slate-200"
                 }`}
               >
@@ -92,7 +92,7 @@ export default function PortalLogin() {
                 onClick={() => setRole("provider")}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
                   role === "provider"
-                    ? "bg-[hsl(45_82%_52%)] text-white"
+                    ? "bg-[hsl(190_55%_40%)] text-white"
                     : "bg-slate-100 text-foreground hover:bg-slate-200"
                 }`}
               >
