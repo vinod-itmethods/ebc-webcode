@@ -43,6 +43,7 @@ export default function PortalProvider() {
 
   const navigate = useNavigate();
   const userEmail = localStorage.getItem("userEmail") || "contact@company.com";
+  const companyId = localStorage.getItem("providerCompanyId") || partners[0].id;
 
   useEffect(() => {
     const isAuth = localStorage.getItem("portalAuthenticated") === "true";
@@ -51,10 +52,11 @@ export default function PortalProvider() {
       navigate("/portal");
     } else {
       setIsAuthenticated(true);
+      setSelectedProviderId(companyId);
     }
-  }, [navigate]);
+  }, [navigate, companyId]);
 
-  // Load provider profile data when provider selection changes
+  // Load provider profile data when authenticated
   useEffect(() => {
     const selected = partners.find(p => p.id === selectedProviderId);
     if (selected) {
