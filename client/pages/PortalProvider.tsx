@@ -626,10 +626,10 @@ export default function PortalProvider() {
                               <button
                                 onClick={() => setAvailableForBriefings(!availableForBriefings)}
                                 className={`px-4 py-2 rounded font-medium transition-all ${
-                                  availableForBriefings
-                                    ? "bg-[hsl(45_82%_52%)] text-white"
-                                    : "bg-slate-300 text-foreground"
-                                }`}
+                                availableForBriefings
+                                  ? "bg-[hsl(190_55%_40%)] text-white"
+                                  : "bg-slate-300 text-foreground hover:bg-slate-400"
+                              }`}
                               >
                                 {availableForBriefings ? "Yes" : "No"}
                               </button>
