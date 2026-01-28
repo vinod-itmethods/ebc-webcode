@@ -480,7 +480,7 @@ export default function PortalProvider() {
             <section className="mb-16 space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-2">Program Registration</h2>
-                <p className="text-foreground/70 mb-6">Complete the steps below to register for the Executive Briefing Council program.</p>
+                <p className="text-foreground/70 mb-6">Complete the steps below to register for the Executive Briefing Council program. Click on each step to provide your information.</p>
               </div>
 
               {/* Progress Bar */}
@@ -497,36 +497,193 @@ export default function PortalProvider() {
                 </div>
               </div>
 
-              {/* Registration Checklist */}
+              {/* Registration Steps - Expandable */}
               <div className="space-y-3">
-                {REGISTRATION_STEPS.map((step, index) => (
+                {/* Step 0: Company Profile */}
+                <div className="bg-white rounded-lg border border-slate-200 overflow-hidden">
                   <button
-                    key={index}
-                    onClick={() => toggleStep(index)}
-                    className="w-full p-4 rounded-lg border border-slate-200 hover:border-slate-300 transition-all text-left flex items-center gap-3 bg-white"
+                    onClick={() => setExpandedStep(expandedStep === 0 ? null : 0)}
+                    className="w-full p-4 hover:bg-slate-50 transition-all text-left flex items-center gap-3"
                   >
                     <div
                       className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
-                        completedSteps.includes(index)
+                        completedSteps.includes(0)
                           ? "bg-[hsl(45_82%_52%)] border-[hsl(45_82%_52%)]"
                           : "border-slate-300"
                       }`}
                     >
-                      {completedSteps.includes(index) && (
+                      {completedSteps.includes(0) && (
                         <CheckCircle2 className="w-4 h-4 text-white" />
                       )}
                     </div>
-                    <span
-                      className={`font-medium ${
-                        completedSteps.includes(index)
-                          ? "text-foreground/60"
-                          : "text-foreground"
+                    <span className="font-medium flex-1">Company profile</span>
+                    <span className="text-xs text-foreground/60">{expandedStep === 0 ? "▼" : "▶"}</span>
+                  </button>
+                  {expandedStep === 0 && (
+                    <div className="border-t border-slate-200 p-4 bg-slate-50">
+                      <p className="text-sm text-foreground/70 mb-4">Your company information is already provided. You can update it in the Profile Information tab.</p>
+                      <Button
+                        onClick={() => {
+                          toggleStep(0);
+                          setExpandedStep(null);
+                        }}
+                        className="w-full"
+                      >
+                        Mark as Complete
+                      </Button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Step 1: Areas of Coverage */}
+                <div className="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                  <button
+                    onClick={() => setExpandedStep(expandedStep === 1 ? null : 1)}
+                    className="w-full p-4 hover:bg-slate-50 transition-all text-left flex items-center gap-3"
+                  >
+                    <div
+                      className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
+                        completedSteps.includes(1)
+                          ? "bg-[hsl(45_82%_52%)] border-[hsl(45_82%_52%)]"
+                          : "border-slate-300"
                       }`}
                     >
-                      {step}
-                    </span>
+                      {completedSteps.includes(1) && (
+                        <CheckCircle2 className="w-4 h-4 text-white" />
+                      )}
+                    </div>
+                    <span className="font-medium flex-1">Areas of coverage</span>
+                    <span className="text-xs text-foreground/60">{expandedStep === 1 ? "▼" : "▶"}</span>
                   </button>
+                  {expandedStep === 1 && (
+                    <div className="border-t border-slate-200 p-4 bg-slate-50 space-y-4">
+                      <div>
+                        <label className="text-sm font-semibold text-foreground mb-3 block">Select domains you support:</label>
+                        <div className="grid sm:grid-cols-2 gap-3">
+                          {COVERAGE_AREAS.map((area) => (
+                            <button
+                              key={area}
+                              onClick={() => toggleArea(area)}
+                              className={`p-3 rounded-lg border-2 transition-all text-left text-sm font-medium ${
+                                selectedAreas.includes(area)
+                                  ? "border-[hsl(45_82%_52%)] bg-[hsl(45_82%_52%/8%)] text-foreground"
+                                  : "border-slate-200 bg-white text-foreground/70 hover:border-slate-300"
+                              }`}
+                            >
+                              {area}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                      <Button
+                        onClick={() => {
+                          toggleStep(1);
+                          setExpandedStep(null);
+                        }}
+                        className="w-full"
+                      >
+                        Mark as Complete
+                      </Button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Step 2-4: Other Steps */}
+                {REGISTRATION_STEPS.slice(2).map((step, stepIndex) => (
+                  <div key={stepIndex + 2} className="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                    <button
+                      onClick={() => setExpandedStep(expandedStep === stepIndex + 2 ? null : stepIndex + 2)}
+                      className="w-full p-4 hover:bg-slate-50 transition-all text-left flex items-center gap-3"
+                    >
+                      <div
+                        className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
+                          completedSteps.includes(stepIndex + 2)
+                            ? "bg-[hsl(45_82%_52%)] border-[hsl(45_82%_52%)]"
+                            : "border-slate-300"
+                        }`}
+                      >
+                        {completedSteps.includes(stepIndex + 2) && (
+                          <CheckCircle2 className="w-4 h-4 text-white" />
+                        )}
+                      </div>
+                      <span className="font-medium flex-1">{step}</span>
+                      <span className="text-xs text-foreground/60">{expandedStep === stepIndex + 2 ? "▼" : "▶"}</span>
+                    </button>
+                    {expandedStep === stepIndex + 2 && (
+                      <div className="border-t border-slate-200 p-4 bg-slate-50 space-y-4">
+                        <p className="text-sm text-foreground/70">
+                          {stepIndex + 2 === 2 && "Provide contact information for executive leadership or subject matter experts who will participate in briefings."}
+                          {stepIndex + 2 === 3 && "Confirm that you understand and agree to the confidentiality terms of the Executive Briefing Council."}
+                          {stepIndex + 2 === 4 && "Indicate your participation preferences and regions of support."}
+                        </p>
+                        {stepIndex + 2 === 4 && (
+                          <div className="space-y-4 p-4 bg-white rounded-lg border border-slate-200">
+                            <div className="flex items-center justify-between">
+                              <div>
+                                <p className="font-medium text-foreground">Available for executive briefings</p>
+                                <p className="text-xs text-foreground/70">Yes / No</p>
+                              </div>
+                              <button
+                                onClick={() => setAvailableForBriefings(!availableForBriefings)}
+                                className={`px-4 py-2 rounded font-medium transition-all ${
+                                  availableForBriefings
+                                    ? "bg-[hsl(45_82%_52%)] text-white"
+                                    : "bg-slate-300 text-foreground"
+                                }`}
+                              >
+                                {availableForBriefings ? "Yes" : "No"}
+                              </button>
+                            </div>
+
+                            <div className="flex items-center justify-between">
+                              <div>
+                                <p className="font-medium text-foreground">Will provide executive sponsor</p>
+                                <p className="text-xs text-foreground/70">Yes / No</p>
+                              </div>
+                              <button
+                                onClick={() => setProvideExecutiveSponsor(!provideExecutiveSponsor)}
+                                className={`px-4 py-2 rounded font-medium transition-all ${
+                                  provideExecutiveSponsor
+                                    ? "bg-[hsl(45_82%_52%)] text-white"
+                                    : "bg-slate-300 text-foreground"
+                                }`}
+                              >
+                                {provideExecutiveSponsor ? "Yes" : "No"}
+                              </button>
+                            </div>
+
+                            <div>
+                              <label className="text-sm font-medium text-foreground mb-2 block">Regions supported (optional)</label>
+                              <input
+                                type="text"
+                                value={regions}
+                                onChange={(e) => setRegions(e.target.value)}
+                                placeholder="e.g., North America, EMEA, APAC"
+                                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-foreground text-sm"
+                              />
+                            </div>
+                          </div>
+                        )}
+                        <Button
+                          onClick={() => {
+                            toggleStep(stepIndex + 2);
+                            setExpandedStep(null);
+                          }}
+                          className="w-full"
+                        >
+                          Mark as Complete
+                        </Button>
+                      </div>
+                    )}
+                  </div>
                 ))}
+              </div>
+
+              {/* Important Note */}
+              <div className="p-6 bg-blue-50/50 rounded-lg border border-blue-100">
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  <span className="font-semibold">Important:</span> Participation does not imply endorsement or preferred provider status. Briefings are customer-led and curated based on customer priorities. Vendors are selected based on relevance to customer needs.
+                </p>
               </div>
             </section>
           )}
