@@ -153,25 +153,23 @@ export default function Partners() {
               {selectedPartner.speakerImage && selectedPartner.speakerQuote && (
                 <div className="space-y-4 pt-2">
                   {/* Speaker Header */}
-                  <p className="text-sm text-primary font-semibold uppercase tracking-wide">
-                    Featured Speaker
-                  </p>
-
-                  {/* Speaker Bio Section */}
-                  <div className="flex gap-3 items-center">
-                    <img
-                      src={selectedPartner.speakerImage}
-                      alt={selectedPartner.speakerName}
-                      className="w-24 h-24 rounded-lg object-cover flex-shrink-0"
-                    />
-                    <div className="flex-1 pt-0.5">
-                      <div className="mb-2">
-                        <h4 className="font-bold text-foreground text-base">{selectedPartner.speakerName}</h4>
-                        <p className="text-xs text-primary font-semibold">{selectedPartner.speakerTitle}</p>
+                  <div>
+                    <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-3">
+                      Featured Speaker
+                    </p>
+                    <div className="flex gap-3">
+                      <img
+                        src={selectedPartner.speakerImage}
+                        alt={selectedPartner.speakerName}
+                        className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                      />
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground text-sm">{selectedPartner.speakerName}</h4>
+                        <p className="text-xs text-primary font-semibold mb-1">{selectedPartner.speakerTitle}</p>
+                        <p className="text-sm text-foreground/70 leading-relaxed">
+                          {selectedPartner.speakerBio}
+                        </p>
                       </div>
-                      <p className="text-sm text-foreground/70 leading-relaxed">
-                        {selectedPartner.speakerBio}
-                      </p>
                     </div>
                   </div>
 
