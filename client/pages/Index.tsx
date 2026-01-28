@@ -72,10 +72,10 @@ export default function Index() {
               </div>
 
               {/* Program Image */}
-              <div className="mt-10 lg:mt-12">
+              <div className="mt-8 lg:mt-10 max-w-2xl mx-auto">
                 <img
-                  src="https://images.pexels.com/photos/7213364/pexels-photo-7213364.jpeg"
-                  alt="Young professionals collaborating and working together in a contemporary office setting"
+                  src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
+                  alt="Multicultural business executives and professionals discussing strategies in a conference room"
                   className="w-full rounded-2xl shadow-lg object-cover aspect-video"
                 />
               </div>
