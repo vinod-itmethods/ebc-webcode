@@ -25,8 +25,7 @@ export default function Index() {
               <span className="block">enterprise technology leaders</span>
             </h1>
             <p className="text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              <span className="block">Confidential, curated briefings designed to help IT</span>
-              <span className="block">and business executives navigate complex decisions</span>
+              Confidential, curated briefings that help AI, DevOps, and IT leaders navigate complex technology decisions beyond a single vendor's perspective
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button
