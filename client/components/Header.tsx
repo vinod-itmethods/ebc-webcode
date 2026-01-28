@@ -31,7 +31,7 @@ export default function Header() {
                 : "text-foreground/60 hover:text-foreground"
             }`}
           >
-            Technology provider
+            Technology providers
           </Link>
           <Link
             to="/faq"
