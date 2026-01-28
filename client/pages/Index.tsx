@@ -58,7 +58,7 @@ export default function Index() {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our program</h2>
-              <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+              <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
                 <p>
                   The Executive Briefing Council is a structured forum designed for enterprise technology and business leaders navigating high-impact decisions across AI, DevOps, cloud, and platform engineering.
                 </p>
@@ -86,7 +86,7 @@ export default function Index() {
                 <Briefcase className="w-6 h-6" style={{ color: 'rgb(59, 130, 246)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Enterprise leaders</h3>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-foreground/90 leading-relaxed">
                 CIOs, CTOs, CDOs, and senior business and IT leaders responsible for enterprise-wide technology strategy.
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function Index() {
                 <CheckCircle2 className="w-6 h-6" style={{ color: 'rgb(168, 85, 247)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Active decision makers</h3>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-foreground/90 leading-relaxed">
                 Organizations currently evaluating AI initiatives, DevOps modernization, platform architecture, or infrastructure strategy.
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function Index() {
                 <Users className="w-6 h-6" style={{ color: 'rgb(20, 184, 166)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Executive teams</h3>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-foreground/90 leading-relaxed">
                 Cross-functional leadership teams seeking alignment across technology, operations, and business priorities.
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Pre-brief alignment</h3>
-                <p className="text-foreground/80 text-lg leading-relaxed">
+                <p className="text-foreground/90 text-lg leading-relaxed">
                   We work with participating organizations to understand priorities, challenges, and the decisions under consideration.
                 </p>
               </div>
@@ -146,7 +146,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Curated agenda</h3>
-                <p className="text-foreground/80 text-lg leading-relaxed">
+                <p className="text-foreground/90 text-lg leading-relaxed">
                   Each briefing is customized based on the specific topics and outcomes the executive team wants to explore.
                 </p>
               </div>
@@ -161,7 +161,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Multi-partner perspectives</h3>
-                <p className="text-foreground/80 text-lg leading-relaxed">
+                <p className="text-foreground/90 text-lg leading-relaxed">
                   Briefings may include perspectives from multiple technology partners selected for relevance. This enables leaders to compare approaches, surface trade-offs, and ask direct questions across providers in a single forum.
                 </p>
               </div>
@@ -176,7 +176,7 @@ export default function Index() {
               </div>
               <div className="flex-grow">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Outcome focus</h3>
-                <p className="text-foreground/80 text-lg leading-relaxed">
+                <p className="text-foreground/90 text-lg leading-relaxed">
                   Sessions conclude with clear takeaways, options, and next-step considerations.
                 </p>
               </div>
@@ -192,7 +192,7 @@ export default function Index() {
 
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Partner Philosophy */}
-            <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+            <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
               <p>
                 The Executive Briefing Council is not a vendor showcase or a partner-led program. Instead, we provide access to a curated set of technology vendors across the industry, enabling informed, strategic dialogue.
               </p>
@@ -304,7 +304,7 @@ export default function Index() {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Where briefings take place</h2>
           
           <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg text-foreground/80 text-center leading-relaxed">
+            <p className="text-lg text-foreground/90 text-center leading-relaxed">
               Executive briefings are hosted in select locations and may be conducted in person or in private settings aligned to major industry moments.
             </p>
           </div>
@@ -349,7 +349,7 @@ export default function Index() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-white">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Ready to schedule a briefing?</h2>
-          <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             Tell us about your organization's priorities and the strategic decisions you're evaluating. We'll work with you to design a briefing tailored to your needs.
           </p>
           <Button
