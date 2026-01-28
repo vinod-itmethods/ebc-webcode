@@ -56,9 +56,10 @@ export default function Index() {
       {/* OUR PROGRAM SECTION */}
       <section id="what" className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-4xl mx-auto px-4">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our program</h2>
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">Our program</h2>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+              {/* Text Content */}
               <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
                 <p>
                   The Executive Briefing Council is a structured forum designed for enterprise technology and business leaders navigating high-impact decisions across AI, DevOps, cloud, and platform engineering.
@@ -72,11 +73,11 @@ export default function Index() {
               </div>
 
               {/* Program Image */}
-              <div className="mt-8 lg:mt-10 max-w-2xl mx-auto">
+              <div className="h-full min-h-[400px]">
                 <img
                   src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
                   alt="Multicultural business executives and professionals discussing strategies in a conference room"
-                  className="w-full rounded-2xl shadow-lg object-cover aspect-video"
+                  className="w-full h-full rounded-2xl shadow-lg object-cover"
                 />
               </div>
             </div>
