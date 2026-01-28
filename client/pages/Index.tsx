@@ -86,7 +86,7 @@ export default function Index() {
                 <Briefcase className="w-6 h-6" style={{ color: 'rgb(59, 130, 246)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Enterprise leaders</h3>
-              <p className="text-foreground/70 leading-relaxed">
+              <p className="text-foreground/80 leading-relaxed">
                 CIOs, CTOs, CDOs, and senior business and IT leaders responsible for enterprise-wide technology strategy.
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function Index() {
                 <CheckCircle2 className="w-6 h-6" style={{ color: 'rgb(168, 85, 247)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Active decision makers</h3>
-              <p className="text-foreground/70 leading-relaxed">
+              <p className="text-foreground/80 leading-relaxed">
                 Organizations currently evaluating AI initiatives, DevOps modernization, platform architecture, or infrastructure strategy.
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function Index() {
                 <Users className="w-6 h-6" style={{ color: 'rgb(20, 184, 166)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Executive teams</h3>
-              <p className="text-foreground/70 leading-relaxed">
+              <p className="text-foreground/80 leading-relaxed">
                 Cross-functional leadership teams seeking alignment across technology, operations, and business priorities.
               </p>
             </div>
