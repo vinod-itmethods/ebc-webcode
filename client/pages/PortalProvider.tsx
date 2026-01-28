@@ -508,7 +508,7 @@ export default function PortalProvider() {
                     <div
                       className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                         completedSteps.includes(0)
-                          ? "bg-[hsl(45_82%_52%)] border-[hsl(45_82%_52%)]"
+                          ? "bg-[hsl(190_55%_40%)] border-[hsl(190_55%_40%)]"
                           : "border-slate-300"
                       }`}
                     >
