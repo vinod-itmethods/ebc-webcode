@@ -46,6 +46,8 @@ export const partners: Partner[] = [
     description: "CircleCI automates the build, test, and deployment pipeline, enabling teams to ship code faster and more reliably.",
     topics: ["Continuous integration", "Automated testing", "Deployment pipelines", "Developer productivity"],
     benefits: ["Faster deployment cycles", "Early bug detection", "Reduced manual work", "Improved code quality"],
+    speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    speakerQuote: "Hear from Jimmy Jones, CEO of CircleCI, on how CircleCI is driving the next iteration of DevOps with AI — from intelligent automation to robots that can literally bake the future.",
   },
   {
     id: "cloudbees",
