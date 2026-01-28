@@ -8,6 +8,7 @@ import { LogOut } from "lucide-react";
 
 export default function PartnerDashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [activeTab, setActiveTab] = useState<"profile" | "briefings" | "resources">("profile");
   const navigate = useNavigate();
 
   useEffect(() => {
