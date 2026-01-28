@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { Quote } from "lucide-react";
+import { useState } from "react";
+import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Testimonial {
   quote: string;
@@ -19,57 +19,28 @@ const testimonials: Testimonial[] = [
     quote: "The biggest value was speed. We compared architectures and operating models across providers in a single forum and left with a clearer sequence for modernization.",
     role: "Head of Cloud & Infrastructure, Manufacturing",
   },
-  {
-    quote: "Getting multiple perspectives in one confidential session helped us pressure-test our plan and align on the right path forward—without getting anchored to a single vendor narrative.",
-    role: "VP Engineering, Financial Services",
-  },
-  {
-    quote: "We walked in with competing opinions. Hearing different approaches side by side clarified the trade-offs and accelerated alignment across security, platform, and delivery teams.",
-    role: "Director, Platform Engineering, Healthcare",
-  },
-  {
-    quote: "The biggest value was speed. We compared architectures and operating models across providers in a single forum and left with a clearer sequence for modernization.",
-    role: "Head of Cloud & Infrastructure, Manufacturing",
-  },
 ];
 
 export default function TestimonialCarousel() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isHovering, setIsHovering] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    if (isHovering || !scrollContainerRef.current) return;
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
 
-    const interval = setInterval(() => {
-      setScrollPosition((prev) => {
-        const container = scrollContainerRef.current;
-        if (!container) return prev;
-        
-        const newPosition = prev + 1;
-        // Reset to 0 when reaching halfway (seamless loop)
-        if (newPosition > container.scrollWidth / 2) {
-          return 0;
-        }
-        return newPosition;
-      });
-    }, 30);
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-    return () => clearInterval(interval);
-  }, [isHovering]);
-
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft = scrollPosition;
-    }
-  }, [scrollPosition]);
-
-  const handleMouseEnter = () => setIsHovering(true);
-  const handleMouseLeave = () => setIsHovering(false);
+  const currentTestimonial = testimonials[currentIndex];
 
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-white via-slate-50/40 to-white">
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container max-w-4xl mx-auto px-4">
         {/* Quote Icon */}
         <div className="flex justify-center mb-12">
           <Quote className="w-16 h-16 text-slate-200" strokeWidth={1.5} />
@@ -85,39 +56,52 @@ export default function TestimonialCarousel() {
           </p>
         </div>
 
-        {/* Carousel */}
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-6 overflow-hidden"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            scrollBehavior: "auto",
-            WebkitOverflowScrolling: "touch",
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={`testimonial-${index}`}
-              className="flex-shrink-0 w-96 bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
-              style={{
-                borderLeft: "4px solid hsl(45 82% 52%)",
-              }}
-            >
-              <p className="text-foreground/90 leading-relaxed mb-6 text-lg">
-                "{testimonial.quote}"
-              </p>
-              <p className="text-sm text-primary font-semibold">
-                {testimonial.role}
-              </p>
-            </div>
-          ))}
+        {/* Testimonial Card with Navigation */}
+        <div className="flex items-center justify-between gap-6 lg:gap-8">
+          {/* Left Arrow */}
+          <button
+            onClick={goToPrevious}
+            className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-sm hover:shadow-md hover:bg-slate-50 transition-all text-foreground"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-6 h-6" strokeWidth={2} />
+          </button>
+
+          {/* Testimonial */}
+          <div className="flex-1 bg-white rounded-xl p-8 lg:p-10 shadow-sm" style={{ borderLeft: "4px solid hsl(45 82% 52%)" }}>
+            <p className="text-lg lg:text-xl text-foreground/90 leading-relaxed mb-6">
+              "{currentTestimonial.quote}"
+            </p>
+            <p className="text-sm lg:text-base text-primary font-semibold">
+              {currentTestimonial.role}
+            </p>
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={goToNext}
+            className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-sm hover:shadow-md hover:bg-slate-50 transition-all text-foreground"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-6 h-6" strokeWidth={2} />
+          </button>
         </div>
 
-        {/* Hint text */}
-        <p className="text-center text-xs text-foreground/50 mt-6">
-          Hover to pause • Swipe to scroll
-        </p>
+        {/* Indicator Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentIndex
+                  ? "bg-primary w-6"
+                  : "bg-slate-300 hover:bg-slate-400"
+              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
