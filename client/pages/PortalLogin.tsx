@@ -80,7 +80,7 @@ export default function PortalLogin() {
             <div className="flex gap-3">
               <button
                 onClick={() => setRole("customer")}
-                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
+                className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-all ${
                   role === "customer"
                     ? "bg-[hsl(193_45%_45%)] text-white"
                     : "bg-slate-100 text-foreground hover:bg-slate-200"
@@ -90,7 +90,7 @@ export default function PortalLogin() {
               </button>
               <button
                 onClick={() => setRole("provider")}
-                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
+                className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-all ${
                   role === "provider"
                     ? "bg-[hsl(193_45%_45%)] text-white"
                     : "bg-slate-100 text-foreground hover:bg-slate-200"
