@@ -295,7 +295,7 @@ export default function Index() {
                 asChild
                 variant="secondary-outline"
               >
-                <Link to="/partners">View all technology partners</Link>
+                <Link to="/partners">View all technology providers</Link>
               </Button>
             </div>
           </div>
