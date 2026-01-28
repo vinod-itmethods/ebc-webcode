@@ -75,6 +75,9 @@ export default function Index() {
         </div>
       </section>
 
+      {/* TESTIMONIALS SECTION */}
+      <TestimonialCarousel />
+
       {/* WHO IT'S FOR SECTION */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50/60 via-teal-50/30 to-white">
         <div className="container max-w-6xl mx-auto px-4">
