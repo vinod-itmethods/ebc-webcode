@@ -106,7 +106,7 @@ export default function PortalCustomer() {
           {/* Header */}
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Customer Portal</h1>
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Customer portal</h1>
               <p className="text-lg text-foreground/90">Welcome. This portal provides a limited view of your Executive Briefing Council activity, including request status and confirmed session details.</p>
             </div>
             <Button
