@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { partners } from "@/data/partners";
 import { Lock } from "lucide-react";
 
 const PORTAL_PASSWORD = "executive2024";
