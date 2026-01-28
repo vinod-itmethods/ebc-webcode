@@ -48,9 +48,9 @@ export default function Header() {
         {/* Right Side - Vendor Login and CTA */}
         <div className="flex items-center gap-4 ml-auto">
           <Link
-            to="/partner-login"
+            to="/portal"
             className={`hidden md:inline text-sm font-medium transition-colors ${
-              isActive("/partner-login") || isActive("/partner-dashboard")
+              isActive("/portal") || isActive("/partner-login") || isActive("/partner-dashboard") || location.pathname.startsWith("/portal")
                 ? "text-primary"
                 : "text-foreground/60 hover:text-foreground"
             }`}
