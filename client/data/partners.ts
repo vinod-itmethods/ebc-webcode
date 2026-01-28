@@ -52,7 +52,7 @@ export const partners: Partner[] = [
     speakerImage: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F64f04be8b8f34fc98ae3e5282dfd5efc?format=webp&width=800&height=1200",
     speakerName: "Jim Rose",
     speakerTitle: "CEO, CircleCI",
-    speakerBio: "Jim Rose is the CEO of CircleCI, the leading continuous integration and continuous delivery (CI/CD) platform trusted by millions of developers and enterprises worldwide. With extensive experience in scaling development operations and DevOps practices, Jim has driven CircleCI's evolution to meet the needs of modern engineering teams. He brings deep insights into how organizations can streamline their software delivery pipelines while maintaining quality and security at scale.",
+    speakerBio: "Jim Rose is the CEO of CircleCI, a leading CI/CD platform used by enterprises worldwide. He brings deep experience in scaling DevOps practices and helping engineering teams deliver software faster while maintaining quality and security.",
     speakerQuote: "At CircleCI, we believe that modern development teams need platforms that not only accelerate delivery but also provide intelligence and visibility across the entire software development lifecycle. Our focus is on helping enterprises reduce friction in their CI/CD practices while enabling teams to move faster with confidence."
   },
   {
