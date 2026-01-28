@@ -75,7 +75,7 @@ export default function Index() {
 
       {/* Program Image - Above Testimonials */}
       <section className="py-12 lg:py-16 bg-white">
-        <div className="container max-w-4xl mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-xl lg:max-w-2xl">
           <img
             src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
             alt="Multicultural business executives and professionals discussing strategies in a conference room"
