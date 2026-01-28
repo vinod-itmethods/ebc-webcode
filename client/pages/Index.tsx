@@ -204,25 +204,30 @@ export default function Index() {
               <h3 className="text-xl lg:text-2xl font-semibold text-foreground">Areas of Coverage</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
-                  { title: "Cloud & Infrastructure", description: "Cloud providers and infrastructure platforms", tint: "warm" },
-                  { title: "AI & Machine Learning", description: "AI platforms and ML operations", tint: "cool" },
-                  { title: "DevOps & Continuous Delivery", description: "CI/CD platforms and automation", tint: "warm" },
-                  { title: "Platform & Architecture", description: "Platform engineering and microservices", tint: "cool" },
-                  { title: "Security & Compliance", description: "Security and governance solutions", tint: "warm" },
-                  { title: "Data & Analytics", description: "Data platforms and analytics", tint: "cool" },
-                ].map((category, index) => (
-                  <div
-                    key={index}
-                    className={`rounded-lg p-6 hover:shadow-md transition-shadow ${
-                      category.tint === "warm"
-                        ? "bg-[hsl(45_82%_52%/4%)]"
-                        : "bg-[hsl(217_13%_46%/4%)]"
-                    }`}
-                  >
-                    <h4 className="font-semibold text-foreground mb-2">{category.title}</h4>
-                    <p className="text-foreground/70 text-sm">{category.description}</p>
-                  </div>
-                ))}
+                  { title: "Cloud & Infrastructure", description: "Cloud providers and infrastructure platforms", icon: Cloud },
+                  { title: "AI & Machine Learning", description: "AI platforms and ML operations", icon: Lightbulb },
+                  { title: "DevOps & Continuous Delivery", description: "CI/CD platforms and automation", icon: GitBranch },
+                  { title: "Platform & Architecture", description: "Platform engineering and microservices", icon: Box },
+                  { title: "Security & Compliance", description: "Security and governance solutions", icon: Shield },
+                  { title: "Data & Analytics", description: "Data platforms and analytics", icon: Database },
+                ].map((category, index) => {
+                  const IconComponent = category.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow border-2"
+                      style={{
+                        borderImage: "linear-gradient(135deg, #22d3ee 0%, #10b981 33%, #f59e0b 66%, #d4ac35 100%) 1",
+                      }}
+                    >
+                      <div className="flex items-start gap-3 mb-3">
+                        <IconComponent className="w-5 h-5 text-slate-700 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                      </div>
+                      <h4 className="font-bold text-slate-900 mb-2 text-sm">{category.title}</h4>
+                      <p className="text-slate-500 text-sm leading-relaxed">{category.description}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
