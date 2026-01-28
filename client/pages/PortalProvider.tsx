@@ -225,8 +225,8 @@ export default function PortalProvider() {
               onClick={() => setActiveTab("registration")}
               className={`px-4 py-3 font-medium border-b-2 transition-colors ${
                 activeTab === "registration"
-                  ? "border-[hsl(190_55%_40%)] text-[hsl(190_55%_40%)]"
-                  : "border-transparent text-foreground/60 hover:text-[hsl(190_55%_40%)]"
+                  ? "border-[hsl(193_45%_45%)] text-[hsl(193_45%_45%)]"
+                  : "border-transparent text-foreground/60 hover:text-[hsl(193_45%_45%)]"
               }`}
             >
               Program Registration
