@@ -12,7 +12,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-1 hover:opacity-80 transition-opacity mr-12">
+        <Link to="/" className="flex items-center gap-0 hover:opacity-80 transition-opacity mr-12">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb708ee6487aa42df951001ea08f04fa4?format=webp&width=800&height=1200"
             alt="EBC Logo"
