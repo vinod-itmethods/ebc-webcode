@@ -38,7 +38,7 @@ export default function Footer() {
           {/* Attribution */}
           <div className="space-y-2">
             <p className="text-xs text-foreground/50">
-              Developed by iTmethods
+              Facilitated by iTmethods
             </p>
           </div>
         </div>
