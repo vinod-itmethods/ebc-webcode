@@ -74,8 +74,8 @@ export default function Index() {
               {/* Program Image */}
               <div className="mt-10 lg:mt-12">
                 <img
-                  src="https://images.pexels.com/photos/6794937/pexels-photo-6794937.jpeg"
-                  alt="Contemporary sleek meeting room with modern design and bright contemporary office space"
+                  src="https://images.pexels.com/photos/5444195/pexels-photo-5444195.jpeg"
+                  alt="Sophisticated modern conference room with sleek furniture and glass walls"
                   className="w-full rounded-2xl shadow-lg object-cover aspect-video"
                 />
               </div>
