@@ -189,7 +189,7 @@ export default function PortalProvider() {
           {/* Header */}
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Technology Provider Portal</h1>
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Technology provider portal</h1>
               <p className="text-lg text-foreground/90">This portal is for approved technology providers participating in Executive Briefing Council sessions. Use it to complete registration and indicate where you'd like to opt in.</p>
             </div>
             <Button
