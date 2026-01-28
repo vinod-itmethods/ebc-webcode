@@ -86,6 +86,79 @@ export default function PortalProvider() {
     navigate("/portal");
   };
 
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const imageUrl = event.target?.result as string;
+        setProviderData(prev => ({
+          ...prev,
+          speakerImage: imageUrl
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleInputChange = (field: keyof Partner, value: string) => {
+    setProviderData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleTopicChange = (index: number, value: string) => {
+    const newTopics = [...topics];
+    newTopics[index] = value;
+    setTopics(newTopics);
+  };
+
+  const addTopic = () => {
+    if (additionalTopic.trim()) {
+      setTopics([...topics, additionalTopic]);
+      setAdditionalTopic("");
+    }
+  };
+
+  const removeTopic = (index: number) => {
+    setTopics(topics.filter((_, i) => i !== index));
+  };
+
+  const handleBenefitChange = (index: number, value: string) => {
+    const newBenefits = [...(providerData.benefits || [])];
+    newBenefits[index] = value;
+    setProviderData(prev => ({
+      ...prev,
+      benefits: newBenefits
+    }));
+  };
+
+  const addBenefit = () => {
+    setProviderData(prev => ({
+      ...prev,
+      benefits: [...(prev.benefits || []), ""]
+    }));
+  };
+
+  const removeBenefit = (index: number) => {
+    setProviderData(prev => ({
+      ...prev,
+      benefits: prev.benefits?.filter((_, i) => i !== index) || []
+    }));
+  };
+
+  const handleSaveProfile = () => {
+    const dataToSave = {
+      ...providerData,
+      topics,
+      additionalTopic
+    };
+    localStorage.setItem(`partner_${selectedProviderId}`, JSON.stringify(dataToSave));
+    setIsSaved(true);
+    setTimeout(() => setIsSaved(false), 2000);
+  };
+
   const toggleArea = (area: string) => {
     setSelectedAreas((prev) =>
       prev.includes(area) ? prev.filter((a) => a !== area) : [...prev, area]
