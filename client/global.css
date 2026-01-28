@@ -51,12 +51,12 @@
     --sidebar-border: 218 15% 88%;
     --sidebar-ring: 200 100% 53%;
 
-    /* Design System - Primary Button (Warm Gradient) */
-    --button-primary-start: 45 82% 52%;    /* #d4ac35 */
-    --button-primary-end: 38 92% 50%;      /* #f59e0b */
-    --button-primary-text: 224 25% 10%;    /* #0a0e1a */
-    --button-primary-hover-start: 45 82% 45%;
-    --button-primary-hover-end: 38 92% 43%;
+    /* Design System - Primary Button (Teal) */
+    --button-primary-start: 190 55% 40%;   /* Teal */
+    --button-primary-end: 190 55% 40%;     /* Teal */
+    --button-primary-text: 0 0% 100%;      /* White text */
+    --button-primary-hover-start: 190 55% 35%;
+    --button-primary-hover-end: 190 55% 35%;
 
     /* Design System - Secondary Button (Gold Outline) */
     --button-secondary-start: 45 82% 52%;  /* #d4ac35 */
