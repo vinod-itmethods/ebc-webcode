@@ -158,16 +158,16 @@ export default function Partners() {
                   </p>
 
                   {/* Speaker Bio Section */}
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 items-start">
                     <img
                       src={selectedPartner.speakerImage}
                       alt={selectedPartner.speakerName}
-                      className="w-32 h-32 rounded-lg object-cover flex-shrink-0"
+                      className="w-28 h-28 rounded-lg object-cover flex-shrink-0"
                     />
-                    <div className="flex-1 pt-1">
-                      <h4 className="font-bold text-foreground text-lg mb-1">{selectedPartner.speakerName}</h4>
-                      <p className="text-sm text-primary font-semibold mb-3">{selectedPartner.speakerTitle}</p>
-                      <p className="text-sm text-foreground/70 leading-relaxed">
+                    <div className="flex-1 pt-0.5">
+                      <h4 className="font-bold text-foreground text-base mb-0.5">{selectedPartner.speakerName}</h4>
+                      <p className="text-xs text-primary font-semibold mb-2">{selectedPartner.speakerTitle}</p>
+                      <p className="text-xs text-foreground/70 leading-snug line-clamp-3">
                         {selectedPartner.speakerBio}
                       </p>
                     </div>
