@@ -144,10 +144,9 @@ export default function RequestBriefing() {
 
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-3">
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">Request an executive briefing</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">Request a briefing</h1>
             <p className="text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto">
-              Use this form to outline your areas of interest and briefing preferences. A member of our team will
-              follow up to confirm alignment and next steps.
+              Tell us about your organization's technology priorities and strategic decisions. Our team will curate a briefing tailored to your needs, bringing together perspectives from relevant technology partners.
             </p>
           </div>
         </div>
