@@ -39,7 +39,6 @@ export default function App() {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        {/* TESTING: If you see this comment in the browser console, hot reload is working */}
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
