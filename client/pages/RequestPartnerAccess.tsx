@@ -282,12 +282,12 @@ export default function RequestPartnerAccess() {
                   htmlFor="description"
                   className="block text-sm font-semibold text-foreground mb-2"
                 >
-                  Tell us about your company <span className="text-red-500">*</span>
+                  Additional information <span className="text-red-500">*</span>
                 </label>
                 <Textarea
                   id="description"
                   name="description"
-                  placeholder="Share details about your company, your value proposition, and why you'd be a good fit for the Executive Briefing Council..."
+                  placeholder="Tell us more about your organization and how you'd like to work together..."
                   value={formData.description}
                   onChange={handleInputChange}
                   className="w-full min-h-32"
