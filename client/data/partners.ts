@@ -6,6 +6,7 @@ export interface Partner {
   description: string;
   topics: string[];
   benefits: string[];
+  categories: ("cloud" | "ai" | "devops" | "platform" | "security" | "data")[];
   speakerImage?: string;
   speakerName?: string;
   speakerTitle?: string;
