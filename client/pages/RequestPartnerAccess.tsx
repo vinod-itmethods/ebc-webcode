@@ -253,26 +253,6 @@ export default function RequestPartnerAccess() {
                 />
               </div>
 
-              {/* Areas of Interest */}
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-3">
-                  Areas of interest <span className="text-red-500">*</span>
-                </label>
-                <div className="space-y-2">
-                  {expertiseOptions.map((area) => (
-                    <label key={area} className="flex items-center gap-3 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={formData.expertise.includes(area)}
-                        onChange={() => handleExpertiseToggle(area)}
-                        className="w-4 h-4 rounded border-border bg-white cursor-pointer"
-                      />
-                      <span className="text-sm text-foreground">{area}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
               {/* Description */}
               <div>
                 <label
