@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+    .header h1 { margin: 0 0 5px 0; font-size: 28px; }
+    .header p { margin: 0; opacity: 0.95; }
+    .content { margin-bottom: 20px; }
+    .section { margin-bottom: 20px; }
+    .section-title { font-weight: bold; font-size: 16px; color: #000; margin-bottom: 15px; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+    .credentials-box { background: #f0f4ff; border-left: 4px solid #667eea; padding: 20px; border-radius: 6px; margin: 15px 0; }
+    .credential-item { margin-bottom: 12px; }
+    .credential-label { font-weight: bold; color: #333; font-size: 13px; }
+    .credential-value { font-family: 'Courier New', monospace; background: white; padding: 8px 12px; border-radius: 4px; margin-top: 4px; border: 1px solid #ddd; font-size: 14px; }
+    .feature-list { list-style: none; padding: 0; margin: 15px 0; }
+    .feature-list li { padding: 10px 0; padding-left: 25px; position: relative; color: #666; }
+    .feature-list li:before { content: "✓"; position: absolute; left: 0; color: #667eea; font-weight: bold; }
+    .cta-button { display: inline-block; background: #667eea; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; margin: 20px 0; }
+    .footer { color: #999; font-size: 12px; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; }
+    .footer p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to the Executive Briefing Council</h1>
+      <p>Your Technology Partner Portal</p>
+    </div>
+
+    <div class="content">
+      <p style="margin-top: 0;">Hello {{partnerName}},</p>
+      
+      <p>Thank you for being a valued technology partner with the Executive Briefing Council. We're excited to have you on board and look forward to collaborating with you.</p>
+
+      <div class="section">
+        <div class="section-title">Your Portal Access</div>
+        <p>Your account has been created. Use the credentials below to log in to your partner portal:</p>
+        <div class="credentials-box">
+          <div class="credential-item">
+            <div class="credential-label">Email:</div>
+            <div class="credential-value">{{partnerEmail}}</div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-label">Temporary Password:</div>
+            <div class="credential-value">{{temporaryPassword}}</div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-label">Portal URL:</div>
+            <div class="credential-value">{{portalUrl}}</div>
+          </div>
+        </div>
+        <p style="background: #fffacd; padding: 10px; border-radius: 4px; font-size: 13px; margin: 15px 0;">
+          <strong>Note:</strong> We recommend changing your password upon first login for security purposes.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">What You Can Do in Your Portal</div>
+        <ul class="feature-list">
+          <li><strong>Update Your Company Information</strong> - Keep your company profile current with logo, description, and contact details</li>
+          <li><strong>Manage Speaker Bios</strong> - Add and update executive speaker profiles with their expertise and backgrounds</li>
+          <li><strong>Upload Photos</strong> - Add professional photos of executives and company imagery</li>
+          <li><strong>Add Topics & Expertise</strong> - Define the topics and areas of expertise your speakers can cover</li>
+          <li><strong>View Briefing Requests</strong> - See the briefing requests that match your expertise</li>
+          <li><strong>Manage Speaker Availability</strong> - Update speaker schedules and availability</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Next Steps</div>
+        <p>1. Log in to your portal using the credentials above</p>
+        <p>2. Update your company profile and add speaker information</p>
+        <p>3. Define your areas of expertise and topics</p>
+        <p>4. Upload professional photos</p>
+        <p>Once your profile is complete, you'll be able to see and respond to relevant briefing requests from our network of organizations.</p>
+      </div>
+
+      <center>
+        <a href="{{portalUrl}}" class="cta-button">Access Your Portal</a>
+      </center>
+
+      <div class="section" style="background: #f9f9f9; padding: 15px; border-radius: 6px; margin-top: 20px;">
+        <div style="font-weight: bold; margin-bottom: 10px;">Need Help?</div>
+        <p style="margin: 0 0 5px 0;">If you have any questions or need assistance getting started, please don't hesitate to contact us:</p>
+        <p style="margin: 5px 0;"><strong>Email:</strong> {{supportEmail}}</p>
+        <p style="margin: 5px 0;"><strong>Phone:</strong> {{supportPhone}}</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>Executive Briefing Council</strong></p>
+      <p>© 2024 All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
