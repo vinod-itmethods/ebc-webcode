@@ -246,7 +246,7 @@ export default function Partners() {
                 variant="secondary-outline"
                 className="flex-1 font-semibold rounded-lg"
               >
-                <Link to="/request-briefing">Go to Request</Link>
+                <Link to="/request-briefing">Submit briefing request</Link>
               </Button>
             </div>
           </div>
