@@ -64,7 +64,7 @@ export default function Partners() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-12 lg:py-16 bg-white border-b border-border/10">
+      <section className="py-6 lg:py-8 bg-white border-b border-border/10">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <label htmlFor="category-filter" className="text-sm font-semibold text-foreground">
