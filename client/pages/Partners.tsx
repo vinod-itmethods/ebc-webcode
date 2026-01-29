@@ -63,6 +63,38 @@ export default function Partners() {
         </div>
       </section>
 
+      {/* Category Filter */}
+      <section className="py-12 lg:py-16 bg-white border-b border-border/10">
+        <div className="container max-w-7xl mx-auto px-4">
+          <h3 className="text-sm font-semibold text-primary uppercase tracking-wide mb-6">Filter by category</h3>
+          <div className="flex flex-wrap gap-3">
+            <button
+              onClick={() => setSelectedCategory(null)}
+              className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                selectedCategory === null
+                  ? "bg-primary text-white"
+                  : "bg-slate-100 text-foreground hover:bg-slate-200"
+              }`}
+            >
+              All
+            </button>
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(selectedCategory === category.id ? null : category.id)}
+                className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                  selectedCategory === category.id
+                    ? "bg-primary text-white"
+                    : "bg-slate-100 text-foreground hover:bg-slate-200"
+                }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partner Grid */}
       <section className="py-20 lg:py-28">
         <div className="container max-w-7xl mx-auto px-4">
