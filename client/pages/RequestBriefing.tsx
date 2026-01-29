@@ -99,10 +99,9 @@ export default function RequestBriefing() {
               </div>
 
               <div className="space-y-3">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Thank you for your request</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Thank you for your briefing request</h2>
                 <p className="text-lg text-foreground/70 leading-relaxed">
-                  A member of our team will review your input and follow up to confirm relevance, alignment, and next
-                  steps. Briefings are curated based on active decision areas and availability.
+                  We've received your briefing request and our team is reviewing your organization's needs. You'll receive an email shortly with your secure login credentials to access the customer portal and track your briefing status.
                 </p>
               </div>
 
