@@ -95,10 +95,10 @@ export default function Partners() {
               <button
                 key={partner.id}
                 onClick={() => setSelectedPartner(partner)}
-                className="group relative flex flex-col items-center justify-center cursor-pointer bg-slate-50 rounded-xl px-2 py-2 hover:shadow-lg hover:bg-white transition-all"
+                className="group relative flex flex-col items-center justify-center cursor-pointer bg-slate-50 rounded-xl p-4 hover:shadow-lg hover:bg-white transition-all"
               >
                 {/* Logo */}
-                <div className="flex items-center justify-center w-full h-full" style={{ minHeight: "140px" }}>
+                <div className="flex items-center justify-center w-full" style={{ height: "120px" }}>
                   <img
                     src={partner.logo}
                     alt={partner.name}
@@ -113,11 +113,6 @@ export default function Partners() {
                     }}
                   />
                 </div>
-
-                {/* Hover Tagline */}
-                <p className="text-xs text-foreground/60 text-center line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity mt-1 px-1">
-                  {partner.tagline}
-                </p>
               </button>
             ))}
           </div>
