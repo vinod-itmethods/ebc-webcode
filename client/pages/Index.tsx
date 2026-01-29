@@ -295,7 +295,7 @@ export default function Index() {
 
             {/* Partner Carousel */}
             <div>
-              <PartnerCarousel selectedCategory={selectedCategory} />
+              <PartnerCarousel />
             </div>
 
             {/* View all partners CTA */}
