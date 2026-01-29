@@ -114,11 +114,6 @@ export default function Partners() {
                   />
                 </div>
 
-                {/* Name */}
-                <h3 className="font-semibold text-foreground text-center text-sm group-hover:text-primary transition-colors">
-                  {partner.name}
-                </h3>
-
                 {/* Hover Tagline */}
                 <p className="text-xs text-foreground/60 text-center mt-2 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity">
                   {partner.tagline}
