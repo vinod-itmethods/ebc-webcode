@@ -432,7 +432,71 @@ function Step3({
   );
 }
 
-function Step4({
+function Step4Vendors({
+  vendors,
+  onToggle,
+}: {
+  vendors: string[];
+  onToggle: (value: string) => void;
+}) {
+  return (
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Which technology vendors interest you?</h2>
+        <p className="text-foreground/70">Add vendors to your wishlist or explore additional options.</p>
+      </div>
+
+      {vendors.length > 0 && (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <h3 className="text-sm font-semibold text-foreground">Your wishlist ({vendors.length})</h3>
+            <div className="flex flex-wrap gap-2">
+              {vendors.map((vendorId) => {
+                const vendor = partners.find((p) => p.id === vendorId);
+                return vendor ? (
+                  <div
+                    key={vendorId}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium"
+                  >
+                    {vendor.name}
+                    <button
+                      onClick={() => onToggle(vendorId)}
+                      className="hover:opacity-80 transition-opacity"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                ) : null;
+              })}
+            </div>
+          </div>
+
+          <Button
+            asChild
+            variant="secondary-outline"
+            className="font-semibold rounded-lg"
+          >
+            <a href="/partners">Browse more vendors</a>
+          </Button>
+        </div>
+      )}
+
+      {vendors.length === 0 && (
+        <div className="text-center space-y-4 py-8">
+          <p className="text-foreground/70">No vendors added yet.</p>
+          <Button
+            asChild
+            className="font-semibold rounded-lg"
+          >
+            <a href="/partners">Browse and add technology vendors</a>
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Step5Location({
   location,
   format,
   onUpdate,
