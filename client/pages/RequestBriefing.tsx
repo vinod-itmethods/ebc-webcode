@@ -260,10 +260,10 @@ export default function RequestBriefing() {
               </div>
 
               <Button
-                onClick={currentStep === 6 ? handleSubmit : handleNext}
+                onClick={currentStep === 7 ? handleSubmit : handleNext}
                 className="font-semibold rounded-lg"
               >
-                {currentStep === 6 ? "Request briefing" : "Continue"}
+                {currentStep === 7 ? "Request briefing" : "Continue"}
               </Button>
             </div>
           </div>
