@@ -41,8 +41,21 @@ export default function PortalLogin() {
       localStorage.setItem("portalAuthenticated", "true");
       localStorage.setItem("userRole", role);
       localStorage.setItem("userEmail", email);
+
       if (role === "provider") {
-        localStorage.setItem("providerCompanyId", selectedCompany);
+        // Extract email domain and match to partner
+        const emailDomain = email.split("@")[1]?.toLowerCase();
+        let matchedCompanyId = selectedCompany;
+
+        if (emailDomain) {
+          // Try to find a partner with matching domain
+          const matchedPartner = partners.find(p => p.domain?.toLowerCase() === emailDomain);
+          if (matchedPartner) {
+            matchedCompanyId = matchedPartner.id;
+          }
+        }
+
+        localStorage.setItem("providerCompanyId", matchedCompanyId);
       }
       setIsAuthenticated(true);
 
