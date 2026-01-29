@@ -168,7 +168,7 @@ export default function RequestBriefing() {
               <div
                 className="h-full transition-all duration-300"
                 style={{
-                  width: `${(currentStep / STEPS.length) * 100}%`,
+                  width: `${(currentStep / 7) * 100}%`,
                   background: 'linear-gradient(90deg, hsl(45 82% 52%), hsl(38 92% 50%))'
                 }}
               ></div>
