@@ -249,11 +249,11 @@ export default function RequestBriefing() {
               </button>
 
               <div className="flex gap-2 items-center">
-                {STEPS.map((step) => (
+                {[1, 2, 3, 4, 5, 6, 7].map((step) => (
                   <div
-                    key={step.number}
+                    key={step}
                     className={`w-2 h-2 rounded-full transition-colors ${
-                      step.number <= currentStep ? "bg-[hsl(45_82%_52%)]" : "bg-slate-200"
+                      step <= currentStep ? "bg-[hsl(45_82%_52%)]" : "bg-slate-200"
                     }`}
                   ></div>
                 ))}
