@@ -297,7 +297,7 @@ export default function RequestPartnerAccess() {
                 disabled={loading}
                 className="w-full font-semibold rounded-lg py-2.5"
               >
-                {loading ? "Submitting..." : "Submit access request"}
+                {loading ? "Submitting..." : "Submit inquiry"}
               </Button>
             </form>
 
