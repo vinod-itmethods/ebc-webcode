@@ -23,7 +23,7 @@ export default function Partners() {
 
   // Load partners with any edited data from localStorage
   const partners = useMemo(() => {
-    return originalPartners.map(partner => {
+    let result = originalPartners.map(partner => {
       const savedData = localStorage.getItem(`partner_${partner.id}`);
       if (savedData) {
         try {
@@ -34,7 +34,14 @@ export default function Partners() {
       }
       return partner;
     });
-  }, []);
+
+    // Filter by selected category
+    if (selectedCategory) {
+      result = result.filter(partner => partner.categories.includes(selectedCategory));
+    }
+
+    return result;
+  }, [selectedCategory]);
 
   return (
     <div className="min-h-screen bg-white">
