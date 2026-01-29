@@ -25,9 +25,10 @@ const STEPS = [
   { number: 1, title: "Areas of Interest" },
   { number: 2, title: "Decision Context" },
   { number: 3, title: "Technology Perspectives" },
-  { number: 4, title: "Location & Format" },
-  { number: 5, title: "Goals & Outcomes" },
-  { number: 6, title: "Contact Details" },
+  { number: 4, title: "Technology Vendors" },
+  { number: 5, title: "Location & Format" },
+  { number: 6, title: "Goals & Outcomes" },
+  { number: 7, title: "Contact Details" },
 ];
 
 export default function RequestBriefing() {
