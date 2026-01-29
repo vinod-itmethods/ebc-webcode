@@ -115,16 +115,13 @@ export default function RequestPartnerAccess() {
               <CheckCircle2 className="w-8 h-8 text-green-600" />
             </div>
             <h1 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Partner request received
+              Request received
             </h1>
             <p className="text-lg text-foreground/70">
-              Thank you for your interest in joining the Executive Briefing Council. We've
-              received your access request and will review it shortly.
+              Thank you for reaching out. We've received your inquiry and will review it.
             </p>
             <p className="text-foreground/60">
-              Our team will be in touch within 1-2 business days. In the meantime, if you
-              have any questions, feel free to reach out to{" "}
-              <span className="font-medium">partners@itmethods.com</span>.
+              Our team will be in touch within 1-2 business days with next steps.
             </p>
             <Button asChild className="font-semibold px-8 rounded-lg">
               <Link to="/">Back to home</Link>
