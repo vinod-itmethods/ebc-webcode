@@ -146,11 +146,10 @@ export default function RequestPartnerAccess() {
           {/* Header */}
           <div className="mb-12 space-y-3">
             <h1 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Become a technology partner
+              Partner inquiry
             </h1>
             <p className="text-lg text-foreground/70">
-              Join the Executive Briefing Council and connect with enterprise leaders
-              seeking your expertise.
+              Tell us about your organization and we'll follow up to discuss how we can work together.
             </p>
           </div>
 
