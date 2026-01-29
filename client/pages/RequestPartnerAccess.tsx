@@ -143,10 +143,10 @@ export default function RequestPartnerAccess() {
           {/* Header */}
           <div className="mb-12 space-y-3">
             <h1 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Partner inquiry
+              Get in touch
             </h1>
             <p className="text-lg text-foreground/70">
-              Tell us about your organization and we'll follow up to discuss how we can work together.
+              Have a question or interested in learning more? Let us know and we'll be in touch.
             </p>
           </div>
 
