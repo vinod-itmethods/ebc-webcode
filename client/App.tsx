@@ -49,7 +49,6 @@ export default function App() {
             <Route path="/partner-login" element={<PartnerLogin />} />
             <Route path="/partner-dashboard" element={<PartnerDashboard />} />
             <Route path="/request-partner-access" element={<RequestPartnerAccess />} />
-            <Route path="/test-route" element={<div>TEST ROUTE WORKS</div>} />
             <Route path="/portal/provider" element={<PortalProvider />} />
             <Route path="/portal/customer" element={<PortalCustomer />} />
             <Route path="/portal" element={<PortalLogin />} />
