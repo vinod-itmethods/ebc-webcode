@@ -64,7 +64,7 @@ export default function Partners() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-6 lg:py-8 bg-white border-b border-border/10">
+      <section className="py-4 bg-white border-b border-border/10">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <label htmlFor="category-filter" className="text-sm font-semibold text-foreground">
@@ -88,7 +88,7 @@ export default function Partners() {
       </section>
 
       {/* Partner Grid */}
-      <section className="py-8 lg:py-12">
+      <section className="py-8 lg:py-12 bg-white">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
             {partners.map((partner) => (
