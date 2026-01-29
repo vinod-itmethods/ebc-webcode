@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+    .header h1 { margin: 0; color: #000; }
+    .content { margin-bottom: 20px; }
+    .section { margin-bottom: 25px; background: #f9f9f9; padding: 15px; border-radius: 6px; }
+    .section-title { font-weight: bold; font-size: 14px; color: #555; margin-bottom: 10px; text-transform: uppercase; }
+    .section-content { font-size: 14px; }
+    .field { margin-bottom: 8px; }
+    .field-label { font-weight: bold; color: #333; }
+    .field-value { color: #666; margin-left: 5px; }
+    .badge { display: inline-block; background: #e8f4f8; color: #0066cc; padding: 4px 8px; border-radius: 3px; font-size: 12px; margin-right: 5px; margin-bottom: 5px; }
+    .footer { color: #999; font-size: 12px; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>New Briefing Request Submitted</h1>
+      <p style="margin: 5px 0 0 0; color: #666;">{{userType}} - {{submissionDate}}</p>
+    </div>
+
+    <div class="content">
+      <div class="section">
+        <div class="section-title">Contact Information</div>
+        <div class="section-content">
+          <div class="field">
+            <span class="field-label">Name:</span>
+            <span class="field-value">{{name}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Email:</span>
+            <span class="field-value">{{email}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Company:</span>
+            <span class="field-value">{{company}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Role:</span>
+            <span class="field-value">{{role}}</span>
+          </div>
+          {{#if assistant}}
+          <div class="field">
+            <span class="field-label">Assistant/Coordinator:</span>
+            <span class="field-value">{{assistant}}</span>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Briefing Details</div>
+        <div class="section-content">
+          <div class="field">
+            <span class="field-label">Areas of Interest:</span>
+            <div style="margin-top: 5px;">
+              {{#each interests}}
+                <span class="badge">{{this}}</span>
+              {{/each}}
+            </div>
+          </div>
+          <div class="field" style="margin-top: 10px;">
+            <span class="field-label">Decision Context:</span>
+            <div style="margin-top: 5px;">
+              {{#each decisionContext}}
+                <span class="badge">{{this}}</span>
+              {{/each}}
+            </div>
+          </div>
+          <div class="field" style="margin-top: 10px;">
+            <span class="field-label">Technology Perspectives:</span>
+            <div style="margin-top: 5px;">
+              {{#each perspectives}}
+                <span class="badge">{{this}}</span>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Technology Vendors</div>
+        <div class="section-content">
+          {{#if vendors}}
+            {{#each vendors}}
+              <span class="badge">{{this}}</span>
+            {{/each}}
+          {{else}}
+            <p style="color: #999; margin: 0;">No vendors selected</p>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Format & Location Preferences</div>
+        <div class="section-content">
+          <div class="field">
+            <span class="field-label">Format:</span>
+            <span class="field-value">{{format}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Location:</span>
+            <span class="field-value">{{location}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Goals & Outcomes</div>
+        <div class="section-content">
+          <p style="margin: 0; white-space: pre-wrap; color: #666;">{{goals}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Executive Briefing Council</p>
+      <p>This briefing request has been automatically logged for action.</p>
+    </div>
+  </div>
+</body>
+</html>
