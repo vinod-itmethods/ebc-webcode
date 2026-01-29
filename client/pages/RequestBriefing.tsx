@@ -570,7 +570,7 @@ function Step6Goals({ goals, onUpdate }: { goals: string; onUpdate: (value: stri
   );
 }
 
-function Step6({
+function Step7Contact({
   name,
   role,
   company,
