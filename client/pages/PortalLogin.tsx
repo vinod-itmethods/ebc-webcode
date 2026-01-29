@@ -117,25 +117,6 @@ export default function PortalLogin() {
               />
             </div>
 
-            {/* Company Selection for Providers */}
-            {role === "provider" && (
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Select Your Company
-                </label>
-                <select
-                  value={selectedCompany}
-                  onChange={(e) => setSelectedCompany(e.target.value)}
-                  className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(45_82%_52%)]"
-                >
-                  {partners.map(partner => (
-                    <option key={partner.id} value={partner.id}>
-                      {partner.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
