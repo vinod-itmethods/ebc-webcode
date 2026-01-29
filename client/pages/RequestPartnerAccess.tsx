@@ -144,7 +144,7 @@ export default function RequestPartnerAccess() {
         <div className="container max-w-2xl mx-auto px-4">
           {/* Header */}
           <div className="mb-12 space-y-3">
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">Become a technology partner</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">Become a technology partner today</h1>
             <p className="text-lg text-foreground/70">
               Join the Executive Briefing Council and connect with enterprise leaders seeking your expertise.
             </p>
