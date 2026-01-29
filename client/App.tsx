@@ -21,13 +21,11 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Scroll to top immediately
-    window.scrollTo(0, 0);
-    // Also schedule a scroll for after the page renders
-    const timer = setTimeout(() => {
+    // Use requestAnimationFrame to scroll after the browser has painted
+    const id = requestAnimationFrame(() => {
       window.scrollTo(0, 0);
-    }, 0);
-    return () => clearTimeout(timer);
+    });
+    return () => cancelAnimationFrame(id);
   }, [pathname]);
 
   return null;
