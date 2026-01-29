@@ -304,9 +304,7 @@ export default function RequestPartnerAccess() {
             {/* Info Box */}
             <div className="p-4 bg-blue-50/50 rounded-lg border border-blue-100">
               <p className="text-sm text-foreground/80 leading-relaxed">
-                We carefully review all partner requests to ensure alignment with the
-                Executive Briefing Council's standards. We'll contact you within 1-2
-                business days to discuss next steps.
+                We'll review your submission and follow up with you to discuss how we can work together.
               </p>
             </div>
           </div>
