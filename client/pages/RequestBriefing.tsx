@@ -203,23 +203,31 @@ export default function RequestBriefing() {
               />
             )}
 
-            {/* Step 4: Location and Format */}
+            {/* Step 4: Technology Vendors */}
             {currentStep === 4 && (
-              <Step4
+              <Step4Vendors
+                vendors={formData.vendors}
+                onToggle={(value) => toggleCheckbox("vendors", value)}
+              />
+            )}
+
+            {/* Step 5: Location and Format */}
+            {currentStep === 5 && (
+              <Step5Location
                 location={formData.location}
                 format={formData.format}
                 onUpdate={(field, value) => updateFormData(field, value)}
               />
             )}
 
-            {/* Step 5: Goals and Outcomes */}
-            {currentStep === 5 && (
-              <Step5 goals={formData.goals} onUpdate={(value) => updateFormData("goals", value)} />
+            {/* Step 6: Goals and Outcomes */}
+            {currentStep === 6 && (
+              <Step6Goals goals={formData.goals} onUpdate={(value) => updateFormData("goals", value)} />
             )}
 
-            {/* Step 6: Contact Details */}
-            {currentStep === 6 && (
-              <Step6
+            {/* Step 7: Contact Details */}
+            {currentStep === 7 && (
+              <Step7Contact
                 name={formData.name}
                 role={formData.role}
                 company={formData.company}
