@@ -185,7 +185,7 @@ export default function PortalLogin() {
               asChild
               className="w-full"
             >
-              <a href="/portal/request-access">Request access</a>
+              <a href="/request-partner-access">Request access</a>
             </Button>
           </div>
         </div>
