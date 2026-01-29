@@ -55,7 +55,7 @@ export default function PartnerCarousel() {
         }}
       >
         {/* Render partners twice to create seamless loop */}
-        {[...filteredPartners, ...filteredPartners].map((partner, index) => (
+        {[...partners, ...partners].map((partner, index) => (
           <div
             key={`${partner.id}-${index}`}
             className="flex-shrink-0 flex items-center justify-center"
