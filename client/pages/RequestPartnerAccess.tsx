@@ -256,10 +256,10 @@ export default function RequestPartnerAccess() {
                 />
               </div>
 
-              {/* Areas of Expertise */}
+              {/* Areas of Interest */}
               <div>
                 <label className="block text-sm font-semibold text-foreground mb-3">
-                  Areas of Expertise <span className="text-red-500">*</span>
+                  Areas of interest <span className="text-red-500">*</span>
                 </label>
                 <div className="space-y-2">
                   {expertiseOptions.map((area) => (
