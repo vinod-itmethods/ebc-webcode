@@ -48,7 +48,6 @@ export default function App() {
             <Route path="/request-briefing" element={<RequestBriefing />} />
             <Route path="/partner-login" element={<PartnerLogin />} />
             <Route path="/partner-dashboard" element={<PartnerDashboard />} />
-            <Route path="/test123xyz" element={<Index />} />
             <Route path="/request-partner-access" element={<RequestPartnerAccess />} />
             <Route path="/portal/provider" element={<PortalProvider />} />
             <Route path="/portal/customer" element={<PortalCustomer />} />
