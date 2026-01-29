@@ -30,7 +30,6 @@ interface BriefingFormData {
 
 
 function formatBriefingEmail(data: BriefingFormData): string {
-  const vendorNames = getVendorNames(data.vendors);
 
   return `
 <html>
