@@ -38,6 +38,7 @@ export default function RequestBriefing() {
     interests: [],
     decisionContext: [],
     perspectives: [],
+    vendors: [],
     location: "",
     format: "",
     goals: "",
@@ -46,6 +47,12 @@ export default function RequestBriefing() {
     company: "",
     email: "",
   });
+
+  // Load wishlist from localStorage on component mount
+  useEffect(() => {
+    const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
+    setFormData((prev) => ({ ...prev, vendors: wishlist }));
+  }, []);
 
   const updateFormData = (field: keyof FormData, value: any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
