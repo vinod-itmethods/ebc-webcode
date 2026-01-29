@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import nodemailer from "nodemailer";
-import { partners } from "../data/partners";
+
+// Partner data for looking up vendor names
+const partners = require("../../client/data/partners").partners;
 
 // Configure email transporter
 const transporter = nodemailer.createTransport({
