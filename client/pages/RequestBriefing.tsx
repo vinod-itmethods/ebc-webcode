@@ -78,7 +78,26 @@ export default function RequestBriefing() {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    try {
+      // Send briefing data to server
+      const response = await fetch("/api/briefing-submission", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        console.error("Failed to submit briefing request");
+      } else {
+        console.log("Briefing request submitted successfully");
+      }
+    } catch (error) {
+      console.error("Error submitting briefing request:", error);
+    }
+
     setSubmitted(true);
   };
 
