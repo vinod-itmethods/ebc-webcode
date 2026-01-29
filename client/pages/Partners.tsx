@@ -98,11 +98,11 @@ export default function Partners() {
                 className="group relative flex flex-col items-center justify-center cursor-pointer bg-slate-50 rounded-xl p-3 hover:shadow-lg hover:bg-white transition-all"
               >
                 {/* Logo */}
-                <div className="flex items-center justify-center" style={{ width: "200px", height: "110px" }}>
+                <div className="flex items-center justify-center w-full h-full" style={{ minHeight: "140px" }}>
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                    style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
                     onError={(e) => {
                       const el = e.currentTarget;
                       el.style.display = "none";
