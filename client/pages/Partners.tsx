@@ -95,7 +95,7 @@ export default function Partners() {
               <button
                 key={partner.id}
                 onClick={() => setSelectedPartner(partner)}
-                className="group relative flex flex-col items-center justify-center cursor-pointer bg-slate-50 rounded-xl p-3 hover:shadow-lg hover:bg-white transition-all"
+                className="group relative flex flex-col items-center justify-center cursor-pointer bg-slate-50 rounded-xl px-3 py-3 pb-4 hover:shadow-lg hover:bg-white transition-all"
               >
                 {/* Logo */}
                 <div className="flex items-center justify-center w-full h-full" style={{ minHeight: "140px" }}>
