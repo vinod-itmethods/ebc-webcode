@@ -115,7 +115,7 @@ export default function Partners() {
                 </div>
 
                 {/* Hover Tagline */}
-                <p className="text-xs text-foreground/60 text-center mt-2 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="text-xs text-foreground/60 text-center line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity">
                   {partner.tagline}
                 </p>
               </button>
