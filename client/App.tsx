@@ -34,6 +34,7 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  console.log("APP IS RENDERING - HOT RELOAD TEST");
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
