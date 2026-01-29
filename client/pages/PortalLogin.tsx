@@ -77,6 +77,17 @@ export default function PortalLogin() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white flex flex-col items-center justify-center p-4">
+      {/* Back to Home Link */}
+      <div className="absolute top-4 left-4">
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+        >
+          <ChevronLeft className="w-4 h-4" />
+          Back to home
+        </Link>
+      </div>
+
       {/* Hero Header */}
       <div className="w-full max-w-2xl text-center mb-12">
         <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-3">Executive briefing<br className="hidden sm:block" /> council portal</h1>
