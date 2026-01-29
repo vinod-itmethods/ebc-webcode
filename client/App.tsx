@@ -43,7 +43,7 @@ export default function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/faq" element={<FAQ />} />
+            <Route path="/faq-test-12345" element={<FAQ />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/request-briefing" element={<RequestBriefing />} />
             <Route path="/partner-login" element={<PartnerLogin />} />
