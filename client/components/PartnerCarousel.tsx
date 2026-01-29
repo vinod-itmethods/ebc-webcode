@@ -1,8 +1,17 @@
 import { useEffect, useRef } from "react";
 import { partners } from "@/data/partners";
 
-export default function PartnerCarousel() {
+interface PartnerCarouselProps {
+  selectedCategory?: string | null;
+}
+
+export default function PartnerCarousel({ selectedCategory }: PartnerCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Filter partners based on selected category
+  const filteredPartners = selectedCategory
+    ? partners.filter(partner => partner.categories.includes(selectedCategory as any))
+    : partners;
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -55,7 +64,7 @@ export default function PartnerCarousel() {
         }}
       >
         {/* Render partners twice to create seamless loop */}
-        {[...partners, ...partners].map((partner, index) => (
+        {[...filteredPartners, ...filteredPartners].map((partner, index) => (
           <div
             key={`${partner.id}-${index}`}
             className="flex-shrink-0 flex items-center justify-center"
