@@ -25,6 +25,7 @@ export const partners: Partner[] = [
     topics: ["AI governance and risk controls", "Secure AI usage in development workflows", "Policy, compliance, and data boundaries", "Measuring value from AI adoption"],
     benefits: ["Clear view of how enterprises are deploying AI responsibly", "Practical insight beyond hype", "Real-world AI governance frameworks", "Enterprise AI adoption strategies"],
     categories: ["ai"],
+    domain: "anthropic.com",
     speakerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
     speakerName: "Dario Amodei",
     speakerTitle: "CEO & Founder, Anthropic",
