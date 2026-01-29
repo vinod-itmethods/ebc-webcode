@@ -49,6 +49,7 @@ export default function App() {
             <Route path="/partner-login" element={<PartnerLogin />} />
             <Route path="/partner-dashboard" element={<PartnerDashboard />} />
             <Route path="/portal" element={<PortalLogin />} />
+            <Route path="/portal/request-access" element={<RequestPartnerAccess />} />
             <Route path="/portal/provider" element={<PortalProvider />} />
             <Route path="/portal/customer" element={<PortalCustomer />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
