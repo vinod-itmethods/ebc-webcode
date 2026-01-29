@@ -28,14 +28,6 @@ interface BriefingFormData {
   assistant?: string;
 }
 
-function getVendorNames(vendorIds: string[]): string[] {
-  return vendorIds
-    .map((id) => {
-      const partner = partners.find((p) => p.id === id);
-      return partner?.name || id;
-    })
-    .filter(Boolean);
-}
 
 function formatBriefingEmail(data: BriefingFormData): string {
   const vendorNames = getVendorNames(data.vendors);
