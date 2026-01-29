@@ -32,6 +32,9 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  // Create QueryClient only once per component lifecycle
+  const queryClient = useMemo(() => new QueryClient(), []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
