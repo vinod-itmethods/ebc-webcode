@@ -1,17 +1,8 @@
 import { useEffect, useRef } from "react";
 import { partners } from "@/data/partners";
 
-interface PartnerCarouselProps {
-  selectedCategory?: string | null;
-}
-
-export default function PartnerCarousel({ selectedCategory }: PartnerCarouselProps) {
+export default function PartnerCarousel() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  // Filter partners based on selected category
-  const filteredPartners = selectedCategory
-    ? partners.filter(partner => partner.categories.includes(selectedCategory as any))
-    : partners;
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
