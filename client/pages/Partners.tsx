@@ -88,9 +88,9 @@ export default function Partners() {
       </section>
 
       {/* Partner Grid */}
-      <section className="py-20 lg:py-28">
+      <section className="py-8 lg:py-12">
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
             {partners.map((partner) => (
               <button
                 key={partner.id}
