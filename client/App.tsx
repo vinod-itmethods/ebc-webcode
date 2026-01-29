@@ -16,15 +16,7 @@ import PortalCustomer from "./pages/PortalCustomer";
 import RequestPartnerAccess from "./pages/RequestPartnerAccess";
 import NotFound from "./pages/NotFound";
 
-// Create queryClient once and reuse it
-let queryClient: QueryClient | null = null;
-
-function getQueryClient() {
-  if (!queryClient) {
-    queryClient = new QueryClient();
-  }
-  return queryClient;
-}
+const queryClient = new QueryClient();
 
 function ScrollToTop() {
   const { pathname } = useLocation();
