@@ -69,14 +69,8 @@ export default function RequestPartnerAccess() {
       return;
     }
 
-    if (formData.expertise.length === 0) {
-      setError("Please select at least one area of expertise.");
-      setLoading(false);
-      return;
-    }
-
     if (!formData.description.trim()) {
-      setError("Please tell us about your company.");
+      setError("Please provide additional information.");
       setLoading(false);
       return;
     }
