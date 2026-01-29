@@ -13,6 +13,7 @@ import PartnerDashboard from "./pages/PartnerDashboard";
 import PortalLogin from "./pages/PortalLogin";
 import PortalProvider from "./pages/PortalProvider";
 import PortalCustomer from "./pages/PortalCustomer";
+import RequestPartnerAccess from "./pages/RequestPartnerAccess";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
