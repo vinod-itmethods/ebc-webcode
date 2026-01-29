@@ -226,12 +226,27 @@ export default function Partners() {
             </div>
 
             {/* Modal Footer */}
-            <div className="sticky bottom-0 border-t border-border/10 bg-white p-6">
+            <div className="sticky bottom-0 border-t border-border/10 bg-white p-6 flex gap-3">
+              <Button
+                onClick={() => {
+                  // Add to wishlist
+                  const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
+                  if (!wishlist.includes(selectedPartner.id)) {
+                    wishlist.push(selectedPartner.id);
+                    localStorage.setItem('vendor_wishlist', JSON.stringify(wishlist));
+                  }
+                  setSelectedPartner(null);
+                }}
+                className="flex-1 font-semibold rounded-lg"
+              >
+                Add to wishlist
+              </Button>
               <Button
                 asChild
-                className="w-full font-semibold rounded-lg"
+                variant="secondary-outline"
+                className="flex-1 font-semibold rounded-lg"
               >
-                <Link to="/request-briefing">Include {selectedPartner.name}</Link>
+                <Link to="/request-briefing">Go to Request</Link>
               </Button>
             </div>
           </div>
