@@ -550,7 +550,7 @@ function Step5Location({
   );
 }
 
-function Step5({ goals, onUpdate }: { goals: string; onUpdate: (value: string) => void }) {
+function Step6Goals({ goals, onUpdate }: { goals: string; onUpdate: (value: string) => void }) {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
