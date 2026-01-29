@@ -56,7 +56,7 @@ export default function Partners() {
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-4">
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground">Technology providers</h1>
-            <p className="text-lg text-foreground/90 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/90 max-w-xl mx-auto">
               Executive Briefings bring perspectives from a broad range of leading technology providers, selected for relevance to your organization's strategic priorities.
             </p>
           </div>
