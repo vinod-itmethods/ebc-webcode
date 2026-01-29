@@ -1,9 +1,6 @@
 import { Request, Response } from "express";
 import nodemailer from "nodemailer";
 
-// Partner data for looking up vendor names
-const partners = require("../../client/data/partners").partners;
-
 // Configure email transporter
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.ethereal.email",
