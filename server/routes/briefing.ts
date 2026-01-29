@@ -62,11 +62,11 @@ function formatBriefingEmail(data: BriefingFormData): string {
       </ul>
 
       ${
-        vendorNames.length > 0
+        data.vendors.length > 0
           ? `
       <p style="margin-top: 15px;"><strong>Technology Vendors of Interest:</strong></p>
       <ul style="margin: 5px 0;">
-        ${vendorNames.map((name) => `<li>${name}</li>`).join("")}
+        ${data.vendors.map((vendor) => `<li>${vendor}</li>`).join("")}
       </ul>
       `
           : ""
