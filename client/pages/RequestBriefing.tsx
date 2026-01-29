@@ -10,6 +10,7 @@ interface FormData {
   interestOther?: string;
   decisionContext: string[];
   perspectives: string[];
+  vendors: string[];
   location: string;
   format: string;
   goals: string;
