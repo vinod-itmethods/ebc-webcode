@@ -6,8 +6,20 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 
+type CategoryType = "cloud" | "ai" | "devops" | "platform" | "security" | "data";
+
+const categories: { id: CategoryType; label: string }[] = [
+  { id: "cloud", label: "Cloud & Infrastructure" },
+  { id: "ai", label: "AI & Machine Learning" },
+  { id: "devops", label: "DevOps & Continuous Delivery" },
+  { id: "platform", label: "Platform & Architecture" },
+  { id: "security", label: "Security & Compliance" },
+  { id: "data", label: "Data & Analytics" },
+];
+
 export default function Partners() {
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<CategoryType | null>(null);
 
   // Load partners with any edited data from localStorage
   const partners = useMemo(() => {
