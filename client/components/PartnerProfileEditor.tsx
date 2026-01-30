@@ -73,28 +73,6 @@ export default function PartnerProfileEditor() {
     setTopics(topics.filter((_, i) => i !== index));
   };
 
-  const handleBenefitChange = (index: number, value: string) => {
-    const newBenefits = [...(partnerData.benefits || [])];
-    newBenefits[index] = value;
-    setPartnerData(prev => ({
-      ...prev,
-      benefits: newBenefits
-    }));
-  };
-
-  const addBenefit = () => {
-    setPartnerData(prev => ({
-      ...prev,
-      benefits: [...(prev.benefits || []), ""]
-    }));
-  };
-
-  const removeBenefit = (index: number) => {
-    setPartnerData(prev => ({
-      ...prev,
-      benefits: prev.benefits?.filter((_, i) => i !== index) || []
-    }));
-  };
 
   const handleSave = () => {
     const dataToSave = {
