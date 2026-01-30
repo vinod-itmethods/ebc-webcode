@@ -259,17 +259,22 @@ export default function Partners() {
               <Button
                 onClick={() => {
                   toggleVendor(selectedPartner.id);
+                  setSelectedPartner(null);
                 }}
                 className="flex-1 font-semibold rounded-lg"
               >
                 Include in briefing
               </Button>
               <Button
-                onClick={() => setSelectedPartner(null)}
+                onClick={() => {
+                  toggleVendor(selectedPartner.id);
+                  localStorage.setItem('vendor_wishlist', JSON.stringify([...selectedVendors, selectedPartner.id].filter((id, idx, arr) => arr.indexOf(id) === idx)));
+                  navigate('/request-briefing?step=4');
+                }}
                 variant="secondary-outline"
                 className="flex-1 font-semibold rounded-lg"
               >
-                Submit briefing
+                Request a briefing
               </Button>
             </div>
           </div>
