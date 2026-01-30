@@ -12200,5 +12200,77 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769804371479-1769804371603",
+    "email": "temp_1769804371479",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:19:31.603Z",
+    "updatedAt": "2026-01-30T20:19:31.603Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:19:31.603Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804373231-1769804373352",
+    "email": "temp_1769804373231",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:19:33.352Z",
+    "updatedAt": "2026-01-30T20:19:33.352Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T20:19:33.352Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
