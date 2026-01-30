@@ -19,7 +19,15 @@ export default function PortalLogin() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if already authenticated
+    // Check if admin is already authenticated
+    const adminEmail = localStorage.getItem("adminEmail");
+    if (adminEmail && adminEmail.endsWith("@itmethods.com")) {
+      setIsAuthenticated(true);
+      navigate("/admin/submissions");
+      return;
+    }
+
+    // Check if already authenticated as customer/provider
     const isAuth = localStorage.getItem("portalAuthenticated") === "true";
     const storedRole = localStorage.getItem("userRole") as UserRole;
     if (isAuth && storedRole) {
