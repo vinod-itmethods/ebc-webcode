@@ -575,11 +575,13 @@ export default function RequestBriefing() {
 function Step1({
   interests,
   interestOther,
+  vendors,
   onUpdate,
   onToggle,
 }: {
   interests: string[];
   interestOther?: string;
+  vendors: string[];
   onUpdate: (field: string, value: any) => void;
   onToggle: (value: string) => void;
 }) {
@@ -594,6 +596,23 @@ function Step1({
 
   return (
     <div className="space-y-6">
+      {/* Vendors Reminder */}
+      {vendors.length > 0 && (
+        <div className="bg-blue-50/60 border border-blue-200 rounded-lg p-4">
+          <p className="text-sm font-semibold text-foreground mb-2">Selected vendors:</p>
+          <div className="flex flex-wrap gap-2">
+            {vendors.map((vendorId) => {
+              const vendor = partners.find((p) => p.id === vendorId);
+              return vendor ? (
+                <span key={vendorId} className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">
+                  {vendor.name}
+                </span>
+              ) : null;
+            })}
+          </div>
+        </div>
+      )}
+
       <div className="space-y-2">
         <h2 className="text-2xl lg:text-3xl font-bold text-foreground">What would you like to explore?</h2>
         <p className="text-foreground/70">Select the topics most relevant to your current priorities.</p>
