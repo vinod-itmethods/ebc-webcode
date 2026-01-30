@@ -147,3 +147,49 @@ export function getAllCustomers(): CustomerProfile[] {
 export function getPersonalEmailDomains(): string[] {
   return PERSONAL_EMAIL_DOMAINS;
 }
+
+export function approveCustomer(
+  email: string,
+  approvedBy: string
+): CustomerProfile | null {
+  const customers = loadCustomers();
+  const customer = customers.find((c) => c.email.toLowerCase() === email.toLowerCase());
+
+  if (customer) {
+    customer.approvalStatus = "approved";
+    customer.approvedAt = new Date().toISOString();
+    customer.approvedBy = approvedBy;
+    customer.updatedAt = new Date().toISOString();
+    saveCustomers(customers);
+    return customer;
+  }
+
+  return null;
+}
+
+export function rejectCustomer(email: string): CustomerProfile | null {
+  const customers = loadCustomers();
+  const customer = customers.find((c) => c.email.toLowerCase() === email.toLowerCase());
+
+  if (customer) {
+    customer.approvalStatus = "rejected";
+    customer.updatedAt = new Date().toISOString();
+    saveCustomers(customers);
+    return customer;
+  }
+
+  return null;
+}
+
+export function removeCustomer(email: string): boolean {
+  const customers = loadCustomers();
+  const index = customers.findIndex((c) => c.email.toLowerCase() === email.toLowerCase());
+
+  if (index !== -1) {
+    customers.splice(index, 1);
+    saveCustomers(customers);
+    return true;
+  }
+
+  return false;
+}
