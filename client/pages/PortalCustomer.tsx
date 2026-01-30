@@ -180,12 +180,6 @@ export default function PortalCustomer() {
     navigate("/request-briefing");
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("portalAuthenticated");
-    localStorage.removeItem("userRole");
-    localStorage.removeItem("userEmail");
-    navigate("/portal");
-  };
 
   const handleAddToCalendar = (dateStr: string) => {
     // Parse the date string
