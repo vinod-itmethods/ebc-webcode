@@ -430,6 +430,8 @@ export default function RequestBriefing() {
                 email={formData.email}
                 assistant={formData.assistant}
                 onUpdate={(field, value) => updateFormData(field, value)}
+                emailError={emailError}
+                onEmailValidate={validateEmailDomain}
               />
             )}
 
