@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import FAQ from "./pages/FAQ";
 import Partners from "./pages/Partners";
