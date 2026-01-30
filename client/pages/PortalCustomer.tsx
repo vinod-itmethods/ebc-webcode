@@ -3,9 +3,21 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { LogOut, CheckCircle2, Clock, AlertCircle } from "lucide-react";
+import { LogOut, CheckCircle2, Clock, AlertCircle, Plus } from "lucide-react";
 
 type RequestStatus = "draft" | "submitted" | "pending" | "scheduled" | "completed";
+
+interface CustomerProfile {
+  id: string;
+  email: string;
+  name: string;
+  role: string;
+  company: string;
+  createdAt: string;
+  updatedAt: string;
+  briefingData: any;
+  status: string;
+}
 
 interface BriefingRequest {
   id: string;
