@@ -14,6 +14,8 @@ import PortalLogin from "./pages/PortalLogin";
 import PortalProvider from "./pages/PortalProvider";
 import PortalCustomer from "./pages/PortalCustomer";
 import RequestPartnerAccess from "./pages/RequestPartnerAccess";
+import AdminLogin from "./pages/AdminLogin";
+import AdminSubmissions from "./pages/AdminSubmissions";
 import NotFound from "./pages/NotFound";
 
 // Create a single QueryClient instance
