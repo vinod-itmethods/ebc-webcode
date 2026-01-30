@@ -86,7 +86,15 @@ export default function AdminSubmissions() {
       {/* Admin Header */}
       <section className="border-b border-border/10 bg-gradient-to-r from-slate-50 to-blue-50/30 px-4 py-4">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-lg font-semibold text-foreground">Submission History</h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-lg font-semibold text-foreground">Submission History</h2>
+            <a
+              href="/admin/customers"
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              → Manage Customer Requests
+            </a>
+          </div>
           <p className="text-sm text-foreground/60">View all briefing request submissions</p>
         </div>
       </section>
