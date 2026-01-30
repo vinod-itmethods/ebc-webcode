@@ -454,8 +454,8 @@ export default function RequestBriefing() {
               <Step6Goals goals={formData.goals} onUpdate={(value) => updateFormData("goals", value)} />
             )}
 
-            {/* Step 7: Contact Details */}
-            {currentStep === 7 && (
+            {/* Step 7: Contact Details (only shown for new customers) */}
+            {!skipContactStep && currentStep === 7 && (
               <Step7Contact
                 name={formData.name}
                 role={formData.role}
