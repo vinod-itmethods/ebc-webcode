@@ -102,6 +102,27 @@ export default function RequestBriefing() {
     updateFormData(field, updated);
   };
 
+  const getStepData = (step: number) => {
+    switch (step) {
+      case 1:
+        return { interests: formData.interests, interestOther: formData.interestOther };
+      case 2:
+        return { decisionContext: formData.decisionContext };
+      case 3:
+        return { perspectives: formData.perspectives };
+      case 4:
+        return { vendors: formData.vendors };
+      case 5:
+        return { location: formData.location, format: formData.format };
+      case 6:
+        return { goals: formData.goals };
+      case 7:
+        return { name: formData.name, role: formData.role, company: formData.company, email: formData.email, assistant: formData.assistant };
+      default:
+        return {};
+    }
+  };
+
   const handleNext = () => {
     if (currentStep < 7) {
       setCurrentStep(currentStep + 1);
