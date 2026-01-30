@@ -71,6 +71,80 @@ export default function PortalCustomer() {
         if (data.customer.briefingData) {
           const request = generateBriefingCard(data.customer.briefingData, data.customer.updatedAt);
           setBriefingRequests([request]);
+
+          // Generate timeline events
+          const submittedDate = new Date(data.customer.createdAt);
+          const threeDaysLater = new Date(submittedDate);
+          threeDaysLater.setDate(threeDaysLater.getDate() + 3);
+          const fiveDaysLater = new Date(submittedDate);
+          fiveDaysLater.setDate(fiveDaysLater.getDate() + 5);
+          const tenDaysLater = new Date(submittedDate);
+          tenDaysLater.setDate(tenDaysLater.getDate() + 10);
+
+          const events: TimelineEvent[] = [
+            {
+              id: "1",
+              title: "Briefing Request Submitted",
+              date: submittedDate.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }),
+              description: "Your briefing request has been received",
+              status: "completed",
+              type: "submission",
+            },
+            {
+              id: "2",
+              title: "Confirmation Email Sent",
+              date: submittedDate.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }),
+              description: "Welcome email with portal access details",
+              status: "completed",
+              type: "email",
+            },
+            {
+              id: "3",
+              title: "Request Under Review",
+              date: threeDaysLater.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }),
+              description: "Our team is reviewing your organization's needs and matching technology partners",
+              status: "completed",
+              type: "update",
+            },
+            {
+              id: "4",
+              title: "Briefing Itinerary Added",
+              date: fiveDaysLater.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }),
+              description: "Briefing agenda and confirmed partners are now available in your portal",
+              status: "pending",
+              type: "update",
+            },
+            {
+              id: "5",
+              title: "Briefing Session Scheduled",
+              date: tenDaysLater.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }),
+              description: "Your executive briefing is scheduled for this date",
+              status: "upcoming",
+              type: "scheduled",
+            },
+          ];
+
+          setTimelineEvents(events);
         }
       }
     } catch (error) {
