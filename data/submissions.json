@@ -1388,5 +1388,108 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769746811802-1769746811909",
+    "email": "temp_1769746811802",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:11.909Z",
+    "updatedAt": "2026-01-30T04:20:11.909Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T04:20:11.909Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746813537-1769746813642",
+    "email": "temp_1769746813537",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:13.642Z",
+    "updatedAt": "2026-01-30T04:20:13.642Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T04:20:13.642Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746813988-1769746814020",
+    "email": "temp_1769746813988",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:14.020Z",
+    "updatedAt": "2026-01-30T04:20:14.020Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:20:14.020Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
