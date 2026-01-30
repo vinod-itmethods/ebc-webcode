@@ -20,6 +20,8 @@ interface FormData {
   company: string;
   email: string;
   assistant?: string;
+  additionalContactName?: string;
+  additionalContactEmail?: string;
 }
 
 const STEPS = [
