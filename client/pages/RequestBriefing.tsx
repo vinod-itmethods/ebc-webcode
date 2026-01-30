@@ -71,6 +71,25 @@ export default function RequestBriefing() {
     const prefillRole = localStorage.getItem('prefillCustomerRole');
     const skip = localStorage.getItem('skipContactStep') === 'true';
 
+    // Check for saved form data from previous session
+    const savedFormDataStr = localStorage.getItem('briefing_form_data');
+    const savedFormStep = localStorage.getItem('briefing_form_step');
+    const returnTo = searchParams.get('returnTo');
+    const step = searchParams.get('step');
+
+    // Only show continue dialog if there's saved data and they're not coming from vendor selection
+    if (savedFormDataStr && !returnTo && !step) {
+      try {
+        const saved = JSON.parse(savedFormDataStr) as FormData;
+        const savedStepNum = savedFormStep ? parseInt(savedFormStep) : 1;
+        setSavedFormData(saved);
+        setSavedStep(savedStepNum);
+        setShowContinueDialog(true);
+      } catch (e) {
+        console.error('Failed to parse saved form data:', e);
+      }
+    }
+
     setFormData((prev) => ({
       ...prev,
       vendors: wishlist,
@@ -87,7 +106,6 @@ export default function RequestBriefing() {
     }
 
     // Check if returning from vendor selection
-    const step = searchParams.get('step');
     if (step) {
       const stepNum = parseInt(step);
       if (stepNum >= 1 && stepNum <= 7) {
