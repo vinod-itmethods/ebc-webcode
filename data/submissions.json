@@ -11910,5 +11910,295 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769803656636-1769803656801",
+    "email": "temp_1769803656636",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:07:36.801Z",
+    "updatedAt": "2026-01-30T20:07:36.801Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "continuai"
+          ]
+        },
+        "timestamp": "2026-01-30T20:07:36.801Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769803712728-1769803713257",
+    "email": "temp_1769803712728",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:08:33.257Z",
+    "updatedAt": "2026-01-30T20:08:33.257Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:08:33.257Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "continuai",
+        "archera",
+        "gitlab",
+        "lyzr"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769803715239-1769803715368",
+    "email": "temp_1769803715239",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:08:35.368Z",
+    "updatedAt": "2026-01-30T20:08:35.368Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "continuai"
+          ]
+        },
+        "timestamp": "2026-01-30T20:08:35.368Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769803726091-1769803726215",
+    "email": "temp_1769803726091",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:08:46.215Z",
+    "updatedAt": "2026-01-30T20:08:46.215Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T20:08:46.215Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769803733270-1769803733396",
+    "email": "temp_1769803733270",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:08:53.396Z",
+    "updatedAt": "2026-01-30T20:08:53.396Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:08:53.396Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "continuai",
+        "archera",
+        "gitlab",
+        "lyzr"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769803736822-1769803736954",
+    "email": "temp_1769803736822",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:08:56.954Z",
+    "updatedAt": "2026-01-30T20:08:56.954Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:08:56.954Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769803755735-1769803755868",
+    "email": "temp_1769803755735",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:09:15.868Z",
+    "updatedAt": "2026-01-30T20:09:15.868Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:09:15.868Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "continuai",
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769803756983-1769803757117",
+    "email": "temp_1769803756983",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:09:17.117Z",
+    "updatedAt": "2026-01-30T20:09:17.117Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:09:17.117Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
