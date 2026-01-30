@@ -168,8 +168,11 @@ export default function RequestBriefing() {
       case 5:
         return !!formData.location && !!formData.format;
       case 6:
+        // Step 6 is last for returning customers (step 7 skipped)
+        // If skipping, this is goals. If not skipping, this is also goals.
         return !!formData.goals.trim();
       case 7:
+        // Step 7 only shown for new customers
         return (
           !!formData.name.trim() &&
           !!formData.role.trim() &&
