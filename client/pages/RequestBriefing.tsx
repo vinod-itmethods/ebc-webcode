@@ -860,6 +860,8 @@ function Step7Contact({
   company,
   email,
   assistant,
+  additionalContactName,
+  additionalContactEmail,
   onUpdate,
   emailError,
   onEmailValidate,
@@ -869,6 +871,8 @@ function Step7Contact({
   company: string;
   email: string;
   assistant?: string;
+  additionalContactName?: string;
+  additionalContactEmail?: string;
   onUpdate: (field: string, value: string) => void;
   emailError: string | null;
   onEmailValidate: (email: string) => void;
