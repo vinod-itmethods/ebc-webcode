@@ -19,10 +19,6 @@ export default function PartnerDashboard() {
     }
   }, [navigate]);
 
-  const handleLogout = () => {
-    localStorage.removeItem("partnerAuthenticated");
-    navigate("/partner-login");
-  };
 
   if (!isAuthenticated) {
     return null;

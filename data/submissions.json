@@ -2893,5 +2893,42 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769747427628-1769747427827",
+    "email": "temp_1769747427628",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:30:27.827Z",
+    "updatedAt": "2026-01-30T04:30:27.827Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T04:30:27.827Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
