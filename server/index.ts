@@ -33,6 +33,7 @@ export function createServer() {
   app.post("/api/validate-email", handleValidateEmail);
   app.post("/api/register-customer", handleRegisterCustomer);
   app.get("/api/personal-domains", handleGetPersonalDomains);
+  app.get("/api/customer-profile", handleGetCustomerProfile);
 
   return app;
 }
