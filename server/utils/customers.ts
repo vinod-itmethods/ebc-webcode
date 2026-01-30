@@ -99,7 +99,8 @@ export function createCustomerProfile(
   name: string,
   role: string,
   company: string,
-  briefingData: any
+  briefingData: any,
+  additionalContact?: AdditionalContact
 ): CustomerProfile | null {
   // Validate email domain
   if (!isValidWorkEmail(email)) {
