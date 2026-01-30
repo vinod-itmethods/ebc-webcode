@@ -110,7 +110,10 @@ export function createCustomerProfile(
     // Update existing customer
     customer.updatedAt = now;
     customer.briefingData = briefingData;
-    customer.status = "active";
+    // Don't change approvalStatus if already set
+    if (!customer.approvalStatus) {
+      customer.approvalStatus = "pending";
+    }
   } else {
     // Create new customer
     customer = {
@@ -123,6 +126,7 @@ export function createCustomerProfile(
       updatedAt: now,
       briefingData,
       status: "active",
+      approvalStatus: "pending",
     };
     customers.push(customer);
   }
