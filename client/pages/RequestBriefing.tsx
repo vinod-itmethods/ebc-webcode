@@ -505,6 +505,8 @@ export default function RequestBriefing() {
                 company={formData.company}
                 email={formData.email}
                 assistant={formData.assistant}
+                additionalContactName={formData.additionalContactName}
+                additionalContactEmail={formData.additionalContactEmail}
                 onUpdate={(field, value) => updateFormData(field, value)}
                 emailError={emailError}
                 onEmailValidate={validateEmailDomain}
