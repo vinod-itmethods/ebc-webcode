@@ -41,11 +41,6 @@ export const partners: Partner[] = [
     topics: ["ML model deployment", "Inference optimization", "Scaling ML workloads", "MLOps automation"],
     benefits: ["Fast model deployment", "Automatic scaling", "Cost-efficient inference", "Production-ready ML infrastructure"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Richard Sloss",
-    speakerTitle: "CEO, Baseten",
-    speakerBio: "Richard Sloss is the CEO of Baseten, simplifying ML model deployment and inference at scale. With expertise in machine learning infrastructure and serverless architectures, Richard helps enterprises move from experimentation to production ML faster than ever before.",
-    speakerQuote: "The gap between building an ML model and deploying it to production should be minutes, not months. Baseten eliminates infrastructure complexity so teams can focus on model quality and business impact."
   },
   {
     id: "circleci",
@@ -56,11 +51,6 @@ export const partners: Partner[] = [
     topics: ["Continuous integration", "Automated testing", "Deployment pipelines", "Developer productivity"],
     benefits: ["Faster deployment cycles", "Early bug detection", "Reduced manual work", "Improved code quality"],
     categories: ["devops"],
-    speakerImage: "https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2F64f04be8b8f34fc98ae3e5282dfd5efc?format=webp&width=800&height=1200",
-    speakerName: "Jim Rose",
-    speakerTitle: "CEO, CircleCI",
-    speakerBio: "Jim Rose is the CEO of CircleCI, a leading CI/CD platform used by enterprises worldwide. He brings deep experience in scaling DevOps practices and helping engineering teams deliver software faster while maintaining quality and security.",
-    speakerQuote: "At CircleCI, we believe that modern development teams need platforms that not only accelerate delivery but also provide intelligence and visibility across the entire software development lifecycle."
   },
   {
     id: "cloudbees",
@@ -71,11 +61,6 @@ export const partners: Partner[] = [
     topics: ["Enterprise CI/CD", "Jenkins governance", "Pipeline automation", "DevOps at scale"],
     benefits: ["Enterprise-grade reliability", "Advanced governance", "Scalable automation", "Legacy system integration"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    speakerName: "Shaya Rishani",
-    speakerTitle: "CEO, CloudBees",
-    speakerBio: "Shaya Rishani is the CEO of CloudBees, transforming enterprise CI/CD with modern Jenkins solutions. With expertise in enterprise DevOps and CI/CD governance, Shaya helps large organizations modernize their software delivery processes.",
-    speakerQuote: "Jenkins has powered millions of deployments. CloudBees takes that proven foundation and adds the governance, scalability, and intelligence that enterprise teams need."
   },
   {
     id: "coder",
@@ -86,11 +71,6 @@ export const partners: Partner[] = [
     topics: ["Remote development", "Developer experience", "Infrastructure consistency", "Team collaboration"],
     benefits: ["Consistent dev environments", "Remote-first capability", "Reduced onboarding time", "Improved developer productivity"],
     categories: ["platform", "cloud"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Colin King-Bailey",
-    speakerTitle: "CEO, Coder",
-    speakerBio: "Colin King-Bailey is the CEO of Coder, reimagining how developers work in the cloud. With a focus on developer experience and infrastructure consistency, Colin helps teams eliminate environment friction and improve productivity.",
-    speakerQuote: "Remote development shouldn't mean compromised performance or fragmented workflows. Coder brings cloud-powered development environments to every engineer, everywhere."
   },
   {
     id: "cognition",
@@ -101,11 +81,6 @@ export const partners: Partner[] = [
     topics: ["AI-assisted development", "Code generation", "Developer augmentation", "Intelligent automation"],
     benefits: ["Accelerated development", "Reduced cognitive load", "AI-powered insights", "Enhanced coding efficiency"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    speakerName: "Steven Brunwasser",
-    speakerTitle: "CEO, Cognition",
-    speakerBio: "Steven Brunwasser is the CEO of Cognition, creating AI agents that augment developer capabilities. With expertise in AI and software development, Steven is advancing how AI can solve complex engineering challenges.",
-    speakerQuote: "The future of software development is collaborative—developers working alongside AI agents that understand context, handle complexity, and accelerate solution delivery."
   },
   {
     id: "cohere",
@@ -116,11 +91,6 @@ export const partners: Partner[] = [
     topics: ["Language model APIs", "Enterprise AI", "NLP applications", "Responsible AI"],
     benefits: ["Production-ready models", "Enterprise support", "Safety features", "Custom fine-tuning"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Aidan Gomez",
-    speakerTitle: "CEO & Founder, Cohere",
-    speakerBio: "Aidan Gomez is the CEO and founder of Cohere, building large language models designed for enterprise deployment. With expertise in NLP and responsible AI, Aidan helps organizations leverage LLMs securely and effectively.",
-    speakerQuote: "Large language models are tools for solving real business problems. Cohere focuses on making these models accessible, controllable, and aligned with enterprise needs."
   },
   {
     id: "continuai",
@@ -131,11 +101,6 @@ export const partners: Partner[] = [
     topics: ["IDE integration", "AI-assisted coding", "Developer tools", "Open source AI"],
     benefits: ["In-IDE AI assistance", "Multiple model support", "Customizable workflows", "Privacy-focused"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Todd Phillips",
-    speakerTitle: "Founder, Continue AI",
-    speakerBio: "Todd Phillips is the founder of Continue AI, bringing AI assistance directly into developer IDEs. With a focus on open-source and privacy-first AI tools, Todd empowers developers with flexible, customizable AI assistance.",
-    speakerQuote: "Developers should have control over their AI tools. Continue puts AI capabilities in your IDE while maintaining privacy and flexibility to use the models and workflows that work best for you."
   },
   {
     id: "cursor",
@@ -146,11 +111,6 @@ export const partners: Partner[] = [
     topics: ["AI-powered editing", "Code generation", "Intelligent refactoring", "Developer experience"],
     benefits: ["Seamless AI integration", "Context-aware assistance", "Fast iteration", "Advanced editing"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Aman Sanger",
-    speakerTitle: "CEO, Cursor",
-    speakerBio: "Aman Sanger is the CEO of Cursor, reimagining code editors for the AI era. With focus on seamless AI integration and developer experience, Aman is building the next generation of development tools.",
-    speakerQuote: "Code editors designed 20 years ago don't take advantage of modern AI capabilities. Cursor is built from the ground up to make AI a first-class citizen in your development workflow."
   },
   {
     id: "github",
@@ -161,11 +121,6 @@ export const partners: Partner[] = [
     topics: ["Version control", "Collaboration", "DevOps workflows", "Security scanning"],
     benefits: ["Centralized collaboration", "Built-in security", "CI/CD capabilities", "Community ecosystem"],
     categories: ["devops", "platform"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Thomas Dohmke",
-    speakerTitle: "CEO, GitHub",
-    speakerBio: "Thomas Dohmke is the CEO of GitHub, the world's leading platform for software development. With expertise in developer platforms and open-source ecosystems, Thomas shapes how teams collaborate and ship software.",
-    speakerQuote: "GitHub is where billions of lines of code are written and where the future of software is being built. We're focused on empowering developers with the tools they need to solve the world's toughest problems."
   },
   {
     id: "gitlab",
@@ -176,11 +131,6 @@ export const partners: Partner[] = [
     topics: ["DevOps platform", "Full SDLC", "Security and compliance", "Enterprise governance"],
     benefits: ["Unified platform", "Integrated DevOps", "Advanced security", "Compliance ready"],
     categories: ["devops", "security"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Sid Sijbrandij",
-    speakerTitle: "CEO & Founder, GitLab",
-    speakerBio: "Sid Sijbrandij is the CEO and founder of GitLab, building a complete DevOps platform that spans the entire software development lifecycle. With a vision for reducing cycle times and improving security, Sid leads the industry toward integrated DevOps.",
-    speakerQuote: "The future of software delivery is integrated. One platform, one language, one view—that's how you unlock true DevOps efficiency and security at scale."
   },
   {
     id: "harness",
@@ -191,11 +141,6 @@ export const partners: Partner[] = [
     topics: ["Continuous delivery", "Deployment automation", "Infrastructure changes", "Risk management"],
     benefits: ["Faster deployments", "Lower deployment risk", "Infrastructure automation", "Compliance controls"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Jyoti Bansal",
-    speakerTitle: "CEO & Founder, Harness",
-    speakerBio: "Jyoti Bansal is the CEO and founder of Harness, automating continuous delivery for enterprise teams. With expertise in deployment automation and risk reduction, Jyoti helps organizations ship faster with confidence.",
-    speakerQuote: "Continuous delivery isn't just about speed—it's about safety and intelligence. Harness brings AI-powered insights to your deployment pipeline, reducing risk while accelerating delivery."
   },
   {
     id: "jfrog",
@@ -206,11 +151,6 @@ export const partners: Partner[] = [
     topics: ["Artifact management", "CI/CD", "Release orchestration", "Software supply chain"],
     benefits: ["Supply chain visibility", "Release automation", "Artifact governance", "Security integration"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    speakerName: "Frederic Simon",
-    speakerTitle: "CEO, JFrog",
-    speakerBio: "Frederic Simon is the CEO of JFrog, pioneering software supply chain security and automation. With deep expertise in release management and artifact governance, Frederic helps enterprises secure and optimize their software delivery pipelines.",
-    speakerQuote: "Software supply chain security is now a business imperative. JFrog provides visibility and control across your entire release pipeline, from build to production."
   },
   {
     id: "kong",
@@ -221,11 +161,6 @@ export const partners: Partner[] = [
     topics: ["API management", "Microservices", "Security", "Performance optimization"],
     benefits: ["API governance", "Microservices security", "Performance optimization", "Developer portals"],
     categories: ["platform"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Marco Palladino",
-    speakerTitle: "CEO & Founder, Kong",
-    speakerBio: "Marco Palladino is the CEO and founder of Kong, the world's most popular API gateway platform. With expertise in API management and microservices architecture, Marco helps enterprises scale their API ecosystems securely.",
-    speakerQuote: "APIs are the backbone of modern applications. Kong provides the control, visibility, and security that enterprises need to manage APIs at scale."
   },
   {
     id: "langchain",
@@ -236,11 +171,6 @@ export const partners: Partner[] = [
     topics: ["LLM application development", "AI workflows", "Integration patterns", "Prompt management"],
     benefits: ["Faster LLM development", "Modular architecture", "LLM agnostic", "Production-ready patterns"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    speakerName: "Harrison Chase",
-    speakerTitle: "CEO & Founder, LangChain",
-    speakerBio: "Harrison Chase is the CEO and founder of LangChain, simplifying LLM application development. With a focus on practical patterns and composability, Harrison is making it faster and easier to build production LLM applications.",
-    speakerQuote: "LangChain abstracts away the complexity of working with language models, so developers can focus on building useful applications rather than managing infrastructure."
   },
   {
     id: "launchdarkly",
@@ -251,11 +181,6 @@ export const partners: Partner[] = [
     topics: ["Feature management", "Progressive deployment", "A/B testing", "Risk reduction"],
     benefits: ["Safe feature releases", "Instant rollback capability", "Experimentation", "Data-driven decisions"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Edith Harbaugh",
-    speakerTitle: "CEO & Co-Founder, LaunchDarkly",
-    speakerBio: "Edith Harbaugh is the CEO and co-founder of LaunchDarkly, transforming how teams deliver features. With expertise in feature management and experimentation, Edith helps enterprises reduce risk and accelerate innovation.",
-    speakerQuote: "Feature flags have become essential infrastructure for modern software delivery. LaunchDarkly brings visibility, control, and intelligence to your entire feature lifecycle."
   },
   {
     id: "lyzr",
@@ -266,11 +191,6 @@ export const partners: Partner[] = [
     topics: ["AI application development", "Prompt engineering", "No-code AI", "Rapid prototyping"],
     benefits: ["Fast AI prototyping", "Minimal coding", "Template library", "Easy deployment"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Rohit Pandey",
-    speakerTitle: "CEO & Founder, Lyzr",
-    speakerBio: "Rohit Pandey is the CEO and founder of Lyzr, democratizing AI application development. With a no-code approach to LLM applications, Rohit empowers teams to build AI solutions without deep ML expertise.",
-    speakerQuote: "Building AI applications shouldn't require a PhD in machine learning. Lyzr makes it easy for anyone to create intelligent, production-ready AI applications."
   },
   {
     id: "mistralai",
@@ -281,11 +201,6 @@ export const partners: Partner[] = [
     topics: ["Language models", "Open-source AI", "Efficient models", "Enterprise deployment"],
     benefits: ["High performance", "Efficient inference", "Open-source options", "Enterprise support"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Arthur Mensch",
-    speakerTitle: "CEO & Founder, Mistral AI",
-    speakerBio: "Arthur Mensch is the CEO and founder of Mistral AI, developing efficient language models for enterprise use. With focus on performance and accessibility, Arthur is making open-source AI practical for production deployment.",
-    speakerQuote: "Efficient, open-source language models are the future. Mistral focuses on delivering models that are both powerful and practical to deploy in enterprise environments."
   },
   {
     id: "n8n",
@@ -296,11 +211,6 @@ export const partners: Partner[] = [
     topics: ["Workflow automation", "API integration", "Process automation", "No-code workflows"],
     benefits: ["Visual workflow builder", "Extensive integrations", "Open-source", "Self-hosted option"],
     categories: ["platform"],
-    speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    speakerName: "Jan Oberhauser",
-    speakerTitle: "CEO & Founder, n8n",
-    speakerBio: "Jan Oberhauser is the CEO and founder of n8n, making workflow automation accessible to everyone. With an open-source approach and focus on flexibility, Jan empowers teams to automate without vendor lock-in.",
-    speakerQuote: "Automation shouldn't be expensive or proprietary. n8n provides an open, extensible platform for building workflows that connect your entire technology stack."
   },
   {
     id: "openai",
@@ -311,11 +221,6 @@ export const partners: Partner[] = [
     topics: ["Advanced AI models", "API access", "Enterprise deployment", "Responsible AI"],
     benefits: ["Cutting-edge models", "Enterprise support", "Safety features", "Flexible pricing"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    speakerName: "Sam Altman",
-    speakerTitle: "CEO, OpenAI",
-    speakerBio: "Sam Altman is the CEO of OpenAI, leading development of advanced AI models that are safe, useful, and accessible. With a vision for beneficial AI, Sam shapes how enterprises adopt cutting-edge AI technology.",
-    speakerQuote: "AI will be one of the most impactful technologies ever developed. OpenAI is focused on ensuring AI benefits all of humanity and helping organizations deploy it safely."
   },
   {
     id: "ollama",
@@ -326,11 +231,6 @@ export const partners: Partner[] = [
     topics: ["Local LLM deployment", "Privacy-first AI", "Open models", "Edge computing"],
     benefits: ["Complete privacy", "No API calls", "Offline capability", "Cost efficient"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Jared Forsyth",
-    speakerTitle: "Founder, Ollama",
-    speakerBio: "Jared Forsyth is the founder of Ollama, making local LLM deployment simple and accessible. With focus on privacy and simplicity, Jared enables teams to run powerful language models on their own infrastructure.",
-    speakerQuote: "Privacy-first AI deployment doesn't require complex infrastructure. Ollama makes running open-source language models locally simple enough for anyone."
   },
   {
     id: "pagerduty",
@@ -341,11 +241,6 @@ export const partners: Partner[] = [
     topics: ["Incident management", "On-call scheduling", "Alert management", "Response automation"],
     benefits: ["Faster incident response", "On-call automation", "Reduced downtime", "Team coordination"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Jennifer Tejada",
-    speakerTitle: "CEO, PagerDuty",
-    speakerBio: "Jennifer Tejada is the CEO of PagerDuty, transforming incident response for digital enterprises. With expertise in critical incident management, Jennifer helps teams respond faster and reduce operational impact.",
-    speakerQuote: "Digital incidents don't wait. PagerDuty gives teams the intelligence and coordination tools they need to respond faster and keep services running."
   },
   {
     id: "plane",
@@ -356,11 +251,6 @@ export const partners: Partner[] = [
     topics: ["Project management", "Issue tracking", "Agile workflows", "Team collaboration"],
     benefits: ["Engineer-focused features", "Open-source", "Customizable", "Seamless integration"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Nishan Bhat",
-    speakerTitle: "CEO & Founder, Plane",
-    speakerBio: "Nishan Bhat is the CEO and founder of Plane, building open-source project management for engineers. With focus on simplicity and customization, Nishan empowers engineering teams to manage work their way.",
-    speakerQuote: "Engineers shouldn't be forced into generic project management tools. Plane is built specifically for how engineering teams work, think, and collaborate."
   },
   {
     id: "poolside",
@@ -371,11 +261,6 @@ export const partners: Partner[] = [
     topics: ["AI engineering", "Code generation", "Problem solving", "Development tools"],
     benefits: ["AI-assisted engineering", "Faster development", "Better solutions", "Knowledge transfer"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    speakerName: "Jason Warner",
-    speakerTitle: "CEO, Poolside",
-    speakerBio: "Jason Warner is the CEO of Poolside, bringing AI-powered assistance to engineering teams. With deep experience in developer tooling and AI, Jason helps teams solve complex engineering problems faster.",
-    speakerQuote: "AI should augment engineering teams, not replace them. Poolside focuses on solving real engineering problems with AI that developers actually want to use."
   },
   {
     id: "postman",
@@ -386,11 +271,6 @@ export const partners: Partner[] = [
     topics: ["API testing", "API documentation", "API mocking", "Collaboration"],
     benefits: ["Comprehensive API tools", "Easy collaboration", "Automated testing", "API documentation"],
     categories: ["platform"],
-    speakerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    speakerName: "Abhinav Asthana",
-    speakerTitle: "CEO & Founder, Postman",
-    speakerBio: "Abhinav Asthana is the CEO and founder of Postman, revolutionizing API development. With millions of developers relying on Postman daily, Abhinav shapes how teams build, test, and collaborate on APIs.",
-    speakerQuote: "APIs are everywhere, and they deserve tools built for them. Postman provides a complete platform for API development that brings teams together."
   },
   {
     id: "rootly",
@@ -401,11 +281,6 @@ export const partners: Partner[] = [
     topics: ["Incident management", "Team collaboration", "Post-incident reviews", "Automation"],
     benefits: ["Streamlined incident response", "Better collaboration", "Data-driven reviews", "Compliance ready"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Rohit Verma",
-    speakerTitle: "CEO & Founder, Rootly",
-    speakerBio: "Rohit Verma is the CEO and founder of Rootly, transforming incident management for DevOps teams. With focus on collaboration and learning, Rohit helps teams respond faster and prevent future incidents.",
-    speakerQuote: "Incidents are learning opportunities. Rootly makes it easy for teams to collaborate during incidents and learn from them afterward."
   },
   {
     id: "scaleai",
@@ -416,11 +291,6 @@ export const partners: Partner[] = [
     topics: ["Data labeling", "Training data", "Data quality", "ML data pipelines"],
     benefits: ["High-quality training data", "Scalable labeling", "Quality assurance", "Production readiness"],
     categories: ["ai", "data"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Alexandr Wang",
-    speakerTitle: "CEO & Founder, Scale AI",
-    speakerBio: "Alexandr Wang is the CEO and founder of Scale AI, building the data infrastructure for AI. With expertise in data quality and labeling at scale, Alexandr enables enterprises to train better ML models.",
-    speakerQuote: "AI models are only as good as the data they train on. Scale AI focuses on making high-quality training data accessible and affordable."
   },
   {
     id: "securiti",
@@ -431,11 +301,6 @@ export const partners: Partner[] = [
     topics: ["Data governance", "Privacy compliance", "Security controls", "Risk management"],
     benefits: ["Compliance automation", "Privacy controls", "Data visibility", "Risk reduction"],
     categories: ["security"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Rehan Jalil",
-    speakerTitle: "CEO & Founder, Securiti",
-    speakerBio: "Rehan Jalil is the CEO and founder of Securiti, automating data security and privacy governance. With focus on compliance and risk reduction, Rehan helps enterprises stay secure in an increasingly complex regulatory landscape.",
-    speakerQuote: "Data security and compliance shouldn't be manual and painful. Securiti uses AI to automate discovery, protection, and governance of your data."
   },
   {
     id: "snyk",
@@ -446,11 +311,6 @@ export const partners: Partner[] = [
     topics: ["Vulnerability scanning", "Dependency management", "Code security", "Compliance"],
     benefits: ["Early vulnerability detection", "Developer-friendly", "Integrated security", "Compliance reports"],
     categories: ["security"],
-    speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    speakerName: "Guy Podjarny",
-    speakerTitle: "CEO & Founder, Snyk",
-    speakerBio: "Guy Podjarny is the CEO and founder of Snyk, bringing developer-first security to enterprises. With focus on making security integrated and accessible, Guy empowers developers to build secure code from day one.",
-    speakerQuote: "Security shouldn't slow developers down. Snyk integrates security into the development workflow so teams can ship fast and secure."
   },
   {
     id: "sonarsource",
@@ -461,11 +321,6 @@ export const partners: Partner[] = [
     topics: ["Code quality", "Technical debt", "Security scanning", "Standards compliance"],
     benefits: ["Code quality metrics", "Vulnerability detection", "Debt tracking", "Developer guidance"],
     categories: ["security"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Olivier Gaudin",
-    speakerTitle: "CEO & Co-Founder, SonarSource",
-    speakerBio: "Olivier Gaudin is the CEO and co-founder of SonarSource, making code quality and security visible. With focus on clean code practices, Olivier helps teams maintain quality and security across their codebase.",
-    speakerQuote: "Code quality is a continuous journey. SonarSource provides visibility into technical debt and security issues, helping teams make informed decisions."
   },
   {
     id: "sonatype",
@@ -476,11 +331,6 @@ export const partners: Partner[] = [
     topics: ["Component management", "Supply chain security", "Vulnerability detection", "License compliance"],
     benefits: ["Supply chain visibility", "Vulnerability management", "License compliance", "Risk reduction"],
     categories: ["security"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Wayne Jackson",
-    speakerTitle: "CEO, Sonatype",
-    speakerBio: "Wayne Jackson is the CEO of Sonatype, securing software supply chains at scale. With expertise in open-source security and component management, Wayne helps enterprises manage risk in their software dependencies.",
-    speakerQuote: "Open-source components power modern software, but they also introduce risk. Sonatype provides the visibility and control enterprises need to manage software supply chain risk."
   },
   {
     id: "spacelift",
@@ -491,11 +341,6 @@ export const partners: Partner[] = [
     topics: ["IaC management", "Policy enforcement", "Infrastructure governance", "Multi-cloud"],
     benefits: ["IaC governance", "Policy compliance", "Audit trails", "Team collaboration"],
     categories: ["devops"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Marcin Dryl",
-    speakerTitle: "CEO & Founder, Spacelift",
-    speakerBio: "Marcin Dryl is the CEO and founder of Spacelift, bringing governance and collaboration to Infrastructure as Code. With focus on policy enforcement and team workflows, Marcin helps enterprises manage IaC safely at scale.",
-    speakerQuote: "Infrastructure as Code is powerful, but without governance and collaboration, it becomes risky. Spacelift adds the intelligence enterprises need."
   },
   {
     id: "tailscale",
@@ -506,11 +351,6 @@ export const partners: Partner[] = [
     topics: ["Network security", "VPN", "Zero trust", "Remote access"],
     benefits: ["Easy setup", "Zero trust security", "Reduced complexity", "Enterprise features"],
     categories: ["security"],
-    speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    speakerName: "Avery Pennarun",
-    speakerTitle: "CEO & Founder, Tailscale",
-    speakerBio: "Avery Pennarun is the CEO and founder of Tailscale, making secure network access simple. With focus on zero-trust security and ease of use, Avery reimagines how teams connect securely.",
-    speakerQuote: "VPNs have been the same for 20 years. Tailscale brings a modern approach to network security that's both more secure and easier to use."
   },
   {
     id: "temporal",
@@ -521,11 +361,6 @@ export const partners: Partner[] = [
     topics: ["Workflow orchestration", "Microservices", "Distributed systems", "Reliability"],
     benefits: ["Reliable workflows", "Scalable orchestration", "Complex logic support", "Developer-friendly"],
     categories: ["platform"],
-    speakerImage: "https://images.unsplash.com/photo-1519085360771-9852ef158ddb?w=400&h=400&fit=crop",
-    speakerName: "Samar Abbas",
-    speakerTitle: "CEO, Temporal",
-    speakerBio: "Samar Abbas is the CEO of Temporal, simplifying microservices orchestration at scale. With expertise in distributed systems and reliability, Samar helps teams build resilient, scalable workflows.",
-    speakerQuote: "Building reliable workflows across microservices is hard. Temporal abstracts the complexity of failure handling and state management."
   },
   {
     id: "wandb",
@@ -536,10 +371,5 @@ export const partners: Partner[] = [
     topics: ["Experiment tracking", "Model management", "ML collaboration", "Reproducibility"],
     benefits: ["Experiment visibility", "Model tracking", "Collaboration tools", "Reproducibility"],
     categories: ["ai"],
-    speakerImage: "https://images.unsplash.com/photo-1507238691814-e64db6f17333?w=400&h=400&fit=crop",
-    speakerName: "Lukas Biewald",
-    speakerTitle: "CEO & Founder, Weights & Biases",
-    speakerBio: "Lukas Biewald is the CEO and founder of Weights & Biases, enabling ML teams to build better models. With focus on experiment tracking and collaboration, Lukas helps data scientists iterate faster and ship better models.",
-    speakerQuote: "Machine learning teams need visibility into their experiments and models. Weights & Biases brings the tools that make ML development more systematic and collaborative."
   },
 ];
