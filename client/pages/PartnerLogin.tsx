@@ -47,6 +47,15 @@ export default function PartnerLogin() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-white flex items-center justify-center p-4">
+      {/* Home Button */}
+      <Link
+        to="/"
+        className="absolute top-4 left-4 flex items-center gap-2 px-3 py-2 rounded-lg text-foreground/70 hover:text-foreground hover:bg-white/50 transition-colors"
+      >
+        <Home className="w-4 h-4" />
+        <span className="text-sm font-medium">Home</span>
+      </Link>
+
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
