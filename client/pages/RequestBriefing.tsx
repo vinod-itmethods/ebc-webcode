@@ -465,6 +465,7 @@ export default function RequestBriefing() {
               <Step1
                 interests={formData.interests}
                 interestOther={formData.interestOther}
+                vendors={formData.vendors}
                 onUpdate={(field, value) => updateFormData(field, value)}
                 onToggle={(value) => toggleCheckbox("interests", value)}
               />
