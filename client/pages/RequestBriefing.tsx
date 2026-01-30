@@ -208,7 +208,7 @@ export default function RequestBriefing() {
   };
 
   const handleNext = () => {
-    if (currentStep < 7) {
+    if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
     }
   };
