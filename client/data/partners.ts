@@ -31,11 +31,6 @@ export const partners: Partner[] = [
     topics: ["Cloud cost visibility", "Financial governance", "Multi-cloud optimization", "FinOps strategy"],
     benefits: ["Cost optimization insights", "Financial controls across clouds", "Usage analytics", "Budget forecasting"],
     categories: ["cloud"],
-    speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    speakerName: "Josh Cummings",
-    speakerTitle: "CEO, Archera",
-    speakerBio: "Josh Cummings is the CEO of Archera, helping enterprises optimize cloud spending through intelligent financial management. With years of experience in cloud economics and FinOps, Josh provides insights on controlling cloud costs while maintaining performance and innovation.",
-    speakerQuote: "Cloud financial management is no longer optional—it's essential. Organizations that implement proper FinOps practices see 20-30% cost reductions while improving their overall cloud strategy and governance."
   },
   {
     id: "baseten",
