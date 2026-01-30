@@ -177,12 +177,25 @@ export default function PortalCustomer() {
 
           {/* Briefing Requests Section */}
           <section className="space-y-8">
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-2">Briefing Requests</h2>
-              <p className="text-foreground/70 mb-6">View the status of your Executive Briefing Council requests.</p>
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-2xl font-bold text-foreground mb-2">Briefing Requests</h2>
+                <p className="text-foreground/70">View the status of your Executive Briefing Council requests.</p>
+              </div>
+              <Button
+                onClick={handleRequestAnotherBriefing}
+                className="flex items-center gap-2 flex-shrink-0"
+              >
+                <Plus className="w-4 h-4" />
+                Request another briefing
+              </Button>
             </div>
 
-            {briefingRequests.length > 0 ? (
+            {loading ? (
+              <div className="p-8 bg-slate-50 rounded-lg border border-slate-200 text-center">
+                <p className="text-foreground/70">Loading your briefing requests...</p>
+              </div>
+            ) : briefingRequests.length > 0 ? (
               <div className="space-y-6">
                 {briefingRequests.map((request) => (
                   <div
