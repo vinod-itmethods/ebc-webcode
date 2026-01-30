@@ -1,24 +1,65 @@
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { LogOut } from "lucide-react";
 
 export default function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userEmail, setUserEmail] = useState<string>("");
+
+  useEffect(() => {
+    // Check for customer portal authentication
+    const customerAuth = localStorage.getItem("portalAuthenticated") === "true";
+    const customerEmail = localStorage.getItem("userEmail");
+
+    // Check for partner authentication
+    const partnerAuth = localStorage.getItem("partnerAuthenticated") === "true";
+
+    // Check for admin authentication
+    const adminEmail = localStorage.getItem("adminEmail");
+
+    if (customerAuth && customerEmail) {
+      setIsAuthenticated(true);
+      setUserEmail(customerEmail);
+    } else if (partnerAuth) {
+      setIsAuthenticated(true);
+      setUserEmail("Partner");
+    } else if (adminEmail) {
+      setIsAuthenticated(true);
+      setUserEmail(adminEmail);
+    }
+  }, [location]);
 
   const isActive = (path: string) => {
     return location.pathname === path;
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("portalAuthenticated");
+    localStorage.removeItem("userRole");
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("partnerAuthenticated");
+    localStorage.removeItem("adminEmail");
+    setIsAuthenticated(false);
+    navigate("/");
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-7xl items-center">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
+      <div className="container flex h-20 max-w-7xl items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-0 hover:opacity-80 transition-opacity mr-12">
+        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity mr-12 flex-shrink-0">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb708ee6487aa42df951001ea08f04fa4?format=webp&width=800&height=1200"
             alt="EBC Logo"
-            className="h-20 flex-shrink-0"
+            className="h-12 flex-shrink-0"
           />
-          <span className="text-sm text-foreground hidden sm:inline whitespace-nowrap -ml-3">| <span className="font-normal">Executive Briefing Council</span></span>
+          <div className="hidden sm:flex flex-col">
+            <span className="text-xs font-semibold text-primary">EBC</span>
+            <span className="text-xs text-foreground/70 font-medium">Executive Briefing Council</span>
+          </div>
         </Link>
 
         {/* Nav Links - Centered */}
@@ -27,8 +68,8 @@ export default function Header() {
             to="/partners"
             className={`text-sm font-medium transition-colors ${
               isActive("/partners")
-                ? "text-primary"
-                : "text-foreground/60 hover:text-primary"
+                ? "text-primary font-semibold"
+                : "text-foreground/70 hover:text-primary"
             }`}
           >
             Technology providers
@@ -37,32 +78,51 @@ export default function Header() {
             to="/faq"
             className={`text-sm font-medium transition-colors ${
               isActive("/faq")
-                ? "text-primary"
-                : "text-foreground/60 hover:text-primary"
+                ? "text-primary font-semibold"
+                : "text-foreground/70 hover:text-primary"
             }`}
           >
             FAQ
           </Link>
         </nav>
 
-        {/* Right Side - Vendor Login and CTA */}
-        <div className="flex items-center gap-4 ml-auto">
-          <Link
-            to="/portal"
-            className={`hidden md:inline text-sm font-medium transition-colors ${
-              isActive("/portal") || isActive("/partner-login") || isActive("/partner-dashboard") || location.pathname.startsWith("/portal")
-                ? "text-primary"
-                : "text-foreground/60 hover:text-primary"
-            }`}
-          >
-            Login
-          </Link>
-          <Button
-            asChild
-            className="font-medium rounded-lg"
-          >
-            <Link to="/request-briefing">Request a briefing</Link>
-          </Button>
+        {/* Right Side - Auth and CTA */}
+        <div className="flex items-center gap-3 ml-auto">
+          {isAuthenticated ? (
+            <>
+              <span className="hidden md:inline text-sm text-foreground/60">
+                {userEmail}
+              </span>
+              <Button
+                onClick={handleLogout}
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-2"
+              >
+                <LogOut className="w-4 h-4" />
+                <span className="hidden sm:inline">Logout</span>
+              </Button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/portal"
+                className={`hidden md:inline text-sm font-medium transition-colors ${
+                  isActive("/portal") || isActive("/partner-login") || isActive("/partner-dashboard")
+                    ? "text-primary font-semibold"
+                    : "text-foreground/70 hover:text-primary"
+                }`}
+              >
+                Login
+              </Link>
+              <Button
+                asChild
+                className="font-medium rounded-lg"
+              >
+                <Link to="/request-briefing">Request a briefing</Link>
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </header>
