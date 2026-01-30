@@ -299,7 +299,7 @@ export default function Partners() {
                     : [...selectedVendors, selectedPartner.id];
 
                   localStorage.setItem('vendor_wishlist', JSON.stringify(updatedVendors));
-                  navigate('/request-briefing?step=4');
+                  navigate(`/request-briefing?step=${returnTo === 'briefing' ? fromStep : '4'}`);
                 }}
                 variant="secondary-outline"
                 className="flex-1 font-semibold rounded-lg"
