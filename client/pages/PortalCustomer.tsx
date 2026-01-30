@@ -247,8 +247,12 @@ export default function PortalCustomer() {
         return "bg-green-50 border-green-200";
       case "scheduled":
         return "bg-blue-50 border-blue-200";
+      case "submitted":
+        return "bg-green-50 border-green-200";
       case "pending":
         return "bg-amber-50 border-amber-200";
+      case "draft":
+        return "bg-red-50 border-red-200";
       default:
         return "bg-slate-50 border-slate-200";
     }
