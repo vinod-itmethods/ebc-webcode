@@ -10104,5 +10104,85 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769802203533-1769802203580",
+    "email": "temp_1769802203533",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:43:23.580Z",
+    "updatedAt": "2026-01-30T19:43:23.580Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten",
+            "cognition",
+            "continuai",
+            "lyzr",
+            "mistralai"
+          ]
+        },
+        "timestamp": "2026-01-30T19:43:23.580Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai",
+        "lyzr",
+        "mistralai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802204370-1769802204503",
+    "email": "temp_1769802204370",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:43:24.503Z",
+    "updatedAt": "2026-01-30T19:43:24.503Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:43:24.503Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]

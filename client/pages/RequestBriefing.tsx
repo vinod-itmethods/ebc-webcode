@@ -793,7 +793,7 @@ function Step4Vendors({
             variant="secondary-outline"
             className="font-semibold rounded-lg"
           >
-            <a href="/partners?returnTo=briefing">Browse more vendors</a>
+            <a href={`/partners?returnTo=briefing&step=${currentStep}`}>Browse more vendors</a>
           </Button>
         </div>
       )}
