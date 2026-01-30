@@ -23,6 +23,10 @@ export default function Partners() {
   const [searchParams] = useSearchParams();
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<CategoryType | null>(null);
+  const [selectedVendors, setSelectedVendors] = useState<string[]>(() => {
+    // Initialize from localStorage
+    return JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
+  });
   const returnTo = searchParams.get('returnTo'); // Check if coming from briefing form
 
   // Load partners with any edited data from localStorage
