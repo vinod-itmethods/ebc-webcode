@@ -51,6 +51,23 @@ export default function Partners() {
     return result;
   }, [selectedCategory]);
 
+  const toggleVendor = (vendorId: string) => {
+    setSelectedVendors(prev => {
+      if (prev.includes(vendorId)) {
+        return prev.filter(id => id !== vendorId);
+      } else {
+        return [...prev, vendorId];
+      }
+    });
+  };
+
+  const handleAddSelectedAndReturn = () => {
+    localStorage.setItem('vendor_wishlist', JSON.stringify(selectedVendors));
+    if (returnTo === 'briefing') {
+      navigate('/request-briefing?step=4');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
