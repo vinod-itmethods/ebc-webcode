@@ -781,6 +781,8 @@ function Step7Contact({
   email,
   assistant,
   onUpdate,
+  emailError,
+  onEmailValidate,
 }: {
   name: string;
   role: string;
@@ -788,6 +790,8 @@ function Step7Contact({
   email: string;
   assistant?: string;
   onUpdate: (field: string, value: string) => void;
+  emailError: string | null;
+  onEmailValidate: (email: string) => void;
 }) {
   return (
     <div className="space-y-6">
@@ -832,9 +836,18 @@ function Step7Contact({
           <input
             type="email"
             value={email}
-            onChange={(e) => onUpdate("email", e.target.value)}
-            className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
+            onChange={(e) => {
+              onUpdate("email", e.target.value);
+              onEmailValidate(e.target.value);
+            }}
+            className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors ${
+              emailError
+                ? "border-red-300 focus:border-red-400 bg-red-50/30"
+                : "border-border/15 focus:border-primary"
+            }`}
           />
+          {emailError && <p className="text-sm text-red-600 mt-2">{emailError}</p>}
+          <p className="text-xs text-foreground/50 mt-2">We accept work email addresses only (not gmail, yahoo, outlook, etc.)</p>
         </div>
 
         <div>
