@@ -123,6 +123,33 @@ export default function RequestBriefing() {
     }
   };
 
+  const isStepValid = (): boolean => {
+    switch (currentStep) {
+      case 1:
+        return formData.interests.length > 0 || !!formData.interestOther;
+      case 2:
+        return formData.decisionContext.length > 0;
+      case 3:
+        return formData.perspectives.length > 0;
+      case 4:
+        // Step 4 is optional - vendors can be added later from partners page
+        return true;
+      case 5:
+        return !!formData.location && !!formData.format;
+      case 6:
+        return !!formData.goals.trim();
+      case 7:
+        return (
+          !!formData.name.trim() &&
+          !!formData.role.trim() &&
+          !!formData.company.trim() &&
+          !!formData.email.trim()
+        );
+      default:
+        return false;
+    }
+  };
+
   const handleNext = () => {
     if (currentStep < 7) {
       setCurrentStep(currentStep + 1);
