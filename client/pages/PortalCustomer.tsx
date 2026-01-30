@@ -257,9 +257,9 @@ export default function PortalCustomer() {
   const getStatusLabel = (status: RequestStatus) => {
     switch (status) {
       case "draft":
-        return "Draft";
+        return "Rejected";
       case "submitted":
-        return "Submitted";
+        return "Approved";
       case "pending":
         return "Pending Review";
       case "scheduled":
