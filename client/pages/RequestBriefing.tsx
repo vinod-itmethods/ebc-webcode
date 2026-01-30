@@ -353,33 +353,41 @@ export default function RequestBriefing() {
             )}
 
             {/* Navigation Buttons */}
-            <div className="flex items-center justify-between gap-4 mt-10 pt-8 border-t border-border/10">
-              <button
-                onClick={handleBack}
-                disabled={currentStep === 1}
-                className="flex items-center gap-2 text-foreground/60 hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
-              >
-                <ChevronLeft className="w-4 h-4" />
-                Back
-              </button>
+            <div className="space-y-4">
+              {!isStepValid() && currentStep !== 7 && (
+                <div className="text-sm text-orange-600 font-medium">
+                  Please complete this step before continuing
+                </div>
+              )}
+              <div className="flex items-center justify-between gap-4 pt-8 border-t border-border/10">
+                <button
+                  onClick={handleBack}
+                  disabled={currentStep === 1}
+                  className="flex items-center gap-2 text-foreground/60 hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  Back
+                </button>
 
-              <div className="flex gap-2 items-center">
-                {[1, 2, 3, 4, 5, 6, 7].map((step) => (
-                  <div
-                    key={step}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      step <= currentStep ? "bg-[hsl(45_82%_52%)]" : "bg-slate-200"
-                    }`}
-                  ></div>
-                ))}
+                <div className="flex gap-2 items-center">
+                  {[1, 2, 3, 4, 5, 6, 7].map((step) => (
+                    <div
+                      key={step}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        step <= currentStep ? "bg-[hsl(45_82%_52%)]" : "bg-slate-200"
+                      }`}
+                    ></div>
+                  ))}
+                </div>
+
+                <Button
+                  onClick={currentStep === 7 ? handleSubmit : handleNext}
+                  disabled={!isStepValid()}
+                  className="font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentStep === 7 ? "Request briefing" : "Continue"}
+                </Button>
               </div>
-
-              <Button
-                onClick={currentStep === 7 ? handleSubmit : handleNext}
-                className="font-semibold rounded-lg"
-              >
-                {currentStep === 7 ? "Request briefing" : "Continue"}
-              </Button>
             </div>
           </div>
         </div>
