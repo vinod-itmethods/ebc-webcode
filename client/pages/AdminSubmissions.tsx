@@ -216,38 +216,103 @@ export default function AdminSubmissions() {
                   {/* Expanded Details */}
                   {expandedId === submission.id && (
                     <div className="border-t border-border/10 bg-slate-50/30 px-6 py-4 space-y-6">
-                      {/* Timeline */}
+                      {!submission.isCompleted && (
+                        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                          <p className="text-sm font-semibold text-yellow-900 mb-2">
+                            ⚠️ Abandoned Submission
+                          </p>
+                          <p className="text-sm text-yellow-800">
+                            User completed steps 1-{submission.currentStep - 1} and abandoned at <strong>Step {submission.currentStep}</strong>
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Progress Indicator */}
+                      <div className="space-y-3">
+                        <h4 className="font-semibold text-foreground text-sm">Form Progress</h4>
+                        <div className="flex gap-2 flex-wrap">
+                          {Array.from({ length: 7 }, (_, i) => i + 1).map((step) => {
+                            const isCompleted = step < submission.currentStep;
+                            const isAbandoned = step === submission.currentStep && !submission.isCompleted;
+                            const isFuture = step > submission.currentStep;
+
+                            return (
+                              <div
+                                key={step}
+                                className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm transition-colors ${
+                                  isCompleted
+                                    ? "bg-green-100 text-green-700 border border-green-300"
+                                    : isAbandoned
+                                    ? "bg-red-100 text-red-700 border border-red-300"
+                                    : "bg-slate-100 text-slate-400 border border-slate-200"
+                                }`}
+                              >
+                                {isCompleted ? "✓" : step}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Collected Data Timeline */}
                       <div className="space-y-4">
-                        <h4 className="font-semibold text-foreground text-sm">Response Timeline</h4>
+                        <h4 className="font-semibold text-foreground text-sm">Collected Data</h4>
                         <div className="space-y-3">
-                          {submission.steps.map((step) => (
-                            <div key={step.stepNumber} className="bg-white rounded p-3 border border-border/10">
-                              <div className="flex justify-between items-start mb-2">
-                                <span className="font-medium text-foreground text-sm">
-                                  Step {step.stepNumber}: {STEP_NAMES[step.stepNumber - 1]}
-                                </span>
-                                <span className="text-xs text-foreground/50">
-                                  {new Date(step.timestamp).toLocaleString()}
-                                </span>
+                          {submission.steps.map((step) => {
+                            const isAbandoned = step.stepNumber === submission.currentStep && !submission.isCompleted;
+
+                            return (
+                              <div
+                                key={step.stepNumber}
+                                className={`rounded-lg border p-4 transition-colors ${
+                                  isAbandoned
+                                    ? "bg-red-50 border-red-200"
+                                    : "bg-white border-border/10"
+                                }`}
+                              >
+                                <div className="flex justify-between items-start mb-3">
+                                  <div className="flex items-center gap-3">
+                                    <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
+                                      isAbandoned
+                                        ? "bg-red-100 text-red-700"
+                                        : "bg-green-100 text-green-700"
+                                    }`}>
+                                      {isAbandoned ? "⚠" : "✓"}
+                                    </span>
+                                    <div>
+                                      <span className="font-semibold text-foreground text-sm">
+                                        Step {step.stepNumber}: {STEP_NAMES[step.stepNumber - 1]}
+                                      </span>
+                                      {isAbandoned && (
+                                        <span className="ml-3 text-xs font-semibold text-red-700 bg-red-100 px-2 py-0.5 rounded">
+                                          ABANDONED HERE
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                  <span className="text-xs text-foreground/50">
+                                    {new Date(step.timestamp).toLocaleString()}
+                                  </span>
+                                </div>
+                                <div className="text-sm text-foreground/70 bg-white/50 rounded p-3 border border-border/5">
+                                  {renderStepData(step.stepNumber, step.data)}
+                                </div>
                               </div>
-                              <div className="text-sm text-foreground/70 bg-slate-50 rounded p-2">
-                                {renderStepData(step.stepNumber, step.data)}
-                              </div>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
 
                       {/* Summary Stats */}
-                      <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="grid grid-cols-2 gap-4 text-sm border-t border-border/10 pt-4">
                         <div>
-                          <p className="text-foreground/60">Created</p>
+                          <p className="text-foreground/60">Started</p>
                           <p className="font-medium text-foreground">
                             {new Date(submission.createdAt).toLocaleString()}
                           </p>
                         </div>
                         <div>
-                          <p className="text-foreground/60">Last Updated</p>
+                          <p className="text-foreground/60">Last Activity</p>
                           <p className="font-medium text-foreground">
                             {new Date(submission.updatedAt).toLocaleString()}
                           </p>
