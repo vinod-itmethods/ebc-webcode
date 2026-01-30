@@ -89,6 +89,65 @@ function formatBriefingEmail(data: BriefingFormData): string {
   `;
 }
 
+function formatCustomerConfirmationEmail(data: BriefingFormData): string {
+  const portalUrl = process.env.PORTAL_URL || "https://briefing.example.com/portal";
+
+  return `
+<html>
+  <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto;">
+      <div style="background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%); padding: 30px; text-align: center; color: white; border-radius: 8px 8px 0 0;">
+        <h1 style="margin: 0; font-size: 28px;">Welcome to Executive Briefing Council</h1>
+      </div>
+
+      <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px;">
+        <p>Hi ${data.name},</p>
+
+        <p style="font-size: 16px; margin-bottom: 20px;">
+          Thank you for submitting your briefing request! We've received your organization's technology priorities and strategic needs.
+        </p>
+
+        <div style="background: white; border: 2px solid #0066cc; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
+          <p style="margin-top: 0; font-weight: bold; color: #0066cc;">What happens next?</p>
+          <ol style="margin: 10px 0; padding-left: 20px;">
+            <li>Our team reviews your briefing plan</li>
+            <li>We confirm timing and select relevant technology partners</li>
+            <li>Your secure portal will be updated with the briefing agenda</li>
+            <li>You'll receive email notifications of all updates</li>
+          </ol>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 20px;">
+          <a href="${portalUrl}" style="display: inline-block; background: #0066cc; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+            Access Your Customer Portal
+          </a>
+        </div>
+
+        <div style="background: #f0f7ff; padding: 15px; border-radius: 6px; border-left: 4px solid #0066cc; margin-bottom: 20px;">
+          <p style="margin: 0; font-size: 14px;">
+            <strong>Your Portal Login:</strong><br/>
+            Email: ${data.email}<br/>
+            You can set up your password on your first visit to the portal.
+          </p>
+        </div>
+
+        <p style="margin-bottom: 30px;">
+          For any questions or updates to your request, please reply to this email or contact our team at <a href="mailto:briefings@itmethods.com">briefings@itmethods.com</a>.
+        </p>
+
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
+
+        <p style="font-size: 12px; color: #999; text-align: center;">
+          Executive Briefing Council - Confidential<br/>
+          You're receiving this because you submitted a briefing request to the Executive Briefing Council.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+  `;
+}
+
 export async function handleBriefingSubmission(req: Request, res: Response) {
   const data: BriefingFormData = req.body;
 
@@ -105,7 +164,8 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
     "sales@itmethods.com",
   ];
 
-  const emailHtml = formatBriefingEmail(data);
+  const internalEmailHtml = formatBriefingEmail(data);
+  const customerEmailHtml = formatCustomerConfirmationEmail(data);
 
   try {
     // Send to internal team
@@ -113,11 +173,23 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
       from: process.env.SMTP_FROM || "noreply@itmethods.com",
       to: internalEmails.join(","),
       subject: `New Briefing Request from ${data.name} (${data.company})`,
-      html: emailHtml,
+      html: internalEmailHtml,
     });
 
     console.log(
       `Briefing request email sent to internal team for ${data.name} from ${data.company}`
+    );
+
+    // Send confirmation to customer
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM || "noreply@itmethods.com",
+      to: data.email,
+      subject: `Briefing Request Received - Welcome to Executive Briefing Council`,
+      html: customerEmailHtml,
+    });
+
+    console.log(
+      `Confirmation email sent to customer ${data.email}`
     );
 
     return res.status(200).json({
