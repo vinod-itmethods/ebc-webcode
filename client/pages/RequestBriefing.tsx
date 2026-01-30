@@ -123,6 +123,12 @@ export default function RequestBriefing() {
     }
   }, [searchParams]);
 
+  // Save form data to localStorage
+  useEffect(() => {
+    localStorage.setItem('briefing_form_data', JSON.stringify(formData));
+    localStorage.setItem('briefing_form_step', currentStep.toString());
+  }, [formData, currentStep]);
+
   // Auto-save progress whenever form data changes
   useEffect(() => {
     const saveProgress = async () => {
