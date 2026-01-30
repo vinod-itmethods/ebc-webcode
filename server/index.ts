@@ -4,6 +4,7 @@ import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleBriefingSubmission } from "./routes/briefing";
 import { handleSaveProgress, handleGetSubmissions } from "./routes/submissions";
+import { handleValidateEmail, handleRegisterCustomer, handleGetPersonalDomains } from "./routes/customers";
 
 export function createServer() {
   const app = express();
