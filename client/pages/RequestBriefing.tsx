@@ -492,6 +492,7 @@ export default function RequestBriefing() {
               <Step4Vendors
                 vendors={formData.vendors}
                 onToggle={(value) => toggleCheckbox("vendors", value)}
+                currentStep={currentStep}
               />
             )}
 
