@@ -129,10 +129,10 @@ export default function Header() {
                 Login
               </Link>
               <Button
-                asChild
+                onClick={() => navigate("/request-briefing")}
                 className="font-medium rounded-lg"
               >
-                <Link to="/request-briefing">Request a briefing</Link>
+                Request a briefing
               </Button>
             </>
           )}
