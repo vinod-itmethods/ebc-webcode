@@ -260,17 +260,16 @@ export default function Partners() {
                 onClick={() => {
                   toggleVendor(selectedPartner.id);
                 }}
-                variant={selectedVendors.includes(selectedPartner.id) ? "default" : "secondary-outline"}
                 className="flex-1 font-semibold rounded-lg"
               >
-                {selectedVendors.includes(selectedPartner.id) ? '✓ Selected' : 'Select vendor'}
+                Include in briefing
               </Button>
               <Button
                 onClick={() => setSelectedPartner(null)}
                 variant="secondary-outline"
                 className="flex-1 font-semibold rounded-lg"
               >
-                Close
+                Submit briefing
               </Button>
             </div>
           </div>
