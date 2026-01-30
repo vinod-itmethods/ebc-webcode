@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BriefingTimeline from "@/components/BriefingTimeline";
-import { LogOut, CheckCircle2, Clock, AlertCircle, Plus } from "lucide-react";
+import { CheckCircle2, Clock, AlertCircle, Plus } from "lucide-react";
 import { downloadICS, getOutlookLink } from "@/utils/calendar";
 
 interface TimelineEvent {
