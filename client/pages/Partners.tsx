@@ -119,41 +119,29 @@ export default function Partners() {
             {partners.map((partner) => {
               const isSelected = selectedVendors.includes(partner.id);
               return (
-                <div
+                <button
                   key={partner.id}
-                  className={`relative flex flex-col items-center justify-center bg-slate-50 rounded-xl p-4 transition-all ${
+                  onClick={() => setSelectedPartner(partner)}
+                  className={`flex flex-col items-center justify-center bg-slate-50 rounded-xl p-4 transition-all ${
                     isSelected ? 'ring-2 ring-primary shadow-lg bg-primary/5' : 'hover:shadow-lg hover:bg-white'
                   }`}
+                  style={{ height: "160px" }}
                 >
-                  {/* Checkbox */}
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    onChange={() => toggleVendor(partner.id)}
-                    className="absolute top-3 right-3 w-5 h-5 cursor-pointer"
-                  />
-
                   {/* Logo */}
-                  <button
-                    onClick={() => setSelectedPartner(partner)}
-                    className="flex items-center justify-center w-full cursor-pointer"
-                    style={{ height: "120px" }}
-                  >
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
-                      onError={(e) => {
-                        const el = e.currentTarget;
-                        el.style.display = "none";
-                        el.parentElement!.innerHTML =
-                          '<div class="text-xs font-medium text-slate-400 text-center px-2">' +
-                          partner.name +
-                          "</div>";
-                      }}
-                    />
-                  </button>
-                </div>
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
+                    onError={(e) => {
+                      const el = e.currentTarget;
+                      el.style.display = "none";
+                      el.parentElement!.innerHTML =
+                        '<div class="text-xs font-medium text-slate-400 text-center px-2">' +
+                        partner.name +
+                        "</div>";
+                    }}
+                  />
+                </button>
               );
             })}
           </div>
