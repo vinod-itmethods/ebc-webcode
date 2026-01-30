@@ -750,9 +750,11 @@ function Step3({
 function Step4Vendors({
   vendors,
   onToggle,
+  currentStep,
 }: {
   vendors: string[];
   onToggle: (value: string) => void;
+  currentStep: number;
 }) {
   return (
     <div className="space-y-6">
