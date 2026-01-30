@@ -81,6 +81,23 @@ export default function Partners() {
     <div className="min-h-screen bg-white">
       <Header />
 
+      {/* Back to Briefing Bar */}
+      {returnTo === 'briefing' && (
+        <section className="bg-blue-50 border-b border-blue-200 py-3">
+          <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <p className="text-sm text-foreground/70">Browsing more vendors for your briefing request</p>
+            <Button
+              onClick={handleBackToBriefing}
+              variant="secondary"
+              size="sm"
+              className="rounded-lg font-medium"
+            >
+              Back to briefing
+            </Button>
+          </div>
+        </section>
+      )}
+
       {/* Hero Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-blue-50/40">
         <div className="absolute inset-0 -z-10">
