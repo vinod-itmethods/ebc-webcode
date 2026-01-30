@@ -110,11 +110,19 @@ export default function RequestBriefing() {
         });
 
         if (!response.ok) {
-          const errorData = await response.json();
-          console.error("Failed to save progress:", errorData);
+          try {
+            const errorData = await response.json();
+            console.warn("Save progress responded with error:", JSON.stringify(errorData));
+          } catch (e) {
+            console.warn(`Save progress failed with status ${response.status}:`, response.statusText);
+          }
+        } else {
+          // Successfully saved
+          const data = await response.json();
+          console.log("Progress saved successfully at step", currentStep);
         }
       } catch (error) {
-        console.error("Error saving progress:", error);
+        console.error("Network error saving progress:", error instanceof Error ? error.message : String(error));
       } finally {
         setIsSaving(false);
       }
