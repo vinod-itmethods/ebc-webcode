@@ -14,11 +14,16 @@ export default function AdminLogin() {
   // If already authenticated, redirect to submissions page
   useEffect(() => {
     const adminEmail = localStorage.getItem("adminEmail");
+    const userEmail = localStorage.getItem("userEmail");
     const customerAuth = localStorage.getItem("portalAuthenticated") === "true";
-    const partnerAuth = localStorage.getItem("partnerAuthenticated") === "true";
 
     // If authenticated as admin, go to submissions
     if (adminEmail && adminEmail.endsWith("@itmethods.com")) {
+      navigate("/admin/submissions", { replace: true });
+    }
+    // If authenticated as customer with @itmethods.com email, auto-authenticate as admin
+    else if (customerAuth && userEmail && userEmail.endsWith("@itmethods.com")) {
+      localStorage.setItem("adminEmail", userEmail);
       navigate("/admin/submissions", { replace: true });
     }
   }, [navigate]);
