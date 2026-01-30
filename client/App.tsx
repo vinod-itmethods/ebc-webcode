@@ -51,6 +51,7 @@ export default function App() {
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/faq" element={<FAQ />} />
