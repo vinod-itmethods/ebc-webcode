@@ -48,17 +48,17 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
-      <div className="container flex h-20 max-w-7xl items-center">
+      <div className="container flex h-24 max-w-7xl items-center px-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity mr-12 flex-shrink-0">
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity mr-16 flex-shrink-0">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb708ee6487aa42df951001ea08f04fa4?format=webp&width=800&height=1200"
             alt="EBC Logo"
-            className="h-12 flex-shrink-0"
+            className="h-16 flex-shrink-0"
           />
-          <div className="hidden sm:flex flex-col">
-            <span className="text-xs font-semibold text-primary">EBC</span>
-            <span className="text-xs text-foreground/70 font-medium">Executive Briefing Council</span>
+          <div className="hidden sm:flex flex-col justify-center">
+            <span className="text-sm font-bold text-primary tracking-tight">EBC</span>
+            <span className="text-xs text-foreground/70 font-semibold">Executive Briefing Council</span>
           </div>
         </Link>
 
