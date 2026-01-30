@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "cust_1769746852480_aefxcal2p",
+    "email": "vinod.avinane@itmethods.com",
+    "name": "Vinod",
+    "role": "presales",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:20:52.480Z",
+    "updatedAt": "2026-01-30T04:20:52.480Z",
+    "briefingData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    },
+    "status": "active"
+  }
+]

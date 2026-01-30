@@ -1672,5 +1672,470 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769746823500-1769746823603",
+    "email": "temp_1769746823500",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:23.603Z",
+    "updatedAt": "2026-01-30T04:20:23.603Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera"
+          ]
+        },
+        "timestamp": "2026-01-30T04:20:23.603Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746824618-1769746824642",
+    "email": "temp_1769746824618",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:24.642Z",
+    "updatedAt": "2026-01-30T04:20:24.642Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:20:24.642Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746825254-1769746825356",
+    "email": "temp_1769746825254",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:25.356Z",
+    "updatedAt": "2026-01-30T04:20:25.356Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T04:20:25.356Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746826685-1769746826787",
+    "email": "temp_1769746826685",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:26.787Z",
+    "updatedAt": "2026-01-30T04:20:26.787Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T04:20:26.787Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746828902-1769746829007",
+    "email": "temp_1769746828902",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:29.007Z",
+    "updatedAt": "2026-01-30T04:20:29.007Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T04:20:29.007Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746831336-1769746831443",
+    "email": "temp_1769746831336",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:31.443Z",
+    "updatedAt": "2026-01-30T04:20:31.443Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "testing"
+        },
+        "timestamp": "2026-01-30T04:20:31.443Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746832203-1769746832315",
+    "email": "temp_1769746832203",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:32.315Z",
+    "updatedAt": "2026-01-30T04:20:32.315Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T04:20:32.315Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746834944-1769746835049",
+    "email": "temp_1769746834944",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:35.049Z",
+    "updatedAt": "2026-01-30T04:20:35.049Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T04:20:35.049Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746837200-1769746837302",
+    "email": "temp_1769746837200",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:37.302Z",
+    "updatedAt": "2026-01-30T04:20:37.302Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "poresales",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T04:20:37.302Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "poresales",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746838376-1769746838492",
+    "email": "temp_1769746838376",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:38.492Z",
+    "updatedAt": "2026-01-30T04:20:38.492Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "presales",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T04:20:38.492Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746843839-1769746843943",
+    "email": "temp_1769746843839",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:20:43.943Z",
+    "updatedAt": "2026-01-30T04:20:43.943Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "presales",
+          "company": "itmethods",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T04:20:43.943Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": ""
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746850323",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:20:50.323Z",
+    "updatedAt": "2026-01-30T04:20:50.323Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "presales",
+          "company": "itmethods",
+          "email": "vinod.avinane@itmethods.com"
+        },
+        "timestamp": "2026-01-30T04:20:50.323Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746852544",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:20:52.544Z",
+    "updatedAt": "2026-01-30T04:20:52.544Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "presales",
+          "company": "itmethods",
+          "email": "vinod.avinane@itmethods.com"
+        },
+        "timestamp": "2026-01-30T04:20:52.544Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
   }
 ]
