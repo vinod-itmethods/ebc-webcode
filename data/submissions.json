@@ -308,5 +308,36 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769746685529-1769746685671",
+    "email": "temp_1769746685529",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:18:05.671Z",
+    "updatedAt": "2026-01-30T04:18:05.671Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:18:05.671Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
