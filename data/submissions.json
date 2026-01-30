@@ -11213,5 +11213,71 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769802482357-1769802482384",
+    "email": "temp_1769802482357",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:48:02.384Z",
+    "updatedAt": "2026-01-30T19:48:02.384Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:48:02.384Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802498267-1769802499607",
+    "email": "temp_1769802498267",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:48:19.607Z",
+    "updatedAt": "2026-01-30T19:48:19.607Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:48:19.607Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
