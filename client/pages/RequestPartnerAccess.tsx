@@ -160,15 +160,6 @@ export default function RequestPartnerAccess() {
 
           {/* Partner Form */}
           <div className="bg-white border border-border rounded-lg p-8 space-y-6">
-            <div className="space-y-2">
-              <p className="text-lg font-semibold text-foreground">
-                Join our technology ecosystem
-              </p>
-              <p className="text-foreground/70">
-                If you're interested in being part of our technology ecosystem, please fill out the form below and we'll get back to you.
-              </p>
-            </div>
-
             {error && (
               <div className="p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
                 <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
