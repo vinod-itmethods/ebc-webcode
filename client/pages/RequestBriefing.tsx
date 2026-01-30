@@ -137,6 +137,20 @@ export default function RequestBriefing() {
 
   const handleSubmit = async () => {
     try {
+      // Save final completion status
+      await fetch("/api/save-progress", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          company: formData.company,
+          stepNumber: 7,
+          stepData: getStepData(7),
+          isCompleted: true,
+          fullData: formData,
+        }),
+      });
+
       // Send briefing data to server
       const response = await fetch("/api/briefing-submission", {
         method: "POST",
