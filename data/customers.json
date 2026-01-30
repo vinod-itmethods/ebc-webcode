@@ -126,5 +126,80 @@
     },
     "status": "active",
     "approvalStatus": "pending"
+  },
+  {
+    "id": "cust_1769807149348_6ivkbfg46",
+    "email": "ava@tiaa.com",
+    "name": "Ava",
+    "role": "Marketing",
+    "company": "TIAA",
+    "createdAt": "2026-01-30T21:05:49.348Z",
+    "updatedAt": "2026-01-30T21:06:28.999Z",
+    "briefingData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "TIAA",
+      "email": "ava@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    },
+    "status": "active",
+    "approvalStatus": "approved",
+    "approvedAt": "2026-01-30T21:06:28.999Z",
+    "approvedBy": "ava.nguyen@itmethods.com"
+  },
+  {
+    "id": "cust_1769807360231_sptfixubb",
+    "email": "joe@lseg.com",
+    "name": "Joe",
+    "role": "Engineering",
+    "company": "LSEG",
+    "createdAt": "2026-01-30T21:09:20.231Z",
+    "updatedAt": "2026-01-30T21:10:01.738Z",
+    "briefingData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineering",
+      "company": "LSEG",
+      "email": "joe@lseg.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    },
+    "status": "active",
+    "approvalStatus": "approved",
+    "approvedAt": "2026-01-30T21:10:01.738Z",
+    "approvedBy": "ava.nguyen@itmethods.com"
   }
 ]

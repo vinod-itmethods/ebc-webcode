@@ -14312,5 +14312,1322 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769807131009-1769807131198",
+    "email": "temp_1769807131009",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:31.198Z",
+    "updatedAt": "2026-01-30T21:05:31.198Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T21:05:31.198Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807132306-1769807132495",
+    "email": "temp_1769807132306",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:32.495Z",
+    "updatedAt": "2026-01-30T21:05:32.495Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T21:05:32.495Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807134172-1769807134363",
+    "email": "temp_1769807134172",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:34.363Z",
+    "updatedAt": "2026-01-30T21:05:34.363Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T21:05:34.363Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807136712-1769807136902",
+    "email": "temp_1769807136712",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:36.902Z",
+    "updatedAt": "2026-01-30T21:05:36.902Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "test"
+        },
+        "timestamp": "2026-01-30T21:05:36.902Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807137744-1769807137923",
+    "email": "temp_1769807137744",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:37.923Z",
+    "updatedAt": "2026-01-30T21:05:37.923Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:05:37.923Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807139834-1769807140034",
+    "email": "temp_1769807139834",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:40.034Z",
+    "updatedAt": "2026-01-30T21:05:40.034Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:05:40.034Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Ava",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807142203-1769807142389",
+    "email": "temp_1769807142203",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:42.389Z",
+    "updatedAt": "2026-01-30T21:05:42.389Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "Marketing",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:05:42.389Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807144756-1769807144948",
+    "email": "temp_1769807144756",
+    "company": "TIAA",
+    "createdAt": "2026-01-30T21:05:44.948Z",
+    "updatedAt": "2026-01-30T21:05:44.948Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "Marketing",
+          "company": "TIAA",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:05:44.948Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "TIAA",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "ava@tiaa.com-1769807148066",
+    "email": "ava@tiaa.com",
+    "company": "TIAA",
+    "createdAt": "2026-01-30T21:05:48.066Z",
+    "updatedAt": "2026-01-30T21:05:48.066Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "Marketing",
+          "company": "TIAA",
+          "email": "ava@tiaa.com"
+        },
+        "timestamp": "2026-01-30T21:05:48.066Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "TIAA",
+      "email": "ava@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "ava@tiaa.com-1769807149492",
+    "email": "ava@tiaa.com",
+    "company": "TIAA",
+    "createdAt": "2026-01-30T21:05:49.492Z",
+    "updatedAt": "2026-01-30T21:05:49.492Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "Marketing",
+          "company": "TIAA",
+          "email": "ava@tiaa.com"
+        },
+        "timestamp": "2026-01-30T21:05:49.492Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "TIAA",
+      "email": "ava@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807285002-1769807285246",
+    "email": "temp_1769807285002",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:05.246Z",
+    "updatedAt": "2026-01-30T21:08:05.246Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T21:08:05.246Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807298152-1769807298408",
+    "email": "temp_1769807298152",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:18.408Z",
+    "updatedAt": "2026-01-30T21:08:18.408Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T21:08:18.408Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807299716-1769807299969",
+    "email": "temp_1769807299716",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:19.969Z",
+    "updatedAt": "2026-01-30T21:08:19.969Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T21:08:19.969Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807307603-1769807307871",
+    "email": "temp_1769807307603",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:27.871Z",
+    "updatedAt": "2026-01-30T21:08:27.871Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T21:08:27.871Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807311282-1769807311539",
+    "email": "temp_1769807311282",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:31.539Z",
+    "updatedAt": "2026-01-30T21:08:31.539Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "archera",
+            "gitlab",
+            "lyzr",
+            "cursor",
+            "cohere"
+          ]
+        },
+        "timestamp": "2026-01-30T21:08:31.539Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "Security and governance technologies"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807318433-1769807318694",
+    "email": "temp_1769807318433",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:38.694Z",
+    "updatedAt": "2026-01-30T21:08:38.694Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "archera",
+            "gitlab",
+            "lyzr",
+            "cursor",
+            "cohere",
+            "anthropic"
+          ]
+        },
+        "timestamp": "2026-01-30T21:08:38.694Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807322191-1769807322459",
+    "email": "temp_1769807322191",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:42.459Z",
+    "updatedAt": "2026-01-30T21:08:42.459Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T21:08:42.459Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807323137-1769807323391",
+    "email": "temp_1769807323137",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:43.391Z",
+    "updatedAt": "2026-01-30T21:08:43.391Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T21:08:43.391Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807324982-1769807325240",
+    "email": "temp_1769807324982",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:45.240Z",
+    "updatedAt": "2026-01-30T21:08:45.240Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "London",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T21:08:45.240Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807325819-1769807326085",
+    "email": "temp_1769807325819",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:46.085Z",
+    "updatedAt": "2026-01-30T21:08:46.085Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T21:08:46.085Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807327531-1769807327798",
+    "email": "temp_1769807327531",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:47.798Z",
+    "updatedAt": "2026-01-30T21:08:47.798Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "test"
+        },
+        "timestamp": "2026-01-30T21:08:47.798Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807328520-1769807328778",
+    "email": "temp_1769807328520",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:48.778Z",
+    "updatedAt": "2026-01-30T21:08:48.778Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:08:48.778Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807331922-1769807332184",
+    "email": "temp_1769807331922",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:52.184Z",
+    "updatedAt": "2026-01-30T21:08:52.184Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:08:52.184Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807338196-1769807338481",
+    "email": "temp_1769807338196",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:58.481Z",
+    "updatedAt": "2026-01-30T21:08:58.481Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "Engineerinh",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:08:58.481Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineerinh",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807339203-1769807339465",
+    "email": "temp_1769807339203",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:08:59.465Z",
+    "updatedAt": "2026-01-30T21:08:59.465Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "Engineering",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:08:59.465Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineering",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807345360-1769807345626",
+    "email": "temp_1769807345360",
+    "company": "ALSA",
+    "createdAt": "2026-01-30T21:09:05.627Z",
+    "updatedAt": "2026-01-30T21:09:05.627Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "Engineering",
+          "company": "ALSA",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:09:05.627Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineering",
+      "company": "ALSA",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807348875-1769807349131",
+    "email": "temp_1769807348875",
+    "company": "LSEG",
+    "createdAt": "2026-01-30T21:09:09.131Z",
+    "updatedAt": "2026-01-30T21:09:09.131Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "Engineering",
+          "company": "LSEG",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T21:09:09.131Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineering",
+      "company": "LSEG",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "joe@lseg.com-1769807358041",
+    "email": "joe@lseg.com",
+    "company": "LSEG",
+    "createdAt": "2026-01-30T21:09:18.041Z",
+    "updatedAt": "2026-01-30T21:09:18.041Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "Engineering",
+          "company": "LSEG",
+          "email": "joe@lseg.com"
+        },
+        "timestamp": "2026-01-30T21:09:18.041Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineering",
+      "company": "LSEG",
+      "email": "joe@lseg.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "joe@lseg.com-1769807360362",
+    "email": "joe@lseg.com",
+    "company": "LSEG",
+    "createdAt": "2026-01-30T21:09:20.362Z",
+    "updatedAt": "2026-01-30T21:09:20.362Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "Engineering",
+          "company": "LSEG",
+          "email": "joe@lseg.com"
+        },
+        "timestamp": "2026-01-30T21:09:20.362Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineering",
+      "company": "LSEG",
+      "email": "joe@lseg.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "joe@lseg.com-1769807361734",
+    "email": "joe@lseg.com",
+    "company": "LSEG",
+    "createdAt": "2026-01-30T21:09:21.734Z",
+    "updatedAt": "2026-01-30T21:09:21.734Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Joe",
+          "role": "Engineering",
+          "company": "LSEG",
+          "email": "joe@lseg.com"
+        },
+        "timestamp": "2026-01-30T21:09:21.734Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "Joe",
+      "role": "Engineering",
+      "company": "LSEG",
+      "email": "joe@lseg.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
