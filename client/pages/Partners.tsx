@@ -270,20 +270,9 @@ export default function Partners() {
             <div className="sticky bottom-0 border-t border-border/10 bg-white p-6 flex gap-3">
               <Button
                 onClick={() => {
-                  // Add to wishlist
-                  const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
-                  if (!wishlist.includes(selectedPartner.id)) {
-                    wishlist.push(selectedPartner.id);
-                    localStorage.setItem('vendor_wishlist', JSON.stringify(wishlist));
-                  }
-
-                  // If coming from briefing form, return to it
-                  if (returnTo === 'briefing') {
-                    navigate('/request-briefing?step=4');
-                  } else {
-                    setSelectedPartner(null);
-                  }
+                  toggleVendor(selectedPartner.id);
                 }}
+                variant={selectedVendors.includes(selectedPartner.id) ? "default" : "secondary-outline"}
                 className="flex-1 font-semibold rounded-lg"
               >
                 {returnTo === 'briefing' ? 'Add and return to briefing' : 'Add to wishlist'}
