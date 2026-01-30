@@ -54,6 +54,8 @@ export default function RequestBriefing() {
     role: "",
     company: "",
     email: "",
+    additionalContactName: "",
+    additionalContactEmail: "",
   });
 
   // Load wishlist and pre-filled customer data on component mount
