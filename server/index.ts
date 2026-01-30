@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleBriefingSubmission } from "./routes/briefing";
-import { handleSaveProgress, handleGetSubmissions } from "./routes/submissions";
+import { handleSaveProgress, handleGetSubmissions, handleApproveCustomer, handleRejectCustomer, handleRemoveCustomer, handleGetAllCustomers } from "./routes/submissions";
 import { handleValidateEmail, handleRegisterCustomer, handleGetPersonalDomains, handleGetCustomerProfile } from "./routes/customers";
 
 export function createServer() {
