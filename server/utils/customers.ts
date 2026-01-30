@@ -1,4 +1,4 @@
-import { writeFileSync, readFileSync, existsSync } from "fs";
+import { writeFileSync, readFileSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
 
 const CUSTOMERS_FILE = join(process.cwd(), "data", "customers.json");
@@ -38,9 +38,18 @@ function ensureDataDir() {
   const dir = join(process.cwd(), "data");
   if (!existsSync(dir)) {
     try {
-      readFileSync(dir);
-    } catch {
+      mkdirSync(dir, { recursive: true });
+    } catch (error) {
+      console.error("Error creating data directory:", error);
+    }
+  }
+
+  // Ensure the customers file exists
+  if (!existsSync(CUSTOMERS_FILE)) {
+    try {
       writeFileSync(CUSTOMERS_FILE, JSON.stringify([]));
+    } catch (error) {
+      console.error("Error creating customers file:", error);
     }
   }
 }
