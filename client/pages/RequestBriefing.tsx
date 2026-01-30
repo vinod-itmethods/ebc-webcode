@@ -224,42 +224,58 @@ export default function RequestBriefing() {
 
   const handleSubmit = async () => {
     try {
-      // Validate email before submitting
-      if (!isValidWorkEmail(formData.email)) {
+      // Only validate email for new customers (not pre-filled from portal)
+      if (!skipContactStep && !isValidWorkEmail(formData.email)) {
         setEmailError("Please use your work email address, not a personal email (gmail, yahoo, outlook, etc.)");
         return;
       }
 
-      // Create customer profile
-      const registerResponse = await fetch("/api/register-customer", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: formData.email,
-          name: formData.name,
-          role: formData.role,
-          company: formData.company,
-          briefingData: formData,
-        }),
-      });
+      // Only create customer profile for new customers (not returning from portal)
+      if (!skipContactStep) {
+        const registerResponse = await fetch("/api/register-customer", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: formData.email,
+            name: formData.name,
+            role: formData.role,
+            company: formData.company,
+            briefingData: formData,
+          }),
+        });
 
-      if (!registerResponse.ok) {
-        const errorData = await registerResponse.json();
-        setEmailError(errorData.error || "Failed to create customer profile");
-        return;
+        if (!registerResponse.ok) {
+          const errorData = await registerResponse.json();
+          setEmailError(errorData.error || "Failed to create customer profile");
+          return;
+        }
+
+        console.log("Customer profile created successfully");
+      } else {
+        // For returning customers, just update their profile with new briefing data
+        await fetch("/api/register-customer", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: formData.email,
+            name: formData.name,
+            role: formData.role,
+            company: formData.company,
+            briefingData: formData,
+          }),
+        }).catch(console.error);
       }
 
-      console.log("Customer profile created successfully");
-
       // Save final completion status
+      const finalStep = skipContactStep ? 6 : 7;
       await fetch("/api/save-progress", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: formData.email,
           company: formData.company,
-          stepNumber: 7,
-          stepData: getStepData(7),
+          stepNumber: finalStep,
+          stepData: getStepData(finalStep),
           isCompleted: true,
           fullData: formData,
         }),
