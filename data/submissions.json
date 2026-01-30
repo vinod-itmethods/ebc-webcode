@@ -3417,5 +3417,3770 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769783022970-1769783022792",
+    "email": "temp_1769783022970",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:23:42.792Z",
+    "updatedAt": "2026-01-30T14:23:42.792Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T14:23:42.792Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769783046903-1769783046719",
+    "email": "temp_1769783046903",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:24:06.719Z",
+    "updatedAt": "2026-01-30T14:24:06.719Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T14:24:06.719Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769783055567-1769783055395",
+    "email": "temp_1769783055567",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:24:15.395Z",
+    "updatedAt": "2026-01-30T14:24:15.395Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "Other"
+          ]
+        },
+        "timestamp": "2026-01-30T14:24:15.395Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769783057006-1769783056835",
+    "email": "temp_1769783057006",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:24:16.835Z",
+    "updatedAt": "2026-01-30T14:24:16.835Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T14:24:16.835Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769783059219-1769783059048",
+    "email": "temp_1769783059219",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:24:19.048Z",
+    "updatedAt": "2026-01-30T14:24:19.048Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Reassessing existing strategy"
+          ]
+        },
+        "timestamp": "2026-01-30T14:24:19.048Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769783060353-1769783060192",
+    "email": "temp_1769783060353",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:24:20.192Z",
+    "updatedAt": "2026-01-30T14:24:20.192Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T14:24:20.192Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769783061334-1769783061162",
+    "email": "temp_1769783061334",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:24:21.162Z",
+    "updatedAt": "2026-01-30T14:24:21.162Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Open to recommendations"
+          ]
+        },
+        "timestamp": "2026-01-30T14:24:21.162Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769783062245-1769783062074",
+    "email": "temp_1769783062245",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T14:24:22.074Z",
+    "updatedAt": "2026-01-30T14:24:22.074Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "archera",
+            "harness",
+            "jfrog",
+            "anthropic",
+            "cohere",
+            "kong"
+          ]
+        },
+        "timestamp": "2026-01-30T14:24:22.074Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785418597-1769785418547",
+    "email": "temp_1769785418597",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:03:38.547Z",
+    "updatedAt": "2026-01-30T15:03:38.547Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T15:03:38.547Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785423064-1769785422960",
+    "email": "temp_1769785423064",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:03:42.960Z",
+    "updatedAt": "2026-01-30T15:03:42.960Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "Other"
+          ]
+        },
+        "timestamp": "2026-01-30T15:03:42.960Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785423998-1769785423877",
+    "email": "temp_1769785423998",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:03:43.877Z",
+    "updatedAt": "2026-01-30T15:03:43.877Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T15:03:43.877Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785427082-1769785426988",
+    "email": "temp_1769785427082",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:03:46.988Z",
+    "updatedAt": "2026-01-30T15:03:46.988Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "archera",
+            "harness",
+            "jfrog",
+            "anthropic",
+            "cohere",
+            "kong",
+            "circleci"
+          ]
+        },
+        "timestamp": "2026-01-30T15:03:46.988Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785439543-1769785439441",
+    "email": "temp_1769785439543",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:03:59.441Z",
+    "updatedAt": "2026-01-30T15:03:59.441Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T15:03:59.441Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785442959-1769785442833",
+    "email": "temp_1769785442959",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:04:02.833Z",
+    "updatedAt": "2026-01-30T15:04:02.833Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T15:04:02.833Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785449446-1769785449335",
+    "email": "temp_1769785449446",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:04:09.335Z",
+    "updatedAt": "2026-01-30T15:04:09.335Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "New York",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T15:04:09.335Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785450516-1769785450390",
+    "email": "temp_1769785450516",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:04:10.390Z",
+    "updatedAt": "2026-01-30T15:04:10.390Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T15:04:10.390Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785453247-1769785453120",
+    "email": "temp_1769785453247",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:04:13.120Z",
+    "updatedAt": "2026-01-30T15:04:13.120Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "xdsdxd"
+        },
+        "timestamp": "2026-01-30T15:04:13.120Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "xdsdxd",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769785454141-1769785454029",
+    "email": "temp_1769785454141",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T15:04:14.029Z",
+    "updatedAt": "2026-01-30T15:04:14.029Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T15:04:14.029Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "xdsdxd",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790283405-1769790283565",
+    "email": "temp_1769790283405",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:24:43.565Z",
+    "updatedAt": "2026-01-30T16:24:43.565Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:24:43.565Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790290728-1769790290857",
+    "email": "temp_1769790290728",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:24:50.857Z",
+    "updatedAt": "2026-01-30T16:24:50.857Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T16:24:50.857Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790292713-1769790292838",
+    "email": "temp_1769790292713",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:24:52.838Z",
+    "updatedAt": "2026-01-30T16:24:52.838Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T16:24:52.838Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790294999-1769790295130",
+    "email": "temp_1769790294999",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:24:55.130Z",
+    "updatedAt": "2026-01-30T16:24:55.130Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T16:24:55.130Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790296495-1769790296625",
+    "email": "temp_1769790296495",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:24:56.625Z",
+    "updatedAt": "2026-01-30T16:24:56.625Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "AI and data platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T16:24:56.625Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790341474-1769790341661",
+    "email": "temp_1769790341474",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:25:41.661Z",
+    "updatedAt": "2026-01-30T16:25:41.661Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:25:41.661Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790346013-1769790346203",
+    "email": "temp_1769790346013",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:25:46.203Z",
+    "updatedAt": "2026-01-30T16:25:46.203Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T16:25:46.203Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790347424-1769790347632",
+    "email": "temp_1769790347424",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:25:47.632Z",
+    "updatedAt": "2026-01-30T16:25:47.632Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Preparing for near-term decisions"
+          ]
+        },
+        "timestamp": "2026-01-30T16:25:47.632Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790348361-1769790348531",
+    "email": "temp_1769790348361",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:25:48.531Z",
+    "updatedAt": "2026-01-30T16:25:48.531Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T16:25:48.531Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790349918-1769790350101",
+    "email": "temp_1769790349918",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:25:50.101Z",
+    "updatedAt": "2026-01-30T16:25:50.101Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Security and governance technologies"
+          ]
+        },
+        "timestamp": "2026-01-30T16:25:50.101Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "Security and governance technologies"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790352287-1769790352473",
+    "email": "temp_1769790352287",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:25:52.473Z",
+    "updatedAt": "2026-01-30T16:25:52.473Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic"
+          ]
+        },
+        "timestamp": "2026-01-30T16:25:52.473Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "Security and governance technologies"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790355321-1769790355503",
+    "email": "temp_1769790355321",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:25:55.503Z",
+    "updatedAt": "2026-01-30T16:25:55.503Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Security and governance technologies"
+          ]
+        },
+        "timestamp": "2026-01-30T16:25:55.503Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "Security and governance technologies"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790368292-1769790368510",
+    "email": "temp_1769790368292",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:08.510Z",
+    "updatedAt": "2026-01-30T16:26:08.510Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Preparing for near-term decisions"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:08.510Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "Security and governance technologies"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790369013-1769790369159",
+    "email": "temp_1769790369013",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:09.159Z",
+    "updatedAt": "2026-01-30T16:26:09.159Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:26:09.159Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790369758-1769790369947",
+    "email": "temp_1769790369758",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:09.947Z",
+    "updatedAt": "2026-01-30T16:26:09.947Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "Governance, risk, and compliance"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:09.947Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "Security and governance technologies"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790369876-1769790370003",
+    "email": "temp_1769790369876",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:10.003Z",
+    "updatedAt": "2026-01-30T16:26:10.003Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "DevOps and software delivery"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:10.003Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790371044-1769790371177",
+    "email": "temp_1769790371044",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:11.177Z",
+    "updatedAt": "2026-01-30T16:26:11.177Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T16:26:11.177Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790372596-1769790372723",
+    "email": "temp_1769790372596",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:12.723Z",
+    "updatedAt": "2026-01-30T16:26:12.723Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T16:26:12.723Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790373579-1769790373711",
+    "email": "temp_1769790373579",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:13.711Z",
+    "updatedAt": "2026-01-30T16:26:13.711Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "AI and data platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:13.711Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790374545-1769790374679",
+    "email": "temp_1769790374545",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:14.679Z",
+    "updatedAt": "2026-01-30T16:26:14.679Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:14.679Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790381278-1769790381144",
+    "email": "temp_1769790381278",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:21.144Z",
+    "updatedAt": "2026-01-30T16:26:21.144Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:26:21.144Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790382959-1769790383130",
+    "email": "temp_1769790382959",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:23.130Z",
+    "updatedAt": "2026-01-30T16:26:23.130Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "AI and data platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:23.130Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790386807-1769790386989",
+    "email": "temp_1769790386807",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:26.989Z",
+    "updatedAt": "2026-01-30T16:26:26.989Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T16:26:26.989Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790396575-1769790396756",
+    "email": "temp_1769790396575",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:36.756Z",
+    "updatedAt": "2026-01-30T16:26:36.756Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "AI and data platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:36.756Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790398175-1769790398310",
+    "email": "temp_1769790398175",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:38.310Z",
+    "updatedAt": "2026-01-30T16:26:38.310Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T16:26:38.310Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790401745-1769790401926",
+    "email": "temp_1769790401745",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:41.926Z",
+    "updatedAt": "2026-01-30T16:26:41.926Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "AI and data platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:41.926Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790404128-1769790404260",
+    "email": "temp_1769790404128",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:44.260Z",
+    "updatedAt": "2026-01-30T16:26:44.260Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:44.260Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790406508-1769790406675",
+    "email": "temp_1769790406508",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:46.675Z",
+    "updatedAt": "2026-01-30T16:26:46.675Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T16:26:46.675Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790407323-1769790407452",
+    "email": "temp_1769790407323",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:26:47.452Z",
+    "updatedAt": "2026-01-30T16:26:47.452Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T16:26:47.452Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790423487-1769790423621",
+    "email": "temp_1769790423487",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:03.621Z",
+    "updatedAt": "2026-01-30T16:27:03.621Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T16:27:03.621Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790431917-1769790432093",
+    "email": "temp_1769790431917",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:12.093Z",
+    "updatedAt": "2026-01-30T16:27:12.093Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T16:27:12.093Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790433975-1769790434118",
+    "email": "temp_1769790433975",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:14.118Z",
+    "updatedAt": "2026-01-30T16:27:14.118Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T16:27:14.118Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790463702-1769790463871",
+    "email": "temp_1769790463702",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:43.871Z",
+    "updatedAt": "2026-01-30T16:27:43.871Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:27:43.871Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790464840-1769790464974",
+    "email": "temp_1769790464840",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:44.974Z",
+    "updatedAt": "2026-01-30T16:27:44.974Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:27:44.974Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790465708-1769790465841",
+    "email": "temp_1769790465708",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:45.841Z",
+    "updatedAt": "2026-01-30T16:27:45.841Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T16:27:45.841Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790468909-1769790469079",
+    "email": "temp_1769790468909",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:49.079Z",
+    "updatedAt": "2026-01-30T16:27:49.079Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T16:27:49.079Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790469771-1769790469907",
+    "email": "temp_1769790469771",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:49.907Z",
+    "updatedAt": "2026-01-30T16:27:49.907Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Open to recommendations"
+          ]
+        },
+        "timestamp": "2026-01-30T16:27:49.907Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790470577-1769790470712",
+    "email": "temp_1769790470577",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:27:50.712Z",
+    "updatedAt": "2026-01-30T16:27:50.712Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T16:27:50.712Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790493461-1769790493594",
+    "email": "temp_1769790493461",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:13.594Z",
+    "updatedAt": "2026-01-30T16:28:13.594Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten",
+            "rootly"
+          ]
+        },
+        "timestamp": "2026-01-30T16:28:13.594Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790495823-1769790495956",
+    "email": "temp_1769790495823",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:15.956Z",
+    "updatedAt": "2026-01-30T16:28:15.956Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T16:28:15.956Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790499155-1769790499325",
+    "email": "temp_1769790499155",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:19.325Z",
+    "updatedAt": "2026-01-30T16:28:19.325Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "San Francisco",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T16:28:19.325Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790500523-1769790500655",
+    "email": "temp_1769790500523",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:20.655Z",
+    "updatedAt": "2026-01-30T16:28:20.655Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T16:28:20.655Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790504265-1769790504445",
+    "email": "temp_1769790504265",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:24.445Z",
+    "updatedAt": "2026-01-30T16:28:24.445Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "testing 123"
+        },
+        "timestamp": "2026-01-30T16:28:24.445Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790513540-1769790513735",
+    "email": "temp_1769790513540",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:33.735Z",
+    "updatedAt": "2026-01-30T16:28:33.735Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T16:28:33.735Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790518996-1769790519166",
+    "email": "temp_1769790518996",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:39.166Z",
+    "updatedAt": "2026-01-30T16:28:39.166Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "tetsing",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T16:28:39.166Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "tetsing",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790522527-1769790522706",
+    "email": "temp_1769790522527",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:42.706Z",
+    "updatedAt": "2026-01-30T16:28:42.706Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "testing user 1",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T16:28:42.706Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "testing user 1",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790524127-1769790524265",
+    "email": "temp_1769790524127",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:44.265Z",
+    "updatedAt": "2026-01-30T16:28:44.265Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "testing user 1",
+          "role": "test",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T16:28:44.265Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "testing user 1",
+      "role": "test",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790525806-1769790525937",
+    "email": "temp_1769790525806",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:28:45.937Z",
+    "updatedAt": "2026-01-30T16:28:45.937Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "testing user 1",
+          "role": "testadmin",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T16:28:45.937Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "testing user 1",
+      "role": "testadmin",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "testadmin@itmethods.com-1769790542796",
+    "email": "testadmin@itmethods.com",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:29:02.796Z",
+    "updatedAt": "2026-01-30T16:29:02.796Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "testing user 1",
+          "role": "testadmin",
+          "company": "",
+          "email": "testadmin@itmethods.com"
+        },
+        "timestamp": "2026-01-30T16:29:02.796Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "testing user 1",
+      "role": "testadmin",
+      "company": "",
+      "email": "testadmin@itmethods.com"
+    }
+  },
+  {
+    "id": "testadmin@itmethods.com-1769790549047",
+    "email": "testadmin@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T16:29:09.047Z",
+    "updatedAt": "2026-01-30T16:29:09.047Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "testing user 1",
+          "role": "testadmin",
+          "company": "itmethods",
+          "email": "testadmin@itmethods.com"
+        },
+        "timestamp": "2026-01-30T16:29:09.047Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "testing user 1",
+      "role": "testadmin",
+      "company": "itmethods",
+      "email": "testadmin@itmethods.com"
+    }
+  },
+  {
+    "id": "testadmin@itmethods.com-1769790601941",
+    "email": "testadmin@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T16:30:01.941Z",
+    "updatedAt": "2026-01-30T16:30:01.941Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "testing user 1",
+          "role": "testadmin",
+          "company": "itmethods",
+          "email": "testadmin@itmethods.com"
+        },
+        "timestamp": "2026-01-30T16:30:01.941Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "testing user 1",
+      "role": "testadmin",
+      "company": "itmethods",
+      "email": "testadmin@itmethods.com"
+    }
+  },
+  {
+    "id": "temp_1769790709484-1769790709624",
+    "email": "temp_1769790709484",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:31:49.624Z",
+    "updatedAt": "2026-01-30T16:31:49.624Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:31:49.624Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790918005-1769790918150",
+    "email": "temp_1769790918005",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:18.150Z",
+    "updatedAt": "2026-01-30T16:35:18.150Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:35:18.150Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790920448-1769790920593",
+    "email": "temp_1769790920448",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:20.593Z",
+    "updatedAt": "2026-01-30T16:35:20.593Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T16:35:20.593Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790921261-1769790921405",
+    "email": "temp_1769790921261",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:21.405Z",
+    "updatedAt": "2026-01-30T16:35:21.405Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Reassessing existing strategy"
+          ]
+        },
+        "timestamp": "2026-01-30T16:35:21.405Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790922462-1769790922643",
+    "email": "temp_1769790922462",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:22.643Z",
+    "updatedAt": "2026-01-30T16:35:22.643Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T16:35:22.643Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790923327-1769790923474",
+    "email": "temp_1769790923327",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:23.474Z",
+    "updatedAt": "2026-01-30T16:35:23.474Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Open to recommendations"
+          ]
+        },
+        "timestamp": "2026-01-30T16:35:23.474Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790924194-1769790924338",
+    "email": "temp_1769790924194",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:24.338Z",
+    "updatedAt": "2026-01-30T16:35:24.338Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten",
+            "rootly"
+          ]
+        },
+        "timestamp": "2026-01-30T16:35:24.338Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790925547-1769790925690",
+    "email": "temp_1769790925547",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:25.690Z",
+    "updatedAt": "2026-01-30T16:35:25.690Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T16:35:25.690Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790926594-1769790926779",
+    "email": "temp_1769790926594",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:26.779Z",
+    "updatedAt": "2026-01-30T16:35:26.779Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "Open to recommendations"
+        },
+        "timestamp": "2026-01-30T16:35:26.779Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "Open to recommendations",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790928144-1769790928291",
+    "email": "temp_1769790928144",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:28.291Z",
+    "updatedAt": "2026-01-30T16:35:28.291Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T16:35:28.291Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790930145-1769790930290",
+    "email": "temp_1769790930145",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:30.290Z",
+    "updatedAt": "2026-01-30T16:35:30.290Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T16:35:30.290Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790932300-1769790932482",
+    "email": "temp_1769790932300",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:32.482Z",
+    "updatedAt": "2026-01-30T16:35:32.482Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "tets"
+        },
+        "timestamp": "2026-01-30T16:35:32.482Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "tets",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769790933243-1769790933388",
+    "email": "temp_1769790933243",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:35:33.388Z",
+    "updatedAt": "2026-01-30T16:35:33.388Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T16:35:33.388Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Other"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "tets",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769791088036-1769791088187",
+    "email": "temp_1769791088036",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:38:08.187Z",
+    "updatedAt": "2026-01-30T16:38:08.187Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:38:08.187Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769791088627-1769791088908",
+    "email": "temp_1769791088627",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:38:08.908Z",
+    "updatedAt": "2026-01-30T16:38:08.908Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:38:08.908Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769791299335-1769791299493",
+    "email": "temp_1769791299335",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:41:39.493Z",
+    "updatedAt": "2026-01-30T16:41:39.493Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:41:39.493Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769791923571-1769791923794",
+    "email": "temp_1769791923571",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:52:03.794Z",
+    "updatedAt": "2026-01-30T16:52:03.794Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:52:03.794Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci",
+        "baseten",
+        "snyk",
+        "sonarsource"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769791931624-1769791931459",
+    "email": "temp_1769791931624",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:52:11.459Z",
+    "updatedAt": "2026-01-30T16:52:11.459Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:52:11.459Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci",
+        "baseten",
+        "snyk",
+        "sonarsource"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769791947943-1769791947770",
+    "email": "temp_1769791947943",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:52:27.770Z",
+    "updatedAt": "2026-01-30T16:52:27.770Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:52:27.770Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "harness",
+        "jfrog",
+        "anthropic",
+        "cohere",
+        "kong",
+        "circleci",
+        "baseten",
+        "snyk",
+        "sonarsource"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769792172600-1769792172771",
+    "email": "temp_1769792172600",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T16:56:12.771Z",
+    "updatedAt": "2026-01-30T16:56:12.771Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T16:56:12.771Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769793556953-1769793557108",
+    "email": "temp_1769793556953",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T17:19:17.108Z",
+    "updatedAt": "2026-01-30T17:19:17.108Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T17:19:17.108Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769794183854-1769794183960",
+    "email": "temp_1769794183854",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T17:29:43.961Z",
+    "updatedAt": "2026-01-30T17:29:43.961Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T17:29:43.961Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769794852857-1769794852920",
+    "email": "temp_1769794852857",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T17:40:52.920Z",
+    "updatedAt": "2026-01-30T17:40:52.920Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T17:40:52.920Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769797055674-1769797055808",
+    "email": "temp_1769797055674",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T18:17:35.808Z",
+    "updatedAt": "2026-01-30T18:17:35.808Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T18:17:35.808Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769797059140-1769797059267",
+    "email": "temp_1769797059140",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T18:17:39.267Z",
+    "updatedAt": "2026-01-30T18:17:39.267Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T18:17:39.267Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]

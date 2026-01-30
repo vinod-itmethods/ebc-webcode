@@ -30,5 +30,33 @@
       "email": "vinod.avinane@itmethods.com"
     },
     "status": "active"
+  },
+  {
+    "id": "cust_1769790601909_gylul3p62",
+    "email": "testadmin@itmethods.com",
+    "name": "testing user 1",
+    "role": "testadmin",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T16:30:01.909Z",
+    "updatedAt": "2026-01-30T16:30:01.909Z",
+    "briefingData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 123",
+      "name": "testing user 1",
+      "role": "testadmin",
+      "company": "itmethods",
+      "email": "testadmin@itmethods.com"
+    },
+    "status": "active"
   }
 ]
