@@ -36,6 +36,8 @@ export default function RequestBriefing() {
   const [submitted, setSubmitted] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [emailError, setEmailError] = useState<string | null>(null);
+  const [skipContactStep, setSkipContactStep] = useState(false);
+  const [totalSteps, setTotalSteps] = useState(7);
   const [formData, setFormData] = useState<FormData>({
     interests: [],
     decisionContext: [],
@@ -50,10 +52,38 @@ export default function RequestBriefing() {
     email: "",
   });
 
-  // Load wishlist from localStorage on component mount
+  // Load wishlist and pre-filled customer data on component mount
   useEffect(() => {
     const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
-    setFormData((prev) => ({ ...prev, vendors: wishlist }));
+    const prefillEmail = localStorage.getItem('prefillCustomerEmail');
+    const prefillName = localStorage.getItem('prefillCustomerName');
+    const prefillCompany = localStorage.getItem('prefillCustomerCompany');
+    const prefillRole = localStorage.getItem('prefillCustomerRole');
+    const skip = localStorage.getItem('skipContactStep') === 'true';
+
+    setFormData((prev) => ({
+      ...prev,
+      vendors: wishlist,
+      ...(prefillEmail && { email: prefillEmail }),
+      ...(prefillName && { name: prefillName }),
+      ...(prefillCompany && { company: prefillCompany }),
+      ...(prefillRole && { role: prefillRole }),
+    }));
+
+    // If coming from portal with customer info, skip step 7 (contact details)
+    if (skip) {
+      setSkipContactStep(true);
+      setTotalSteps(6);
+    }
+
+    // Clean up the prefill flags
+    if (skip) {
+      localStorage.removeItem('prefillCustomerEmail');
+      localStorage.removeItem('prefillCustomerName');
+      localStorage.removeItem('prefillCustomerCompany');
+      localStorage.removeItem('prefillCustomerRole');
+      localStorage.removeItem('skipContactStep');
+    }
   }, []);
 
   // Auto-save progress whenever form data changes
