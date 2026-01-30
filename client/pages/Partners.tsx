@@ -69,8 +69,12 @@ export default function Partners() {
 
   const handleAddSelectedAndReturn = () => {
     if (returnTo === 'briefing') {
-      navigate('/request-briefing?step=4');
+      navigate(`/request-briefing?step=${fromStep}`);
     }
+  };
+
+  const handleBackToBriefing = () => {
+    navigate(`/request-briefing?step=${fromStep}`);
   };
 
   return (
