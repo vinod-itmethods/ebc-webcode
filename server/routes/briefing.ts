@@ -148,6 +148,26 @@ function formatCustomerConfirmationEmail(data: BriefingFormData): string {
   `;
 }
 
+export async function sendCustomerConfirmationEmail(email: string, name: string, company: string): Promise<boolean> {
+  const data = { name, email, company } as BriefingFormData;
+  const customerEmailHtml = formatCustomerConfirmationEmail(data);
+
+  try {
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM || "noreply@itmethods.com",
+      to: email,
+      subject: `Briefing Request Approved - Welcome to Executive Briefing Council`,
+      html: customerEmailHtml,
+    });
+
+    console.log(`Confirmation email sent to customer ${email}`);
+    return true;
+  } catch (error) {
+    console.error("Error sending confirmation email to customer:", error);
+    return false;
+  }
+}
+
 export async function handleBriefingSubmission(req: Request, res: Response) {
   const data: BriefingFormData = req.body;
 
@@ -165,39 +185,26 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
   ];
 
   const internalEmailHtml = formatBriefingEmail(data);
-  const customerEmailHtml = formatCustomerConfirmationEmail(data);
 
   try {
-    // Send to internal team
+    // Send notification to internal team
     await transporter.sendMail({
       from: process.env.SMTP_FROM || "noreply@itmethods.com",
       to: internalEmails.join(","),
-      subject: `New Briefing Request from ${data.name} (${data.company})`,
+      subject: `New Briefing Request Pending Approval from ${data.name} (${data.company})`,
       html: internalEmailHtml,
     });
 
     console.log(
-      `Briefing request email sent to internal team for ${data.name} from ${data.company}`
-    );
-
-    // Send confirmation to customer
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || "noreply@itmethods.com",
-      to: data.email,
-      subject: `Briefing Request Received - Welcome to Executive Briefing Council`,
-      html: customerEmailHtml,
-    });
-
-    console.log(
-      `Confirmation email sent to customer ${data.email}`
+      `Briefing request notification sent to internal team for ${data.name} from ${data.company}`
     );
 
     return res.status(200).json({
       success: true,
-      message: "Briefing request submitted successfully",
+      message: "Briefing request submitted successfully. Awaiting admin approval.",
     });
   } catch (error) {
-    console.error("Error sending briefing request email:", error);
+    console.error("Error sending briefing request notification:", error);
     return res.status(500).json({
       error: "Failed to process briefing request",
     });
