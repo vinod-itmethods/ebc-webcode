@@ -371,6 +371,36 @@ export default function RequestBriefing() {
     setSubmitted(true);
   };
 
+  const handleContinuePreviousSession = () => {
+    if (savedFormData && savedStep) {
+      setFormData(savedFormData);
+      setCurrentStep(savedStep);
+      setShowContinueDialog(false);
+    }
+  };
+
+  const handleStartFresh = () => {
+    localStorage.removeItem('briefing_form_data');
+    localStorage.removeItem('briefing_form_step');
+    setFormData({
+      interests: [],
+      decisionContext: [],
+      perspectives: [],
+      vendors: [],
+      location: "",
+      format: "",
+      goals: "",
+      name: "",
+      role: "",
+      company: "",
+      email: "",
+      additionalContactName: "",
+      additionalContactEmail: "",
+    });
+    setCurrentStep(1);
+    setShowContinueDialog(false);
+  };
+
   const isValidWorkEmail = (email: string): boolean => {
     const personalDomains = [
       "gmail.com",
