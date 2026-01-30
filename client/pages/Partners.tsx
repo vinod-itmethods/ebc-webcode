@@ -19,8 +19,11 @@ const categories: { id: CategoryType; label: string }[] = [
 ];
 
 export default function Partners() {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<CategoryType | null>(null);
+  const returnTo = searchParams.get('returnTo'); // Check if coming from briefing form
 
   // Load partners with any edited data from localStorage
   const partners = useMemo(() => {
