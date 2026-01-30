@@ -308,6 +308,58 @@ export default function Partners() {
         </div>
       </section>
 
+      {/* Action Buttons - Only show when coming from briefing */}
+      {returnTo === 'briefing' && (
+        <section className="py-8 bg-blue-50 border-t border-border/10">
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="max-w-2xl mx-auto space-y-4">
+              <div className="bg-white rounded-lg p-6 space-y-4">
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">Selected vendors</h3>
+                  {selectedVendors.length > 0 ? (
+                    <div className="flex flex-wrap gap-2">
+                      {selectedVendors.map(vendorId => {
+                        const vendor = originalPartners.find(p => p.id === vendorId);
+                        return vendor ? (
+                          <div key={vendorId} className="flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full">
+                            <span className="text-sm font-medium text-foreground">{vendor.name}</span>
+                            <button
+                              onClick={() => toggleVendor(vendorId)}
+                              className="text-primary hover:text-primary/70 transition-colors"
+                            >
+                              <X className="w-4 h-4" />
+                            </button>
+                          </div>
+                        ) : null;
+                      })}
+                    </div>
+                  ) : (
+                    <p className="text-sm text-foreground/60">No vendors selected yet</p>
+                  )}
+                </div>
+
+                <div className="flex gap-3 pt-4">
+                  <Button
+                    onClick={handleAddSelectedAndReturn}
+                    disabled={selectedVendors.length === 0}
+                    className="flex-1 font-semibold rounded-lg"
+                  >
+                    Add selected vendors & return
+                  </Button>
+                  <Button
+                    variant="secondary-outline"
+                    className="flex-1 font-semibold rounded-lg"
+                    onClick={() => setSelectedCategory(null)}
+                  >
+                    Select more vendors
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <Footer />
     </div>
   );
