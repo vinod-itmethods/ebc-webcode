@@ -28,6 +28,7 @@ export default function Partners() {
     return JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
   });
   const returnTo = searchParams.get('returnTo'); // Check if coming from briefing form
+  const fromStep = searchParams.get('step') || '4'; // Default to step 4
 
   // Load partners with any edited data from localStorage
   const partners = useMemo(() => {
