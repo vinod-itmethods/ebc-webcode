@@ -32,7 +32,16 @@ export default function AdminLogin() {
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
 
-      <section className="flex-grow flex items-center justify-center py-12 lg:py-20 bg-gradient-to-b from-blue-50/20 to-white px-4">
+      <section className="flex-grow flex items-center justify-center py-12 lg:py-20 bg-gradient-to-b from-blue-50/20 to-white px-4 relative">
+        {/* Home Button */}
+        <Link
+          to="/"
+          className="absolute top-4 left-4 flex items-center gap-2 px-3 py-2 rounded-lg text-foreground/70 hover:text-foreground hover:bg-white/50 transition-colors"
+        >
+          <Home className="w-4 h-4" />
+          <span className="text-sm font-medium">Home</span>
+        </Link>
+
         <div className="w-full max-w-md">
           <div className="bg-white rounded-lg border border-border/10 p-8 space-y-6">
             <div className="space-y-2 text-center">
