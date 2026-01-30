@@ -35,6 +35,7 @@ export default function RequestBriefing() {
   const [currentStep, setCurrentStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [emailError, setEmailError] = useState<string | null>(null);
   const [formData, setFormData] = useState<FormData>({
     interests: [],
     decisionContext: [],
