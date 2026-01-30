@@ -38,6 +38,15 @@ export default function PortalLogin() {
     }
 
     if (password === PORTAL_PASSWORD) {
+      // Check if this is an admin email
+      if (email.endsWith("@itmethods.com")) {
+        // Redirect admin to admin portal
+        localStorage.setItem("adminEmail", email);
+        setIsAuthenticated(true);
+        navigate("/admin/submissions");
+        return;
+      }
+
       localStorage.setItem("portalAuthenticated", "true");
       localStorage.setItem("userRole", role);
       localStorage.setItem("userEmail", email);
