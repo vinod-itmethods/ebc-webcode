@@ -10,15 +10,16 @@ export default function AdminLogin() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [isChecking, setIsChecking] = useState(true);
 
   // If already authenticated, redirect to submissions page
   useEffect(() => {
     const adminEmail = localStorage.getItem("adminEmail");
+    const customerAuth = localStorage.getItem("portalAuthenticated") === "true";
+    const partnerAuth = localStorage.getItem("partnerAuthenticated") === "true";
+
+    // If authenticated as admin, go to submissions
     if (adminEmail && adminEmail.endsWith("@itmethods.com")) {
       navigate("/admin/submissions", { replace: true });
-    } else {
-      setIsChecking(false);
     }
   }, [navigate]);
 
@@ -37,19 +38,6 @@ export default function AdminLogin() {
     // Store email and redirect
     localStorage.setItem("adminEmail", email);
     navigate("/admin/submissions");
-  };
-
-  if (isChecking) {
-    return (
-      <div className="min-h-screen bg-white flex flex-col">
-        <Header />
-        <section className="flex-grow flex items-center justify-center">
-          <div className="text-center">
-            <p className="text-foreground/70">Loading...</p>
-          </div>
-        </section>
-      </div>
-    );
   }
 
   return (

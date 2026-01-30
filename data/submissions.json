@@ -3070,5 +3070,157 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769747887944-1769747888112",
+    "email": "temp_1769747887944",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:38:08.112Z",
+    "updatedAt": "2026-01-30T04:38:08.112Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:38:08.112Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769747889091-1769747889176",
+    "email": "temp_1769747889091",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:38:09.176Z",
+    "updatedAt": "2026-01-30T04:38:09.176Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T04:38:09.176Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769747890288-1769747890371",
+    "email": "temp_1769747890288",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:38:10.371Z",
+    "updatedAt": "2026-01-30T04:38:10.371Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T04:38:10.371Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769747891256-1769747891339",
+    "email": "temp_1769747891256",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:38:11.339Z",
+    "updatedAt": "2026-01-30T04:38:11.339Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Evaluating options and trade-offs"
+          ]
+        },
+        "timestamp": "2026-01-30T04:38:11.339Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
