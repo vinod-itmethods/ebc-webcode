@@ -137,7 +137,7 @@ export default function Header() {
                     : "text-foreground/70 hover:text-primary"
                 }`}
               >
-                Login
+                Customer login
               </Link>
               <Button
                 asChild
