@@ -89,7 +89,10 @@ export default function RequestBriefing() {
   // Auto-save progress whenever form data changes
   useEffect(() => {
     const saveProgress = async () => {
-      if (!formData.email || !formData.company) return;
+      // For auto-save, we use a temporary ID based on form data
+      // Only save if we have at least some data to track
+      const email = formData.email || `temp_${Date.now()}`;
+      const company = formData.company || "Unknown Company";
 
       setIsSaving(true);
       try {
@@ -97,8 +100,8 @@ export default function RequestBriefing() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            email: formData.email,
-            company: formData.company,
+            email,
+            company,
             stepNumber: currentStep,
             stepData: getStepData(currentStep),
             isCompleted: false,
@@ -107,7 +110,8 @@ export default function RequestBriefing() {
         });
 
         if (!response.ok) {
-          console.error("Failed to save progress");
+          const errorData = await response.json();
+          console.error("Failed to save progress:", errorData);
         }
       } catch (error) {
         console.error("Error saving progress:", error);
@@ -117,7 +121,7 @@ export default function RequestBriefing() {
     };
 
     // Debounce the save by waiting a moment after user interaction
-    const timer = setTimeout(saveProgress, 500);
+    const timer = setTimeout(saveProgress, 800);
     return () => clearTimeout(timer);
   }, [formData, currentStep]);
 
