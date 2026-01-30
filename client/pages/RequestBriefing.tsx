@@ -191,6 +191,33 @@ export default function RequestBriefing() {
 
   const handleSubmit = async () => {
     try {
+      // Validate email before submitting
+      if (!isValidWorkEmail(formData.email)) {
+        setEmailError("Please use your work email address, not a personal email (gmail, yahoo, outlook, etc.)");
+        return;
+      }
+
+      // Create customer profile
+      const registerResponse = await fetch("/api/register-customer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          name: formData.name,
+          role: formData.role,
+          company: formData.company,
+          briefingData: formData,
+        }),
+      });
+
+      if (!registerResponse.ok) {
+        const errorData = await registerResponse.json();
+        setEmailError(errorData.error || "Failed to create customer profile");
+        return;
+      }
+
+      console.log("Customer profile created successfully");
+
       // Save final completion status
       await fetch("/api/save-progress", {
         method: "POST",
@@ -205,7 +232,7 @@ export default function RequestBriefing() {
         }),
       });
 
-      // Send briefing data to server
+      // Send briefing data to server (email to internal team)
       const response = await fetch("/api/briefing-submission", {
         method: "POST",
         headers: {
@@ -219,11 +246,38 @@ export default function RequestBriefing() {
       } else {
         console.log("Briefing request submitted successfully");
       }
+
+      setEmailError(null);
     } catch (error) {
       console.error("Error submitting briefing request:", error);
+      setEmailError("An error occurred while submitting your request. Please try again.");
+      return;
     }
 
     setSubmitted(true);
+  };
+
+  const isValidWorkEmail = (email: string): boolean => {
+    const personalDomains = [
+      "gmail.com",
+      "yahoo.com",
+      "outlook.com",
+      "hotmail.com",
+      "aol.com",
+      "protonmail.com",
+      "icloud.com",
+      "mail.com",
+      "zoho.com",
+      "yandex.com",
+      "163.com",
+      "qq.com",
+      "gmx.com",
+      "test.com",
+      "example.com",
+    ];
+
+    const domain = email.split("@")[1]?.toLowerCase();
+    return domain ? !personalDomains.includes(domain) : false;
   };
 
   if (submitted) {
