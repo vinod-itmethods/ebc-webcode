@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleBriefingSubmission } from "./routes/briefing";
+import { handleSaveProgress, handleGetSubmissions } from "./routes/submissions";
 
 export function createServer() {
   const app = express();
@@ -22,6 +23,10 @@ export function createServer() {
 
   // Briefing submission endpoint
   app.post("/api/briefing-submission", handleBriefingSubmission);
+
+  // Form progress tracking endpoints
+  app.post("/api/save-progress", handleSaveProgress);
+  app.get("/api/submissions", handleGetSubmissions);
 
   return app;
 }
