@@ -66,6 +66,7 @@ export default function App() {
             <Route path="/portal" element={<PortalLogin />} />
             <Route path="/admin" element={<AdminLogin />} />
             <Route path="/admin/submissions" element={<AdminSubmissions />} />
+            <Route path="/admin/customers" element={<AdminCustomers />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
