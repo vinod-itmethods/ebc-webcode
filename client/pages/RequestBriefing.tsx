@@ -754,7 +754,7 @@ function Step4Vendors({
             variant="secondary-outline"
             className="font-semibold rounded-lg"
           >
-            <a href="/partners">Browse more vendors</a>
+            <a href="/partners?returnTo=briefing">Browse more vendors</a>
           </Button>
         </div>
       )}
@@ -766,7 +766,7 @@ function Step4Vendors({
             asChild
             className="font-semibold rounded-lg"
           >
-            <a href="/partners">Browse and add technology vendors</a>
+            <a href="/partners?returnTo=briefing">Browse and add technology vendors</a>
           </Button>
         </div>
       )}
