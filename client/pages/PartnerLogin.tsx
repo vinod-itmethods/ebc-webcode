@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Home } from "lucide-react";
 
 const PARTNER_PASSWORD = "executive2024";
 
