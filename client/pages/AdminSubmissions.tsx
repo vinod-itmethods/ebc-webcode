@@ -71,10 +71,6 @@ export default function AdminSubmissions() {
     }
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("adminEmail");
-    navigate("/admin");
-  };
 
   const filteredSubmissions = submissions
     .filter((s) => {
