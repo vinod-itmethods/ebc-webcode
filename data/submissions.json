@@ -374,5 +374,217 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769746694231-1769746694359",
+    "email": "temp_1769746694231",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:18:14.359Z",
+    "updatedAt": "2026-01-30T04:18:14.359Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T04:18:14.359Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746695266-1769746695393",
+    "email": "temp_1769746695266",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:18:15.393Z",
+    "updatedAt": "2026-01-30T04:18:15.393Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Evaluating options and trade-offs"
+          ]
+        },
+        "timestamp": "2026-01-30T04:18:15.393Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746696151-1769746696279",
+    "email": "temp_1769746696151",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:18:16.279Z",
+    "updatedAt": "2026-01-30T04:18:16.279Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T04:18:16.279Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746697034-1769746697156",
+    "email": "temp_1769746697034",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:18:17.156Z",
+    "updatedAt": "2026-01-30T04:18:17.156Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "DevOps and delivery platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T04:18:17.156Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746698138-1769746698272",
+    "email": "temp_1769746698138",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:18:18.272Z",
+    "updatedAt": "2026-01-30T04:18:18.272Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T04:18:18.272Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746701394-1769746701461",
+    "email": "temp_1769746701394",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:18:21.461Z",
+    "updatedAt": "2026-01-30T04:18:21.461Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:18:21.461Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
