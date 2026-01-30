@@ -78,6 +78,15 @@ export default function RequestBriefing() {
       setTotalSteps(6);
     }
 
+    // Check if returning from vendor selection
+    const step = searchParams.get('step');
+    if (step) {
+      const stepNum = parseInt(step);
+      if (stepNum >= 1 && stepNum <= 7) {
+        setCurrentStep(stepNum);
+      }
+    }
+
     // Clean up the prefill flags
     if (skip) {
       localStorage.removeItem('prefillCustomerEmail');
@@ -86,7 +95,7 @@ export default function RequestBriefing() {
       localStorage.removeItem('prefillCustomerRole');
       localStorage.removeItem('skipContactStep');
     }
-  }, []);
+  }, [searchParams]);
 
   // Auto-save progress whenever form data changes
   useEffect(() => {
