@@ -187,6 +187,32 @@ export default function PortalCustomer() {
     navigate("/portal");
   };
 
+  const handleAddToCalendar = (dateStr: string) => {
+    // Parse the date string
+    const dateParts = dateStr.split(" ");
+    const monthStr = dateParts[0];
+    const day = parseInt(dateParts[1]);
+    const monthMap: { [key: string]: number } = {
+      "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
+      "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11,
+    };
+    const month = monthMap[monthStr];
+    const year = parseInt(dateParts[2]);
+
+    const eventDate = new Date(year, month, day, 9, 0, 0);
+
+    const calendarEvent = {
+      title: "Executive Briefing Council Session",
+      description: `Your scheduled briefing session with technology partners\n\nCompany: ${customer?.company}\nContact: ${customer?.name}`,
+      startDate: eventDate,
+      endDate: new Date(eventDate.getTime() + 90 * 60 * 1000), // 90 minutes
+      location: "Virtual",
+    };
+
+    // For now, download ICS file. Could also open Outlook link if desired
+    downloadICS(calendarEvent);
+  };
+
   const getStatusIcon = (status: RequestStatus) => {
     switch (status) {
       case "completed":
