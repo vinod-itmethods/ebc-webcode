@@ -156,18 +156,33 @@ export default function PortalCustomer() {
     }
   };
 
-  const generateBriefingCard = (briefingData: any, submittedDate: string): BriefingRequest => {
+  const generateBriefingCard = (
+    briefingData: any,
+    submittedDate: string,
+    approvalStatus?: string
+  ): BriefingRequest => {
     const interests = briefingData.interests || [];
     const location = briefingData.location || "Not specified";
 
+    let status: RequestStatus = "pending";
+    let statusMessage = "Your briefing request has been received and is awaiting approval from our team.";
+
+    if (approvalStatus === "approved") {
+      status = "submitted";
+      statusMessage = "Your briefing request has been approved! We're now coordinating with the selected technology partners to schedule your session.";
+    } else if (approvalStatus === "rejected") {
+      status = "draft";
+      statusMessage = "Unfortunately, your briefing request was not approved. Please contact our team for more information.";
+    }
+
     return {
       id: `br-${Date.now()}`,
-      status: "pending",
+      status,
       topics: interests.slice(0, 2),
       timeframe: location,
       attendees: 5,
       submittedDate: new Date(submittedDate).toLocaleDateString(),
-      statusMessage: "Your briefing request has been received and is currently being reviewed. We'll notify you when scheduling is confirmed.",
+      statusMessage,
     };
   };
 
