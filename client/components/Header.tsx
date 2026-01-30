@@ -58,7 +58,7 @@ export default function Header() {
             alt="EBC Logo"
             className="h-24 flex-shrink-0"
           />
-          <span className="text-foreground/70 text-lg mr-2">|</span>
+          <span className="text-foreground/70 text-lg mr-1">|</span>
           <span className="text-base font-semibold text-foreground">Executive Briefing Council</span>
         </Link>
 
