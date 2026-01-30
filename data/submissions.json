@@ -2961,5 +2961,44 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769747432670-1769747432807",
+    "email": "temp_1769747432670",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:30:32.807Z",
+    "updatedAt": "2026-01-30T04:30:32.807Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera",
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T04:30:32.807Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera",
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
