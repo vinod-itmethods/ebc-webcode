@@ -389,15 +389,15 @@ export default function RequestBriefing() {
           <div className="mb-12 space-y-4">
             <div className="flex items-center justify-between text-xs font-medium text-foreground/60">
               <span>
-                Step {currentStep} of 7
+                Step {currentStep} of {totalSteps}
               </span>
-              <span>{Math.round((currentStep / 7) * 100)}%</span>
+              <span>{Math.round((currentStep / totalSteps) * 100)}%</span>
             </div>
             <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
               <div
                 className="h-full transition-all duration-300"
                 style={{
-                  width: `${(currentStep / 7) * 100}%`,
+                  width: `${(currentStep / totalSteps) * 100}%`,
                   background: 'linear-gradient(90deg, hsl(45 82% 52%), hsl(38 92% 50%))'
                 }}
               ></div>
