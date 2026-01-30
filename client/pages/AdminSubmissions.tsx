@@ -87,21 +87,8 @@ export default function AdminSubmissions() {
       {/* Admin Header */}
       <section className="border-b border-border/10 bg-gradient-to-r from-slate-50 to-blue-50/30 px-4 py-4">
         <div className="container max-w-6xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div>
-              <h2 className="text-lg font-semibold text-foreground">Admin Portal</h2>
-              <p className="text-sm text-foreground/60">Logged in as {adminEmail}</p>
-            </div>
-            <Button
-              onClick={handleLogout}
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2"
-            >
-              <LogOut className="w-4 h-4" />
-              Logout
-            </Button>
-          </div>
+          <h2 className="text-lg font-semibold text-foreground">Submission History</h2>
+          <p className="text-sm text-foreground/60">View all briefing request submissions</p>
         </div>
       </section>
 
