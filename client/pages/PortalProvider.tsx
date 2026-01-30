@@ -82,12 +82,6 @@ export default function PortalProvider() {
     setIsSaved(false);
   }, [selectedProviderId]);
 
-  const handleLogout = () => {
-    localStorage.removeItem("portalAuthenticated");
-    localStorage.removeItem("userRole");
-    localStorage.removeItem("userEmail");
-    navigate("/portal");
-  };
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
