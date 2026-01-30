@@ -50,7 +50,8 @@ export default function App() {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <ScrollToTop />
+          <ScrollToTopOnNavigate />
+          <ScrollToTopButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/faq" element={<FAQ />} />
