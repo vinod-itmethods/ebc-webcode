@@ -1240,5 +1240,89 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "vinod.avinane@itemthods.com-1769746800150",
+    "email": "vinod.avinane@itemthods.com",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:20:00.150Z",
+    "updatedAt": "2026-01-30T04:20:00.150Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "",
+          "company": "",
+          "email": "vinod.avinane@itemthods.com"
+        },
+        "timestamp": "2026-01-30T04:20:00.150Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "",
+      "company": "",
+      "email": "vinod.avinane@itemthods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itemthods.com-1769746802585",
+    "email": "vinod.avinane@itemthods.com",
+    "company": "itemthods",
+    "createdAt": "2026-01-30T04:20:02.585Z",
+    "updatedAt": "2026-01-30T04:20:02.585Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "",
+          "company": "itemthods",
+          "email": "vinod.avinane@itemthods.com"
+        },
+        "timestamp": "2026-01-30T04:20:02.585Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "",
+      "company": "itemthods",
+      "email": "vinod.avinane@itemthods.com"
+    }
   }
 ]

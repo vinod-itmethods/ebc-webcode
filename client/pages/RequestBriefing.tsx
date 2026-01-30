@@ -33,6 +33,7 @@ const STEPS = [
 ];
 
 export default function RequestBriefing() {
+  const [searchParams] = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
