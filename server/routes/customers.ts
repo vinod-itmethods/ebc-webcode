@@ -43,7 +43,7 @@ export async function handleValidateEmail(req: Request, res: Response) {
 
 export async function handleRegisterCustomer(req: Request, res: Response) {
   try {
-    const { email, name, role, company, briefingData } = req.body;
+    const { email, name, role, company, briefingData, additionalContactName, additionalContactEmail } = req.body;
 
     if (!email || !name || !role || !company) {
       return res.status(400).json({
@@ -61,8 +61,28 @@ export async function handleRegisterCustomer(req: Request, res: Response) {
       });
     }
 
+    // Validate additional contact email if provided
+    let additionalContact = undefined;
+    if (additionalContactName || additionalContactEmail) {
+      if (!additionalContactName || !additionalContactEmail) {
+        return res.status(400).json({
+          error: "Both name and email required for additional contact",
+        });
+      }
+      if (!isValidWorkEmail(additionalContactEmail)) {
+        return res.status(400).json({
+          error: "Additional contact must use a work email address",
+          isPersonalEmail: true,
+        });
+      }
+      additionalContact = {
+        name: additionalContactName,
+        email: additionalContactEmail,
+      };
+    }
+
     // Create customer profile
-    const customer = createCustomerProfile(email, name, role, company, briefingData);
+    const customer = createCustomerProfile(email, name, role, company, briefingData, additionalContact);
 
     if (!customer) {
       return res.status(400).json({
@@ -77,6 +97,7 @@ export async function handleRegisterCustomer(req: Request, res: Response) {
         email: customer.email,
         name: customer.name,
         company: customer.company,
+        additionalContact: customer.additionalContact,
         createdAt: customer.createdAt,
       },
       message: "Customer profile created successfully",
