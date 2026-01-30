@@ -147,27 +147,51 @@ export default function PartnerProfileEditor() {
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">
-              Company Tagline
+              Company Name
             </label>
             <Input
-              value={partnerData.tagline}
-              onChange={(e) => handleInputChange("tagline", e.target.value)}
-              placeholder="Brief company tagline"
+              value={partnerData.name}
+              onChange={(e) => handleInputChange("name", e.target.value)}
+              placeholder="Your company name"
               className="w-full"
+              disabled
             />
+            <p className="text-xs text-foreground/50 mt-1">Company name cannot be changed. Contact support if you need to update this.</p>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">
-              Company Description
+              Company Logo
             </label>
-            <textarea
-              value={partnerData.description}
-              onChange={(e) => handleInputChange("description", e.target.value)}
-              placeholder="Detailed description of your company"
-              className="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              rows={4}
-            />
+            <div className="flex items-center gap-4">
+              <div className="w-24 h-16 rounded-lg border-2 border-dashed border-border flex items-center justify-center bg-slate-50 flex-shrink-0">
+                {partnerData.logo ? (
+                  <img
+                    src={partnerData.logo}
+                    alt="Logo"
+                    className="max-h-14 object-contain"
+                  />
+                ) : (
+                  <Upload className="w-6 h-6 text-foreground/40" />
+                )}
+              </div>
+              <div className="flex-1">
+                <p className="text-xs text-foreground/60 mb-2">Upload your company logo (PNG, JPG)</p>
+                <p className="text-xs text-foreground/50 mb-2">Supported formats: PNG, JPG, SVG</p>
+                <Button asChild variant="outline" className="w-full">
+                  <label>
+                    <span>Upload Logo</span>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      disabled
+                    />
+                  </label>
+                </Button>
+                <p className="text-xs text-foreground/50 mt-2">Logo uploads will be enabled in a future update</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
