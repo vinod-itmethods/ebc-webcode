@@ -275,17 +275,15 @@ export default function Partners() {
                 variant={selectedVendors.includes(selectedPartner.id) ? "default" : "secondary-outline"}
                 className="flex-1 font-semibold rounded-lg"
               >
-                {returnTo === 'briefing' ? 'Add and return to briefing' : 'Add to wishlist'}
+                {selectedVendors.includes(selectedPartner.id) ? '✓ Selected' : 'Select vendor'}
               </Button>
-              {returnTo !== 'briefing' && (
-                <Button
-                  asChild
-                  variant="secondary-outline"
-                  className="flex-1 font-semibold rounded-lg"
-                >
-                  <Link to="/request-briefing">Submit briefing request</Link>
-                </Button>
-              )}
+              <Button
+                onClick={() => setSelectedPartner(null)}
+                variant="secondary-outline"
+                className="flex-1 font-semibold rounded-lg"
+              >
+                Close
+              </Button>
             </div>
           </div>
         </div>
