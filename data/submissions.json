@@ -2703,5 +2703,41 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769747421061-1769747421177",
+    "email": "temp_1769747421061",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:30:21.177Z",
+    "updatedAt": "2026-01-30T04:30:21.177Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T04:30:21.177Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
