@@ -50,13 +50,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
-      <div className="container flex h-32 max-w-7xl items-center px-4">
+      <div className="container flex h-40 max-w-7xl items-center px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity mr-16 flex-shrink-0">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb708ee6487aa42df951001ea08f04fa4?format=webp&width=800&height=1200"
             alt="EBC Logo"
-            className="h-24 flex-shrink-0"
+            className="h-32 flex-shrink-0"
           />
           <span className="text-foreground/70 text-lg">|</span>
           <span className="text-base font-semibold text-foreground">Executive Briefing Council</span>
