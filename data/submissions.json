@@ -2570,5 +2570,70 @@
       "company": "itmethods",
       "email": "vinod.avinane@itmethods.com"
     }
+  },
+  {
+    "id": "temp_1769746923110-1769746923222",
+    "email": "temp_1769746923110",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:22:03.222Z",
+    "updatedAt": "2026-01-30T04:22:03.222Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:22:03.222Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746925599-1769746925704",
+    "email": "temp_1769746925599",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:22:05.704Z",
+    "updatedAt": "2026-01-30T04:22:05.704Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:22:05.704Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
