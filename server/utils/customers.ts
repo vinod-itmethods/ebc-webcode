@@ -68,11 +68,13 @@ function loadCustomers(): CustomerProfile[] {
 }
 
 function saveCustomers(customers: CustomerProfile[]) {
-  ensureDataDir();
   try {
+    ensureDataDir();
     writeFileSync(CUSTOMERS_FILE, JSON.stringify(customers, null, 2));
+    console.log(`Customers saved to ${CUSTOMERS_FILE}`);
   } catch (error) {
-    console.error("Error saving customers:", error);
+    console.error("Error saving customers to file:", error);
+    console.error("File path:", CUSTOMERS_FILE);
     throw error;
   }
 }
