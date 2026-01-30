@@ -15629,5 +15629,45 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769807801380-1769807801720",
+    "email": "temp_1769807801380",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:16:41.720Z",
+    "updatedAt": "2026-01-30T21:16:41.720Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T21:16:41.720Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor",
+        "cohere",
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
