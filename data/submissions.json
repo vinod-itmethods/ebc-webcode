@@ -1125,5 +1125,47 @@
       "company": "vinkum@gmail.com",
       "email": ""
     }
+  },
+  {
+    "id": "vinkum@gmail.com-1769746789751",
+    "email": "vinkum@gmail.com",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:19:49.751Z",
+    "updatedAt": "2026-01-30T04:19:49.751Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "",
+          "company": "",
+          "email": "vinkum@gmail.com"
+        },
+        "timestamp": "2026-01-30T04:19:49.751Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "",
+      "company": "",
+      "email": "vinkum@gmail.com"
+    }
   }
 ]

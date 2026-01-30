@@ -239,19 +239,27 @@ export default function Partners() {
                     wishlist.push(selectedPartner.id);
                     localStorage.setItem('vendor_wishlist', JSON.stringify(wishlist));
                   }
-                  setSelectedPartner(null);
+
+                  // If coming from briefing form, return to it
+                  if (returnTo === 'briefing') {
+                    navigate('/request-briefing?step=4');
+                  } else {
+                    setSelectedPartner(null);
+                  }
                 }}
                 className="flex-1 font-semibold rounded-lg"
               >
-                Add to wishlist
+                {returnTo === 'briefing' ? 'Add and return to briefing' : 'Add to wishlist'}
               </Button>
-              <Button
-                asChild
-                variant="secondary-outline"
-                className="flex-1 font-semibold rounded-lg"
-              >
-                <Link to="/request-briefing">Submit briefing request</Link>
-              </Button>
+              {returnTo !== 'briefing' && (
+                <Button
+                  asChild
+                  variant="secondary-outline"
+                  className="flex-1 font-semibold rounded-lg"
+                >
+                  <Link to="/request-briefing">Submit briefing request</Link>
+                </Button>
+              )}
             </div>
           </div>
         </div>
