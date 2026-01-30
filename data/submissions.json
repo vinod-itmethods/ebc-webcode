@@ -10509,5 +10509,52 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769802363522-1769802363572",
+    "email": "temp_1769802363522",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:46:03.572Z",
+    "updatedAt": "2026-01-30T19:46:03.572Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten",
+            "cognition",
+            "continuai",
+            "lyzr",
+            "mistralai",
+            "cohere"
+          ]
+        },
+        "timestamp": "2026-01-30T19:46:03.572Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai",
+        "lyzr",
+        "mistralai",
+        "cohere"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
