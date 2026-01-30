@@ -167,14 +167,17 @@ export default function AdminSubmissions() {
                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors"
                   >
                     <div className="flex-grow text-left">
-                      <div className="flex items-center gap-3">
-                        <div>
+                      <div className="flex items-start justify-between gap-4 w-full">
+                        <div className="flex-grow">
                           <h3 className="font-semibold text-foreground">
-                            {submission.email.split("@")[0]}
+                            {submission.company}
                           </h3>
-                          <p className="text-sm text-foreground/60">{submission.company}</p>
+                          <p className="text-sm text-foreground/70 mt-1">{submission.email}</p>
+                          <p className="text-xs text-foreground/50 mt-1">
+                            Submitted {new Date(submission.createdAt).toLocaleString()}
+                          </p>
                         </div>
-                        <div className="ml-auto flex items-center gap-4">
+                        <div className="flex items-center gap-3 flex-shrink-0">
                           {submission.isCompleted ? (
                             <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
                               Completed
@@ -184,9 +187,6 @@ export default function AdminSubmissions() {
                               Step {submission.currentStep}/7
                             </span>
                           )}
-                          <span className="text-xs text-foreground/50">
-                            {new Date(submission.createdAt).toLocaleDateString()}
-                          </span>
                         </div>
                       </div>
                     </div>
