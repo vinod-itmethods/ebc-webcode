@@ -526,7 +526,7 @@ export default function RequestBriefing() {
 
             {/* Navigation Buttons */}
             <div className="space-y-4">
-              {!isStepValid() && currentStep !== 7 && (
+              {!isStepValid() && attemptedContinue && currentStep !== 7 && (
                 <div className="text-sm text-orange-600 font-medium">
                   Please complete this step before continuing
                 </div>
