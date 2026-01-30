@@ -120,9 +120,19 @@ export default function Header() {
           ) : (
             <>
               <Link
+                to="/partner-login"
+                className={`hidden md:inline text-sm font-medium transition-colors ${
+                  isActive("/partner-login") || isActive("/partner-dashboard")
+                    ? "text-primary font-semibold"
+                    : "text-foreground/70 hover:text-primary"
+                }`}
+              >
+                Vendor login
+              </Link>
+              <Link
                 to="/portal"
                 className={`hidden md:inline text-sm font-medium transition-colors ${
-                  isActive("/portal") || isActive("/partner-login") || isActive("/partner-dashboard")
+                  isActive("/portal")
                     ? "text-primary font-semibold"
                     : "text-foreground/70 hover:text-primary"
                 }`}
