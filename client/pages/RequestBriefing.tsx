@@ -368,6 +368,9 @@ export default function RequestBriefing() {
       return;
     }
 
+    // Clear saved form data on successful submission
+    localStorage.removeItem('briefing_form_data');
+    localStorage.removeItem('briefing_form_step');
     setSubmitted(true);
   };
 
