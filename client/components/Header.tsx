@@ -49,7 +49,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm overflow-visible">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white shadow-sm overflow-visible">
       <div className="container flex h-16 max-w-7xl items-center px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-0 hover:opacity-80 transition-opacity mr-16 flex-shrink-0 -my-4">
