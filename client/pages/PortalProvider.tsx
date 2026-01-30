@@ -181,26 +181,9 @@ export default function PortalProvider() {
       <div className="flex-grow">
         <div className="container max-w-4xl mx-auto px-4 py-20">
           {/* Header */}
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Technology provider portal</h1>
-              <p className="text-lg text-foreground/90">This portal is for approved technology providers participating in Executive Briefing Council sessions. Use it to complete registration and indicate where you'd like to opt in.</p>
-            </div>
-            <Button
-              onClick={handleLogout}
-              variant="secondary-outline"
-              className="flex items-center gap-2 flex-shrink-0"
-            >
-              <LogOut className="w-4 h-4" />
-              Log out
-            </Button>
-          </div>
-
-          {/* User Info */}
-          <div className="mb-12 p-4 bg-blue-50/50 rounded-lg border border-blue-100">
-            <p className="text-sm text-foreground/80">
-              Logged in as: <span className="font-medium">{userEmail}</span>
-            </p>
+          <div className="mb-12">
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Technology provider portal</h1>
+            <p className="text-lg text-foreground/90">This portal is for approved technology providers participating in Executive Briefing Council sessions. Use it to complete registration and indicate where you'd like to opt in.</p>
           </div>
 
           {/* Tab Navigation */}

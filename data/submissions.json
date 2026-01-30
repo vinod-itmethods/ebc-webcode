@@ -2635,5 +2635,73 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769747412331-1769747412529",
+    "email": "temp_1769747412331",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:30:12.529Z",
+    "updatedAt": "2026-01-30T04:30:12.529Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:30:12.529Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769747415680-1769747415795",
+    "email": "temp_1769747415680",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:30:15.795Z",
+    "updatedAt": "2026-01-30T04:30:15.795Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:30:15.795Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
