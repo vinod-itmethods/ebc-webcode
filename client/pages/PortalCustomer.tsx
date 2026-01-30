@@ -380,6 +380,16 @@ export default function PortalCustomer() {
             )}
           </section>
 
+          {/* Timeline Section */}
+          {timelineEvents.length > 0 && (
+            <section className="mt-16">
+              <BriefingTimeline
+                events={timelineEvents}
+                onAddToCalendar={handleAddToCalendar}
+              />
+            </section>
+          )}
+
           {/* Confidentiality Note */}
           <div className="mt-16 p-6 bg-slate-50 rounded-lg border border-slate-200">
             <p className="text-xs text-foreground/60 text-center leading-relaxed">
