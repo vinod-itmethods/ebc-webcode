@@ -28,6 +28,8 @@ interface CustomerProfile {
   updatedAt: string;
   briefingData: any;
   status: string;
+  approvalStatus?: "pending" | "approved" | "rejected";
+  approvedAt?: string;
 }
 
 interface BriefingRequest {
