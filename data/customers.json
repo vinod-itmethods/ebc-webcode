@@ -94,5 +94,37 @@
     },
     "status": "active",
     "approvalStatus": "pending"
+  },
+  {
+    "id": "cust_1769806763163_u1yo3i6z9",
+    "email": "ava.nguyen@itmethods.com",
+    "name": "Ava",
+    "role": "Marketing",
+    "company": "iTmethods",
+    "createdAt": "2026-01-30T20:59:23.163Z",
+    "updatedAt": "2026-01-30T20:59:23.163Z",
+    "briefingData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "iTmethods",
+      "email": "ava.nguyen@itmethods.com",
+      "additionalContactName": "Ava",
+      "additionalContactEmail": "ava.nguyen@itmethods.com",
+      "assistant": ""
+    },
+    "status": "active",
+    "approvalStatus": "pending"
   }
 ]

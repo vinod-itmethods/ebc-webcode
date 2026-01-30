@@ -13601,5 +13601,499 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769806728629-1769806728815",
+    "email": "temp_1769806728629",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:58:48.815Z",
+    "updatedAt": "2026-01-30T20:58:48.815Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "archera",
+            "gitlab",
+            "lyzr",
+            "cursor"
+          ]
+        },
+        "timestamp": "2026-01-30T20:58:48.815Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769806732523-1769806732705",
+    "email": "temp_1769806732523",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:58:52.705Z",
+    "updatedAt": "2026-01-30T20:58:52.705Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T20:58:52.705Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769806733562-1769806733750",
+    "email": "temp_1769806733562",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:58:53.750Z",
+    "updatedAt": "2026-01-30T20:58:53.750Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T20:58:53.750Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769806736561-1769806736749",
+    "email": "temp_1769806736561",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:58:56.749Z",
+    "updatedAt": "2026-01-30T20:58:56.749Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T20:58:56.749Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769806739685-1769806739873",
+    "email": "temp_1769806739685",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:58:59.873Z",
+    "updatedAt": "2026-01-30T20:58:59.873Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "test test\n"
+        },
+        "timestamp": "2026-01-30T20:58:59.873Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769806740984-1769806741197",
+    "email": "temp_1769806740984",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:59:01.197Z",
+    "updatedAt": "2026-01-30T20:59:01.197Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T20:59:01.197Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "ava.nguyen@itmethods.com-1769806743495",
+    "email": "ava.nguyen@itmethods.com",
+    "company": "iTmethods",
+    "createdAt": "2026-01-30T20:59:03.495Z",
+    "updatedAt": "2026-01-30T20:59:03.495Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "",
+          "company": "iTmethods",
+          "email": "ava.nguyen@itmethods.com"
+        },
+        "timestamp": "2026-01-30T20:59:03.495Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "Ava",
+      "role": "",
+      "company": "iTmethods",
+      "email": "ava.nguyen@itmethods.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "ava.nguyen@itmethods.com-1769806751519",
+    "email": "ava.nguyen@itmethods.com",
+    "company": "iTmethods",
+    "createdAt": "2026-01-30T20:59:11.519Z",
+    "updatedAt": "2026-01-30T20:59:11.519Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "",
+          "company": "iTmethods",
+          "email": "ava.nguyen@itmethods.com",
+          "assistant": "d"
+        },
+        "timestamp": "2026-01-30T20:59:11.519Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "Ava",
+      "role": "",
+      "company": "iTmethods",
+      "email": "ava.nguyen@itmethods.com",
+      "additionalContactName": "",
+      "additionalContactEmail": "",
+      "assistant": "d"
+    }
+  },
+  {
+    "id": "ava.nguyen@itmethods.com-1769806752540",
+    "email": "ava.nguyen@itmethods.com",
+    "company": "iTmethods",
+    "createdAt": "2026-01-30T20:59:12.541Z",
+    "updatedAt": "2026-01-30T20:59:12.541Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "",
+          "company": "iTmethods",
+          "email": "ava.nguyen@itmethods.com",
+          "assistant": ""
+        },
+        "timestamp": "2026-01-30T20:59:12.541Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "Ava",
+      "role": "",
+      "company": "iTmethods",
+      "email": "ava.nguyen@itmethods.com",
+      "additionalContactName": "",
+      "additionalContactEmail": "",
+      "assistant": ""
+    }
+  },
+  {
+    "id": "ava.nguyen@itmethods.com-1769806759169",
+    "email": "ava.nguyen@itmethods.com",
+    "company": "iTmethods",
+    "createdAt": "2026-01-30T20:59:19.169Z",
+    "updatedAt": "2026-01-30T20:59:19.169Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "Marketing",
+          "company": "iTmethods",
+          "email": "ava.nguyen@itmethods.com",
+          "assistant": ""
+        },
+        "timestamp": "2026-01-30T20:59:19.169Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "iTmethods",
+      "email": "ava.nguyen@itmethods.com",
+      "additionalContactName": "",
+      "additionalContactEmail": "",
+      "assistant": ""
+    }
+  },
+  {
+    "id": "ava.nguyen@itmethods.com-1769806762460",
+    "email": "ava.nguyen@itmethods.com",
+    "company": "iTmethods",
+    "createdAt": "2026-01-30T20:59:22.460Z",
+    "updatedAt": "2026-01-30T20:59:22.460Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "Marketing",
+          "company": "iTmethods",
+          "email": "ava.nguyen@itmethods.com",
+          "assistant": ""
+        },
+        "timestamp": "2026-01-30T20:59:22.460Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "iTmethods",
+      "email": "ava.nguyen@itmethods.com",
+      "additionalContactName": "Ava",
+      "additionalContactEmail": "ava.nguyen@itmethods.com",
+      "assistant": ""
+    }
+  },
+  {
+    "id": "ava.nguyen@itmethods.com-1769806763300",
+    "email": "ava.nguyen@itmethods.com",
+    "company": "iTmethods",
+    "createdAt": "2026-01-30T20:59:23.300Z",
+    "updatedAt": "2026-01-30T20:59:23.300Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Ava",
+          "role": "Marketing",
+          "company": "iTmethods",
+          "email": "ava.nguyen@itmethods.com",
+          "assistant": ""
+        },
+        "timestamp": "2026-01-30T20:59:23.300Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test test\n",
+      "name": "Ava",
+      "role": "Marketing",
+      "company": "iTmethods",
+      "email": "ava.nguyen@itmethods.com",
+      "additionalContactName": "Ava",
+      "additionalContactEmail": "ava.nguyen@itmethods.com",
+      "assistant": ""
+    }
   }
 ]
