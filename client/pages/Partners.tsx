@@ -116,30 +116,46 @@ export default function Partners() {
       <section className="py-8 lg:py-12 bg-white">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
-            {partners.map((partner) => (
-              <button
-                key={partner.id}
-                onClick={() => setSelectedPartner(partner)}
-                className="group relative flex flex-col items-center justify-center cursor-pointer bg-slate-50 rounded-xl p-4 hover:shadow-lg hover:bg-white transition-all"
-              >
-                {/* Logo */}
-                <div className="flex items-center justify-center w-full" style={{ height: "120px" }}>
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
-                    onError={(e) => {
-                      const el = e.currentTarget;
-                      el.style.display = "none";
-                      el.parentElement!.innerHTML =
-                        '<div class="text-xs font-medium text-slate-400 text-center px-2">' +
-                        partner.name +
-                        "</div>";
-                    }}
+            {partners.map((partner) => {
+              const isSelected = selectedVendors.includes(partner.id);
+              return (
+                <div
+                  key={partner.id}
+                  className={`relative flex flex-col items-center justify-center bg-slate-50 rounded-xl p-4 transition-all ${
+                    isSelected ? 'ring-2 ring-primary shadow-lg bg-primary/5' : 'hover:shadow-lg hover:bg-white'
+                  }`}
+                >
+                  {/* Checkbox */}
+                  <input
+                    type="checkbox"
+                    checked={isSelected}
+                    onChange={() => toggleVendor(partner.id)}
+                    className="absolute top-3 right-3 w-5 h-5 cursor-pointer"
                   />
+
+                  {/* Logo */}
+                  <button
+                    onClick={() => setSelectedPartner(partner)}
+                    className="flex items-center justify-center w-full cursor-pointer"
+                    style={{ height: "120px" }}
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
+                      onError={(e) => {
+                        const el = e.currentTarget;
+                        el.style.display = "none";
+                        el.parentElement!.innerHTML =
+                          '<div class="text-xs font-medium text-slate-400 text-center px-2">' +
+                          partner.name +
+                          "</div>";
+                      }}
+                    />
+                  </button>
                 </div>
-              </button>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
