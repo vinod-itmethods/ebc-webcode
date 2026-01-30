@@ -241,13 +241,23 @@ export default function RequestBriefing() {
   const handleNext = () => {
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
+      setAttemptedContinue(false);
     }
   };
 
   const handleBack = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
+      setAttemptedContinue(false);
     }
+  };
+
+  const handleContinueClick = () => {
+    if (!isStepValid()) {
+      setAttemptedContinue(true);
+      return;
+    }
+    handleNext();
   };
 
   const handleSubmit = async () => {
