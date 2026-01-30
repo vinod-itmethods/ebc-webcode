@@ -39,6 +39,19 @@ export default function AdminLogin() {
     navigate("/admin/submissions");
   };
 
+  if (isChecking) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col">
+        <Header />
+        <section className="flex-grow flex items-center justify-center">
+          <div className="text-center">
+            <p className="text-foreground/70">Loading...</p>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
