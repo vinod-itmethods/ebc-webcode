@@ -331,42 +331,6 @@ export default function PartnerProfileEditor() {
         </div>
       </div>
 
-      {/* What You'll Get */}
-      <div className="bg-white rounded-lg border border-border p-6">
-        <h3 className="text-lg font-bold text-foreground mb-6">What You'll Get From This Session</h3>
-        <div className="space-y-3">
-          {(partnerData.benefits || []).map((benefit, idx) => (
-            <div key={idx} className="flex gap-2 items-end">
-              <div className="flex-1">
-                <Input
-                  value={benefit}
-                  onChange={(e) => handleBenefitChange(idx, e.target.value)}
-                  placeholder="Benefit or outcome"
-                  className="w-full"
-                />
-              </div>
-              <Button
-                onClick={() => removeBenefit(idx)}
-                variant="ghost"
-                size="sm"
-                className="text-red-600 hover:bg-red-50"
-              >
-                <X className="w-4 h-4" />
-              </Button>
-            </div>
-          ))}
-
-          <Button
-            onClick={addBenefit}
-            variant="outline"
-            size="sm"
-            className="w-full flex items-center gap-2 mt-2"
-          >
-            <Plus className="w-4 h-4" />
-            Add Benefit
-          </Button>
-        </div>
-      </div>
 
       {/* Save and Preview */}
       <div className="grid md:grid-cols-2 gap-6">
