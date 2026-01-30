@@ -61,8 +61,12 @@ export default function Partners() {
     });
   };
 
-  const handleAddSelectedAndReturn = () => {
+  // Save selected vendors to localStorage whenever they change
+  useEffect(() => {
     localStorage.setItem('vendor_wishlist', JSON.stringify(selectedVendors));
+  }, [selectedVendors]);
+
+  const handleAddSelectedAndReturn = () => {
     if (returnTo === 'briefing') {
       navigate('/request-briefing?step=4');
     }
