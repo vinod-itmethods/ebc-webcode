@@ -140,7 +140,7 @@ export default function RequestPartnerAccess() {
               Get in touch
             </h1>
             <p className="text-lg text-foreground/70">
-              Have a question or interested in learning more? Let us know and we'll be in touch.
+              If you're interested in being part of our technology ecosystem, please fill out the form below and we'll get back to you.
             </p>
           </div>
 
