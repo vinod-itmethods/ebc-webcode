@@ -44,6 +44,7 @@ export default function PortalCustomer() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [customer, setCustomer] = useState<CustomerProfile | null>(null);
   const [briefingRequests, setBriefingRequests] = useState<BriefingRequest[]>([]);
+  const [timelineEvents, setTimelineEvents] = useState<TimelineEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const userEmail = localStorage.getItem("userEmail") || "user@company.com";
