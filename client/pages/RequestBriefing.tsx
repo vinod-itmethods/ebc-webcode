@@ -477,6 +477,41 @@ export default function RequestBriefing() {
     <div className="min-h-screen bg-white">
       <Header />
 
+      {/* Continue Previous Session Modal */}
+      {showContinueDialog && savedFormData && savedStep && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full">
+            <div className="p-6 space-y-4">
+              <div className="space-y-2">
+                <h2 className="text-2xl font-bold text-foreground">Welcome back!</h2>
+                <p className="text-foreground/70">We found your previous briefing request. Would you like to continue where you left off or start a new one?</p>
+              </div>
+
+              <div className="bg-blue-50 rounded-lg p-4 space-y-2">
+                <p className="text-sm font-medium text-foreground">Previous progress:</p>
+                <p className="text-sm text-foreground/70">Step {savedStep} of {totalSteps}</p>
+              </div>
+
+              <div className="flex gap-3 pt-4">
+                <Button
+                  onClick={handleContinuePreviousSession}
+                  className="flex-1 font-semibold rounded-lg"
+                >
+                  Continue
+                </Button>
+                <Button
+                  onClick={handleStartFresh}
+                  variant="secondary-outline"
+                  className="flex-1 font-semibold rounded-lg"
+                >
+                  Start fresh
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="relative py-12 lg:py-16 overflow-hidden bg-gradient-to-b from-white to-blue-50/40">
         <div className="absolute inset-0 -z-10">
