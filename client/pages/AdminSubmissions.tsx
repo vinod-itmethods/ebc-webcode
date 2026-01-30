@@ -76,11 +76,13 @@ export default function AdminSubmissions() {
     navigate("/admin");
   };
 
-  const filteredSubmissions = submissions.filter((s) => {
-    if (filter === "completed") return s.isCompleted;
-    if (filter === "partial") return !s.isCompleted;
-    return true;
-  });
+  const filteredSubmissions = submissions
+    .filter((s) => {
+      if (filter === "completed") return s.isCompleted;
+      if (filter === "partial") return !s.isCompleted;
+      return true;
+    })
+    .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
