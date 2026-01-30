@@ -92,6 +92,20 @@ export default function Header() {
         <div className="flex items-center gap-3 ml-auto">
           {isAuthenticated ? (
             <>
+              {/* Admin Portal Link - Only for admins */}
+              {isAdmin && (
+                <Link
+                  to="/admin/submissions"
+                  className={`hidden md:inline text-sm font-medium transition-colors px-3 py-1 rounded-lg ${
+                    isActive("/admin")
+                      ? "text-primary font-semibold bg-primary/10"
+                      : "text-foreground/70 hover:text-primary hover:bg-primary/5"
+                  }`}
+                >
+                  Admin Portal
+                </Link>
+              )}
+
               <span className="hidden md:inline text-sm text-foreground/60">
                 {userEmail}
               </span>
