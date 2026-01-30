@@ -3,7 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BriefingTimeline from "@/components/BriefingTimeline";
 import { LogOut, CheckCircle2, Clock, AlertCircle, Plus } from "lucide-react";
+import { downloadICS, getOutlookLink } from "@/utils/calendar";
+
+interface TimelineEvent {
+  id: string;
+  title: string;
+  date: string;
+  description?: string;
+  status: "completed" | "pending" | "upcoming";
+  type?: "submission" | "update" | "scheduled" | "email";
+}
 
 type RequestStatus = "draft" | "submitted" | "pending" | "scheduled" | "completed";
 
