@@ -103,3 +103,33 @@ export async function handleGetPersonalDomains(req: Request, res: Response) {
     });
   }
 }
+
+export async function handleGetCustomerProfile(req: Request, res: Response) {
+  try {
+    const { email } = req.query;
+
+    if (!email) {
+      return res.status(400).json({
+        error: "Email is required",
+      });
+    }
+
+    const customer = getCustomerByEmail(String(email));
+
+    if (!customer) {
+      return res.status(404).json({
+        error: "Customer not found",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      customer,
+    });
+  } catch (error) {
+    console.error("Error fetching customer profile:", error);
+    return res.status(500).json({
+      error: "Failed to fetch customer profile",
+    });
+  }
+}
