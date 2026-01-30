@@ -8,11 +8,6 @@ export interface Partner {
   benefits: string[];
   categories: ("cloud" | "ai" | "devops" | "platform" | "security" | "data")[];
   domain?: string;
-  speakerImage?: string;
-  speakerName?: string;
-  speakerTitle?: string;
-  speakerBio?: string;
-  speakerQuote?: string;
 }
 
 export const partners: Partner[] = [
