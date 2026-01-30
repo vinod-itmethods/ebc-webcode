@@ -497,11 +497,11 @@ export default function RequestBriefing() {
                 </div>
 
                 <Button
-                  onClick={currentStep === 7 ? handleSubmit : handleNext}
+                  onClick={(skipContactStep && currentStep === totalSteps) || (!skipContactStep && currentStep === 7) ? handleSubmit : handleNext}
                   disabled={!isStepValid()}
                   className="font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {currentStep === 7 ? "Request briefing" : "Continue"}
+                  {(skipContactStep && currentStep === totalSteps) || (!skipContactStep && currentStep === 7) ? "Request briefing" : "Continue"}
                 </Button>
               </div>
             </div>
