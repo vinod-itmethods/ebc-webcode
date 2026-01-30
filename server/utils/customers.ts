@@ -22,6 +22,11 @@ const PERSONAL_EMAIL_DOMAINS = [
   "example.com",
 ];
 
+export interface AdditionalContact {
+  name: string;
+  email: string;
+}
+
 export interface CustomerProfile {
   id: string;
   email: string;
@@ -35,6 +40,7 @@ export interface CustomerProfile {
   approvalStatus: "pending" | "approved" | "rejected";
   approvedAt?: string;
   approvedBy?: string;
+  additionalContact?: AdditionalContact;
 }
 
 function ensureDataDir() {
