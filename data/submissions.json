@@ -9546,5 +9546,384 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769802099262-1769802099340",
+    "email": "temp_1769802099262",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:39.340Z",
+    "updatedAt": "2026-01-30T19:41:39.340Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:41:39.340Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802100366-1769802100411",
+    "email": "temp_1769802100366",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:40.411Z",
+    "updatedAt": "2026-01-30T19:41:40.411Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:41:40.411Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802109981-1769802110055",
+    "email": "temp_1769802109981",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:50.055Z",
+    "updatedAt": "2026-01-30T19:41:50.055Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "Operating model and organizational change"
+          ]
+        },
+        "timestamp": "2026-01-30T19:41:50.055Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Operating model and organizational change"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802111576-1769802111642",
+    "email": "temp_1769802111576",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:51.642Z",
+    "updatedAt": "2026-01-30T19:41:51.642Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Preparing for near-term decisions"
+          ]
+        },
+        "timestamp": "2026-01-30T19:41:51.642Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Operating model and organizational change"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802112446-1769802112500",
+    "email": "temp_1769802112446",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:52.500Z",
+    "updatedAt": "2026-01-30T19:41:52.500Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T19:41:52.500Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Operating model and organizational change"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802114092-1769802114147",
+    "email": "temp_1769802114092",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:54.147Z",
+    "updatedAt": "2026-01-30T19:41:54.147Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten",
+            "cognition",
+            "continuai"
+          ]
+        },
+        "timestamp": "2026-01-30T19:41:54.147Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Operating model and organizational change"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802115482-1769802115529",
+    "email": "temp_1769802115482",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:55.529Z",
+    "updatedAt": "2026-01-30T19:41:55.529Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten",
+            "cognition"
+          ]
+        },
+        "timestamp": "2026-01-30T19:41:55.529Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Operating model and organizational change"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "cognition"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802116493-1769802116557",
+    "email": "temp_1769802116493",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:41:56.557Z",
+    "updatedAt": "2026-01-30T19:41:56.557Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten"
+          ]
+        },
+        "timestamp": "2026-01-30T19:41:56.557Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Operating model and organizational change"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802126420-1769802126466",
+    "email": "temp_1769802126420",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:42:06.466Z",
+    "updatedAt": "2026-01-30T19:42:06.466Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten",
+            "cognition",
+            "continuai",
+            "lyzr",
+            "mistralai"
+          ]
+        },
+        "timestamp": "2026-01-30T19:42:06.466Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai",
+        "lyzr",
+        "mistralai"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
