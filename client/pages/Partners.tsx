@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { partners as originalPartners, type Partner } from "@/data/partners";

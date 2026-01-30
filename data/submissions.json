@@ -1041,5 +1041,47 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769746782004-1769746782113",
+    "email": "temp_1769746782004",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:19:42.113Z",
+    "updatedAt": "2026-01-30T04:19:42.113Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "Vinod",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T04:19:42.113Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing",
+      "name": "Vinod",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
