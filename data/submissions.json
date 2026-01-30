@@ -960,5 +960,86 @@
       "company": "",
       "email": ""
     }
+  },
+  {
+    "id": "temp_1769746777657-1769746777765",
+    "email": "temp_1769746777657",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:19:37.765Z",
+    "updatedAt": "2026-01-30T04:19:37.765Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "testing"
+        },
+        "timestamp": "2026-01-30T04:19:37.765Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  },
+  {
+    "id": "temp_1769746778722-1769746778824",
+    "email": "temp_1769746778722",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:19:38.824Z",
+    "updatedAt": "2026-01-30T04:19:38.824Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T04:19:38.824Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
   }
 ]
