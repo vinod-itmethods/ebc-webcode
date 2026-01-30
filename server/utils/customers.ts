@@ -32,6 +32,9 @@ export interface CustomerProfile {
   updatedAt: string;
   briefingData: any;
   status: "active" | "inactive";
+  approvalStatus: "pending" | "approved" | "rejected";
+  approvedAt?: string;
+  approvedBy?: string;
 }
 
 function ensureDataDir() {
