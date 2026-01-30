@@ -263,7 +263,7 @@ export default function Partners() {
                 }}
                 className="flex-1 font-semibold rounded-lg"
               >
-                Include in briefing
+                {selectedVendors.includes(selectedPartner.id) ? "Remove from briefing" : "Include in briefing"}
               </Button>
               <Button
                 onClick={() => {
