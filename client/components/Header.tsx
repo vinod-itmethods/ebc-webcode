@@ -8,11 +8,13 @@ export default function Header() {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userEmail, setUserEmail] = useState<string>("");
+  const [userRole, setUserRole] = useState<string>("");
 
   useEffect(() => {
     // Check for customer portal authentication
     const customerAuth = localStorage.getItem("portalAuthenticated") === "true";
     const customerEmail = localStorage.getItem("userEmail");
+    const role = localStorage.getItem("userRole");
 
     // Check for partner authentication
     const partnerAuth = localStorage.getItem("partnerAuthenticated") === "true";
@@ -23,12 +25,15 @@ export default function Header() {
     if (customerAuth && customerEmail) {
       setIsAuthenticated(true);
       setUserEmail(customerEmail);
+      setUserRole(role || "");
     } else if (partnerAuth) {
       setIsAuthenticated(true);
       setUserEmail("Partner");
+      setUserRole("provider");
     } else if (adminEmail) {
       setIsAuthenticated(true);
       setUserEmail(adminEmail);
+      setUserRole("admin");
     }
   }, [location]);
 
