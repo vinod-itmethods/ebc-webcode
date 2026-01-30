@@ -1,0 +1,33 @@
+[
+  {
+    "id": "temp_1769746605416-1769746605556",
+    "email": "temp_1769746605416",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T04:16:45.556Z",
+    "updatedAt": "2026-01-30T04:16:45.556Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:16:45.556Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": ""
+    }
+  }
+]

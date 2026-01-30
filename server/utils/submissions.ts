@@ -55,11 +55,13 @@ function loadSubmissions(): BriefingSubmission[] {
 }
 
 function saveSubmissions(submissions: BriefingSubmission[]) {
-  ensureDataDir();
   try {
+    ensureDataDir();
     writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2));
+    console.log(`Submissions saved to ${SUBMISSIONS_FILE}`);
   } catch (error) {
-    console.error("Error saving submissions:", error);
+    console.error("Error saving submissions to file:", error);
+    console.error("File path:", SUBMISSIONS_FILE);
     throw error;
   }
 }
