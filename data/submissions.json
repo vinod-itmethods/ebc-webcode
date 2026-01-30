@@ -11279,5 +11279,424 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769802549115-1769802549199",
+    "email": "temp_1769802549115",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:09.200Z",
+    "updatedAt": "2026-01-30T19:49:09.200Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:49:09.200Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai",
+        "lyzr",
+        "mistralai",
+        "cohere"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802554337-1769802554411",
+    "email": "temp_1769802554337",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:14.411Z",
+    "updatedAt": "2026-01-30T19:49:14.411Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:49:14.411Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802560070-1769802560144",
+    "email": "temp_1769802560070",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:20.144Z",
+    "updatedAt": "2026-01-30T19:49:20.144Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Platform and tooling vendors"
+          ]
+        },
+        "timestamp": "2026-01-30T19:49:20.144Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "Platform and tooling vendors"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802561143-1769802561199",
+    "email": "temp_1769802561143",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:21.199Z",
+    "updatedAt": "2026-01-30T19:49:21.199Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T19:49:21.199Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "Platform and tooling vendors"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802565214-1769802565271",
+    "email": "temp_1769802565214",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:25.271Z",
+    "updatedAt": "2026-01-30T19:49:25.271Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:49:25.271Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802568097-1769802568172",
+    "email": "temp_1769802568097",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:28.172Z",
+    "updatedAt": "2026-01-30T19:49:28.172Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T19:49:28.172Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802570489-1769802570547",
+    "email": "temp_1769802570489",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:30.547Z",
+    "updatedAt": "2026-01-30T19:49:30.547Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T19:49:30.547Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802571425-1769802571473",
+    "email": "temp_1769802571425",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:31.473Z",
+    "updatedAt": "2026-01-30T19:49:31.473Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "DevOps and delivery platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T19:49:31.473Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802572912-1769802572984",
+    "email": "temp_1769802572912",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:32.984Z",
+    "updatedAt": "2026-01-30T19:49:32.984Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T19:49:32.984Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802576141-1769802576197",
+    "email": "temp_1769802576141",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:36.197Z",
+    "updatedAt": "2026-01-30T19:49:36.197Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:49:36.197Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "cognition",
+        "continuai",
+        "lyzr",
+        "mistralai",
+        "cohere"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769802577093-1769802577164",
+    "email": "temp_1769802577093",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:49:37.164Z",
+    "updatedAt": "2026-01-30T19:49:37.164Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T19:49:37.164Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
