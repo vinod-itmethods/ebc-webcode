@@ -21,11 +21,6 @@ export const partners: Partner[] = [
     benefits: ["Clear view of how enterprises are deploying AI responsibly", "Practical insight beyond hype", "Real-world AI governance frameworks", "Enterprise AI adoption strategies"],
     categories: ["ai"],
     domain: "anthropic.com",
-    speakerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    speakerName: "Dario Amodei",
-    speakerTitle: "CEO & Founder, Anthropic",
-    speakerBio: "Dario Amodei is the CEO and founder of Anthropic, where he leads efforts to develop safe, beneficial AI systems. With deep expertise in AI research and responsible deployment, Dario brings critical perspectives on how enterprises can adopt AI safely while maintaining alignment with organizational values.",
-    speakerQuote: "The future of enterprise AI adoption depends on building systems that are not only powerful but also interpretable, controllable, and aligned with human values. At Anthropic, we're committed to making AI safety a core part of every deployment."
   },
   {
     id: "archera",
