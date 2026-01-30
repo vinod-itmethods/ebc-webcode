@@ -34,6 +34,7 @@ const STEPS = [
 export default function RequestBriefing() {
   const [currentStep, setCurrentStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     interests: [],
     decisionContext: [],
@@ -53,6 +54,41 @@ export default function RequestBriefing() {
     const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
     setFormData((prev) => ({ ...prev, vendors: wishlist }));
   }, []);
+
+  // Auto-save progress whenever form data changes
+  useEffect(() => {
+    const saveProgress = async () => {
+      if (!formData.email || !formData.company) return;
+
+      setIsSaving(true);
+      try {
+        const response = await fetch("/api/save-progress", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: formData.email,
+            company: formData.company,
+            stepNumber: currentStep,
+            stepData: getStepData(currentStep),
+            isCompleted: false,
+            fullData: formData,
+          }),
+        });
+
+        if (!response.ok) {
+          console.error("Failed to save progress");
+        }
+      } catch (error) {
+        console.error("Error saving progress:", error);
+      } finally {
+        setIsSaving(false);
+      }
+    };
+
+    // Debounce the save by waiting a moment after user interaction
+    const timer = setTimeout(saveProgress, 500);
+    return () => clearTimeout(timer);
+  }, [formData, currentStep]);
 
   const updateFormData = (field: keyof FormData, value: any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
