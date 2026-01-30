@@ -2137,5 +2137,438 @@
       "company": "itmethods",
       "email": "vinod.avinane@itmethods.com"
     }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746895704",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:35.704Z",
+    "updatedAt": "2026-01-30T04:21:35.704Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T04:21:35.704Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746898429",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:38.429Z",
+    "updatedAt": "2026-01-30T04:21:38.429Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "DevOps and software delivery"
+          ]
+        },
+        "timestamp": "2026-01-30T04:21:38.429Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746899274",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:39.274Z",
+    "updatedAt": "2026-01-30T04:21:39.274Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T04:21:39.274Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746901206",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:41.206Z",
+    "updatedAt": "2026-01-30T04:21:41.206Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T04:21:41.206Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746902244",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:42.244Z",
+    "updatedAt": "2026-01-30T04:21:42.244Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "AI and data platforms"
+          ]
+        },
+        "timestamp": "2026-01-30T04:21:42.244Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746903099",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:43.099Z",
+    "updatedAt": "2026-01-30T04:21:43.099Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic",
+            "archera"
+          ]
+        },
+        "timestamp": "2026-01-30T04:21:43.099Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746905222",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:45.222Z",
+    "updatedAt": "2026-01-30T04:21:45.222Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T04:21:45.222Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746906394",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:46.394Z",
+    "updatedAt": "2026-01-30T04:21:46.394Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T04:21:46.394Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746909929",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:49.929Z",
+    "updatedAt": "2026-01-30T04:21:49.929Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T04:21:49.929Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746912491",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:52.491Z",
+    "updatedAt": "2026-01-30T04:21:52.491Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "testing 2"
+        },
+        "timestamp": "2026-01-30T04:21:52.491Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 2",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
+  },
+  {
+    "id": "vinod.avinane@itmethods.com-1769746912690",
+    "email": "vinod.avinane@itmethods.com",
+    "company": "itmethods",
+    "createdAt": "2026-01-30T04:21:52.690Z",
+    "updatedAt": "2026-01-30T04:21:52.690Z",
+    "currentStep": 6,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "testing 2"
+        },
+        "timestamp": "2026-01-30T04:21:52.690Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic",
+        "archera"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "testing 2",
+      "name": "Vinod",
+      "role": "presales",
+      "company": "itmethods",
+      "email": "vinod.avinane@itmethods.com"
+    }
   }
 ]
