@@ -94,6 +94,20 @@ export default function Header() {
         <div className="flex items-center gap-3 ml-auto">
           {isAuthenticated ? (
             <>
+              {/* Customer Portal Link - Only for customers */}
+              {userRole === "customer" && (
+                <Link
+                  to="/portal/customer"
+                  className={`hidden md:inline text-sm font-medium transition-colors px-3 py-1 rounded-lg ${
+                    isActive("/portal/customer")
+                      ? "text-primary font-semibold bg-primary/10"
+                      : "text-foreground/70 hover:text-primary hover:bg-primary/5"
+                  }`}
+                >
+                  My Portal
+                </Link>
+              )}
+
               {/* Admin Portal Link - Only for admins */}
               {isAdmin && (
                 <Link
