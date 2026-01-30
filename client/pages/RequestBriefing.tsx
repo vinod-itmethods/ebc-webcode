@@ -385,11 +385,15 @@ export default function RequestBriefing() {
   const handleStartFresh = () => {
     localStorage.removeItem('briefing_form_data');
     localStorage.removeItem('briefing_form_step');
+
+    // Load vendors from wishlist to preserve selected vendors
+    const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
+
     setFormData({
       interests: [],
       decisionContext: [],
       perspectives: [],
-      vendors: [],
+      vendors: wishlist,
       location: "",
       format: "",
       goals: "",
