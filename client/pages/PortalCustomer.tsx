@@ -265,19 +265,9 @@ export default function PortalCustomer() {
       <div className="flex-grow">
         <div className="container max-w-4xl mx-auto px-4 py-20">
           {/* Header */}
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Customer portal</h1>
-              <p className="text-lg text-foreground/90">Welcome. This portal provides a limited view of your Executive Briefing Council activity, including request status and confirmed session details.</p>
-            </div>
-            <Button
-              onClick={handleLogout}
-              variant="secondary-outline"
-              className="flex items-center gap-2 flex-shrink-0"
-            >
-              <LogOut className="w-4 h-4" />
-              Log out
-            </Button>
+          <div className="mb-12">
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Customer portal</h1>
+            <p className="text-lg text-foreground/90">Welcome. This portal provides a limited view of your Executive Briefing Council activity, including request status and confirmed session details.</p>
           </div>
 
           {/* User Info */}
