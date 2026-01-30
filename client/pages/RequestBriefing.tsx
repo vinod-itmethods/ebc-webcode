@@ -502,7 +502,7 @@ export default function RequestBriefing() {
                 </button>
 
                 <div className="flex gap-2 items-center">
-                  {[1, 2, 3, 4, 5, 6, 7].map((step) => (
+                  {Array.from({ length: totalSteps }, (_, i) => i + 1).map((step) => (
                     <div
                       key={step}
                       className={`w-2 h-2 rounded-full transition-colors ${
