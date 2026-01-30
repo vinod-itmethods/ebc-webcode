@@ -14095,5 +14095,222 @@
       "additionalContactEmail": "ava.nguyen@itmethods.com",
       "assistant": ""
     }
+  },
+  {
+    "id": "temp_1769807122273-1769807122466",
+    "email": "temp_1769807122273",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:22.466Z",
+    "updatedAt": "2026-01-30T21:05:22.466Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T21:05:22.466Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807123956-1769807124141",
+    "email": "temp_1769807123956",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:24.141Z",
+    "updatedAt": "2026-01-30T21:05:24.141Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T21:05:24.141Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807124990-1769807125173",
+    "email": "temp_1769807124990",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:25.173Z",
+    "updatedAt": "2026-01-30T21:05:25.173Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption",
+            "Other"
+          ]
+        },
+        "timestamp": "2026-01-30T21:05:25.173Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807127824-1769807128028",
+    "email": "temp_1769807127824",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:28.028Z",
+    "updatedAt": "2026-01-30T21:05:28.028Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T21:05:28.028Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769807129563-1769807129759",
+    "email": "temp_1769807129563",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T21:05:29.759Z",
+    "updatedAt": "2026-01-30T21:05:29.759Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "archera",
+            "gitlab",
+            "lyzr",
+            "cursor"
+          ]
+        },
+        "timestamp": "2026-01-30T21:05:29.759Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption",
+        "Other"
+      ],
+      "decisionContext": [
+        "Preparing for near-term decisions"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
