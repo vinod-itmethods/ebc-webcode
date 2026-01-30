@@ -11,13 +11,15 @@ export async function handleSaveProgress(req: Request, res: Response) {
     const { email, company, stepNumber, stepData, isCompleted, fullData } = req.body;
 
     if (!email || !company || stepNumber === undefined) {
+      console.warn("Missing required fields:", { email, company, stepNumber });
       return res.status(400).json({
         error: "Missing required fields: email, company, stepNumber",
       });
     }
 
-    if (!isAdminEmail(email) && !email.match(/^[\w.-]+@[\w.-]+\.\w+$/)) {
-      // Basic email validation
+    // Skip email validation for temporary progress saves (temp_* emails)
+    if (!email.startsWith("temp_") && !email.match(/^[\w.-]+@[\w.-]+\.\w+$/)) {
+      console.warn("Invalid email format:", email);
       return res.status(400).json({
         error: "Invalid email format",
       });
@@ -40,6 +42,7 @@ export async function handleSaveProgress(req: Request, res: Response) {
     console.error("Error saving form progress:", error);
     return res.status(500).json({
       error: "Failed to save form progress",
+      details: error instanceof Error ? error.message : "Unknown error",
     });
   }
 }
