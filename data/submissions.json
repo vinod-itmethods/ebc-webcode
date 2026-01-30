@@ -12272,5 +12272,1334 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769804558310-1769804558435",
+    "email": "temp_1769804558310",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:22:38.435Z",
+    "updatedAt": "2026-01-30T20:22:38.435Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:22:38.435Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804560264-1769804560381",
+    "email": "temp_1769804560264",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:22:40.381Z",
+    "updatedAt": "2026-01-30T20:22:40.381Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "Platform and cloud architecture"
+          ]
+        },
+        "timestamp": "2026-01-30T20:22:40.381Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804561533-1769804561654",
+    "email": "temp_1769804561533",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:22:41.654Z",
+    "updatedAt": "2026-01-30T20:22:41.654Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T20:22:41.654Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804564228-1769804564347",
+    "email": "temp_1769804564228",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:22:44.347Z",
+    "updatedAt": "2026-01-30T20:22:44.347Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T20:22:44.347Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Platform and cloud architecture"
+      ],
+      "decisionContext": [
+        "Reassessing existing strategy"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804583474-1769804583593",
+    "email": "temp_1769804583474",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:03.593Z",
+    "updatedAt": "2026-01-30T20:23:03.593Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten",
+            "harness",
+            "rootly"
+          ]
+        },
+        "timestamp": "2026-01-30T20:23:03.593Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804588667-1769804588791",
+    "email": "temp_1769804588667",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:08.791Z",
+    "updatedAt": "2026-01-30T20:23:08.791Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T20:23:08.791Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804591474-1769804591608",
+    "email": "temp_1769804591474",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:11.608Z",
+    "updatedAt": "2026-01-30T20:23:11.608Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "London",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T20:23:11.608Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804593612-1769804593740",
+    "email": "temp_1769804593612",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:13.740Z",
+    "updatedAt": "2026-01-30T20:23:13.740Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "London",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T20:23:13.740Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804594480-1769804594598",
+    "email": "temp_1769804594480",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:14.598Z",
+    "updatedAt": "2026-01-30T20:23:14.598Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T20:23:14.598Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804596792-1769804596929",
+    "email": "temp_1769804596792",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:16.929Z",
+    "updatedAt": "2026-01-30T20:23:16.929Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "hh"
+        },
+        "timestamp": "2026-01-30T20:23:16.929Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "hh",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804599682-1769804599806",
+    "email": "temp_1769804599682",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:19.806Z",
+    "updatedAt": "2026-01-30T20:23:19.806Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "test"
+        },
+        "timestamp": "2026-01-30T20:23:19.806Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804600682-1769804600795",
+    "email": "temp_1769804600682",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:20.795Z",
+    "updatedAt": "2026-01-30T20:23:20.795Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T20:23:20.795Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804603414-1769804603530",
+    "email": "temp_1769804603414",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:23:23.530Z",
+    "updatedAt": "2026-01-30T20:23:23.530Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "tedtq",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T20:23:23.530Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "tedtq",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "dan@tiaa.com-1769804610989",
+    "email": "dan@tiaa.com",
+    "company": "test",
+    "createdAt": "2026-01-30T20:23:30.989Z",
+    "updatedAt": "2026-01-30T20:23:30.989Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "test",
+          "role": "test",
+          "company": "test",
+          "email": "dan@tiaa.com"
+        },
+        "timestamp": "2026-01-30T20:23:30.989Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "test",
+      "role": "test",
+      "company": "test",
+      "email": "dan@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "dan@tiaa.com-1769804614766",
+    "email": "dan@tiaa.com",
+    "company": "test",
+    "createdAt": "2026-01-30T20:23:34.766Z",
+    "updatedAt": "2026-01-30T20:23:34.766Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "test",
+          "role": "test",
+          "company": "test",
+          "email": "dan@tiaa.com"
+        },
+        "timestamp": "2026-01-30T20:23:34.766Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "London",
+      "format": "In person",
+      "goals": "test",
+      "name": "test",
+      "role": "test",
+      "company": "test",
+      "email": "dan@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804660218-1769804660334",
+    "email": "temp_1769804660218",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:20.335Z",
+    "updatedAt": "2026-01-30T20:24:20.335Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:24:20.335Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804668319-1769804668425",
+    "email": "temp_1769804668319",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:28.425Z",
+    "updatedAt": "2026-01-30T20:24:28.425Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:24:28.425Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804670532-1769804670657",
+    "email": "temp_1769804670532",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:30.657Z",
+    "updatedAt": "2026-01-30T20:24:30.657Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:24:30.657Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804677932-1769804678050",
+    "email": "temp_1769804677932",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:38.050Z",
+    "updatedAt": "2026-01-30T20:24:38.050Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "Infrastructure modernization"
+          ]
+        },
+        "timestamp": "2026-01-30T20:24:38.050Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804680678-1769804680834",
+    "email": "temp_1769804680678",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:40.834Z",
+    "updatedAt": "2026-01-30T20:24:40.834Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T20:24:40.834Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804682264-1769804682407",
+    "email": "temp_1769804682264",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:42.407Z",
+    "updatedAt": "2026-01-30T20:24:42.407Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": [
+            "Evaluating options and trade-offs"
+          ]
+        },
+        "timestamp": "2026-01-30T20:24:42.407Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804683183-1769804683291",
+    "email": "temp_1769804683183",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:43.291Z",
+    "updatedAt": "2026-01-30T20:24:43.291Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": []
+        },
+        "timestamp": "2026-01-30T20:24:43.291Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804689845-1769804689970",
+    "email": "temp_1769804689845",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:49.970Z",
+    "updatedAt": "2026-01-30T20:24:49.970Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "baseten",
+            "harness",
+            "rootly"
+          ]
+        },
+        "timestamp": "2026-01-30T20:24:49.970Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804691197-1769804691323",
+    "email": "temp_1769804691197",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:51.323Z",
+    "updatedAt": "2026-01-30T20:24:51.323Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T20:24:51.323Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804693510-1769804693632",
+    "email": "temp_1769804693510",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:53.632Z",
+    "updatedAt": "2026-01-30T20:24:53.632Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "San Francisco",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T20:24:53.632Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804696995-1769804697101",
+    "email": "temp_1769804696995",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:24:57.101Z",
+    "updatedAt": "2026-01-30T20:24:57.101Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T20:24:57.101Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804714009-1769804714129",
+    "email": "temp_1769804714009",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:25:14.129Z",
+    "updatedAt": "2026-01-30T20:25:14.129Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "",
+          "role": "",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T20:25:14.129Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804717250-1769804717368",
+    "email": "temp_1769804717250",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:25:17.368Z",
+    "updatedAt": "2026-01-30T20:25:17.368Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "test",
+          "role": "test",
+          "company": "",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T20:25:17.368Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test",
+      "name": "test",
+      "role": "test",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804718627-1769804718764",
+    "email": "temp_1769804718627",
+    "company": "test",
+    "createdAt": "2026-01-30T20:25:18.764Z",
+    "updatedAt": "2026-01-30T20:25:18.764Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "test",
+          "role": "test",
+          "company": "test",
+          "email": ""
+        },
+        "timestamp": "2026-01-30T20:25:18.764Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test",
+      "name": "test",
+      "role": "test",
+      "company": "test",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "dan@tiaa.com-1769804721655",
+    "email": "dan@tiaa.com",
+    "company": "test",
+    "createdAt": "2026-01-30T20:25:21.655Z",
+    "updatedAt": "2026-01-30T20:25:21.655Z",
+    "currentStep": 7,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "test",
+          "role": "test",
+          "company": "test",
+          "email": "dan@tiaa.com"
+        },
+        "timestamp": "2026-01-30T20:25:21.655Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test",
+      "name": "test",
+      "role": "test",
+      "company": "test",
+      "email": "dan@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "dan@tiaa.com-1769804722813",
+    "email": "dan@tiaa.com",
+    "company": "test",
+    "createdAt": "2026-01-30T20:25:22.813Z",
+    "updatedAt": "2026-01-30T20:25:22.813Z",
+    "currentStep": 7,
+    "isCompleted": true,
+    "steps": [
+      {
+        "stepNumber": 7,
+        "data": {
+          "name": "test",
+          "role": "test",
+          "company": "test",
+          "email": "dan@tiaa.com"
+        },
+        "timestamp": "2026-01-30T20:25:22.813Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test",
+      "name": "test",
+      "role": "test",
+      "company": "test",
+      "email": "dan@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769804787642-1769804787763",
+    "email": "temp_1769804787642",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:26:27.763Z",
+    "updatedAt": "2026-01-30T20:26:27.763Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:26:27.763Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769806402913-1769806403184",
+    "email": "temp_1769806402913",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T20:53:23.184Z",
+    "updatedAt": "2026-01-30T20:53:23.184Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T20:53:23.184Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "continuai",
+        "archera",
+        "gitlab",
+        "lyzr",
+        "cursor"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]

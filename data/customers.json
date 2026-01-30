@@ -58,5 +58,41 @@
       "email": "testadmin@itmethods.com"
     },
     "status": "active"
+  },
+  {
+    "id": "cust_1769804614642_ta9rb2ova",
+    "email": "dan@tiaa.com",
+    "name": "test",
+    "role": "test",
+    "company": "test",
+    "createdAt": "2026-01-30T20:23:34.642Z",
+    "updatedAt": "2026-01-30T20:25:22.709Z",
+    "briefingData": {
+      "interests": [
+        "Infrastructure modernization"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "DevOps and delivery platforms"
+      ],
+      "vendors": [
+        "baseten",
+        "harness",
+        "rootly"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "test",
+      "name": "test",
+      "role": "test",
+      "company": "test",
+      "email": "dan@tiaa.com",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    },
+    "status": "active",
+    "approvalStatus": "pending"
   }
 ]
