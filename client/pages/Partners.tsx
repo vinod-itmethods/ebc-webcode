@@ -83,7 +83,7 @@ export default function Partners() {
 
       {/* Back to Briefing Bar */}
       {returnTo === 'briefing' && (
-        <section className="sticky top-0 z-40 bg-blue-50 border-b border-blue-200 py-3 shadow-sm">
+        <section className="sticky top-16 z-40 bg-blue-50 border-b border-blue-200 py-3 shadow-sm">
           <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
             <p className="text-sm text-foreground/70">Browsing more vendors for your briefing request</p>
             <Button
