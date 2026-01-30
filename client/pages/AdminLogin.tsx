@@ -10,12 +10,15 @@ export default function AdminLogin() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [isChecking, setIsChecking] = useState(true);
 
   // If already authenticated, redirect to submissions page
   useEffect(() => {
     const adminEmail = localStorage.getItem("adminEmail");
-    if (adminEmail) {
+    if (adminEmail && adminEmail.endsWith("@itmethods.com")) {
       navigate("/admin/submissions", { replace: true });
+    } else {
+      setIsChecking(false);
     }
   }, [navigate]);
 
