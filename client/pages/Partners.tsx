@@ -267,8 +267,12 @@ export default function Partners() {
               </Button>
               <Button
                 onClick={() => {
-                  toggleVendor(selectedPartner.id);
-                  localStorage.setItem('vendor_wishlist', JSON.stringify([...selectedVendors, selectedPartner.id].filter((id, idx, arr) => arr.indexOf(id) === idx)));
+                  // Calculate the updated vendors list before navigating
+                  const updatedVendors = selectedVendors.includes(selectedPartner.id)
+                    ? selectedVendors.filter(id => id !== selectedPartner.id)
+                    : [...selectedVendors, selectedPartner.id];
+
+                  localStorage.setItem('vendor_wishlist', JSON.stringify(updatedVendors));
                   navigate('/request-briefing?step=4');
                 }}
                 variant="secondary-outline"
