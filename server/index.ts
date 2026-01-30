@@ -29,5 +29,10 @@ export function createServer() {
   app.post("/api/save-progress", handleSaveProgress);
   app.get("/api/submissions", handleGetSubmissions);
 
+  // Customer registration endpoints
+  app.post("/api/validate-email", handleValidateEmail);
+  app.post("/api/register-customer", handleRegisterCustomer);
+  app.get("/api/personal-domains", handleGetPersonalDomains);
+
   return app;
 }
