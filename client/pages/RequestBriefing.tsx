@@ -946,6 +946,41 @@ function Step7Contact({
             className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
           />
         </div>
+
+        {/* Additional Contact */}
+        <div className="border-t border-border/10 pt-6 mt-6">
+          <div className="flex items-center justify-between mb-4">
+            <label className="block text-sm font-semibold text-foreground">
+              Additional attendee <span className="text-foreground/50">(optional)</span>
+            </label>
+            <span className="text-xs text-foreground/50 font-medium">Max 1 additional contact</span>
+          </div>
+
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-semibold text-foreground mb-2">Name</label>
+              <input
+                type="text"
+                value={additionalContactName || ""}
+                onChange={(e) => onUpdate("additionalContactName", e.target.value)}
+                placeholder="Full name"
+                className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-foreground mb-2">Email address</label>
+              <input
+                type="email"
+                value={additionalContactEmail || ""}
+                onChange={(e) => onUpdate("additionalContactEmail", e.target.value)}
+                placeholder="work@company.com"
+                className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
+              />
+              <p className="text-xs text-foreground/50 mt-2">This person will receive the same portal access as the primary contact.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
