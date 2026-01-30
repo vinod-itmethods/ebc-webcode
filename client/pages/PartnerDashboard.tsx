@@ -29,19 +29,9 @@ export default function PartnerDashboard() {
       <Header />
 
       <div className="container max-w-6xl mx-auto px-4 py-20">
-        <div className="flex items-center justify-between mb-12">
-          <div>
-            <h1 className="text-4xl font-bold text-foreground">Partner Dashboard</h1>
-            <p className="text-foreground/60 mt-2">Executive Business Council Partner Portal</p>
-          </div>
-          <Button
-            onClick={handleLogout}
-            variant="outline"
-            className="flex items-center gap-2"
-          >
-            <LogOut className="w-4 h-4" />
-            Logout
-          </Button>
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold text-foreground">Partner Dashboard</h1>
+          <p className="text-foreground/60 mt-2">Executive Business Council Partner Portal</p>
         </div>
 
         {/* Tab Navigation */}
