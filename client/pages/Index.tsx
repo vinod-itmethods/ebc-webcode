@@ -52,32 +52,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* VENDOR / TECHNOLOGY PROVIDER SECTION */}
-      <section className="py-16 lg:py-20 bg-gradient-to-r from-slate-50 to-slate-100 border-b border-border/10">
-        <div className="container max-w-4xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-grow">
-              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">For technology providers</h2>
-              <p className="text-lg text-foreground/90 mb-6 leading-relaxed">
-                Are you a technology vendor interested in participating in Executive Briefing Council sessions? Sign in to your vendor dashboard to manage your company profile, configure your presence, and monitor briefing opportunities.
-              </p>
-              <Button
-                asChild
-                variant="default"
-                className="font-semibold rounded-lg"
-              >
-                <Link to="/partner-login">Vendor Login</Link>
-              </Button>
-            </div>
-            <div className="hidden md:block flex-shrink-0">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
-                <Briefcase className="w-16 h-16 text-primary opacity-50" strokeWidth={1} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div className="bg-white">
       {/* OUR PROGRAM SECTION */}
       <section id="what" className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/40 to-white">
