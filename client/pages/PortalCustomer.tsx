@@ -31,6 +31,9 @@ interface BriefingRequest {
 
 export default function PortalCustomer() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [customer, setCustomer] = useState<CustomerProfile | null>(null);
+  const [briefingRequests, setBriefingRequests] = useState<BriefingRequest[]>([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const userEmail = localStorage.getItem("userEmail") || "user@company.com";
 
@@ -41,8 +44,55 @@ export default function PortalCustomer() {
       navigate("/portal");
     } else {
       setIsAuthenticated(true);
+      fetchCustomerProfile();
     }
-  }, [navigate]);
+  }, [navigate, userEmail]);
+
+  const fetchCustomerProfile = async () => {
+    try {
+      const response = await fetch(`/api/customer-profile?email=${encodeURIComponent(userEmail)}`);
+      if (response.ok) {
+        const data = await response.json();
+        setCustomer(data.customer);
+
+        // Generate briefing request cards from the customer's briefing data
+        if (data.customer.briefingData) {
+          const request = generateBriefingCard(data.customer.briefingData, data.customer.updatedAt);
+          setBriefingRequests([request]);
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching customer profile:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const generateBriefingCard = (briefingData: any, submittedDate: string): BriefingRequest => {
+    const interests = briefingData.interests || [];
+    const location = briefingData.location || "Not specified";
+
+    return {
+      id: `br-${Date.now()}`,
+      status: "pending",
+      topics: interests.slice(0, 2),
+      timeframe: location,
+      attendees: 5,
+      submittedDate: new Date(submittedDate).toLocaleDateString(),
+      statusMessage: "Your briefing request has been received and is currently being reviewed. We'll notify you when scheduling is confirmed.",
+    };
+  };
+
+  const handleRequestAnotherBriefing = () => {
+    // Store customer info for pre-filling
+    localStorage.setItem("prefillCustomerEmail", customer?.email || "");
+    localStorage.setItem("prefillCustomerName", customer?.name || "");
+    localStorage.setItem("prefillCustomerCompany", customer?.company || "");
+    localStorage.setItem("prefillCustomerRole", customer?.role || "");
+    localStorage.setItem("skipContactStep", "true");
+
+    navigate("/request-briefing");
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("portalAuthenticated");
@@ -50,19 +100,6 @@ export default function PortalCustomer() {
     localStorage.removeItem("userEmail");
     navigate("/portal");
   };
-
-  // Mock briefing request data
-  const briefingRequests: BriefingRequest[] = [
-    {
-      id: "br-001",
-      status: "pending",
-      topics: ["AI & Machine Learning", "DevOps & Continuous Delivery"],
-      timeframe: "Q2 2024",
-      attendees: 8,
-      submittedDate: "March 15, 2024",
-      statusMessage: "Your request has been received and is currently being reviewed. We'll notify you when scheduling is confirmed.",
-    },
-  ];
 
   const getStatusIcon = (status: RequestStatus) => {
     switch (status) {
