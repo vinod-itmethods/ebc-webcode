@@ -35,5 +35,11 @@ export function createServer() {
   app.get("/api/personal-domains", handleGetPersonalDomains);
   app.get("/api/customer-profile", handleGetCustomerProfile);
 
+  // Admin customer management endpoints
+  app.get("/api/admin/customers", handleGetAllCustomers);
+  app.post("/api/admin/customers/approve", handleApproveCustomer);
+  app.post("/api/admin/customers/reject", handleRejectCustomer);
+  app.post("/api/admin/customers/remove", handleRemoveCustomer);
+
   return app;
 }
