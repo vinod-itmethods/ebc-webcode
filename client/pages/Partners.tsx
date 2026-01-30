@@ -289,7 +289,7 @@ export default function Partners() {
                 }}
                 className="flex-1 font-semibold rounded-lg"
               >
-                {selectedVendors.includes(selectedPartner.id) ? "Remove from briefing" : "Include in briefing"}
+                {selectedVendors.includes(selectedPartner.id) ? "Remove from wishlist" : "Add to wishlist"}
               </Button>
               <Button
                 onClick={() => {
