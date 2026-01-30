@@ -36,6 +36,8 @@ export default function Header() {
     return location.pathname === path;
   };
 
+  const isAdmin = userEmail && userEmail.endsWith("@itmethods.com");
+
   const handleLogout = () => {
     localStorage.removeItem("portalAuthenticated");
     localStorage.removeItem("userRole");
