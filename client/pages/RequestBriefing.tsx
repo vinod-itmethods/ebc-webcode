@@ -144,10 +144,36 @@ export default function RequestBriefing() {
           !!formData.name.trim() &&
           !!formData.role.trim() &&
           !!formData.company.trim() &&
-          !!formData.email.trim()
+          !!formData.email.trim() &&
+          !emailError
         );
       default:
         return false;
+    }
+  };
+
+  const validateEmailDomain = async (email: string) => {
+    if (!email) {
+      setEmailError(null);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/validate-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || data.isPersonalEmail) {
+        setEmailError("Please use your work email address, not a personal email (gmail, yahoo, outlook, etc.)");
+      } else {
+        setEmailError(null);
+      }
+    } catch (error) {
+      console.error("Error validating email:", error);
     }
   };
 
