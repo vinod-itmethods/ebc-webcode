@@ -7754,5 +7754,1059 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769800095875-1769800096002",
+    "email": "temp_1769800095875",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:16.002Z",
+    "updatedAt": "2026-01-30T19:08:16.002Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:08:16.002Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800097962-1769800098075",
+    "email": "temp_1769800097962",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:18.075Z",
+    "updatedAt": "2026-01-30T19:08:18.075Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "Governance, risk, and compliance"
+          ]
+        },
+        "timestamp": "2026-01-30T19:08:18.075Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800098828-1769800098945",
+    "email": "temp_1769800098828",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:18.945Z",
+    "updatedAt": "2026-01-30T19:08:18.945Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T19:08:18.945Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800101458-1769800101578",
+    "email": "temp_1769800101458",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:21.578Z",
+    "updatedAt": "2026-01-30T19:08:21.578Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic"
+          ]
+        },
+        "timestamp": "2026-01-30T19:08:21.578Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800103116-1769800103233",
+    "email": "temp_1769800103116",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:23.233Z",
+    "updatedAt": "2026-01-30T19:08:23.233Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T19:08:23.233Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800104080-1769800104180",
+    "email": "temp_1769800104080",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:24.180Z",
+    "updatedAt": "2026-01-30T19:08:24.180Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T19:08:24.180Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800105826-1769800105957",
+    "email": "temp_1769800105826",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:25.957Z",
+    "updatedAt": "2026-01-30T19:08:25.957Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "Open to recommendations"
+        },
+        "timestamp": "2026-01-30T19:08:25.957Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "Open to recommendations",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800106990-1769800107089",
+    "email": "temp_1769800106990",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:27.089Z",
+    "updatedAt": "2026-01-30T19:08:27.089Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T19:08:27.089Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800109190-1769800109306",
+    "email": "temp_1769800109190",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:29.306Z",
+    "updatedAt": "2026-01-30T19:08:29.306Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "San Francisco",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T19:08:29.306Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800110152-1769800110295",
+    "email": "temp_1769800110152",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:30.295Z",
+    "updatedAt": "2026-01-30T19:08:30.295Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T19:08:30.295Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Open to recommendations"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "San Francisco",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800139327-1769800139446",
+    "email": "temp_1769800139327",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:08:59.446Z",
+    "updatedAt": "2026-01-30T19:08:59.446Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:08:59.446Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800140893-1769800141003",
+    "email": "temp_1769800140893",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:01.004Z",
+    "updatedAt": "2026-01-30T19:09:01.004Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "AI strategy and adoption"
+          ]
+        },
+        "timestamp": "2026-01-30T19:09:01.004Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800144730-1769800144832",
+    "email": "temp_1769800144730",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:04.832Z",
+    "updatedAt": "2026-01-30T19:09:04.832Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic"
+          ]
+        },
+        "timestamp": "2026-01-30T19:09:04.832Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800146441-1769800146543",
+    "email": "temp_1769800146441",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:06.543Z",
+    "updatedAt": "2026-01-30T19:09:06.543Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": ""
+        },
+        "timestamp": "2026-01-30T19:09:06.543Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800148018-1769800148130",
+    "email": "temp_1769800148018",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:08.130Z",
+    "updatedAt": "2026-01-30T19:09:08.130Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T19:09:08.130Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800154072-1769800154190",
+    "email": "temp_1769800154072",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:14.190Z",
+    "updatedAt": "2026-01-30T19:09:14.190Z",
+    "currentStep": 5,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 5,
+        "data": {
+          "location": "New York",
+          "format": "In person"
+        },
+        "timestamp": "2026-01-30T19:09:14.190Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800167463-1769800167583",
+    "email": "temp_1769800167463",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:27.583Z",
+    "updatedAt": "2026-01-30T19:09:27.583Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": ""
+        },
+        "timestamp": "2026-01-30T19:09:27.583Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800171808-1769800171923",
+    "email": "temp_1769800171808",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:31.923Z",
+    "updatedAt": "2026-01-30T19:09:31.923Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "test text"
+        },
+        "timestamp": "2026-01-30T19:09:31.923Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "test text",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800174041-1769800174169",
+    "email": "temp_1769800174041",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:09:34.169Z",
+    "updatedAt": "2026-01-30T19:09:34.169Z",
+    "currentStep": 6,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 6,
+        "data": {
+          "goals": "test test"
+        },
+        "timestamp": "2026-01-30T19:09:34.169Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "AI strategy and adoption"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "AI and data platforms"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "New York",
+      "format": "In person",
+      "goals": "test test",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800515044-1769800515209",
+    "email": "temp_1769800515044",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:15:15.209Z",
+    "updatedAt": "2026-01-30T19:15:15.209Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:15:15.209Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800517432-1769800517531",
+    "email": "temp_1769800517432",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:15:17.531Z",
+    "updatedAt": "2026-01-30T19:15:17.531Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "DevOps and software delivery"
+          ]
+        },
+        "timestamp": "2026-01-30T19:15:17.531Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800519041-1769800519152",
+    "email": "temp_1769800519041",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:15:19.152Z",
+    "updatedAt": "2026-01-30T19:15:19.152Z",
+    "currentStep": 2,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 2,
+        "data": {
+          "decisionContext": []
+        },
+        "timestamp": "2026-01-30T19:15:19.152Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800521352-1769800521489",
+    "email": "temp_1769800521352",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:15:21.489Z",
+    "updatedAt": "2026-01-30T19:15:21.489Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Platform and tooling vendors"
+          ]
+        },
+        "timestamp": "2026-01-30T19:15:21.489Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "Platform and tooling vendors"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800522692-1769800522800",
+    "email": "temp_1769800522692",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:15:22.800Z",
+    "updatedAt": "2026-01-30T19:15:22.800Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": [
+            "anthropic"
+          ]
+        },
+        "timestamp": "2026-01-30T19:15:22.800Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "Platform and tooling vendors"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800532644-1769800532759",
+    "email": "temp_1769800532644",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:15:32.759Z",
+    "updatedAt": "2026-01-30T19:15:32.759Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Platform and tooling vendors"
+          ]
+        },
+        "timestamp": "2026-01-30T19:15:32.759Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "Platform and tooling vendors"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769800535300-1769800535426",
+    "email": "temp_1769800535300",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:15:35.426Z",
+    "updatedAt": "2026-01-30T19:15:35.426Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": [
+            "DevOps and software delivery"
+          ]
+        },
+        "timestamp": "2026-01-30T19:15:35.426Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "DevOps and software delivery"
+      ],
+      "decisionContext": [
+        "Evaluating options and trade-offs"
+      ],
+      "perspectives": [
+        "Platform and tooling vendors"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
