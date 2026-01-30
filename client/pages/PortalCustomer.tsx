@@ -71,7 +71,11 @@ export default function PortalCustomer() {
 
         // Generate briefing request cards from the customer's briefing data
         if (data.customer.briefingData) {
-          const request = generateBriefingCard(data.customer.briefingData, data.customer.updatedAt);
+          const request = generateBriefingCard(
+            data.customer.briefingData,
+            data.customer.updatedAt,
+            data.customer.approvalStatus
+          );
           setBriefingRequests([request]);
 
           // Generate timeline events
