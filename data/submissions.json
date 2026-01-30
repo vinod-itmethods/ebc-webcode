@@ -9252,5 +9252,299 @@
       "additionalContactName": "",
       "additionalContactEmail": ""
     }
+  },
+  {
+    "id": "temp_1769801878461-1769801878529",
+    "email": "temp_1769801878461",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:37:58.529Z",
+    "updatedAt": "2026-01-30T19:37:58.529Z",
+    "currentStep": 4,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 4,
+        "data": {
+          "vendors": []
+        },
+        "timestamp": "2026-01-30T19:37:58.529Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Cloud and infrastructure providers"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769801881125-1769801881169",
+    "email": "temp_1769801881125",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:38:01.169Z",
+    "updatedAt": "2026-01-30T19:38:01.169Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Cloud and infrastructure providers"
+          ]
+        },
+        "timestamp": "2026-01-30T19:38:01.169Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Cloud and infrastructure providers"
+      ],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769801884028-1769801884091",
+    "email": "temp_1769801884028",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:38:04.091Z",
+    "updatedAt": "2026-01-30T19:38:04.091Z",
+    "currentStep": 3,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 3,
+        "data": {
+          "perspectives": [
+            "Cloud and infrastructure providers"
+          ]
+        },
+        "timestamp": "2026-01-30T19:38:04.091Z"
+      }
+    ],
+    "fullData": {
+      "interests": [
+        "Governance, risk, and compliance"
+      ],
+      "decisionContext": [
+        "Aligning executive or leadership teams"
+      ],
+      "perspectives": [
+        "Cloud and infrastructure providers"
+      ],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769801894820-1769801894883",
+    "email": "temp_1769801894820",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:38:14.883Z",
+    "updatedAt": "2026-01-30T19:38:14.883Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:38:14.883Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769801895958-1769801896002",
+    "email": "temp_1769801895958",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:38:16.002Z",
+    "updatedAt": "2026-01-30T19:38:16.002Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:38:16.002Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769801912035-1769801912199",
+    "email": "temp_1769801912035",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:38:32.199Z",
+    "updatedAt": "2026-01-30T19:38:32.199Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:38:32.199Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [
+        "anthropic"
+      ],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769801937894-1769801937918",
+    "email": "temp_1769801937894",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:38:57.918Z",
+    "updatedAt": "2026-01-30T19:38:57.918Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:38:57.918Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
+  },
+  {
+    "id": "temp_1769801938619-1769801938643",
+    "email": "temp_1769801938619",
+    "company": "Unknown Company",
+    "createdAt": "2026-01-30T19:38:58.643Z",
+    "updatedAt": "2026-01-30T19:38:58.643Z",
+    "currentStep": 1,
+    "isCompleted": false,
+    "steps": [
+      {
+        "stepNumber": 1,
+        "data": {
+          "interests": []
+        },
+        "timestamp": "2026-01-30T19:38:58.643Z"
+      }
+    ],
+    "fullData": {
+      "interests": [],
+      "decisionContext": [],
+      "perspectives": [],
+      "vendors": [],
+      "location": "",
+      "format": "",
+      "goals": "",
+      "name": "",
+      "role": "",
+      "company": "",
+      "email": "",
+      "additionalContactName": "",
+      "additionalContactEmail": ""
+    }
   }
 ]
