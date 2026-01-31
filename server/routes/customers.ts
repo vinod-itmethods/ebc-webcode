@@ -135,7 +135,7 @@ export async function handleGetCustomerProfile(req: Request, res: Response) {
       });
     }
 
-    const customer = getCustomerByEmail(String(email));
+    const customer = await getCustomerByEmail(String(email));
 
     if (!customer) {
       return res.status(404).json({
