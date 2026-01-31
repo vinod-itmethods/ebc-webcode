@@ -183,7 +183,7 @@ export async function handleRemoveCustomer(req: Request, res: Response) {
     }
 
     // Remove the customer
-    const removed = removeCustomer(customerEmail);
+    const removed = await removeCustomer(customerEmail);
 
     if (!removed) {
       return res.status(404).json({
