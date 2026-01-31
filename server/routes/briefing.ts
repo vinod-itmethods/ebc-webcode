@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import nodemailer from "nodemailer";
+import { logFormSubmission } from "../lib/audit-log";
 
 // Configure email transporter
 const transporter = nodemailer.createTransport({
