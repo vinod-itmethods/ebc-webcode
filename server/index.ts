@@ -7,7 +7,7 @@ import { handleSaveProgress, handleGetSubmissions, handleApproveCustomer, handle
 import { handleValidateEmail, handleRegisterCustomer, handleGetPersonalDomains, handleGetCustomerProfile } from "./routes/customers";
 import { rateLimit } from "./lib/rate-limit";
 import { verifyCaptcha } from "./lib/captcha";
-import { getAuditLogs, isAdminEmail } from "./lib/audit-log";
+import { getAuditLogs } from "./lib/audit-log";
 
 export function createServer() {
   const app = express();
