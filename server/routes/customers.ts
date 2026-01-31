@@ -82,7 +82,7 @@ export async function handleRegisterCustomer(req: Request, res: Response) {
     }
 
     // Create customer profile
-    const customer = createCustomerProfile(email, name, role, company, briefingData, additionalContact);
+    const customer = await createCustomerProfile(email, name, role, company, briefingData, additionalContact);
 
     if (!customer) {
       return res.status(400).json({
