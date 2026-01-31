@@ -215,7 +215,7 @@ export async function handleGetAllCustomers(req: Request, res: Response) {
       });
     }
 
-    const customers = getAllCustomers();
+    const customers = await getAllCustomers();
 
     // Separate by approval status
     const pending = customers.filter((c) => c.approvalStatus === "pending");
