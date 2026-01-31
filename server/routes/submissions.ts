@@ -60,7 +60,7 @@ export async function handleGetSubmissions(req: Request, res: Response) {
       });
     }
 
-    const submissions = getAllSubmissions();
+    const submissions = await getAllSubmissions();
 
     return res.status(200).json({
       success: true,
