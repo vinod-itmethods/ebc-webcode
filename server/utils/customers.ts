@@ -42,51 +42,6 @@ export interface CustomerProfile {
   additionalContact?: AdditionalContact;
 }
 
-function ensureDataDir() {
-  const dir = join(process.cwd(), "data");
-  if (!existsSync(dir)) {
-    try {
-      mkdirSync(dir, { recursive: true });
-    } catch (error) {
-      console.error("Error creating data directory:", error);
-    }
-  }
-
-  // Ensure the customers file exists
-  if (!existsSync(CUSTOMERS_FILE)) {
-    try {
-      writeFileSync(CUSTOMERS_FILE, JSON.stringify([]));
-    } catch (error) {
-      console.error("Error creating customers file:", error);
-    }
-  }
-}
-
-function loadCustomers(): CustomerProfile[] {
-  ensureDataDir();
-  try {
-    if (existsSync(CUSTOMERS_FILE)) {
-      const data = readFileSync(CUSTOMERS_FILE, "utf-8");
-      return JSON.parse(data || "[]");
-    }
-  } catch (error) {
-    console.error("Error loading customers:", error);
-  }
-  return [];
-}
-
-function saveCustomers(customers: CustomerProfile[]) {
-  try {
-    ensureDataDir();
-    writeFileSync(CUSTOMERS_FILE, JSON.stringify(customers, null, 2));
-    console.log(`Customers saved to ${CUSTOMERS_FILE}`);
-  } catch (error) {
-    console.error("Error saving customers to file:", error);
-    console.error("File path:", CUSTOMERS_FILE);
-    throw error;
-  }
-}
-
 export function isValidWorkEmail(email: string): boolean {
   const domain = email.split("@")[1]?.toLowerCase();
   if (!domain) return false;
