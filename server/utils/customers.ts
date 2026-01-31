@@ -1,7 +1,6 @@
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from "fs";
-import { join } from "path";
+import { supabase } from "../lib/supabase";
 
-const CUSTOMERS_FILE = join(process.cwd(), "data", "customers.json");
+// Note: JSON file support removed in favor of Supabase
 
 // Personal email domains to reject
 const PERSONAL_EMAIL_DOMAINS = [
