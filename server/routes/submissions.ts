@@ -27,7 +27,7 @@ export async function handleSaveProgress(req: Request, res: Response) {
       });
     }
 
-    const submission = saveFormProgress(
+    const submission = await saveFormProgress(
       email,
       company,
       stepNumber,
