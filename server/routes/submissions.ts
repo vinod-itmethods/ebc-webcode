@@ -155,6 +155,9 @@ export async function handleRejectCustomer(req: Request, res: Response) {
       });
     }
 
+    // Log the rejection for audit trail
+    await logCustomerRejection(adminEmail, customerEmail, req);
+
     return res.status(200).json({
       success: true,
       message: "Customer rejected",
