@@ -18,78 +18,124 @@ export interface BriefingSubmission {
   fullData?: any;
 }
 
-export function saveFormProgress(
+export async function saveFormProgress(
   email: string,
   company: string,
   stepNumber: number,
   stepData: any,
   isCompleted: boolean = false,
   fullData?: any
-): BriefingSubmission {
-  const submissions = loadSubmissions();
-  const id = `${email}-${Date.now()}`;
-  
-  // Find existing submission for this email/company combo from today
-  const today = new Date().toDateString();
-  let submission = submissions.find(
-    (s) => s.email === email && s.company === company && s.createdAt.startsWith(today)
-  );
-
+): Promise<BriefingSubmission> {
   const now = new Date().toISOString();
+  const id = `${email}-${Date.now()}`;
 
-  if (!submission) {
-    submission = {
-      id,
-      email,
-      company,
-      createdAt: now,
-      updatedAt: now,
-      currentStep: stepNumber,
-      isCompleted,
-      steps: [],
-      fullData,
-    };
-    submissions.push(submission);
-  } else {
-    submission.updatedAt = now;
-    submission.currentStep = stepNumber;
-    submission.isCompleted = isCompleted;
-    if (fullData) {
-      submission.fullData = fullData;
+  // Try to find existing submission
+  const { data: existing } = await supabase
+    .from("briefing_submissions")
+    .select("*")
+    .eq("email", email)
+    .eq("company", company)
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .single();
+
+  let submission: any;
+
+  if (existing) {
+    // Update existing submission
+    const steps = existing.steps || [];
+    const existingStepIndex = steps.findIndex((s: any) => s.stepNumber === stepNumber);
+
+    if (existingStepIndex >= 0) {
+      steps[existingStepIndex] = {
+        stepNumber,
+        data: stepData,
+        timestamp: now,
+      };
+    } else {
+      steps.push({
+        stepNumber,
+        data: stepData,
+        timestamp: now,
+      });
     }
-  }
 
-  // Add or update step
-  const existingStepIndex = submission.steps.findIndex(
-    (s) => s.stepNumber === stepNumber
-  );
+    steps.sort((a: any, b: any) => a.stepNumber - b.stepNumber);
 
-  if (existingStepIndex >= 0) {
-    submission.steps[existingStepIndex] = {
-      stepNumber,
-      data: stepData,
-      timestamp: now,
-    };
+    const { data: updated } = await supabase
+      .from("briefing_submissions")
+      .update({
+        updated_at: now,
+        current_step: stepNumber,
+        is_completed: isCompleted,
+        steps,
+        full_data: fullData || existing.full_data,
+      })
+      .eq("id", existing.id)
+      .select()
+      .single();
+
+    submission = updated;
   } else {
-    submission.steps.push({
-      stepNumber,
-      data: stepData,
-      timestamp: now,
-    });
+    // Create new submission
+    const { data: created } = await supabase
+      .from("briefing_submissions")
+      .insert({
+        id,
+        email,
+        company,
+        created_at: now,
+        updated_at: now,
+        current_step: stepNumber,
+        is_completed: isCompleted,
+        steps: [
+          {
+            stepNumber,
+            data: stepData,
+            timestamp: now,
+          },
+        ],
+        full_data: fullData,
+      })
+      .select()
+      .single();
+
+    submission = created;
   }
 
-  // Sort steps by step number
-  submission.steps.sort((a, b) => a.stepNumber - b.stepNumber);
-
-  saveSubmissions(submissions);
-  return submission;
+  return formatSubmissionResponse(submission);
 }
 
-export function getAllSubmissions(): BriefingSubmission[] {
-  return loadSubmissions();
+export async function getAllSubmissions(): Promise<BriefingSubmission[]> {
+  const { data } = await supabase
+    .from("briefing_submissions")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  return data ? data.map(formatSubmissionResponse) : [];
 }
 
-export function getSubmissionsByEmail(email: string): BriefingSubmission[] {
-  const submissions = loadSubmissions();
-  return submissions.filter((s) => s.email === email);
+export async function getSubmissionsByEmail(email: string): Promise<BriefingSubmission[]> {
+  const { data } = await supabase
+    .from("briefing_submissions")
+    .select("*")
+    .eq("email", email)
+    .order("created_at", { ascending: false });
+
+  return data ? data.map(formatSubmissionResponse) : [];
+}
+
+// Helper function to format Supabase response
+function formatSubmissionResponse(data: any): BriefingSubmission {
+  return {
+    id: data.id,
+    email: data.email,
+    company: data.company,
+    createdAt: data.created_at,
+    updatedAt: data.updated_at,
+    currentStep: data.current_step,
+    isCompleted: data.is_completed,
+    steps: data.steps || [],
+    fullData: data.full_data,
+  };
 }
