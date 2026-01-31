@@ -143,7 +143,7 @@ export async function handleRejectCustomer(req: Request, res: Response) {
     }
 
     // Reject the customer
-    const customer = rejectCustomer(customerEmail);
+    const customer = await rejectCustomer(customerEmail);
 
     if (!customer) {
       return res.status(404).json({
