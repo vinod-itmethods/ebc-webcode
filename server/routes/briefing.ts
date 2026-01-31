@@ -188,6 +188,9 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
   const internalEmailHtml = formatBriefingEmail(data);
 
   try {
+    // Log the form submission for audit trail
+    await logFormSubmission(data.email, data.company, req);
+
     // Send notification to internal team
     await transporter.sendMail({
       from: process.env.SMTP_FROM || "noreply@itmethods.com",
