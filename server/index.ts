@@ -58,5 +58,57 @@ export function createServer() {
   app.post("/api/admin/customers/reject", handleRejectCustomer);
   app.post("/api/admin/customers/remove", handleRemoveCustomer);
 
+  // Audit logs endpoint (admin only)
+  app.get("/api/admin/audit-logs", async (req, res) => {
+    try {
+      const { adminEmail } = req.query;
+
+      // Verify admin access
+      if (!adminEmail || !adminEmail.toString().endsWith("@itmethods.com")) {
+        return res.status(403).json({
+          error: "Unauthorized: only @itmethods.com emails can view audit logs",
+        });
+      }
+
+      const limit = parseInt((req.query.limit as string) || "100");
+      const offset = parseInt((req.query.offset as string) || "0");
+
+      const logs = await getAuditLogs(limit, offset);
+
+      return res.status(200).json({
+        success: true,
+        logs,
+        count: logs.length,
+      });
+    } catch (error) {
+      console.error("Error fetching audit logs:", error);
+      return res.status(500).json({
+        error: "Failed to fetch audit logs",
+      });
+    }
+  });
+
+  // CAPTCHA verification endpoint
+  app.post("/api/verify-captcha", async (req, res) => {
+    try {
+      const { captchaToken } = req.body;
+
+      if (!captchaToken) {
+        return res.status(400).json({
+          error: "CAPTCHA token is required",
+        });
+      }
+
+      const result = await verifyCaptcha(captchaToken);
+
+      return res.status(200).json(result);
+    } catch (error) {
+      console.error("Error verifying CAPTCHA:", error);
+      return res.status(500).json({
+        error: "Failed to verify CAPTCHA",
+      });
+    }
+  });
+
   return app;
 }
