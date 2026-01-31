@@ -17,6 +17,20 @@ export function createServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
+  // Security: Rate limiting for form submissions (5 per hour per IP)
+  const formRateLimit = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 5, // 5 requests per hour
+    message: "Too many briefing submissions. Please try again later.",
+  });
+
+  // Security: Rate limiting for login attempts (10 per 15 minutes per IP)
+  const loginRateLimit = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 10, // 10 attempts per 15 minutes
+    message: "Too many login attempts. Please try again later.",
+  });
+
   // Example API routes
   app.get("/api/ping", (_req, res) => {
     const ping = process.env.PING_MESSAGE ?? "ping";
