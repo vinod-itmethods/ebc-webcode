@@ -32,6 +32,9 @@ export default defineConfig({
         // External dependencies that should not be bundled
         "express",
         "cors",
+        "@supabase/supabase-js",
+        "nodemailer",
+        "dotenv",
       ],
       output: {
         format: "es",
