@@ -1,7 +1,4 @@
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from "fs";
-import { join } from "path";
-
-const SUBMISSIONS_FILE = join(process.cwd(), "data", "submissions.json");
+import { supabase } from "../lib/supabase";
 
 export interface SubmissionStep {
   stepNumber: number;
@@ -19,51 +16,6 @@ export interface BriefingSubmission {
   isCompleted: boolean;
   steps: SubmissionStep[];
   fullData?: any;
-}
-
-function ensureDataDir() {
-  const dir = join(process.cwd(), "data");
-  if (!existsSync(dir)) {
-    try {
-      mkdirSync(dir, { recursive: true });
-    } catch (error) {
-      console.error("Error creating data directory:", error);
-    }
-  }
-
-  // Ensure the submissions file exists
-  if (!existsSync(SUBMISSIONS_FILE)) {
-    try {
-      writeFileSync(SUBMISSIONS_FILE, JSON.stringify([]));
-    } catch (error) {
-      console.error("Error creating submissions file:", error);
-    }
-  }
-}
-
-function loadSubmissions(): BriefingSubmission[] {
-  ensureDataDir();
-  try {
-    if (existsSync(SUBMISSIONS_FILE)) {
-      const data = readFileSync(SUBMISSIONS_FILE, "utf-8");
-      return JSON.parse(data || "[]");
-    }
-  } catch (error) {
-    console.error("Error loading submissions:", error);
-  }
-  return [];
-}
-
-function saveSubmissions(submissions: BriefingSubmission[]) {
-  try {
-    ensureDataDir();
-    writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2));
-    console.log(`Submissions saved to ${SUBMISSIONS_FILE}`);
-  } catch (error) {
-    console.error("Error saving submissions to file:", error);
-    console.error("File path:", SUBMISSIONS_FILE);
-    throw error;
-  }
 }
 
 export function saveFormProgress(
