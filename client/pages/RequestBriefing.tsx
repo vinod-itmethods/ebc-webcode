@@ -295,6 +295,14 @@ export default function RequestBriefing() {
         return;
       }
 
+      // Get CAPTCHA token (if available)
+      let captchaToken = "";
+      if ((window as any).grecaptcha) {
+        captchaToken = await (window as any).grecaptcha.execute("6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", {
+          action: "submit",
+        });
+      }
+
       // Only create customer profile for new customers (not returning from portal)
       if (!skipContactStep) {
         const registerResponse = await fetch("/api/register-customer", {
@@ -352,7 +360,10 @@ export default function RequestBriefing() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          captchaToken, // Include CAPTCHA token
+        }),
       });
 
       if (!response.ok) {
