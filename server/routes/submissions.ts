@@ -104,6 +104,9 @@ export async function handleApproveCustomer(req: Request, res: Response) {
       });
     }
 
+    // Log the approval for audit trail
+    await logCustomerApproval(adminEmail, customerEmail, req);
+
     // Send confirmation email to customer
     const emailSent = await sendCustomerConfirmationEmail(
       customer.email,
