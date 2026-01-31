@@ -1,6 +1,11 @@
 import { Request, Response } from "express";
 import { saveFormProgress, getAllSubmissions } from "../utils/submissions";
-import { approveCustomer, rejectCustomer, removeCustomer, getAllCustomers } from "../utils/customers";
+import {
+  approveCustomer,
+  rejectCustomer,
+  removeCustomer,
+  getAllCustomers,
+} from "../utils/customers";
 import { sendCustomerConfirmationEmail } from "./briefing";
 import { logCustomerApproval, logCustomerRejection } from "../lib/audit-log";
 
@@ -11,7 +16,8 @@ export function isAdminEmail(email: string): boolean {
 
 export async function handleSaveProgress(req: Request, res: Response) {
   try {
-    const { email, company, stepNumber, stepData, isCompleted, fullData } = req.body;
+    const { email, company, stepNumber, stepData, isCompleted, fullData } =
+      req.body;
 
     if (!email || !company || stepNumber === undefined) {
       console.warn("Missing required fields:", { email, company, stepNumber });
@@ -34,7 +40,7 @@ export async function handleSaveProgress(req: Request, res: Response) {
       stepNumber,
       stepData,
       isCompleted,
-      fullData
+      fullData,
     );
 
     return res.status(200).json({
@@ -111,7 +117,7 @@ export async function handleApproveCustomer(req: Request, res: Response) {
     const emailSent = await sendCustomerConfirmationEmail(
       customer.email,
       customer.name,
-      customer.company
+      customer.company,
     );
 
     return res.status(200).json({

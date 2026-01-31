@@ -1,6 +1,6 @@
 /**
  * CAPTCHA Verification for Google reCAPTCHA v3
- * 
+ *
  * Frontend sends a token, backend verifies it with Google
  */
 
@@ -32,13 +32,16 @@ export async function verifyCaptcha(token: string): Promise<VerifyResponse> {
   }
 
   try {
-    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+    const response = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `secret=${RECAPTCHA_SECRET_KEY}&response=${token}`,
       },
-      body: `secret=${RECAPTCHA_SECRET_KEY}&response=${token}`,
-    });
+    );
 
     const data = await response.json();
 

@@ -14,11 +14,18 @@ export interface RateLimitOptions {
 }
 
 export function rateLimit(options: RateLimitOptions) {
-  const { windowMs, max, message = "Too many requests, please try again later.", keyGenerator } = options;
+  const {
+    windowMs,
+    max,
+    message = "Too many requests, please try again later.",
+    keyGenerator,
+  } = options;
 
   return (req: Request, res: Response, next: NextFunction) => {
     // Generate key based on IP address or custom key generator
-    const key = keyGenerator ? keyGenerator(req) : req.ip || req.socket.remoteAddress || "unknown";
+    const key = keyGenerator
+      ? keyGenerator(req)
+      : req.ip || req.socket.remoteAddress || "unknown";
 
     const now = Date.now();
     const record = store[key];
@@ -54,11 +61,14 @@ export function rateLimit(options: RateLimitOptions) {
 }
 
 // Cleanup old entries every hour
-setInterval(() => {
-  const now = Date.now();
-  for (const key in store) {
-    if (store[key].resetTime < now) {
-      delete store[key];
+setInterval(
+  () => {
+    const now = Date.now();
+    for (const key in store) {
+      if (store[key].resetTime < now) {
+        delete store[key];
+      }
     }
-  }
-}, 60 * 60 * 1000);
+  },
+  60 * 60 * 1000,
+);

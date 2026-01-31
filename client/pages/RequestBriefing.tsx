@@ -64,18 +64,20 @@ export default function RequestBriefing() {
 
   // Load wishlist and pre-filled customer data on component mount
   useEffect(() => {
-    const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
-    const prefillEmail = localStorage.getItem('prefillCustomerEmail');
-    const prefillName = localStorage.getItem('prefillCustomerName');
-    const prefillCompany = localStorage.getItem('prefillCustomerCompany');
-    const prefillRole = localStorage.getItem('prefillCustomerRole');
-    const skip = localStorage.getItem('skipContactStep') === 'true';
+    const wishlist = JSON.parse(
+      localStorage.getItem("vendor_wishlist") || "[]",
+    ) as string[];
+    const prefillEmail = localStorage.getItem("prefillCustomerEmail");
+    const prefillName = localStorage.getItem("prefillCustomerName");
+    const prefillCompany = localStorage.getItem("prefillCustomerCompany");
+    const prefillRole = localStorage.getItem("prefillCustomerRole");
+    const skip = localStorage.getItem("skipContactStep") === "true";
 
     // Check for saved form data from previous session
-    const savedFormDataStr = localStorage.getItem('briefing_form_data');
-    const savedFormStep = localStorage.getItem('briefing_form_step');
-    const returnTo = searchParams.get('returnTo');
-    const step = searchParams.get('step');
+    const savedFormDataStr = localStorage.getItem("briefing_form_data");
+    const savedFormStep = localStorage.getItem("briefing_form_step");
+    const returnTo = searchParams.get("returnTo");
+    const step = searchParams.get("step");
 
     // Only show continue dialog if there's saved data and they're not coming from vendor selection
     if (savedFormDataStr && !returnTo && !step) {
@@ -86,7 +88,7 @@ export default function RequestBriefing() {
         setSavedStep(savedStepNum);
         setShowContinueDialog(true);
       } catch (e) {
-        console.error('Failed to parse saved form data:', e);
+        console.error("Failed to parse saved form data:", e);
       }
     }
 
@@ -115,18 +117,18 @@ export default function RequestBriefing() {
 
     // Clean up the prefill flags
     if (skip) {
-      localStorage.removeItem('prefillCustomerEmail');
-      localStorage.removeItem('prefillCustomerName');
-      localStorage.removeItem('prefillCustomerCompany');
-      localStorage.removeItem('prefillCustomerRole');
-      localStorage.removeItem('skipContactStep');
+      localStorage.removeItem("prefillCustomerEmail");
+      localStorage.removeItem("prefillCustomerName");
+      localStorage.removeItem("prefillCustomerCompany");
+      localStorage.removeItem("prefillCustomerRole");
+      localStorage.removeItem("skipContactStep");
     }
   }, [searchParams]);
 
   // Save form data to localStorage
   useEffect(() => {
-    localStorage.setItem('briefing_form_data', JSON.stringify(formData));
-    localStorage.setItem('briefing_form_step', currentStep.toString());
+    localStorage.setItem("briefing_form_data", JSON.stringify(formData));
+    localStorage.setItem("briefing_form_step", currentStep.toString());
   }, [formData, currentStep]);
 
   // Auto-save progress whenever form data changes
@@ -155,9 +157,15 @@ export default function RequestBriefing() {
         if (!response.ok) {
           try {
             const errorData = await response.json();
-            console.warn("Save progress responded with error:", JSON.stringify(errorData));
+            console.warn(
+              "Save progress responded with error:",
+              JSON.stringify(errorData),
+            );
           } catch (e) {
-            console.warn(`Save progress failed with status ${response.status}:`, response.statusText);
+            console.warn(
+              `Save progress failed with status ${response.status}:`,
+              response.statusText,
+            );
           }
         } else {
           // Successfully saved
@@ -165,7 +173,10 @@ export default function RequestBriefing() {
           console.log("Progress saved successfully at step", currentStep);
         }
       } catch (error) {
-        console.error("Network error saving progress:", error instanceof Error ? error.message : String(error));
+        console.error(
+          "Network error saving progress:",
+          error instanceof Error ? error.message : String(error),
+        );
       } finally {
         setIsSaving(false);
       }
@@ -191,7 +202,10 @@ export default function RequestBriefing() {
   const getStepData = (step: number) => {
     switch (step) {
       case 1:
-        return { interests: formData.interests, interestOther: formData.interestOther };
+        return {
+          interests: formData.interests,
+          interestOther: formData.interestOther,
+        };
       case 2:
         return { decisionContext: formData.decisionContext };
       case 3:
@@ -203,7 +217,13 @@ export default function RequestBriefing() {
       case 6:
         return { goals: formData.goals };
       case 7:
-        return { name: formData.name, role: formData.role, company: formData.company, email: formData.email, assistant: formData.assistant };
+        return {
+          name: formData.name,
+          role: formData.role,
+          company: formData.company,
+          email: formData.email,
+          assistant: formData.assistant,
+        };
       default:
         return {};
     }
@@ -256,7 +276,9 @@ export default function RequestBriefing() {
       const data = await response.json();
 
       if (!response.ok || data.isPersonalEmail) {
-        setEmailError("Please use your work email address, not a personal email (gmail, yahoo, outlook, etc.)");
+        setEmailError(
+          "Please use your work email address, not a personal email (gmail, yahoo, outlook, etc.)",
+        );
       } else {
         setEmailError(null);
       }
@@ -291,16 +313,21 @@ export default function RequestBriefing() {
     try {
       // Only validate email for new customers (not pre-filled from portal)
       if (!skipContactStep && !isValidWorkEmail(formData.email)) {
-        setEmailError("Please use your work email address, not a personal email (gmail, yahoo, outlook, etc.)");
+        setEmailError(
+          "Please use your work email address, not a personal email (gmail, yahoo, outlook, etc.)",
+        );
         return;
       }
 
       // Get CAPTCHA token (if available)
       let captchaToken = "";
       if ((window as any).grecaptcha) {
-        captchaToken = await (window as any).grecaptcha.execute("6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", {
-          action: "submit",
-        });
+        captchaToken = await (window as any).grecaptcha.execute(
+          "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+          {
+            action: "submit",
+          },
+        );
       }
 
       // Only create customer profile for new customers (not returning from portal)
@@ -375,13 +402,15 @@ export default function RequestBriefing() {
       setEmailError(null);
     } catch (error) {
       console.error("Error submitting briefing request:", error);
-      setEmailError("An error occurred while submitting your request. Please try again.");
+      setEmailError(
+        "An error occurred while submitting your request. Please try again.",
+      );
       return;
     }
 
     // Clear saved form data on successful submission
-    localStorage.removeItem('briefing_form_data');
-    localStorage.removeItem('briefing_form_step');
+    localStorage.removeItem("briefing_form_data");
+    localStorage.removeItem("briefing_form_step");
     setSubmitted(true);
   };
 
@@ -394,11 +423,13 @@ export default function RequestBriefing() {
   };
 
   const handleStartFresh = () => {
-    localStorage.removeItem('briefing_form_data');
-    localStorage.removeItem('briefing_form_step');
+    localStorage.removeItem("briefing_form_data");
+    localStorage.removeItem("briefing_form_step");
 
     // Load vendors from wishlist to preserve selected vendors
-    const wishlist = JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
+    const wishlist = JSON.parse(
+      localStorage.getItem("vendor_wishlist") || "[]",
+    ) as string[];
 
     setFormData({
       interests: [],
@@ -454,19 +485,29 @@ export default function RequestBriefing() {
             <div className="bg-white rounded-lg p-8 lg:p-12 space-y-6 text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center icon-neutral-bg">
-                  <CheckCircle2 className="w-8 h-8 icon-neutral" strokeWidth={1.5} />
+                  <CheckCircle2
+                    className="w-8 h-8 icon-neutral"
+                    strokeWidth={1.5}
+                  />
                 </div>
               </div>
 
               <div className="space-y-3">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Thank you for your briefing request</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+                  Thank you for your briefing request
+                </h2>
                 <p className="text-lg text-foreground/70 leading-relaxed">
-                  We've received your briefing request and our team is reviewing your organization's needs. You'll receive an email shortly with your secure login credentials to access the customer portal and track your briefing status.
+                  We've received your briefing request and our team is reviewing
+                  your organization's needs. You'll receive an email shortly
+                  with your secure login credentials to access the customer
+                  portal and track your briefing status.
                 </p>
               </div>
 
               <div className="bg-slate-50/50 rounded-lg p-6 space-y-3">
-                <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">What happens next</p>
+                <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">
+                  What happens next
+                </p>
                 <ul className="space-y-2 text-left text-foreground/70">
                   <li className="flex gap-3">
                     <span className="text-primary font-bold">1</span>
@@ -474,11 +515,15 @@ export default function RequestBriefing() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-bold">2</span>
-                    <span>We confirm timing and select relevant technology partners</span>
+                    <span>
+                      We confirm timing and select relevant technology partners
+                    </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-bold">3</span>
-                    <span>You'll receive a confirmed briefing date and agenda</span>
+                    <span>
+                      You'll receive a confirmed briefing date and agenda
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -501,13 +546,22 @@ export default function RequestBriefing() {
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full">
             <div className="p-6 space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold text-foreground">Welcome back!</h2>
-                <p className="text-foreground/70">We found your previous briefing request. Would you like to continue where you left off or start a new one?</p>
+                <h2 className="text-2xl font-bold text-foreground">
+                  Welcome back!
+                </h2>
+                <p className="text-foreground/70">
+                  We found your previous briefing request. Would you like to
+                  continue where you left off or start a new one?
+                </p>
               </div>
 
               <div className="bg-blue-50 rounded-lg p-4 space-y-2">
-                <p className="text-sm font-medium text-foreground">Previous progress:</p>
-                <p className="text-sm text-foreground/70">Step {savedStep} of {totalSteps}</p>
+                <p className="text-sm font-medium text-foreground">
+                  Previous progress:
+                </p>
+                <p className="text-sm text-foreground/70">
+                  Step {savedStep} of {totalSteps}
+                </p>
               </div>
 
               <div className="flex gap-3 pt-4">
@@ -538,9 +592,14 @@ export default function RequestBriefing() {
 
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-3">
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">Request a briefing</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">
+              Request a briefing
+            </h1>
             <p className="text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto">
-              Tell us about your organization's technology priorities and strategic decisions. Our team will curate a briefing tailored to your needs, bringing together perspectives from relevant technology partners.
+              Tell us about your organization's technology priorities and
+              strategic decisions. Our team will curate a briefing tailored to
+              your needs, bringing together perspectives from relevant
+              technology partners.
             </p>
           </div>
         </div>
@@ -562,7 +621,8 @@ export default function RequestBriefing() {
                 className="h-full transition-all duration-300"
                 style={{
                   width: `${(currentStep / totalSteps) * 100}%`,
-                  background: 'linear-gradient(90deg, hsl(45 82% 52%), hsl(38 92% 50%))'
+                  background:
+                    "linear-gradient(90deg, hsl(45 82% 52%), hsl(38 92% 50%))",
                 }}
               ></div>
             </div>
@@ -617,7 +677,10 @@ export default function RequestBriefing() {
 
             {/* Step 6: Goals and Outcomes */}
             {currentStep === 6 && (
-              <Step6Goals goals={formData.goals} onUpdate={(value) => updateFormData("goals", value)} />
+              <Step6Goals
+                goals={formData.goals}
+                onUpdate={(value) => updateFormData("goals", value)}
+              />
             )}
 
             {/* Step 7: Contact Details (only shown for new customers) */}
@@ -654,21 +717,33 @@ export default function RequestBriefing() {
                 </button>
 
                 <div className="flex gap-2 items-center">
-                  {Array.from({ length: totalSteps }, (_, i) => i + 1).map((step) => (
-                    <div
-                      key={step}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        step <= currentStep ? "bg-[hsl(45_82%_52%)]" : "bg-slate-200"
-                      }`}
-                    ></div>
-                  ))}
+                  {Array.from({ length: totalSteps }, (_, i) => i + 1).map(
+                    (step) => (
+                      <div
+                        key={step}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          step <= currentStep
+                            ? "bg-[hsl(45_82%_52%)]"
+                            : "bg-slate-200"
+                        }`}
+                      ></div>
+                    ),
+                  )}
                 </div>
 
                 <Button
-                  onClick={(skipContactStep && currentStep === totalSteps) || (!skipContactStep && currentStep === 7) ? handleSubmit : handleContinueClick}
-                  className={`font-semibold rounded-lg transition-all ${!isStepValid() ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  onClick={
+                    (skipContactStep && currentStep === totalSteps) ||
+                    (!skipContactStep && currentStep === 7)
+                      ? handleSubmit
+                      : handleContinueClick
+                  }
+                  className={`font-semibold rounded-lg transition-all ${!isStepValid() ? "opacity-50 cursor-not-allowed" : ""}`}
                 >
-                  {(skipContactStep && currentStep === totalSteps) || (!skipContactStep && currentStep === 7) ? "Request briefing" : "Continue"}
+                  {(skipContactStep && currentStep === totalSteps) ||
+                  (!skipContactStep && currentStep === 7)
+                    ? "Request briefing"
+                    : "Continue"}
                 </Button>
               </div>
             </div>
@@ -710,12 +785,17 @@ function Step1({
       {/* Vendors Reminder */}
       {vendors.length > 0 && (
         <div className="bg-blue-50/60 border border-blue-200 rounded-lg p-4">
-          <p className="text-sm font-semibold text-foreground mb-2">Selected vendors:</p>
+          <p className="text-sm font-semibold text-foreground mb-2">
+            Selected vendors:
+          </p>
           <div className="flex flex-wrap gap-2">
             {vendors.map((vendorId) => {
               const vendor = partners.find((p) => p.id === vendorId);
               return vendor ? (
-                <span key={vendorId} className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">
+                <span
+                  key={vendorId}
+                  className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium"
+                >
                   {vendor.name}
                 </span>
               ) : null;
@@ -725,8 +805,12 @@ function Step1({
       )}
 
       <div className="space-y-2">
-        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">What would you like to explore?</h2>
-        <p className="text-foreground/70">Select the topics most relevant to your current priorities.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+          What would you like to explore?
+        </h2>
+        <p className="text-foreground/70">
+          Select the topics most relevant to your current priorities.
+        </p>
       </div>
 
       <div className="space-y-3">
@@ -790,8 +874,12 @@ function Step2({
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">What best describes your current context?</h2>
-        <p className="text-sm text-foreground/60">This helps us tailor the discussion to where you are today.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+          What best describes your current context?
+        </h2>
+        <p className="text-sm text-foreground/60">
+          This helps us tailor the discussion to where you are today.
+        </p>
       </div>
 
       <div className="space-y-3">
@@ -833,8 +921,12 @@ function Step3({
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">What perspectives would be most helpful?</h2>
-        <p className="text-foreground/70">Select the types of technology perspectives you would like included.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+          What perspectives would be most helpful?
+        </h2>
+        <p className="text-foreground/70">
+          Select the types of technology perspectives you would like included.
+        </p>
       </div>
 
       <div className="space-y-3">
@@ -869,14 +961,20 @@ function Step4Vendors({
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Which technology vendors interest you?</h2>
-        <p className="text-foreground/70">Add vendors to your wishlist or explore additional options.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+          Which technology vendors interest you?
+        </h2>
+        <p className="text-foreground/70">
+          Add vendors to your wishlist or explore additional options.
+        </p>
       </div>
 
       {vendors.length > 0 && (
         <div className="space-y-4">
           <div className="space-y-2">
-            <h3 className="text-sm font-semibold text-foreground">Your wishlist ({vendors.length})</h3>
+            <h3 className="text-sm font-semibold text-foreground">
+              Your wishlist ({vendors.length})
+            </h3>
             <div className="flex flex-wrap gap-2">
               {vendors.map((vendorId) => {
                 const vendor = partners.find((p) => p.id === vendorId);
@@ -903,7 +1001,9 @@ function Step4Vendors({
             variant="secondary-outline"
             className="font-semibold rounded-lg"
           >
-            <a href={`/partners?returnTo=briefing&step=${currentStep}`}>Browse more vendors</a>
+            <a href={`/partners?returnTo=briefing&step=${currentStep}`}>
+              Browse more vendors
+            </a>
           </Button>
         </div>
       )}
@@ -911,11 +1011,10 @@ function Step4Vendors({
       {vendors.length === 0 && (
         <div className="text-center space-y-4 py-8">
           <p className="text-foreground/70">No vendors added yet.</p>
-          <Button
-            asChild
-            className="font-semibold rounded-lg"
-          >
-            <a href="/partners?returnTo=briefing">Browse and add technology vendors</a>
+          <Button asChild className="font-semibold rounded-lg">
+            <a href="/partners?returnTo=briefing">
+              Browse and add technology vendors
+            </a>
           </Button>
         </div>
       )}
@@ -932,16 +1031,31 @@ function Step5Location({
   format: string;
   onUpdate: (field: string, value: string) => void;
 }) {
-  const locations = ["New York", "San Francisco", "London", "Toronto", "Austin", "Open to other locations"];
-  const formats = ["In person", "Private session aligned to an industry event", "Open to recommendations"];
+  const locations = [
+    "New York",
+    "San Francisco",
+    "London",
+    "Toronto",
+    "Austin",
+    "Open to other locations",
+  ];
+  const formats = [
+    "In person",
+    "Private session aligned to an industry event",
+    "Open to recommendations",
+  ];
 
   return (
     <div className="space-y-8">
       <div className="space-y-4">
-        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Preferred briefing format</h2>
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+          Preferred briefing format
+        </h2>
 
         <div className="space-y-2">
-          <label className="block text-sm font-semibold text-foreground/80">Location</label>
+          <label className="block text-sm font-semibold text-foreground/80">
+            Location
+          </label>
           <select
             value={location}
             onChange={(e) => onUpdate("location", e.target.value)}
@@ -958,9 +1072,14 @@ function Step5Location({
       </div>
 
       <div className="space-y-3">
-        <label className="block text-sm font-semibold text-foreground/80">Format</label>
+        <label className="block text-sm font-semibold text-foreground/80">
+          Format
+        </label>
         {formats.map((fmt) => (
-          <label key={fmt} className="flex items-center gap-3 p-4 border border-border/15 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer">
+          <label
+            key={fmt}
+            className="flex items-center gap-3 p-4 border border-border/15 rounded-lg hover:border-primary/30 hover:bg-blue-50/50 transition-colors cursor-pointer"
+          >
             <input
               type="radio"
               name="format"
@@ -977,12 +1096,22 @@ function Step5Location({
   );
 }
 
-function Step6Goals({ goals, onUpdate }: { goals: string; onUpdate: (value: string) => void }) {
+function Step6Goals({
+  goals,
+  onUpdate,
+}: {
+  goals: string;
+  onUpdate: (value: string) => void;
+}) {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">What would make this briefing valuable for you?</h2>
-        <p className="text-foreground/70">This helps us design a briefing tailored to your needs.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+          What would make this briefing valuable for you?
+        </h2>
+        <p className="text-foreground/70">
+          This helps us design a briefing tailored to your needs.
+        </p>
       </div>
 
       <textarea
@@ -992,7 +1121,10 @@ function Step6Goals({ goals, onUpdate }: { goals: string; onUpdate: (value: stri
         className="w-full px-4 py-4 border border-border/15 rounded-lg focus:outline-none focus:border-primary min-h-48 resize-none"
       ></textarea>
 
-      <p className="text-xs text-foreground/50">This is an important part of planning your briefing. Share as much context as helpful.</p>
+      <p className="text-xs text-foreground/50">
+        This is an important part of planning your briefing. Share as much
+        context as helpful.
+      </p>
     </div>
   );
 }
@@ -1023,13 +1155,19 @@ function Step7Contact({
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">How can we follow up?</h2>
-        <p className="text-foreground/70">Just the essentials so we can confirm your briefing details.</p>
+        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+          How can we follow up?
+        </h2>
+        <p className="text-foreground/70">
+          Just the essentials so we can confirm your briefing details.
+        </p>
       </div>
 
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">Full name</label>
+          <label className="block text-sm font-semibold text-foreground mb-2">
+            Full name
+          </label>
           <input
             type="text"
             value={name}
@@ -1039,7 +1177,9 @@ function Step7Contact({
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">Role / title</label>
+          <label className="block text-sm font-semibold text-foreground mb-2">
+            Role / title
+          </label>
           <input
             type="text"
             value={role}
@@ -1049,7 +1189,9 @@ function Step7Contact({
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">Company</label>
+          <label className="block text-sm font-semibold text-foreground mb-2">
+            Company
+          </label>
           <input
             type="text"
             value={company}
@@ -1059,7 +1201,9 @@ function Step7Contact({
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">Email address</label>
+          <label className="block text-sm font-semibold text-foreground mb-2">
+            Email address
+          </label>
           <input
             type="email"
             value={email}
@@ -1073,13 +1217,19 @@ function Step7Contact({
                 : "border-border/15 focus:border-primary"
             }`}
           />
-          {emailError && <p className="text-sm text-red-600 mt-2">{emailError}</p>}
-          <p className="text-xs text-foreground/50 mt-2">We accept work email addresses only (not gmail, yahoo, outlook, etc.)</p>
+          {emailError && (
+            <p className="text-sm text-red-600 mt-2">{emailError}</p>
+          )}
+          <p className="text-xs text-foreground/50 mt-2">
+            We accept work email addresses only (not gmail, yahoo, outlook,
+            etc.)
+          </p>
         </div>
 
         <div>
           <label className="block text-sm font-semibold text-foreground mb-2">
-            Assistant or coordinator contact <span className="text-foreground/50">(optional)</span>
+            Assistant or coordinator contact{" "}
+            <span className="text-foreground/50">(optional)</span>
           </label>
           <input
             type="text"
@@ -1094,33 +1244,47 @@ function Step7Contact({
         <div className="border-t border-border/10 pt-6 mt-6">
           <div className="flex items-center justify-between mb-4">
             <label className="block text-sm font-semibold text-foreground">
-              Additional attendee <span className="text-foreground/50">(optional)</span>
+              Additional attendee{" "}
+              <span className="text-foreground/50">(optional)</span>
             </label>
-            <span className="text-xs text-foreground/50 font-medium">Max 1 additional contact</span>
+            <span className="text-xs text-foreground/50 font-medium">
+              Max 1 additional contact
+            </span>
           </div>
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">Name</label>
+              <label className="block text-sm font-semibold text-foreground mb-2">
+                Name
+              </label>
               <input
                 type="text"
                 value={additionalContactName || ""}
-                onChange={(e) => onUpdate("additionalContactName", e.target.value)}
+                onChange={(e) =>
+                  onUpdate("additionalContactName", e.target.value)
+                }
                 placeholder="Full name"
                 className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">Email address</label>
+              <label className="block text-sm font-semibold text-foreground mb-2">
+                Email address
+              </label>
               <input
                 type="email"
                 value={additionalContactEmail || ""}
-                onChange={(e) => onUpdate("additionalContactEmail", e.target.value)}
+                onChange={(e) =>
+                  onUpdate("additionalContactEmail", e.target.value)
+                }
                 placeholder="work@company.com"
                 className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
               />
-              <p className="text-xs text-foreground/50 mt-2">This person will receive the same portal access as the primary contact.</p>
+              <p className="text-xs text-foreground/50 mt-2">
+                This person will receive the same portal access as the primary
+                contact.
+              </p>
             </div>
           </div>
         </div>

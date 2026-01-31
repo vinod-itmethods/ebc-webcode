@@ -54,7 +54,7 @@ export async function createCustomerProfile(
   role: string,
   company: string,
   briefingData: any,
-  additionalContact?: AdditionalContact
+  additionalContact?: AdditionalContact,
 ): Promise<CustomerProfile | null> {
   // Validate email domain
   if (!isValidWorkEmail(email)) {
@@ -109,7 +109,9 @@ export async function createCustomerProfile(
   }
 }
 
-export async function getCustomerByEmail(email: string): Promise<CustomerProfile | undefined> {
+export async function getCustomerByEmail(
+  email: string,
+): Promise<CustomerProfile | undefined> {
   try {
     const { data } = await supabase
       .from("customers")
@@ -134,7 +136,7 @@ export function getPersonalEmailDomains(): string[] {
 
 export async function approveCustomer(
   email: string,
-  approvedBy: string
+  approvedBy: string,
 ): Promise<CustomerProfile | null> {
   const now = new Date().toISOString();
 
@@ -153,7 +155,9 @@ export async function approveCustomer(
   return formatCustomerResponse(data);
 }
 
-export async function rejectCustomer(email: string): Promise<CustomerProfile | null> {
+export async function rejectCustomer(
+  email: string,
+): Promise<CustomerProfile | null> {
   const now = new Date().toISOString();
 
   const { data } = await supabase
@@ -170,7 +174,10 @@ export async function rejectCustomer(email: string): Promise<CustomerProfile | n
 }
 
 export async function removeCustomer(email: string): Promise<boolean> {
-  const { error } = await supabase.from("customers").delete().eq("email", email.toLowerCase());
+  const { error } = await supabase
+    .from("customers")
+    .delete()
+    .eq("email", email.toLowerCase());
 
   return !error;
 }

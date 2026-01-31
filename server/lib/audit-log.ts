@@ -43,7 +43,7 @@ export async function logAudit(entry: AuditLogEntry): Promise<void> {
 export async function logCustomerApproval(
   approverEmail: string,
   customerEmail: string,
-  request?: Request
+  request?: Request,
 ): Promise<void> {
   await logAudit({
     action: "customer_approved",
@@ -66,7 +66,7 @@ export async function logCustomerApproval(
 export async function logCustomerRejection(
   approverEmail: string,
   customerEmail: string,
-  request?: Request
+  request?: Request,
 ): Promise<void> {
   await logAudit({
     action: "customer_rejected",
@@ -89,7 +89,7 @@ export async function logCustomerRejection(
 export async function logFormSubmission(
   customerEmail: string,
   company: string,
-  request?: Request
+  request?: Request,
 ): Promise<void> {
   await logAudit({
     action: "form_submitted",
@@ -112,7 +112,7 @@ export async function logFormSubmission(
  */
 export async function logAdminLogin(
   adminEmail: string,
-  request?: Request
+  request?: Request,
 ): Promise<void> {
   await logAudit({
     action: "admin_login",
@@ -133,7 +133,7 @@ export async function logAdminLogin(
  */
 export async function logFailedLogin(
   email: string,
-  request?: Request
+  request?: Request,
 ): Promise<void> {
   await logAudit({
     action: "login_failed",
@@ -154,7 +154,7 @@ export async function logFailedLogin(
  */
 export async function getAuditLogs(
   limit: number = 100,
-  offset: number = 0
+  offset: number = 0,
 ): Promise<any[]> {
   const { data } = await supabase
     .from("audit_logs")
@@ -170,7 +170,7 @@ export async function getAuditLogs(
  */
 export async function getAuditLogsForEmail(
   email: string,
-  limit: number = 50
+  limit: number = 50,
 ): Promise<any[]> {
   const { data } = await supabase
     .from("audit_logs")

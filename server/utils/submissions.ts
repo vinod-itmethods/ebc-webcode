@@ -24,7 +24,7 @@ export async function saveFormProgress(
   stepNumber: number,
   stepData: any,
   isCompleted: boolean = false,
-  fullData?: any
+  fullData?: any,
 ): Promise<BriefingSubmission> {
   const now = new Date().toISOString();
   const id = `${email}-${Date.now()}`;
@@ -44,7 +44,9 @@ export async function saveFormProgress(
   if (existing) {
     // Update existing submission
     const steps = existing.steps || [];
-    const existingStepIndex = steps.findIndex((s: any) => s.stepNumber === stepNumber);
+    const existingStepIndex = steps.findIndex(
+      (s: any) => s.stepNumber === stepNumber,
+    );
 
     if (existingStepIndex >= 0) {
       steps[existingStepIndex] = {
@@ -115,7 +117,9 @@ export async function getAllSubmissions(): Promise<BriefingSubmission[]> {
   return data ? data.map(formatSubmissionResponse) : [];
 }
 
-export async function getSubmissionsByEmail(email: string): Promise<BriefingSubmission[]> {
+export async function getSubmissionsByEmail(
+  email: string,
+): Promise<BriefingSubmission[]> {
   const { data } = await supabase
     .from("briefing_submissions")
     .select("*")

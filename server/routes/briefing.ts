@@ -29,9 +29,7 @@ interface BriefingFormData {
   assistant?: string;
 }
 
-
 function formatBriefingEmail(data: BriefingFormData): string {
-
   return `
 <html>
   <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -91,7 +89,8 @@ function formatBriefingEmail(data: BriefingFormData): string {
 }
 
 function formatCustomerConfirmationEmail(data: BriefingFormData): string {
-  const portalUrl = process.env.PORTAL_URL || "https://briefing.example.com/portal";
+  const portalUrl =
+    process.env.PORTAL_URL || "https://briefing.example.com/portal";
 
   return `
 <html>
@@ -149,7 +148,11 @@ function formatCustomerConfirmationEmail(data: BriefingFormData): string {
   `;
 }
 
-export async function sendCustomerConfirmationEmail(email: string, name: string, company: string): Promise<boolean> {
+export async function sendCustomerConfirmationEmail(
+  email: string,
+  name: string,
+  company: string,
+): Promise<boolean> {
   const data = { name, email, company } as BriefingFormData;
   const customerEmailHtml = formatCustomerConfirmationEmail(data);
 
@@ -200,12 +203,13 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
     });
 
     console.log(
-      `Briefing request notification sent to internal team for ${data.name} from ${data.company}`
+      `Briefing request notification sent to internal team for ${data.name} from ${data.company}`,
     );
 
     return res.status(200).json({
       success: true,
-      message: "Briefing request submitted successfully. Awaiting admin approval.",
+      message:
+        "Briefing request submitted successfully. Awaiting admin approval.",
     });
   } catch (error) {
     console.error("Error sending briefing request notification:", error);

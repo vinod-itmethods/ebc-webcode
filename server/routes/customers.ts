@@ -1,5 +1,10 @@
 import { Request, Response } from "express";
-import { createCustomerProfile, isValidWorkEmail, getCustomerByEmail, getPersonalEmailDomains } from "../utils/customers";
+import {
+  createCustomerProfile,
+  isValidWorkEmail,
+  getCustomerByEmail,
+  getPersonalEmailDomains,
+} from "../utils/customers";
 
 export async function handleValidateEmail(req: Request, res: Response) {
   try {
@@ -16,7 +21,8 @@ export async function handleValidateEmail(req: Request, res: Response) {
     if (!isValid) {
       const domain = email.split("@")[1];
       return res.status(400).json({
-        error: "Personal email domains are not allowed. Please use your work email address.",
+        error:
+          "Personal email domains are not allowed. Please use your work email address.",
         domain,
         isPersonalEmail: true,
       });
@@ -43,7 +49,15 @@ export async function handleValidateEmail(req: Request, res: Response) {
 
 export async function handleRegisterCustomer(req: Request, res: Response) {
   try {
-    const { email, name, role, company, briefingData, additionalContactName, additionalContactEmail } = req.body;
+    const {
+      email,
+      name,
+      role,
+      company,
+      briefingData,
+      additionalContactName,
+      additionalContactEmail,
+    } = req.body;
 
     if (!email || !name || !role || !company) {
       return res.status(400).json({
@@ -55,7 +69,8 @@ export async function handleRegisterCustomer(req: Request, res: Response) {
     if (!isValidWorkEmail(email)) {
       const domain = email.split("@")[1];
       return res.status(400).json({
-        error: "Personal email domains are not allowed. Please use your work email address.",
+        error:
+          "Personal email domains are not allowed. Please use your work email address.",
         domain,
         isPersonalEmail: true,
       });
@@ -82,7 +97,14 @@ export async function handleRegisterCustomer(req: Request, res: Response) {
     }
 
     // Create customer profile
-    const customer = await createCustomerProfile(email, name, role, company, briefingData, additionalContact);
+    const customer = await createCustomerProfile(
+      email,
+      name,
+      role,
+      company,
+      briefingData,
+      additionalContact,
+    );
 
     if (!customer) {
       return res.status(400).json({
