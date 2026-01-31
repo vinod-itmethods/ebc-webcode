@@ -1,7 +1,10 @@
 [build]
-  command = "npm run build:client"
+  command = "pnpm install && pnpm run build:client"
   functions = "netlify/functions"
   publish = "dist/spa"
+
+[build.environment]
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [functions]
   external_node_modules = ["express", "@supabase/supabase-js", "nodemailer"]
