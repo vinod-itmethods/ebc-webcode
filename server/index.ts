@@ -39,8 +39,8 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
-  // Briefing submission endpoint
-  app.post("/api/briefing-submission", handleBriefingSubmission);
+  // Briefing submission endpoint (with rate limiting)
+  app.post("/api/briefing-submission", formRateLimit, handleBriefingSubmission);
 
   // Form progress tracking endpoints
   app.post("/api/save-progress", handleSaveProgress);
