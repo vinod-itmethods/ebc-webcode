@@ -5,6 +5,9 @@ import { handleDemo } from "./routes/demo";
 import { handleBriefingSubmission } from "./routes/briefing";
 import { handleSaveProgress, handleGetSubmissions, handleApproveCustomer, handleRejectCustomer, handleRemoveCustomer, handleGetAllCustomers } from "./routes/submissions";
 import { handleValidateEmail, handleRegisterCustomer, handleGetPersonalDomains, handleGetCustomerProfile } from "./routes/customers";
+import { rateLimit } from "./lib/rate-limit";
+import { verifyCaptcha } from "./lib/captcha";
+import { getAuditLogs, isAdminEmail } from "./lib/audit-log";
 
 export function createServer() {
   const app = express();
