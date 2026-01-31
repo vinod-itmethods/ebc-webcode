@@ -95,7 +95,7 @@ export async function handleApproveCustomer(req: Request, res: Response) {
     }
 
     // Approve the customer
-    const customer = approveCustomer(customerEmail, adminEmail);
+    const customer = await approveCustomer(customerEmail, adminEmail);
 
     if (!customer) {
       return res.status(404).json({
