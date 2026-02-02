@@ -79,6 +79,16 @@ export default function PortalProvider() {
 
     setIsAuthenticated(true);
     setSelectedProviderId(companyId);
+
+    // Load documents for this provider
+    const storedDocs = localStorage.getItem(`provider_documents_${companyId}`);
+    if (storedDocs) {
+      try {
+        setDocuments(JSON.parse(storedDocs));
+      } catch {
+        setDocuments([]);
+      }
+    }
   }, [navigate, companyId]);
 
   // Load provider profile data when authenticated
