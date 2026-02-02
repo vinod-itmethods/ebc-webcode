@@ -102,6 +102,13 @@ export default function AdminSubmissions() {
               >
                 → Manage Portal Logins
               </a>
+              <span className="text-foreground/30">|</span>
+              <a
+                href="/admin/documents"
+                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                → Manage Documents
+              </a>
             </div>
           </div>
           <p className="text-sm text-foreground/60">View all briefing request submissions</p>
