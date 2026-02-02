@@ -72,6 +72,7 @@ export default function App() {
             <Route path="/admin/submissions" element={<AdminSubmissions />} />
             <Route path="/admin/customers" element={<AdminCustomers />} />
             <Route path="/admin/portal-logins" element={<AdminPortalLogins />} />
+            <Route path="/admin/documents" element={<AdminDocuments />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
