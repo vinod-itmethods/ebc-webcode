@@ -42,6 +42,7 @@ export default function PortalProvider() {
   const [isSaved, setIsSaved] = useState(false);
   const [topics, setTopics] = useState<string[]>(partners[0].topics || []);
   const [additionalTopic, setAdditionalTopic] = useState("");
+  const [showChangePassword, setShowChangePassword] = useState(false);
 
   const navigate = useNavigate();
   const userEmail = localStorage.getItem("userEmail") || "contact@company.com";
