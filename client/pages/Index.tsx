@@ -78,7 +78,7 @@ export default function Index() {
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">Who it's for</h2>
 
-          <div className="space-y-14">
+          <div className="space-y-12">
             {/* Enterprise Leaders - Image Left */}
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="rounded-lg overflow-hidden shadow-md h-80 md:h-96">
