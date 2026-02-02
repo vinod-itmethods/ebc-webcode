@@ -54,7 +54,9 @@ export default function AdminSubmissions() {
   const fetchSubmissions = async (email: string) => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/submissions?adminEmail=${encodeURIComponent(email)}`);
+      const response = await fetch(
+        `/api/submissions?adminEmail=${encodeURIComponent(email)}`,
+      );
 
       if (!response.ok) {
         throw new Error("Unauthorized or failed to fetch submissions");
@@ -64,12 +66,13 @@ export default function AdminSubmissions() {
       setSubmissions(data.submissions || []);
       setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to load submissions");
+      setError(
+        err instanceof Error ? err.message : "Failed to load submissions",
+      );
     } finally {
       setLoading(false);
     }
   };
-
 
   const filteredSubmissions = submissions
     .filter((s) => {
@@ -77,7 +80,10 @@ export default function AdminSubmissions() {
       if (filter === "partial") return !s.isCompleted;
       return true;
     })
-    .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+    .sort(
+      (a, b) =>
+        new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
+    );
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -87,7 +93,9 @@ export default function AdminSubmissions() {
       <section className="border-b border-border/10 bg-gradient-to-r from-slate-50 to-blue-50/30 px-4 py-4">
         <div className="container max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-lg font-semibold text-foreground">Submission History</h2>
+            <h2 className="text-lg font-semibold text-foreground">
+              Submission History
+            </h2>
             <div className="flex gap-3">
               <a
                 href="/admin/customers"
@@ -111,7 +119,9 @@ export default function AdminSubmissions() {
               </a>
             </div>
           </div>
-          <p className="text-sm text-foreground/60">View all briefing request submissions</p>
+          <p className="text-sm text-foreground/60">
+            View all briefing request submissions
+          </p>
         </div>
       </section>
 
@@ -122,7 +132,9 @@ export default function AdminSubmissions() {
           <div className="grid grid-cols-3 gap-4 mb-8">
             <div className="bg-blue-50 rounded-lg p-4">
               <p className="text-sm text-foreground/70">Total Submissions</p>
-              <p className="text-3xl font-bold text-foreground">{submissions.length}</p>
+              <p className="text-3xl font-bold text-foreground">
+                {submissions.length}
+              </p>
             </div>
             <div className="bg-green-50 rounded-lg p-4">
               <p className="text-sm text-foreground/70">Completed</p>
@@ -150,7 +162,11 @@ export default function AdminSubmissions() {
                     : "border-transparent text-foreground/60 hover:text-foreground"
                 }`}
               >
-                {tab === "all" ? "All Submissions" : tab === "completed" ? "Completed" : "Abandoned"}
+                {tab === "all"
+                  ? "All Submissions"
+                  : tab === "completed"
+                    ? "Completed"
+                    : "Abandoned"}
               </button>
             ))}
           </div>
@@ -172,7 +188,9 @@ export default function AdminSubmissions() {
           {/* Submissions List */}
           {!loading && !error && filteredSubmissions.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-foreground/60">No {filter === "all" ? "" : filter} submissions yet</p>
+              <p className="text-foreground/60">
+                No {filter === "all" ? "" : filter} submissions yet
+              </p>
             </div>
           )}
 
@@ -186,7 +204,9 @@ export default function AdminSubmissions() {
                   {/* Summary Row */}
                   <button
                     onClick={() =>
-                      setExpandedId(expandedId === submission.id ? null : submission.id)
+                      setExpandedId(
+                        expandedId === submission.id ? null : submission.id,
+                      )
                     }
                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors"
                   >
@@ -196,9 +216,12 @@ export default function AdminSubmissions() {
                           <h3 className="font-semibold text-foreground">
                             {submission.company}
                           </h3>
-                          <p className="text-sm text-foreground/70 mt-1">{submission.email}</p>
+                          <p className="text-sm text-foreground/70 mt-1">
+                            {submission.email}
+                          </p>
                           <p className="text-xs text-foreground/50 mt-1">
-                            Submitted {new Date(submission.createdAt).toLocaleString()}
+                            Submitted{" "}
+                            {new Date(submission.createdAt).toLocaleString()}
                           </p>
                         </div>
                         <div className="flex items-center gap-3 flex-shrink-0">
@@ -216,7 +239,9 @@ export default function AdminSubmissions() {
                     </div>
                     <ChevronDown
                       className={`w-5 h-5 text-foreground/60 transition-transform ${
-                        expandedId === submission.id ? "transform rotate-180" : ""
+                        expandedId === submission.id
+                          ? "transform rotate-180"
+                          : ""
                       }`}
                     />
                   </button>
@@ -230,44 +255,56 @@ export default function AdminSubmissions() {
                             ⚠️ Abandoned Submission
                           </p>
                           <p className="text-sm text-yellow-800">
-                            User completed steps 1-{submission.currentStep - 1} and abandoned at <strong>Step {submission.currentStep}</strong>
+                            User completed steps 1-{submission.currentStep - 1}{" "}
+                            and abandoned at{" "}
+                            <strong>Step {submission.currentStep}</strong>
                           </p>
                         </div>
                       )}
 
                       {/* Progress Indicator */}
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-foreground text-sm">Form Progress</h4>
+                        <h4 className="font-semibold text-foreground text-sm">
+                          Form Progress
+                        </h4>
                         <div className="flex gap-2 flex-wrap">
-                          {Array.from({ length: 7 }, (_, i) => i + 1).map((step) => {
-                            const isCompleted = step < submission.currentStep;
-                            const isAbandoned = step === submission.currentStep && !submission.isCompleted;
-                            const isFuture = step > submission.currentStep;
+                          {Array.from({ length: 7 }, (_, i) => i + 1).map(
+                            (step) => {
+                              const isCompleted = step < submission.currentStep;
+                              const isAbandoned =
+                                step === submission.currentStep &&
+                                !submission.isCompleted;
+                              const isFuture = step > submission.currentStep;
 
-                            return (
-                              <div
-                                key={step}
-                                className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm transition-colors ${
-                                  isCompleted
-                                    ? "bg-green-100 text-green-700 border border-green-300"
-                                    : isAbandoned
-                                    ? "bg-red-100 text-red-700 border border-red-300"
-                                    : "bg-slate-100 text-slate-400 border border-slate-200"
-                                }`}
-                              >
-                                {isCompleted ? "✓" : step}
-                              </div>
-                            );
-                          })}
+                              return (
+                                <div
+                                  key={step}
+                                  className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm transition-colors ${
+                                    isCompleted
+                                      ? "bg-green-100 text-green-700 border border-green-300"
+                                      : isAbandoned
+                                        ? "bg-red-100 text-red-700 border border-red-300"
+                                        : "bg-slate-100 text-slate-400 border border-slate-200"
+                                  }`}
+                                >
+                                  {isCompleted ? "✓" : step}
+                                </div>
+                              );
+                            },
+                          )}
                         </div>
                       </div>
 
                       {/* Collected Data Timeline */}
                       <div className="space-y-4">
-                        <h4 className="font-semibold text-foreground text-sm">Collected Data</h4>
+                        <h4 className="font-semibold text-foreground text-sm">
+                          Collected Data
+                        </h4>
                         <div className="space-y-3">
                           {submission.steps.map((step) => {
-                            const isAbandoned = step.stepNumber === submission.currentStep && !submission.isCompleted;
+                            const isAbandoned =
+                              step.stepNumber === submission.currentStep &&
+                              !submission.isCompleted;
 
                             return (
                               <div
@@ -280,16 +317,19 @@ export default function AdminSubmissions() {
                               >
                                 <div className="flex justify-between items-start mb-3">
                                   <div className="flex items-center gap-3">
-                                    <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
-                                      isAbandoned
-                                        ? "bg-red-100 text-red-700"
-                                        : "bg-green-100 text-green-700"
-                                    }`}>
+                                    <span
+                                      className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
+                                        isAbandoned
+                                          ? "bg-red-100 text-red-700"
+                                          : "bg-green-100 text-green-700"
+                                      }`}
+                                    >
                                       {isAbandoned ? "⚠" : "✓"}
                                     </span>
                                     <div>
                                       <span className="font-semibold text-foreground text-sm">
-                                        Step {step.stepNumber}: {STEP_NAMES[step.stepNumber - 1]}
+                                        Step {step.stepNumber}:{" "}
+                                        {STEP_NAMES[step.stepNumber - 1]}
                                       </span>
                                       {isAbandoned && (
                                         <span className="ml-3 text-xs font-semibold text-red-700 bg-red-100 px-2 py-0.5 rounded">
@@ -348,34 +388,46 @@ function renderStepData(stepNumber: number, data: any): React.ReactNode {
       return (
         <div>
           <p>
-            <strong>Interests:</strong> {(data.interests || []).join(", ") || "None selected"}
+            <strong>Interests:</strong>{" "}
+            {(data.interests || []).join(", ") || "None selected"}
           </p>
-          {data.interestOther && <p><strong>Other:</strong> {data.interestOther}</p>}
+          {data.interestOther && (
+            <p>
+              <strong>Other:</strong> {data.interestOther}
+            </p>
+          )}
         </div>
       );
     case 2:
       return (
         <p>
-          <strong>Decision Context:</strong> {(data.decisionContext || []).join(", ") || "None selected"}
+          <strong>Decision Context:</strong>{" "}
+          {(data.decisionContext || []).join(", ") || "None selected"}
         </p>
       );
     case 3:
       return (
         <p>
-          <strong>Perspectives:</strong> {(data.perspectives || []).join(", ") || "None selected"}
+          <strong>Perspectives:</strong>{" "}
+          {(data.perspectives || []).join(", ") || "None selected"}
         </p>
       );
     case 4:
       return (
         <p>
-          <strong>Vendors:</strong> {(data.vendors || []).join(", ") || "None selected"}
+          <strong>Vendors:</strong>{" "}
+          {(data.vendors || []).join(", ") || "None selected"}
         </p>
       );
     case 5:
       return (
         <div>
-          <p><strong>Location:</strong> {data.location || "Not specified"}</p>
-          <p><strong>Format:</strong> {data.format || "Not specified"}</p>
+          <p>
+            <strong>Location:</strong> {data.location || "Not specified"}
+          </p>
+          <p>
+            <strong>Format:</strong> {data.format || "Not specified"}
+          </p>
         </div>
       );
     case 6:
@@ -387,11 +439,23 @@ function renderStepData(stepNumber: number, data: any): React.ReactNode {
     case 7:
       return (
         <div>
-          <p><strong>Name:</strong> {data.name || "Not specified"}</p>
-          <p><strong>Role:</strong> {data.role || "Not specified"}</p>
-          <p><strong>Company:</strong> {data.company || "Not specified"}</p>
-          <p><strong>Email:</strong> {data.email || "Not specified"}</p>
-          {data.assistant && <p><strong>Assistant:</strong> {data.assistant}</p>}
+          <p>
+            <strong>Name:</strong> {data.name || "Not specified"}
+          </p>
+          <p>
+            <strong>Role:</strong> {data.role || "Not specified"}
+          </p>
+          <p>
+            <strong>Company:</strong> {data.company || "Not specified"}
+          </p>
+          <p>
+            <strong>Email:</strong> {data.email || "Not specified"}
+          </p>
+          {data.assistant && (
+            <p>
+              <strong>Assistant:</strong> {data.assistant}
+            </p>
+          )}
         </div>
       );
     default:

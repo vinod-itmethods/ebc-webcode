@@ -7,9 +7,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8">
           {/* Description */}
           <div className="space-y-2">
-            <h3 className="font-semibold text-foreground">Executive Briefing Council</h3>
+            <h3 className="font-semibold text-foreground">
+              Executive Briefing Council
+            </h3>
             <p className="text-sm text-foreground/60 max-w-xs">
-              Confidential, curated briefings for enterprise technology leaders navigating complex decisions across AI, DevOps, and modern infrastructure.
+              Confidential, curated briefings for enterprise technology leaders
+              navigating complex decisions across AI, DevOps, and modern
+              infrastructure.
             </p>
           </div>
 
@@ -18,17 +22,26 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-foreground">Program</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#what" className="text-foreground/60 hover:text-foreground transition-colors">
+                <a
+                  href="#what"
+                  className="text-foreground/60 hover:text-foreground transition-colors"
+                >
                   What this is
                 </a>
               </li>
               <li>
-                <a href="#how" className="text-foreground/60 hover:text-foreground transition-colors">
+                <a
+                  href="#how"
+                  className="text-foreground/60 hover:text-foreground transition-colors"
+                >
                   How it works
                 </a>
               </li>
               <li>
-                <a href="#locations" className="text-foreground/60 hover:text-foreground transition-colors">
+                <a
+                  href="#locations"
+                  className="text-foreground/60 hover:text-foreground transition-colors"
+                >
                   Locations
                 </a>
               </li>
@@ -40,7 +53,10 @@ export default function Footer() {
             <p className="text-xs text-foreground/50">
               Facilitated by iTmethods
             </p>
-            <a href="/admin" className="text-xs text-foreground/50 hover:text-foreground/70 transition-colors inline-block">
+            <a
+              href="/admin"
+              className="text-xs text-foreground/50 hover:text-foreground/70 transition-colors inline-block"
+            >
               Admin login
             </a>
           </div>

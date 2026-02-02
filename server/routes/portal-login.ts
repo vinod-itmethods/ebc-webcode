@@ -46,7 +46,11 @@ export async function handlePortalLogin(req: Request, res: Response) {
       .eq("email", emailLower)
       .single();
 
-    if (!customerError && customerData && customerData.password_hash === password) {
+    if (
+      !customerError &&
+      customerData &&
+      customerData.password_hash === password
+    ) {
       return res.status(200).json({
         success: true,
         user: {
@@ -65,7 +69,11 @@ export async function handlePortalLogin(req: Request, res: Response) {
       .eq("email", emailLower)
       .single();
 
-    if (!providerError && providerData && providerData.password_hash === password) {
+    if (
+      !providerError &&
+      providerData &&
+      providerData.password_hash === password
+    ) {
       return res.status(200).json({
         success: true,
         user: {
@@ -90,7 +98,8 @@ export async function handlePortalLogin(req: Request, res: Response) {
 }
 
 // Store password reset requests in memory (in production, use database)
-const passwordResetRequests: Map<string, { email: string; requestedAt: Date }> = new Map();
+const passwordResetRequests: Map<string, { email: string; requestedAt: Date }> =
+  new Map();
 
 // Endpoint for forgot password requests
 export async function handleForgotPassword(req: Request, res: Response) {
@@ -123,7 +132,8 @@ export async function handleForgotPassword(req: Request, res: Response) {
       // Always return success message
       return res.status(200).json({
         success: true,
-        message: "If an account exists with this email, a password reset request has been sent",
+        message:
+          "If an account exists with this email, a password reset request has been sent",
       });
     }
 
@@ -153,7 +163,8 @@ export async function handleGetResetRequests(req: Request, res: Response) {
     // Verify admin access
     if (!adminEmail || !adminEmail.toString().endsWith("@itmethods.com")) {
       return res.status(403).json({
-        error: "Unauthorized: only @itmethods.com emails can view reset requests",
+        error:
+          "Unauthorized: only @itmethods.com emails can view reset requests",
       });
     }
 
@@ -220,7 +231,11 @@ export async function handleChangePassword(req: Request, res: Response) {
       .eq("email", emailLower)
       .single();
 
-    if (!customerError && customerData && customerData.password_hash === currentPassword) {
+    if (
+      !customerError &&
+      customerData &&
+      customerData.password_hash === currentPassword
+    ) {
       // Update customer password
       const { error: updateError } = await supabase
         .from("portal_customer_logins")
@@ -244,7 +259,11 @@ export async function handleChangePassword(req: Request, res: Response) {
       .eq("email", emailLower)
       .single();
 
-    if (!providerError && providerData && providerData.password_hash === currentPassword) {
+    if (
+      !providerError &&
+      providerData &&
+      providerData.password_hash === currentPassword
+    ) {
       // Update provider password
       const { error: updateError } = await supabase
         .from("portal_provider_logins")
@@ -281,7 +300,8 @@ export async function handleAddPortalLogin(req: Request, res: Response) {
     // Verify admin access
     if (!adminEmail || !adminEmail.endsWith("@itmethods.com")) {
       return res.status(403).json({
-        error: "Unauthorized: only @itmethods.com emails can manage portal logins",
+        error:
+          "Unauthorized: only @itmethods.com emails can manage portal logins",
       });
     }
 
@@ -298,7 +318,8 @@ export async function handleAddPortalLogin(req: Request, res: Response) {
     }
 
     const emailLower = email.toLowerCase();
-    const table = role === "customer" ? "portal_customer_logins" : "portal_provider_logins";
+    const table =
+      role === "customer" ? "portal_customer_logins" : "portal_provider_logins";
 
     const { data, error } = await supabase
       .from(table)

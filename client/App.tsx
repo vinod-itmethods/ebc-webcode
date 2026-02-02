@@ -39,7 +39,7 @@ function ScrollToTopOnNavigate() {
     // Scroll to top with a small delay to ensure page has rendered
     window.scrollTo(0, 0);
     const timer = setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }, 10);
     return () => clearTimeout(timer);
   }, [pathname]);
@@ -63,15 +63,24 @@ export default function App() {
             <Route path="/request-briefing" element={<RequestBriefing />} />
             <Route path="/partner-login" element={<PartnerLogin />} />
             <Route path="/partner-dashboard" element={<PartnerDashboard />} />
-            <Route path="/request-partner-access" element={<RequestPartnerAccess />} />
+            <Route
+              path="/request-partner-access"
+              element={<RequestPartnerAccess />}
+            />
             <Route path="/portal/provider" element={<PortalProvider />} />
             <Route path="/portal/customer" element={<PortalCustomer />} />
-            <Route path="/portal/forgot-password" element={<ForgotPassword />} />
+            <Route
+              path="/portal/forgot-password"
+              element={<ForgotPassword />}
+            />
             <Route path="/portal" element={<PortalLogin />} />
             <Route path="/admin" element={<AdminLogin />} />
             <Route path="/admin/submissions" element={<AdminSubmissions />} />
             <Route path="/admin/customers" element={<AdminCustomers />} />
-            <Route path="/admin/portal-logins" element={<AdminPortalLogins />} />
+            <Route
+              path="/admin/portal-logins"
+              element={<AdminPortalLogins />}
+            />
             <Route path="/admin/documents" element={<AdminDocuments />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

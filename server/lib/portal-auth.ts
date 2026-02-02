@@ -47,7 +47,7 @@ export async function initializePortalAuth() {
 // Verify portal login
 export async function verifyPortalLogin(
   email: string,
-  password: string
+  password: string,
 ): Promise<{ user: PortalUser | null; error: string | null }> {
   try {
     // Try customer login first
@@ -114,7 +114,7 @@ export async function verifyPortalLogin(
 export async function addCustomerLogin(
   email: string,
   passwordHash: string,
-  companyId?: string
+  companyId?: string,
 ) {
   const { data, error } = await supabase
     .from("portal_customer_logins")
@@ -136,7 +136,7 @@ export async function addCustomerLogin(
 export async function addProviderLogin(
   email: string,
   passwordHash: string,
-  companyId: string
+  companyId: string,
 ) {
   const { data, error } = await supabase
     .from("portal_provider_logins")

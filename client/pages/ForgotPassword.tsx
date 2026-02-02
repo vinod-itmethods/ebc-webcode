@@ -71,7 +71,9 @@ export default function ForgotPassword() {
               </div>
 
               <div className="space-y-2">
-                <h1 className="text-2xl font-bold text-foreground">Request Sent</h1>
+                <h1 className="text-2xl font-bold text-foreground">
+                  Request Sent
+                </h1>
                 <p className="text-foreground/70">
                   We've received your password reset request.
                 </p>
@@ -79,13 +81,16 @@ export default function ForgotPassword() {
 
               <div className="p-4 bg-blue-50/50 rounded-lg border border-blue-100">
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  An admin will review your request and send you a temporary password at <span className="font-medium">{email}</span>. Please check your email for further instructions.
+                  An admin will review your request and send you a temporary
+                  password at <span className="font-medium">{email}</span>.
+                  Please check your email for further instructions.
                 </p>
               </div>
 
               <div className="space-y-3 pt-4">
                 <p className="text-xs text-foreground/60">
-                  You should receive your reset password within 24 hours. If you don't receive it, please contact support.
+                  You should receive your reset password within 24 hours. If you
+                  don't receive it, please contact support.
                 </p>
                 <Button asChild className="w-full">
                   <Link to="/portal">Return to login</Link>
@@ -95,9 +100,12 @@ export default function ForgotPassword() {
           ) : (
             <div className="bg-white rounded-lg border border-border/10 p-8 space-y-6">
               <div className="space-y-2 text-center">
-                <h1 className="text-3xl font-bold text-foreground">Reset Password</h1>
+                <h1 className="text-3xl font-bold text-foreground">
+                  Reset Password
+                </h1>
                 <p className="text-foreground/70">
-                  Enter your email address and we'll help you reset your password
+                  Enter your email address and we'll help you reset your
+                  password
                 </p>
               </div>
 
@@ -134,7 +142,10 @@ export default function ForgotPassword() {
 
               <div className="text-xs text-foreground/50 text-center">
                 Remember your password?{" "}
-                <Link to="/portal" className="text-primary hover:text-primary/80 font-medium">
+                <Link
+                  to="/portal"
+                  className="text-primary hover:text-primary/80 font-medium"
+                >
                   Back to login
                 </Link>
               </div>

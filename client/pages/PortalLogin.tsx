@@ -28,7 +28,9 @@ export default function PortalLogin() {
     const storedRole = localStorage.getItem("userRole") as UserRole;
     if (isAuth && storedRole) {
       setIsAuthenticated(true);
-      navigate(storedRole === "customer" ? "/portal/customer" : "/portal/provider");
+      navigate(
+        storedRole === "customer" ? "/portal/customer" : "/portal/provider",
+      );
     }
   }, [navigate]);
 
@@ -106,18 +108,26 @@ export default function PortalLogin() {
 
       {/* Hero Header */}
       <div className="w-full max-w-2xl text-center mb-12">
-        <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-3">Executive briefing<br className="hidden sm:block" /> council portal</h1>
-        <p className="text-lg text-foreground/90">Secure access for customers and technology providers participating in Executive Briefing Council briefings.</p>
+        <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-3">
+          Executive briefing
+          <br className="hidden sm:block" /> council portal
+        </h1>
+        <p className="text-lg text-foreground/90">
+          Secure access for customers and technology providers participating in
+          Executive Briefing Council briefings.
+        </p>
       </div>
 
       {/* Login Card */}
       <div className="w-full max-w-lg">
         <div className="bg-white rounded-xl shadow-sm border border-border p-8 space-y-8">
-          
           {/* Login Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Email
               </label>
               <Input
@@ -132,7 +142,10 @@ export default function PortalLogin() {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Password
               </label>
               <Input
@@ -171,7 +184,10 @@ export default function PortalLogin() {
 
           {/* Help Links */}
           <div className="flex flex-col gap-3 pt-2">
-            <Link to="/portal/forgot-password" className="text-sm text-primary hover:text-primary/80 font-medium">
+            <Link
+              to="/portal/forgot-password"
+              className="text-sm text-primary hover:text-primary/80 font-medium"
+            >
               Forgot password?
             </Link>
           </div>
@@ -181,11 +197,7 @@ export default function PortalLogin() {
             <p className="text-sm text-foreground/80 leading-relaxed">
               Are you a technology vendor interested in joining our ecosystem?
             </p>
-            <Button
-              variant="secondary-outline"
-              asChild
-              className="w-full"
-            >
+            <Button variant="secondary-outline" asChild className="w-full">
               <a href="/request-partner-access">Request access</a>
             </Button>
           </div>
@@ -194,7 +206,10 @@ export default function PortalLogin() {
         {/* Security Note */}
         <div className="mt-8 flex items-start gap-3 justify-center text-center">
           <Lock className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
-          <p className="text-xs text-foreground/60">Confidential and secure. Briefing details are visible only to approved participants.</p>
+          <p className="text-xs text-foreground/60">
+            Confidential and secure. Briefing details are visible only to
+            approved participants.
+          </p>
         </div>
       </div>
     </div>

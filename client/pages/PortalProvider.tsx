@@ -6,7 +6,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChangePasswordModal from "@/components/ChangePasswordModal";
 import { partners, type Partner } from "@/data/partners";
-import { CheckCircle2, Upload, X, Plus, Key, FileText, Download, Trash2 } from "lucide-react";
+import {
+  CheckCircle2,
+  Upload,
+  X,
+  Plus,
+  Key,
+  FileText,
+  Download,
+  Trash2,
+} from "lucide-react";
 
 type RegistrationStep = "not-started" | "in-progress" | "complete";
 
@@ -37,16 +46,24 @@ const REGISTRATION_STEPS = [
 
 export default function PortalProvider() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [activeTab, setActiveTab] = useState<"profile" | "registration" | "documents">("profile");
+  const [activeTab, setActiveTab] = useState<
+    "profile" | "registration" | "documents"
+  >("profile");
   const [expandedStep, setExpandedStep] = useState<number | null>(null);
   const [documents, setDocuments] = useState<UploadedDocument[]>([]);
-  const [registrationStatus, setRegistrationStatus] = useState<RegistrationStep>("in-progress");
+  const [registrationStatus, setRegistrationStatus] =
+    useState<RegistrationStep>("in-progress");
   const [completedSteps, setCompletedSteps] = useState<number[]>([0, 1]);
-  const [selectedAreas, setSelectedAreas] = useState<string[]>(["AI & Machine Learning", "Cloud & Infrastructure"]);
+  const [selectedAreas, setSelectedAreas] = useState<string[]>([
+    "AI & Machine Learning",
+    "Cloud & Infrastructure",
+  ]);
   const [availableForBriefings, setAvailableForBriefings] = useState(true);
   const [provideExecutiveSponsor, setProvideExecutiveSponsor] = useState(true);
   const [regions, setRegions] = useState("North America");
-  const [selectedProviderId, setSelectedProviderId] = useState<string>(partners[0].id);
+  const [selectedProviderId, setSelectedProviderId] = useState<string>(
+    partners[0].id,
+  );
   const [providerData, setProviderData] = useState<Partner>(partners[0]);
   const [isSaved, setIsSaved] = useState(false);
   const [topics, setTopics] = useState<string[]>(partners[0].topics || []);
@@ -93,7 +110,7 @@ export default function PortalProvider() {
 
   // Load provider profile data when authenticated
   useEffect(() => {
-    const selected = partners.find(p => p.id === selectedProviderId);
+    const selected = partners.find((p) => p.id === selectedProviderId);
     if (selected) {
       const savedData = localStorage.getItem(`partner_${selectedProviderId}`);
       if (savedData) {
@@ -116,16 +133,15 @@ export default function PortalProvider() {
     setIsSaved(false);
   }, [selectedProviderId]);
 
-
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = (event) => {
         const imageUrl = event.target?.result as string;
-        setProviderData(prev => ({
+        setProviderData((prev) => ({
           ...prev,
-          speakerImage: imageUrl
+          speakerImage: imageUrl,
         }));
       };
       reader.readAsDataURL(file);
@@ -133,9 +149,9 @@ export default function PortalProvider() {
   };
 
   const handleInputChange = (field: keyof Partner, value: string) => {
-    setProviderData(prev => ({
+    setProviderData((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
@@ -159,23 +175,23 @@ export default function PortalProvider() {
   const handleBenefitChange = (index: number, value: string) => {
     const newBenefits = [...(providerData.benefits || [])];
     newBenefits[index] = value;
-    setProviderData(prev => ({
+    setProviderData((prev) => ({
       ...prev,
-      benefits: newBenefits
+      benefits: newBenefits,
     }));
   };
 
   const addBenefit = () => {
-    setProviderData(prev => ({
+    setProviderData((prev) => ({
       ...prev,
-      benefits: [...(prev.benefits || []), ""]
+      benefits: [...(prev.benefits || []), ""],
     }));
   };
 
   const removeBenefit = (index: number) => {
-    setProviderData(prev => ({
+    setProviderData((prev) => ({
       ...prev,
-      benefits: prev.benefits?.filter((_, i) => i !== index) || []
+      benefits: prev.benefits?.filter((_, i) => i !== index) || [],
     }));
   };
 
@@ -183,26 +199,32 @@ export default function PortalProvider() {
     const dataToSave = {
       ...providerData,
       topics,
-      additionalTopic
+      additionalTopic,
     };
-    localStorage.setItem(`partner_${selectedProviderId}`, JSON.stringify(dataToSave));
+    localStorage.setItem(
+      `partner_${selectedProviderId}`,
+      JSON.stringify(dataToSave),
+    );
     setIsSaved(true);
     setTimeout(() => setIsSaved(false), 2000);
   };
 
   const toggleArea = (area: string) => {
     setSelectedAreas((prev) =>
-      prev.includes(area) ? prev.filter((a) => a !== area) : [...prev, area]
+      prev.includes(area) ? prev.filter((a) => a !== area) : [...prev, area],
     );
   };
 
   const toggleStep = (stepIndex: number) => {
     setCompletedSteps((prev) =>
-      prev.includes(stepIndex) ? prev.filter((i) => i !== stepIndex) : [...prev, stepIndex]
+      prev.includes(stepIndex)
+        ? prev.filter((i) => i !== stepIndex)
+        : [...prev, stepIndex],
     );
   };
 
-  const progressPercentage = (completedSteps.length / REGISTRATION_STEPS.length) * 100;
+  const progressPercentage =
+    (completedSteps.length / REGISTRATION_STEPS.length) * 100;
 
   if (!isAuthenticated) {
     return null;
@@ -216,8 +238,14 @@ export default function PortalProvider() {
         <div className="container max-w-4xl mx-auto px-4 py-20">
           {/* Header */}
           <div className="mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Technology provider portal</h1>
-            <p className="text-lg text-foreground/90">This portal is for approved technology providers participating in Executive Briefing Council sessions. Use it to complete registration and indicate where you'd like to opt in.</p>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">
+              Technology provider portal
+            </h1>
+            <p className="text-lg text-foreground/90">
+              This portal is for approved technology providers participating in
+              Executive Briefing Council sessions. Use it to complete
+              registration and indicate where you'd like to opt in.
+            </p>
           </div>
 
           {/* Tab Navigation */}
@@ -261,10 +289,17 @@ export default function PortalProvider() {
             <div className="space-y-8">
               {/* Manage Your Login */}
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-4">Manage Your Login</h3>
+                <h3 className="text-lg font-bold text-foreground mb-4">
+                  Manage Your Login
+                </h3>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm text-foreground/70 mb-4">Email: <span className="font-medium text-foreground">{userEmail}</span></p>
+                    <p className="text-sm text-foreground/70 mb-4">
+                      Email:{" "}
+                      <span className="font-medium text-foreground">
+                        {userEmail}
+                      </span>
+                    </p>
                     <Button
                       onClick={() => setShowChangePassword(true)}
                       className="flex items-center gap-2"
@@ -278,7 +313,9 @@ export default function PortalProvider() {
 
               {/* Company Info Header */}
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200 p-6">
-                <p className="text-sm text-foreground/70 mb-3">You are editing profile information for:</p>
+                <p className="text-sm text-foreground/70 mb-3">
+                  You are editing profile information for:
+                </p>
                 <div className="flex items-center gap-4">
                   <div className="h-16 w-16 rounded-lg flex items-center justify-center bg-white border border-border">
                     <img
@@ -291,15 +328,21 @@ export default function PortalProvider() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground">{providerData.name}</h3>
-                    <p className="text-sm text-foreground/70 mt-1">{providerData.tagline}</p>
+                    <h3 className="text-2xl font-bold text-foreground">
+                      {providerData.name}
+                    </h3>
+                    <p className="text-sm text-foreground/70 mt-1">
+                      {providerData.tagline}
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Company Information */}
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-6">Company Information</h3>
+                <h3 className="text-lg font-bold text-foreground mb-6">
+                  Company Information
+                </h3>
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -307,7 +350,9 @@ export default function PortalProvider() {
                     </label>
                     <Input
                       value={providerData.tagline}
-                      onChange={(e) => handleInputChange("tagline", e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("tagline", e.target.value)
+                      }
                       placeholder="Brief company tagline"
                       className="w-full"
                     />
@@ -319,7 +364,9 @@ export default function PortalProvider() {
                     </label>
                     <textarea
                       value={providerData.description}
-                      onChange={(e) => handleInputChange("description", e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("description", e.target.value)
+                      }
                       placeholder="Detailed description of your company"
                       className="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(45_82%_52%)]"
                       rows={4}
@@ -330,7 +377,9 @@ export default function PortalProvider() {
 
               {/* Speaker Information */}
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-6">Featured Speaker</h3>
+                <h3 className="text-lg font-bold text-foreground mb-6">
+                  Featured Speaker
+                </h3>
                 <div className="space-y-4">
                   {/* Photo Upload */}
                   <div>
@@ -370,7 +419,9 @@ export default function PortalProvider() {
                       </label>
                       <Input
                         value={providerData.speakerName || ""}
-                        onChange={(e) => handleInputChange("speakerName", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("speakerName", e.target.value)
+                        }
                         placeholder="Full name"
                         className="w-full"
                       />
@@ -382,7 +433,9 @@ export default function PortalProvider() {
                       </label>
                       <Input
                         value={providerData.speakerTitle || ""}
-                        onChange={(e) => handleInputChange("speakerTitle", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("speakerTitle", e.target.value)
+                        }
                         placeholder="CEO, Founder, etc."
                         className="w-full"
                       />
@@ -395,7 +448,9 @@ export default function PortalProvider() {
                     </label>
                     <textarea
                       value={providerData.speakerBio || ""}
-                      onChange={(e) => handleInputChange("speakerBio", e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("speakerBio", e.target.value)
+                      }
                       placeholder="Brief biography of the speaker"
                       className="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(45_82%_52%)]"
                       rows={3}
@@ -408,7 +463,9 @@ export default function PortalProvider() {
                     </label>
                     <textarea
                       value={providerData.speakerQuote || ""}
-                      onChange={(e) => handleInputChange("speakerQuote", e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("speakerQuote", e.target.value)
+                      }
                       placeholder="Insightful quote from the speaker"
                       className="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(45_82%_52%)]"
                       rows={3}
@@ -419,14 +476,18 @@ export default function PortalProvider() {
 
               {/* Discussion Topics */}
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-6">Example Discussion Topics</h3>
+                <h3 className="text-lg font-bold text-foreground mb-6">
+                  Example Discussion Topics
+                </h3>
                 <div className="space-y-3">
                   {topics.map((topic, idx) => (
                     <div key={idx} className="flex gap-2 items-end">
                       <div className="flex-1">
                         <Input
                           value={topic}
-                          onChange={(e) => handleTopicChange(idx, e.target.value)}
+                          onChange={(e) =>
+                            handleTopicChange(idx, e.target.value)
+                          }
                           placeholder="Discussion topic"
                           className="w-full"
                         />
@@ -465,14 +526,18 @@ export default function PortalProvider() {
 
               {/* What You'll Get */}
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-6">What You'll Get From This Session</h3>
+                <h3 className="text-lg font-bold text-foreground mb-6">
+                  What You'll Get From This Session
+                </h3>
                 <div className="space-y-3">
                   {(providerData.benefits || []).map((benefit, idx) => (
                     <div key={idx} className="flex gap-2 items-end">
                       <div className="flex-1">
                         <Input
                           value={benefit}
-                          onChange={(e) => handleBenefitChange(idx, e.target.value)}
+                          onChange={(e) =>
+                            handleBenefitChange(idx, e.target.value)
+                          }
                           placeholder="Benefit or outcome"
                           className="w-full"
                         />
@@ -509,7 +574,8 @@ export default function PortalProvider() {
                   {isSaved ? "✓ Changes Saved" : "Save Profile Changes"}
                 </Button>
                 <p className="text-xs text-foreground/60 mt-2 text-center">
-                  Changes are saved and will appear on your technology provider card
+                  Changes are saved and will appear on your technology provider
+                  card
                 </p>
               </div>
             </div>
@@ -519,15 +585,25 @@ export default function PortalProvider() {
           {activeTab === "registration" && (
             <section className="mb-16 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">Program Registration</h2>
-                <p className="text-foreground/70 mb-6">Complete the steps below to register for the Executive Briefing Council program. Click on each step to provide your information.</p>
+                <h2 className="text-2xl font-bold text-foreground mb-2">
+                  Program Registration
+                </h2>
+                <p className="text-foreground/70 mb-6">
+                  Complete the steps below to register for the Executive
+                  Briefing Council program. Click on each step to provide your
+                  information.
+                </p>
               </div>
 
               {/* Progress Bar */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <p className="text-sm font-medium text-foreground">Overall Progress</p>
-                  <p className="text-sm text-foreground/70">{Math.round(progressPercentage)}%</p>
+                  <p className="text-sm font-medium text-foreground">
+                    Overall Progress
+                  </p>
+                  <p className="text-sm text-foreground/70">
+                    {Math.round(progressPercentage)}%
+                  </p>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-2">
                   <div
@@ -542,7 +618,9 @@ export default function PortalProvider() {
                 {/* Step 0: Company Profile */}
                 <div className="bg-white rounded-lg border border-slate-200 overflow-hidden">
                   <button
-                    onClick={() => setExpandedStep(expandedStep === 0 ? null : 0)}
+                    onClick={() =>
+                      setExpandedStep(expandedStep === 0 ? null : 0)
+                    }
                     className="w-full p-4 hover:bg-slate-50 transition-all text-left flex items-center gap-3"
                   >
                     <div
@@ -557,11 +635,16 @@ export default function PortalProvider() {
                       )}
                     </div>
                     <span className="font-medium flex-1">Company profile</span>
-                    <span className="text-xs text-foreground/60">{expandedStep === 0 ? "▼" : "▶"}</span>
+                    <span className="text-xs text-foreground/60">
+                      {expandedStep === 0 ? "▼" : "▶"}
+                    </span>
                   </button>
                   {expandedStep === 0 && (
                     <div className="border-t border-slate-200 p-4 bg-slate-50">
-                      <p className="text-sm text-foreground/70 mb-4">Your company information is already provided. You can update it in the Profile Information tab.</p>
+                      <p className="text-sm text-foreground/70 mb-4">
+                        Your company information is already provided. You can
+                        update it in the Profile Information tab.
+                      </p>
                       <Button
                         onClick={() => {
                           toggleStep(0);
@@ -578,7 +661,9 @@ export default function PortalProvider() {
                 {/* Step 1: Areas of Coverage */}
                 <div className="bg-white rounded-lg border border-slate-200 overflow-hidden">
                   <button
-                    onClick={() => setExpandedStep(expandedStep === 1 ? null : 1)}
+                    onClick={() =>
+                      setExpandedStep(expandedStep === 1 ? null : 1)
+                    }
                     className="w-full p-4 hover:bg-slate-50 transition-all text-left flex items-center gap-3"
                   >
                     <div
@@ -592,13 +677,19 @@ export default function PortalProvider() {
                         <CheckCircle2 className="w-4 h-4 text-white" />
                       )}
                     </div>
-                    <span className="font-medium flex-1">Areas of coverage</span>
-                    <span className="text-xs text-foreground/60">{expandedStep === 1 ? "▼" : "▶"}</span>
+                    <span className="font-medium flex-1">
+                      Areas of coverage
+                    </span>
+                    <span className="text-xs text-foreground/60">
+                      {expandedStep === 1 ? "▼" : "▶"}
+                    </span>
                   </button>
                   {expandedStep === 1 && (
                     <div className="border-t border-slate-200 p-4 bg-slate-50 space-y-4">
                       <div>
-                        <label className="text-sm font-semibold text-foreground mb-3 block">Select domains you support:</label>
+                        <label className="text-sm font-semibold text-foreground mb-3 block">
+                          Select domains you support:
+                        </label>
                         <div className="grid sm:grid-cols-2 gap-3">
                           {COVERAGE_AREAS.map((area) => (
                             <button
@@ -630,9 +721,16 @@ export default function PortalProvider() {
 
                 {/* Step 2-4: Other Steps */}
                 {REGISTRATION_STEPS.slice(2).map((step, stepIndex) => (
-                  <div key={stepIndex + 2} className="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                  <div
+                    key={stepIndex + 2}
+                    className="bg-white rounded-lg border border-slate-200 overflow-hidden"
+                  >
                     <button
-                      onClick={() => setExpandedStep(expandedStep === stepIndex + 2 ? null : stepIndex + 2)}
+                      onClick={() =>
+                        setExpandedStep(
+                          expandedStep === stepIndex + 2 ? null : stepIndex + 2,
+                        )
+                      }
                       className="w-full p-4 hover:bg-slate-50 transition-all text-left flex items-center gap-3"
                     >
                       <div
@@ -647,29 +745,42 @@ export default function PortalProvider() {
                         )}
                       </div>
                       <span className="font-medium flex-1">{step}</span>
-                      <span className="text-xs text-foreground/60">{expandedStep === stepIndex + 2 ? "▼" : "▶"}</span>
+                      <span className="text-xs text-foreground/60">
+                        {expandedStep === stepIndex + 2 ? "▼" : "▶"}
+                      </span>
                     </button>
                     {expandedStep === stepIndex + 2 && (
                       <div className="border-t border-slate-200 p-4 bg-slate-50 space-y-4">
                         <p className="text-sm text-foreground/70">
-                          {stepIndex + 2 === 2 && "Provide contact information for executive leadership or subject matter experts who will participate in briefings."}
-                          {stepIndex + 2 === 3 && "Confirm that you understand and agree to the confidentiality terms of the Executive Briefing Council."}
-                          {stepIndex + 2 === 4 && "Indicate your participation preferences and regions of support."}
+                          {stepIndex + 2 === 2 &&
+                            "Provide contact information for executive leadership or subject matter experts who will participate in briefings."}
+                          {stepIndex + 2 === 3 &&
+                            "Confirm that you understand and agree to the confidentiality terms of the Executive Briefing Council."}
+                          {stepIndex + 2 === 4 &&
+                            "Indicate your participation preferences and regions of support."}
                         </p>
                         {stepIndex + 2 === 4 && (
                           <div className="space-y-4 p-4 bg-white rounded-lg border border-slate-200">
                             <div className="flex items-center justify-between">
                               <div>
-                                <p className="font-medium text-foreground">Available for executive briefings</p>
-                                <p className="text-xs text-foreground/70">Yes / No</p>
+                                <p className="font-medium text-foreground">
+                                  Available for executive briefings
+                                </p>
+                                <p className="text-xs text-foreground/70">
+                                  Yes / No
+                                </p>
                               </div>
                               <button
-                                onClick={() => setAvailableForBriefings(!availableForBriefings)}
+                                onClick={() =>
+                                  setAvailableForBriefings(
+                                    !availableForBriefings,
+                                  )
+                                }
                                 className={`px-4 py-2 rounded font-medium transition-all ${
-                                availableForBriefings
-                                  ? "bg-[hsl(190_55%_40%)] text-white"
-                                  : "bg-slate-300 text-foreground hover:bg-slate-400"
-                              }`}
+                                  availableForBriefings
+                                    ? "bg-[hsl(190_55%_40%)] text-white"
+                                    : "bg-slate-300 text-foreground hover:bg-slate-400"
+                                }`}
                               >
                                 {availableForBriefings ? "Yes" : "No"}
                               </button>
@@ -677,23 +788,33 @@ export default function PortalProvider() {
 
                             <div className="flex items-center justify-between">
                               <div>
-                                <p className="font-medium text-foreground">Will provide executive sponsor</p>
-                                <p className="text-xs text-foreground/70">Yes / No</p>
+                                <p className="font-medium text-foreground">
+                                  Will provide executive sponsor
+                                </p>
+                                <p className="text-xs text-foreground/70">
+                                  Yes / No
+                                </p>
                               </div>
                               <button
-                                onClick={() => setProvideExecutiveSponsor(!provideExecutiveSponsor)}
+                                onClick={() =>
+                                  setProvideExecutiveSponsor(
+                                    !provideExecutiveSponsor,
+                                  )
+                                }
                                 className={`px-4 py-2 rounded font-medium transition-all ${
-                                provideExecutiveSponsor
-                                  ? "bg-[hsl(190_55%_40%)] text-white"
-                                  : "bg-slate-300 text-foreground hover:bg-slate-400"
-                              }`}
+                                  provideExecutiveSponsor
+                                    ? "bg-[hsl(190_55%_40%)] text-white"
+                                    : "bg-slate-300 text-foreground hover:bg-slate-400"
+                                }`}
                               >
                                 {provideExecutiveSponsor ? "Yes" : "No"}
                               </button>
                             </div>
 
                             <div>
-                              <label className="text-sm font-medium text-foreground mb-2 block">Regions supported (optional)</label>
+                              <label className="text-sm font-medium text-foreground mb-2 block">
+                                Regions supported (optional)
+                              </label>
                               <input
                                 type="text"
                                 value={regions}
@@ -722,7 +843,11 @@ export default function PortalProvider() {
               {/* Important Note */}
               <div className="p-6 bg-blue-50/50 rounded-lg border border-blue-100">
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  <span className="font-semibold">Important:</span> Participation does not imply endorsement or preferred provider status. Briefings are customer-led and curated based on customer priorities. Vendors are selected based on relevance to customer needs.
+                  <span className="font-semibold">Important:</span>{" "}
+                  Participation does not imply endorsement or preferred provider
+                  status. Briefings are customer-led and curated based on
+                  customer priorities. Vendors are selected based on relevance
+                  to customer needs.
                 </p>
               </div>
             </section>
@@ -732,19 +857,32 @@ export default function PortalProvider() {
           {activeTab === "documents" && (
             <section className="mb-16 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">Documents</h2>
-                <p className="text-foreground/70 mb-6">View and download your contracts and other important documents.</p>
+                <h2 className="text-2xl font-bold text-foreground mb-2">
+                  Documents
+                </h2>
+                <p className="text-foreground/70 mb-6">
+                  View and download your contracts and other important
+                  documents.
+                </p>
               </div>
 
               {documents.length > 0 ? (
                 <div className="space-y-3">
                   {documents.map((doc) => (
-                    <div key={doc.id} className="bg-white rounded-lg border border-border p-4 flex items-center justify-between hover:shadow-md transition-shadow">
+                    <div
+                      key={doc.id}
+                      className="bg-white rounded-lg border border-border p-4 flex items-center justify-between hover:shadow-md transition-shadow"
+                    >
                       <div className="flex items-center gap-3 flex-1">
                         <FileText className="w-5 h-5 text-slate-400 flex-shrink-0" />
                         <div className="flex-1 min-w-0">
-                          <p className="font-medium text-foreground truncate">{doc.name}</p>
-                          <p className="text-xs text-foreground/60">{doc.type} • Uploaded {new Date(doc.uploadedAt).toLocaleDateString()}</p>
+                          <p className="font-medium text-foreground truncate">
+                            {doc.name}
+                          </p>
+                          <p className="text-xs text-foreground/60">
+                            {doc.type} • Uploaded{" "}
+                            {new Date(doc.uploadedAt).toLocaleDateString()}
+                          </p>
                         </div>
                       </div>
                       <a
@@ -761,19 +899,25 @@ export default function PortalProvider() {
               ) : (
                 <div className="bg-slate-50 rounded-lg border border-slate-200 p-12 text-center">
                   <FileText className="w-12 h-12 text-slate-300 mx-auto mb-4" />
-                  <p className="text-foreground/70 mb-2">No documents uploaded yet</p>
-                  <p className="text-sm text-foreground/60">Your contracts and documents will appear here once the admin uploads them.</p>
+                  <p className="text-foreground/70 mb-2">
+                    No documents uploaded yet
+                  </p>
+                  <p className="text-sm text-foreground/60">
+                    Your contracts and documents will appear here once the admin
+                    uploads them.
+                  </p>
                 </div>
               )}
 
               <div className="p-6 bg-blue-50/50 rounded-lg border border-blue-100">
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  <span className="font-semibold">Note:</span> All documents are confidential and should be treated as such. Do not share these documents with unauthorized parties.
+                  <span className="font-semibold">Note:</span> All documents are
+                  confidential and should be treated as such. Do not share these
+                  documents with unauthorized parties.
                 </p>
               </div>
             </section>
           )}
-
         </div>
       </div>
 

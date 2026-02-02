@@ -82,7 +82,9 @@ export default function ChangePasswordModal({
       <div className="bg-white rounded-lg max-w-md w-full p-6 space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-foreground">Change Password</h2>
+          <h2 className="text-lg font-semibold text-foreground">
+            Change Password
+          </h2>
           <button
             onClick={onClose}
             disabled={loading}
@@ -109,7 +111,9 @@ export default function ChangePasswordModal({
                 />
               </svg>
             </div>
-            <p className="text-foreground font-medium">Password changed successfully!</p>
+            <p className="text-foreground font-medium">
+              Password changed successfully!
+            </p>
             <p className="text-sm text-foreground/60">
               Your new password is now active.
             </p>

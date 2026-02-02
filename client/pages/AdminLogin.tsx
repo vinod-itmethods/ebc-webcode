@@ -26,7 +26,11 @@ export default function AdminLogin() {
       navigate("/admin/submissions", { replace: true });
     }
     // If authenticated as customer with @itmethods.com email, auto-authenticate as admin
-    else if (customerAuth && userEmail && userEmail.endsWith("@itmethods.com")) {
+    else if (
+      customerAuth &&
+      userEmail &&
+      userEmail.endsWith("@itmethods.com")
+    ) {
       localStorage.setItem("adminEmail", userEmail);
       navigate("/admin/submissions", { replace: true });
     }
@@ -39,7 +43,9 @@ export default function AdminLogin() {
 
     // Validate email is @itmethods.com
     if (!email.endsWith("@itmethods.com")) {
-      setError("Only @itmethods.com email addresses can access the admin portal");
+      setError(
+        "Only @itmethods.com email addresses can access the admin portal",
+      );
       setLoading(false);
       return;
     }
@@ -55,7 +61,7 @@ export default function AdminLogin() {
     // Store email and redirect
     localStorage.setItem("adminEmail", email);
     navigate("/admin/submissions");
-  }
+  };
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -74,8 +80,12 @@ export default function AdminLogin() {
         <div className="w-full max-w-md">
           <div className="bg-white rounded-lg border border-border/10 p-8 space-y-6">
             <div className="space-y-2 text-center">
-              <h1 className="text-3xl font-bold text-foreground">Admin Portal</h1>
-              <p className="text-foreground/70">Enter your credentials to access submissions</p>
+              <h1 className="text-3xl font-bold text-foreground">
+                Admin Portal
+              </h1>
+              <p className="text-foreground/70">
+                Enter your credentials to access submissions
+              </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -111,7 +121,11 @@ export default function AdminLogin() {
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60 hover:text-foreground transition-colors"
                   >
-                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    {showPassword ? (
+                      <EyeOff className="w-4 h-4" />
+                    ) : (
+                      <Eye className="w-4 h-4" />
+                    )}
                   </button>
                 </div>
               </div>

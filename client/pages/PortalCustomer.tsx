@@ -17,7 +17,12 @@ interface TimelineEvent {
   type?: "submission" | "update" | "scheduled" | "email";
 }
 
-type RequestStatus = "draft" | "submitted" | "pending" | "scheduled" | "completed";
+type RequestStatus =
+  | "draft"
+  | "submitted"
+  | "pending"
+  | "scheduled"
+  | "completed";
 
 interface CustomerProfile {
   id: string;
@@ -46,7 +51,9 @@ interface BriefingRequest {
 export default function PortalCustomer() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [customer, setCustomer] = useState<CustomerProfile | null>(null);
-  const [briefingRequests, setBriefingRequests] = useState<BriefingRequest[]>([]);
+  const [briefingRequests, setBriefingRequests] = useState<BriefingRequest[]>(
+    [],
+  );
   const [timelineEvents, setTimelineEvents] = useState<TimelineEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [showChangePassword, setShowChangePassword] = useState(false);
@@ -79,7 +86,9 @@ export default function PortalCustomer() {
 
   const fetchCustomerProfile = async () => {
     try {
-      const response = await fetch(`/api/customer-profile?email=${encodeURIComponent(userEmail)}`);
+      const response = await fetch(
+        `/api/customer-profile?email=${encodeURIComponent(userEmail)}`,
+      );
       if (response.ok) {
         const data = await response.json();
         setCustomer(data.customer);
@@ -89,7 +98,7 @@ export default function PortalCustomer() {
           const request = generateBriefingCard(
             data.customer.briefingData,
             data.customer.updatedAt,
-            data.customer.approvalStatus
+            data.customer.approvalStatus,
           );
           setBriefingRequests([request]);
 
@@ -135,7 +144,8 @@ export default function PortalCustomer() {
                 month: "short",
                 day: "numeric",
               }),
-              description: "Our team is reviewing your organization's needs and matching technology partners",
+              description:
+                "Our team is reviewing your organization's needs and matching technology partners",
               status: "completed",
               type: "update",
             },
@@ -147,7 +157,8 @@ export default function PortalCustomer() {
                 month: "short",
                 day: "numeric",
               }),
-              description: "Briefing agenda and confirmed partners are now available in your portal",
+              description:
+                "Briefing agenda and confirmed partners are now available in your portal",
               status: "pending",
               type: "update",
             },
@@ -178,20 +189,23 @@ export default function PortalCustomer() {
   const generateBriefingCard = (
     briefingData: any,
     submittedDate: string,
-    approvalStatus?: string
+    approvalStatus?: string,
   ): BriefingRequest => {
     const interests = briefingData.interests || [];
     const location = briefingData.location || "Not specified";
 
     let status: RequestStatus = "pending";
-    let statusMessage = "Your briefing request has been received and is awaiting approval from our team.";
+    let statusMessage =
+      "Your briefing request has been received and is awaiting approval from our team.";
 
     if (approvalStatus === "approved") {
       status = "submitted";
-      statusMessage = "Your briefing request has been approved! We're now coordinating with the selected technology partners to schedule your session.";
+      statusMessage =
+        "Your briefing request has been approved! We're now coordinating with the selected technology partners to schedule your session.";
     } else if (approvalStatus === "rejected") {
       status = "draft";
-      statusMessage = "Unfortunately, your briefing request was not approved. Please contact our team for more information.";
+      statusMessage =
+        "Unfortunately, your briefing request was not approved. Please contact our team for more information.";
     }
 
     return {
@@ -216,15 +230,24 @@ export default function PortalCustomer() {
     navigate("/request-briefing");
   };
 
-
   const handleAddToCalendar = (dateStr: string) => {
     // Parse the date string
     const dateParts = dateStr.split(" ");
     const monthStr = dateParts[0];
     const day = parseInt(dateParts[1]);
     const monthMap: { [key: string]: number } = {
-      "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
-      "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11,
+      Jan: 0,
+      Feb: 1,
+      Mar: 2,
+      Apr: 3,
+      May: 4,
+      Jun: 5,
+      Jul: 6,
+      Aug: 7,
+      Sep: 8,
+      Oct: 9,
+      Nov: 10,
+      Dec: 11,
     };
     const month = monthMap[monthStr];
     const year = parseInt(dateParts[2]);
@@ -304,16 +327,29 @@ export default function PortalCustomer() {
         <div className="container max-w-4xl mx-auto px-4 py-20">
           {/* Header */}
           <div className="mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Customer portal</h1>
-            <p className="text-lg text-foreground/90">Welcome. This portal provides a limited view of your Executive Briefing Council activity, including request status and confirmed session details.</p>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">
+              Customer portal
+            </h1>
+            <p className="text-lg text-foreground/90">
+              Welcome. This portal provides a limited view of your Executive
+              Briefing Council activity, including request status and confirmed
+              session details.
+            </p>
           </div>
 
           {/* Manage Your Login */}
           <div className="mb-12 bg-white rounded-lg border border-border p-6">
-            <h3 className="text-lg font-bold text-foreground mb-4">Manage Your Login</h3>
+            <h3 className="text-lg font-bold text-foreground mb-4">
+              Manage Your Login
+            </h3>
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-foreground/70 mb-4">Email: <span className="font-medium text-foreground">{userEmail}</span></p>
+                <p className="text-sm text-foreground/70 mb-4">
+                  Email:{" "}
+                  <span className="font-medium text-foreground">
+                    {userEmail}
+                  </span>
+                </p>
                 <Button
                   onClick={() => setShowChangePassword(true)}
                   className="flex items-center gap-2"
@@ -329,8 +365,12 @@ export default function PortalCustomer() {
           <section className="space-y-8">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">Briefing Requests</h2>
-                <p className="text-foreground/70">View the status of your Executive Briefing Council requests.</p>
+                <h2 className="text-2xl font-bold text-foreground mb-2">
+                  Briefing Requests
+                </h2>
+                <p className="text-foreground/70">
+                  View the status of your Executive Briefing Council requests.
+                </p>
               </div>
               <Button
                 onClick={handleRequestAnotherBriefing}
@@ -343,7 +383,9 @@ export default function PortalCustomer() {
 
             {loading ? (
               <div className="p-8 bg-slate-50 rounded-lg border border-slate-200 text-center">
-                <p className="text-foreground/70">Loading your briefing requests...</p>
+                <p className="text-foreground/70">
+                  Loading your briefing requests...
+                </p>
               </div>
             ) : briefingRequests.length > 0 ? (
               <div className="space-y-6">
@@ -357,28 +399,41 @@ export default function PortalCustomer() {
                       <div className="flex items-center gap-3">
                         {getStatusIcon(request.status)}
                         <div>
-                          <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Status</p>
-                          <p className="text-xl font-semibold text-foreground">{getStatusLabel(request.status)}</p>
+                          <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide">
+                            Status
+                          </p>
+                          <p className="text-xl font-semibold text-foreground">
+                            {getStatusLabel(request.status)}
+                          </p>
                         </div>
                       </div>
                       <div className="text-right">
                         <p className="text-xs text-foreground/60">Submitted</p>
-                        <p className="text-sm font-medium text-foreground">{request.submittedDate}</p>
+                        <p className="text-sm font-medium text-foreground">
+                          {request.submittedDate}
+                        </p>
                       </div>
                     </div>
 
                     {/* Status Message */}
                     <div className="p-4 bg-white/60 rounded border border-white/40">
-                      <p className="text-sm text-foreground/80 leading-relaxed">{request.statusMessage}</p>
+                      <p className="text-sm text-foreground/80 leading-relaxed">
+                        {request.statusMessage}
+                      </p>
                     </div>
 
                     {/* Request Details Grid */}
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Topics</p>
+                        <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">
+                          Topics
+                        </p>
                         <div className="space-y-2">
                           {request.topics.map((topic) => (
-                            <p key={topic} className="text-sm text-foreground/80">
+                            <p
+                              key={topic}
+                              className="text-sm text-foreground/80"
+                            >
                               • {topic}
                             </p>
                           ))}
@@ -386,23 +441,30 @@ export default function PortalCustomer() {
                       </div>
                       <div className="space-y-4">
                         <div>
-                          <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1">Preferred Timeframe</p>
-                          <p className="text-sm text-foreground/80">{request.timeframe}</p>
+                          <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1">
+                            Preferred Timeframe
+                          </p>
+                          <p className="text-sm text-foreground/80">
+                            {request.timeframe}
+                          </p>
                         </div>
                         <div>
-                          <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1">Attendees</p>
-                          <p className="text-sm text-foreground/80">{request.attendees} stakeholders</p>
+                          <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1">
+                            Attendees
+                          </p>
+                          <p className="text-sm text-foreground/80">
+                            {request.attendees} stakeholders
+                          </p>
                         </div>
                       </div>
                     </div>
 
                     {/* CTA */}
                     <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/40">
-                      <Button
-                        variant="secondary-outline"
-                        asChild
-                      >
-                        <a href="mailto:briefings@example.com">Contact the team</a>
+                      <Button variant="secondary-outline" asChild>
+                        <a href="mailto:briefings@example.com">
+                          Contact the team
+                        </a>
                       </Button>
                     </div>
                   </div>
@@ -410,7 +472,9 @@ export default function PortalCustomer() {
               </div>
             ) : (
               <div className="p-8 bg-slate-50 rounded-lg border border-slate-200 text-center">
-                <p className="text-foreground/70">No briefing requests found.</p>
+                <p className="text-foreground/70">
+                  No briefing requests found.
+                </p>
                 <Button asChild className="mt-4">
                   <a href="/">Submit a request</a>
                 </Button>
@@ -431,7 +495,9 @@ export default function PortalCustomer() {
           {/* Confidentiality Note */}
           <div className="mt-16 p-6 bg-slate-50 rounded-lg border border-slate-200">
             <p className="text-xs text-foreground/60 text-center leading-relaxed">
-              To protect confidentiality, customer portal access is limited and does not include vendor or provider materials. All briefing details are restricted to approved participants only.
+              To protect confidentiality, customer portal access is limited and
+              does not include vendor or provider materials. All briefing
+              details are restricted to approved participants only.
             </p>
           </div>
         </div>

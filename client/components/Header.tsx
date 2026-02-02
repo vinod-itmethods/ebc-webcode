@@ -57,13 +57,19 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white shadow-sm overflow-visible">
       <div className="container flex h-16 max-w-7xl items-center px-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-1 hover:opacity-80 transition-opacity flex-shrink-0 -my-4">
+        <Link
+          to="/"
+          className="flex items-center gap-1 hover:opacity-80 transition-opacity flex-shrink-0 -my-4"
+        >
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F3ee4b2193a1f49feab79dc6eb04adb1a%2Fb708ee6487aa42df951001ea08f04fa4?format=webp&width=800&height=1200"
             alt="EBC Logo"
             className="h-24 flex-shrink-0"
           />
-          <span className="text-foreground/70 text-lg">|</span><span className="text-base font-semibold text-foreground">Executive Briefing Council</span>
+          <span className="text-foreground/70 text-lg">|</span>
+          <span className="text-base font-semibold text-foreground">
+            Executive Briefing Council
+          </span>
         </Link>
 
         {/* Nav Links - Centered */}
@@ -154,7 +160,9 @@ export default function Header() {
               <Link
                 to="/portal"
                 className={`hidden md:inline text-sm font-medium transition-colors ${
-                  isActive("/portal") || isActive("/partner-login") || isActive("/partner-dashboard")
+                  isActive("/portal") ||
+                  isActive("/partner-login") ||
+                  isActive("/partner-dashboard")
                     ? "text-primary font-semibold"
                     : "text-foreground/70 hover:text-primary"
                 }`}

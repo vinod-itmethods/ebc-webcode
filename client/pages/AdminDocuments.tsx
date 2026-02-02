@@ -21,7 +21,9 @@ interface ProviderDocuments {
 
 export default function AdminDocuments() {
   const navigate = useNavigate();
-  const [selectedProviderId, setSelectedProviderId] = useState<string>(partners[0]?.id || "");
+  const [selectedProviderId, setSelectedProviderId] = useState<string>(
+    partners[0]?.id || "",
+  );
   const [documents, setDocuments] = useState<ProviderDocuments>({});
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [documentType, setDocumentType] = useState("contract");
@@ -37,8 +39,10 @@ export default function AdminDocuments() {
 
     // Load all documents
     const allDocs: ProviderDocuments = {};
-    partners.forEach(partner => {
-      const storedDocs = localStorage.getItem(`provider_documents_${partner.id}`);
+    partners.forEach((partner) => {
+      const storedDocs = localStorage.getItem(
+        `provider_documents_${partner.id}`,
+      );
       if (storedDocs) {
         try {
           allDocs[partner.id] = JSON.parse(storedDocs);
@@ -91,7 +95,7 @@ export default function AdminDocuments() {
       // Save to localStorage
       localStorage.setItem(
         `provider_documents_${selectedProviderId}`,
-        JSON.stringify(updatedDocs[selectedProviderId])
+        JSON.stringify(updatedDocs[selectedProviderId]),
       );
 
       setDocuments(updatedDocs);
@@ -115,7 +119,7 @@ export default function AdminDocuments() {
 
     localStorage.setItem(
       `provider_documents_${providerId}`,
-      JSON.stringify(updatedDocs[providerId])
+      JSON.stringify(updatedDocs[providerId]),
     );
 
     setDocuments(updatedDocs);
@@ -129,13 +133,19 @@ export default function AdminDocuments() {
         <div className="container max-w-4xl mx-auto px-4 py-20">
           {/* Header */}
           <div className="mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Manage Provider Documents</h1>
-            <p className="text-lg text-foreground/90">Upload contracts and other documents for technology providers.</p>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">
+              Manage Provider Documents
+            </h1>
+            <p className="text-lg text-foreground/90">
+              Upload contracts and other documents for technology providers.
+            </p>
           </div>
 
           {/* Upload Section */}
           <div className="bg-white rounded-lg border border-border p-6 mb-12">
-            <h3 className="text-lg font-bold text-foreground mb-6">Upload Document</h3>
+            <h3 className="text-lg font-bold text-foreground mb-6">
+              Upload Document
+            </h3>
 
             <div className="space-y-4">
               <div>
@@ -180,9 +190,13 @@ export default function AdminDocuments() {
                   <Upload className="w-5 h-5 text-slate-400" />
                   <div className="text-center">
                     <p className="text-sm font-medium text-foreground">
-                      {selectedFile ? selectedFile.name : "Click to select a file"}
+                      {selectedFile
+                        ? selectedFile.name
+                        : "Click to select a file"}
                     </p>
-                    <p className="text-xs text-foreground/60">or drag and drop</p>
+                    <p className="text-xs text-foreground/60">
+                      or drag and drop
+                    </p>
                   </div>
                   <input
                     type="file"
@@ -208,7 +222,9 @@ export default function AdminDocuments() {
               const providerDocs = documents[partner.id] || [];
               return (
                 <div key={partner.id}>
-                  <h3 className="text-lg font-bold text-foreground mb-4">{partner.name}</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    {partner.name}
+                  </h3>
 
                   {providerDocs.length > 0 ? (
                     <div className="space-y-2">
@@ -224,12 +240,15 @@ export default function AdminDocuments() {
                                 {doc.name}
                               </p>
                               <p className="text-xs text-foreground/60">
-                                {doc.type} • {new Date(doc.uploadedAt).toLocaleDateString()}
+                                {doc.type} •{" "}
+                                {new Date(doc.uploadedAt).toLocaleDateString()}
                               </p>
                             </div>
                           </div>
                           <button
-                            onClick={() => handleDeleteDocument(partner.id, doc.id)}
+                            onClick={() =>
+                              handleDeleteDocument(partner.id, doc.id)
+                            }
                             className="ml-4 p-2 rounded-lg hover:bg-red-50 text-red-600 transition-colors flex-shrink-0"
                             title="Delete document"
                           >

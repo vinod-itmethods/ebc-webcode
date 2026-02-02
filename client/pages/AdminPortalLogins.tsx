@@ -102,7 +102,9 @@ export default function AdminPortalLogins() {
       }
 
       // Fetch password reset requests
-      const resetResponse = await fetch(`/api/portal-login/reset-requests?adminEmail=${encodeURIComponent(adminEmail || "")}`);
+      const resetResponse = await fetch(
+        `/api/portal-login/reset-requests?adminEmail=${encodeURIComponent(adminEmail || "")}`,
+      );
       if (resetResponse.ok) {
         const data = await resetResponse.json();
         setResetRequests(data.requests || []);
@@ -110,7 +112,9 @@ export default function AdminPortalLogins() {
 
       setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to load portal logins");
+      setError(
+        err instanceof Error ? err.message : "Failed to load portal logins",
+      );
     } finally {
       setLoading(false);
     }
@@ -167,7 +171,9 @@ export default function AdminPortalLogins() {
       setFormData({ email: "", password: "", role: "customer", companyId: "" });
       setShowForm(false);
     } catch (err) {
-      setFormError(err instanceof Error ? err.message : "Error adding portal login");
+      setFormError(
+        err instanceof Error ? err.message : "Error adding portal login",
+      );
     } finally {
       setFormLoading(false);
     }
@@ -198,7 +204,10 @@ export default function AdminPortalLogins() {
     try {
       // Update the password in the database
       const updateRole = logins.find((l) => l.email === email)?.role;
-      const table = updateRole === "customer" ? "portal_customer_logins" : "portal_provider_logins";
+      const table =
+        updateRole === "customer"
+          ? "portal_customer_logins"
+          : "portal_provider_logins";
 
       // Note: In a production app, you'd call an API endpoint to do this securely
       // For now, we'll just show a success message and clear the request
@@ -220,7 +229,9 @@ export default function AdminPortalLogins() {
         setNewResetPassword("");
         setShowResetPasswordModal(false);
         setShowResetPasswordField(false);
-        alert(`Temporary password for ${email} is: ${newResetPassword}\n\nMake sure to share this with the user.`);
+        alert(
+          `Temporary password for ${email} is: ${newResetPassword}\n\nMake sure to share this with the user.`,
+        );
       }
     } catch (err) {
       alert(err instanceof Error ? err.message : "Error resetting password");
@@ -242,7 +253,9 @@ export default function AdminPortalLogins() {
       <section className="border-b border-border/10 bg-gradient-to-r from-slate-50 to-blue-50/30 px-4 py-4">
         <div className="container max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-lg font-semibold text-foreground">Portal Login Management</h2>
+            <h2 className="text-lg font-semibold text-foreground">
+              Portal Login Management
+            </h2>
             <a
               href="/admin/customers"
               className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
@@ -250,7 +263,9 @@ export default function AdminPortalLogins() {
               → Manage Customers
             </a>
           </div>
-          <p className="text-sm text-foreground/60">Manage customer and technology provider portal login credentials</p>
+          <p className="text-sm text-foreground/60">
+            Manage customer and technology provider portal login credentials
+          </p>
         </div>
       </section>
 
@@ -261,7 +276,9 @@ export default function AdminPortalLogins() {
           {showForm && (
             <div className="mb-8 p-6 bg-blue-50/50 rounded-lg border border-blue-200">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-foreground">Add New Portal Login</h3>
+                <h3 className="text-lg font-semibold text-foreground">
+                  Add New Portal Login
+                </h3>
                 <button
                   onClick={() => {
                     setShowForm(false);
@@ -282,7 +299,9 @@ export default function AdminPortalLogins() {
                     <Input
                       type="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       placeholder="user@example.com"
                       disabled={formLoading}
                     />
@@ -296,7 +315,9 @@ export default function AdminPortalLogins() {
                       <Input
                         type={showPassword ? "text" : "password"}
                         value={formData.password}
-                        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, password: e.target.value })
+                        }
                         placeholder="Enter password"
                         disabled={formLoading}
                       />
@@ -305,7 +326,11 @@ export default function AdminPortalLogins() {
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60 hover:text-foreground"
                       >
-                        {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                        {showPassword ? (
+                          <EyeOff className="w-4 h-4" />
+                        ) : (
+                          <Eye className="w-4 h-4" />
+                        )}
                       </button>
                     </div>
                   </div>
@@ -338,7 +363,12 @@ export default function AdminPortalLogins() {
                       <Input
                         type="text"
                         value={formData.companyId}
-                        onChange={(e) => setFormData({ ...formData, companyId: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            companyId: e.target.value,
+                          })
+                        }
                         placeholder="e.g., google, microsoft"
                         disabled={formLoading}
                       />
@@ -389,9 +419,12 @@ export default function AdminPortalLogins() {
                     className="flex items-center justify-between p-4 bg-white rounded-lg border border-amber-100"
                   >
                     <div>
-                      <p className="font-medium text-foreground">{request.email}</p>
+                      <p className="font-medium text-foreground">
+                        {request.email}
+                      </p>
                       <p className="text-xs text-foreground/60">
-                        Requested {new Date(request.requestedAt).toLocaleDateString()}
+                        Requested{" "}
+                        {new Date(request.requestedAt).toLocaleDateString()}
                       </p>
                     </div>
                     <Button
@@ -416,7 +449,8 @@ export default function AdminPortalLogins() {
                       Reset Password for {resetPasswordEmail}
                     </h4>
                     <p className="text-sm text-foreground/70">
-                      Enter a temporary password for this user. They can change it after logging in.
+                      Enter a temporary password for this user. They can change
+                      it after logging in.
                     </p>
 
                     <div>
@@ -432,11 +466,17 @@ export default function AdminPortalLogins() {
                           disabled={resetLoading}
                         />
                         <button
-                          onClick={() => setShowResetPasswordField(!showResetPasswordField)}
+                          onClick={() =>
+                            setShowResetPasswordField(!showResetPasswordField)
+                          }
                           disabled={resetLoading}
                           className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60"
                         >
-                          {showResetPasswordField ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                          {showResetPasswordField ? (
+                            <EyeOff className="w-4 h-4" />
+                          ) : (
+                            <Eye className="w-4 h-4" />
+                          )}
                         </button>
                       </div>
                     </div>
@@ -482,8 +522,10 @@ export default function AdminPortalLogins() {
                 }`}
               >
                 {f === "all" && `All (${logins.length})`}
-                {f === "customer" && `Customers (${logins.filter((l) => l.role === "customer").length})`}
-                {f === "provider" && `Providers (${logins.filter((l) => l.role === "provider").length})`}
+                {f === "customer" &&
+                  `Customers (${logins.filter((l) => l.role === "customer").length})`}
+                {f === "provider" &&
+                  `Providers (${logins.filter((l) => l.role === "provider").length})`}
               </button>
             ))}
           </div>
@@ -524,7 +566,9 @@ export default function AdminPortalLogins() {
                   <div className="flex-1">
                     <p className="font-medium text-foreground">{login.email}</p>
                     <p className="text-sm text-foreground/60">
-                      {login.role === "customer" ? "Customer" : `Provider${login.companyId ? ` (${login.companyId})` : ""}`}
+                      {login.role === "customer"
+                        ? "Customer"
+                        : `Provider${login.companyId ? ` (${login.companyId})` : ""}`}
                     </p>
                     <p className="text-xs text-foreground/50 mt-1">
                       Added {new Date(login.createdAt).toLocaleDateString()}
