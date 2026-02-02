@@ -68,6 +68,9 @@ export function createServer() {
   // Portal login endpoints
   app.post("/api/portal-login", loginRateLimit, handlePortalLogin);
   app.post("/api/portal-login/change-password", handleChangePassword);
+  app.post("/api/portal-login/forgot-password", handleForgotPassword);
+  app.get("/api/portal-login/reset-requests", handleGetResetRequests);
+  app.post("/api/portal-login/clear-reset-request", handleClearResetRequest);
   app.post("/api/admin/portal-login", handleAddPortalLogin);
 
   // Admin customer management endpoints
