@@ -88,14 +88,14 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Step 2: Select Technology Perspectives */}
+            {/* Step 2: Select Providers */}
             <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
               <div className="flex items-center justify-center w-14 h-14 rounded-full font-bold mb-6 mx-auto border-2" style={{ borderColor: "hsl(193 45% 45%)", color: "hsl(193 45% 45%)" }}>
                 2
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Select technology perspectives</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Select providers</h3>
               <p className="text-foreground/80 leading-relaxed text-center">
-                Identify the technology partners and perspectives you want included, based on relevance to your current decisions.
+                Identify the technology providers and perspectives you want included, based on relevance to your current decisions.
               </p>
             </div>
 
