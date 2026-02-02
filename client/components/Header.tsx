@@ -108,6 +108,20 @@ export default function Header() {
                 </Link>
               )}
 
+              {/* Technology Provider Portal Link - Only for providers */}
+              {userRole === "provider" && (
+                <Link
+                  to="/portal/provider"
+                  className={`hidden md:inline text-sm font-medium transition-colors px-3 py-1 rounded-lg ${
+                    isActive("/portal/provider")
+                      ? "text-primary font-semibold bg-primary/10"
+                      : "text-foreground/70 hover:text-primary hover:bg-primary/5"
+                  }`}
+                >
+                  My Portal
+                </Link>
+              )}
+
               {/* Admin Portal Link - Only for admins */}
               {isAdmin && (
                 <Link
