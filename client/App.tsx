@@ -65,6 +65,7 @@ export default function App() {
             <Route path="/request-partner-access" element={<RequestPartnerAccess />} />
             <Route path="/portal/provider" element={<PortalProvider />} />
             <Route path="/portal/customer" element={<PortalCustomer />} />
+            <Route path="/portal/forgot-password" element={<ForgotPassword />} />
             <Route path="/portal" element={<PortalLogin />} />
             <Route path="/admin" element={<AdminLogin />} />
             <Route path="/admin/submissions" element={<AdminSubmissions />} />
