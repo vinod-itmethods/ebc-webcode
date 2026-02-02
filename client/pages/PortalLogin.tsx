@@ -2,19 +2,15 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { partners } from "@/data/partners";
-import { Lock, ChevronLeft } from "lucide-react";
-
-const PORTAL_PASSWORD = "executive2024";
+import { Lock, ChevronLeft, Loader } from "lucide-react";
 
 type UserRole = "customer" | "provider";
 
 export default function PortalLogin() {
-  const [role, setRole] = useState<UserRole>("customer");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [selectedCompany, setSelectedCompany] = useState<string>(partners[0].id);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
