@@ -170,10 +170,10 @@ export default function Index() {
           </div>
 
           {/* CTA Button */}
-          <div className="mt-16 flex justify-center">
+          <div className="mt-12 flex justify-center">
             <Button
               asChild
-              className="px-8 py-3 text-lg font-semibold rounded-lg"
+              className="px-6 py-2 font-medium rounded-lg"
             >
               <Link to="/partners">
                 Select your technology providers
