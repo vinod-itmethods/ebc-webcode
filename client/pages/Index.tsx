@@ -132,67 +132,40 @@ export default function Index() {
       {/* HOW THE BRIEFING WORKS SECTION */}
       <section id="how" className="py-20 lg:py-28 bg-gradient-to-b from-white via-purple-50/30 to-blue-50/40">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">How the briefing works</h2>
-          
-          <div className="space-y-8">
-            {/* Step 1 */}
-            <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/10 last:border-b-0">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-bold" style={{ backgroundColor: "hsl(45 82% 52%)" }}>
-                  1
-                </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">How the briefing works</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Step 1: Choose Your Focus */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full text-white font-bold mb-6 mx-auto" style={{ backgroundColor: "hsl(193 45% 45%)" }}>
+                1
               </div>
-              <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Pre-brief alignment</h3>
-                <p className="text-foreground/90 text-lg leading-relaxed">
-                  We work with participating organizations to understand priorities, challenges, and the decisions under consideration.
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Choose your focus</h3>
+              <p className="text-foreground/80 leading-relaxed text-center">
+                Select the topics you want to explore, such as AI strategy, DevOps, platform architecture, or operating model decisions.
+              </p>
             </div>
 
-            {/* Step 2 */}
-            <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/10 last:border-b-0">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-bold" style={{ backgroundColor: "hsl(45 82% 52%)" }}>
-                  2
-                </div>
+            {/* Step 2: Select Technology Perspectives */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full text-white font-bold mb-6 mx-auto" style={{ backgroundColor: "hsl(193 45% 45%)" }}>
+                2
               </div>
-              <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Curated agenda</h3>
-                <p className="text-foreground/90 text-lg leading-relaxed">
-                  Each briefing is customized based on the specific topics and outcomes the executive team wants to explore.
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Select technology perspectives</h3>
+              <p className="text-foreground/80 leading-relaxed text-center">
+                Identify the technology partners and perspectives you want included, based on relevance to your current decisions.
+              </p>
             </div>
 
-            {/* Step 3 */}
-            <div className="flex gap-6 items-start pb-8 lg:pb-12 border-b border-border/10 last:border-b-0">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-bold" style={{ backgroundColor: "hsl(45 82% 52%)" }}>
-                  3
-                </div>
+            {/* Step 3: Set the Session Details */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full text-white font-bold mb-6 mx-auto" style={{ backgroundColor: "hsl(193 45% 45%)" }}>
+                3
               </div>
-              <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Multi-partner perspectives</h3>
-                <p className="text-foreground/90 text-lg leading-relaxed">
-                  Briefings may include perspectives from multiple technology partners selected for relevance. This enables leaders to compare approaches, surface trade-offs, and ask direct questions across providers in a single forum.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full text-white font-bold" style={{ backgroundColor: "hsl(45 82% 52%)" }}>
-                  4
-                </div>
-              </div>
-              <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Outcome focus</h3>
-                <p className="text-foreground/90 text-lg leading-relaxed">
-                  Sessions conclude with clear takeaways, options, and next-step considerations.
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Set the session details</h3>
+              <p className="text-foreground/80 leading-relaxed text-center">
+                Confirm your preferred location, format, and attendees for a single, in-person executive session.
+              </p>
             </div>
           </div>
         </div>
