@@ -35,11 +35,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Attribution */}
+          {/* Attribution & Admin */}
           <div className="space-y-2">
             <p className="text-xs text-foreground/50">
               Facilitated by iTmethods
             </p>
+            <a href="/admin" className="text-xs text-foreground/50 hover:text-foreground/70 transition-colors inline-block">
+              Admin Portal
+            </a>
           </div>
         </div>
 
