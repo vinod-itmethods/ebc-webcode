@@ -63,6 +63,117 @@ export async function handlePortalLogin(req: Request, res: Response) {
   }
 }
 
+// Store password reset requests in memory (in production, use database)
+const passwordResetRequests: Map<string, { email: string; requestedAt: Date }> = new Map();
+
+// Endpoint for forgot password requests
+export async function handleForgotPassword(req: Request, res: Response) {
+  try {
+    const { email } = req.body;
+
+    if (!email) {
+      return res.status(400).json({
+        error: "Email is required",
+      });
+    }
+
+    const emailLower = email.toLowerCase();
+
+    // Check if user exists in either table
+    const { data: customerData } = await supabase
+      .from("portal_customer_logins")
+      .select("id")
+      .eq("email", emailLower)
+      .single();
+
+    const { data: providerData } = await supabase
+      .from("portal_provider_logins")
+      .select("id")
+      .eq("email", emailLower)
+      .single();
+
+    if (!customerData && !providerData) {
+      // For security, don't reveal if email exists or not
+      // Always return success message
+      return res.status(200).json({
+        success: true,
+        message: "If an account exists with this email, a password reset request has been sent",
+      });
+    }
+
+    // Store reset request
+    passwordResetRequests.set(emailLower, {
+      email: emailLower,
+      requestedAt: new Date(),
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Password reset request submitted successfully",
+    });
+  } catch (error) {
+    console.error("Error in forgot password:", error);
+    return res.status(500).json({
+      error: "An error occurred while processing your request",
+    });
+  }
+}
+
+// Get pending password reset requests (admin only)
+export async function handleGetResetRequests(req: Request, res: Response) {
+  try {
+    const { adminEmail } = req.query;
+
+    // Verify admin access
+    if (!adminEmail || !adminEmail.toString().endsWith("@itmethods.com")) {
+      return res.status(403).json({
+        error: "Unauthorized: only @itmethods.com emails can view reset requests",
+      });
+    }
+
+    const requests = Array.from(passwordResetRequests.values()).map((req) => ({
+      email: req.email,
+      requestedAt: req.requestedAt.toISOString(),
+    }));
+
+    return res.status(200).json({
+      success: true,
+      requests,
+    });
+  } catch (error) {
+    console.error("Error getting reset requests:", error);
+    return res.status(500).json({
+      error: "An error occurred while fetching reset requests",
+    });
+  }
+}
+
+// Clear a password reset request (admin calls this after resetting password)
+export async function handleClearResetRequest(req: Request, res: Response) {
+  try {
+    const { adminEmail, email } = req.body;
+
+    // Verify admin access
+    if (!adminEmail || !adminEmail.endsWith("@itmethods.com")) {
+      return res.status(403).json({
+        error: "Unauthorized",
+      });
+    }
+
+    passwordResetRequests.delete(email.toLowerCase());
+
+    return res.status(200).json({
+      success: true,
+      message: "Reset request cleared",
+    });
+  } catch (error) {
+    console.error("Error clearing reset request:", error);
+    return res.status(500).json({
+      error: "An error occurred",
+    });
+  }
+}
+
 // Endpoint to change user password (authenticated users)
 export async function handleChangePassword(req: Request, res: Response) {
   try {
