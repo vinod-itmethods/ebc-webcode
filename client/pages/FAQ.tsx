@@ -44,7 +44,7 @@ export default function FAQ() {
       id: "cost",
       question: "How much does this event cost?",
       answer:
-        "These are no cost sessions for organisations that are confirmed for a briefing. Travel, accommodation and meals are all included.",
+        "These are no cost sessions for organisations that are confirmed for a briefing. Travel, accommodation and meals are all included, where applicable.",
     },
     {
       id: "follow-up",
