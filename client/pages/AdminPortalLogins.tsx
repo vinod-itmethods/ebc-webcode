@@ -363,6 +363,102 @@ export default function AdminPortalLogins() {
             </div>
           )}
 
+          {/* Password Reset Requests */}
+          {resetRequests.length > 0 && (
+            <div className="mb-8 p-6 bg-amber-50/50 rounded-lg border border-amber-200 space-y-4">
+              <div className="flex items-center gap-2">
+                <AlertCircle className="w-5 h-5 text-amber-600" />
+                <h3 className="font-semibold text-amber-900">
+                  Password Reset Requests ({resetRequests.length})
+                </h3>
+              </div>
+
+              <div className="space-y-3">
+                {resetRequests.map((request) => (
+                  <div
+                    key={request.email}
+                    className="flex items-center justify-between p-4 bg-white rounded-lg border border-amber-100"
+                  >
+                    <div>
+                      <p className="font-medium text-foreground">{request.email}</p>
+                      <p className="text-xs text-foreground/60">
+                        Requested {new Date(request.requestedAt).toLocaleDateString()}
+                      </p>
+                    </div>
+                    <Button
+                      onClick={() => {
+                        setResetPasswordEmail(request.email);
+                        setShowResetPassword(true);
+                      }}
+                      size="sm"
+                      className="flex items-center gap-2"
+                    >
+                      Reset Password
+                    </Button>
+                  </div>
+                ))}
+              </div>
+
+              {/* Reset Password Modal */}
+              {showResetPassword && (
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+                  <div className="bg-white rounded-lg max-w-md w-full p-6 space-y-4">
+                    <h4 className="text-lg font-semibold text-foreground">
+                      Reset Password for {resetPasswordEmail}
+                    </h4>
+                    <p className="text-sm text-foreground/70">
+                      Enter a temporary password for this user. They can change it after logging in.
+                    </p>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Temporary Password
+                      </label>
+                      <div className="relative">
+                        <Input
+                          type={showResetPassword ? "text" : "password"}
+                          value={newResetPassword}
+                          onChange={(e) => setNewResetPassword(e.target.value)}
+                          placeholder="Enter temporary password"
+                          disabled={resetLoading}
+                        />
+                        <button
+                          onClick={() => setShowResetPassword(!showResetPassword)}
+                          disabled={resetLoading}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60"
+                        >
+                          {showResetPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 pt-4">
+                      <Button
+                        variant="outline"
+                        onClick={() => {
+                          setShowResetPassword(false);
+                          setResetPasswordEmail("");
+                          setNewResetPassword("");
+                        }}
+                        disabled={resetLoading}
+                        className="flex-1"
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        onClick={() => handleResetPassword(resetPasswordEmail)}
+                        disabled={resetLoading || !newResetPassword}
+                        className="flex-1"
+                      >
+                        {resetLoading ? "Setting..." : "Set Password"}
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Filter Tabs */}
           <div className="flex gap-3 mb-6 border-b border-border">
             {["all", "customer", "provider"].map((f) => (
