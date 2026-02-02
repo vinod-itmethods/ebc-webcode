@@ -37,8 +37,9 @@ const REGISTRATION_STEPS = [
 
 export default function PortalProvider() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [activeTab, setActiveTab] = useState<"profile" | "registration">("profile");
+  const [activeTab, setActiveTab] = useState<"profile" | "registration" | "documents">("profile");
   const [expandedStep, setExpandedStep] = useState<number | null>(null);
+  const [documents, setDocuments] = useState<UploadedDocument[]>([]);
   const [registrationStatus, setRegistrationStatus] = useState<RegistrationStep>("in-progress");
   const [completedSteps, setCompletedSteps] = useState<number[]>([0, 1]);
   const [selectedAreas, setSelectedAreas] = useState<string[]>(["AI & Machine Learning", "Cloud & Infrastructure"]);
