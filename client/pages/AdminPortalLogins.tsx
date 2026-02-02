@@ -55,8 +55,15 @@ export default function AdminPortalLogins() {
       return;
     }
     setAdminEmail(storedEmail);
-    fetchLogins();
+    // fetchLogins will be called in the next effect
   }, [navigate]);
+
+  // Fetch logins when adminEmail is set
+  useEffect(() => {
+    if (adminEmail) {
+      fetchLogins();
+    }
+  }, [adminEmail]);
 
   const fetchLogins = async () => {
     try {
