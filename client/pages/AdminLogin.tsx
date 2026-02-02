@@ -3,11 +3,15 @@ import { useNavigate, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { AlertCircle, Home } from "lucide-react";
+import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
+
+const ADMIN_PASSWORD = "executive2024";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
