@@ -172,10 +172,12 @@ export default function Index() {
           {/* CTA Button */}
           <div className="mt-16 flex justify-center">
             <Button
-              onClick={() => navigate("/partners")}
+              asChild
               className="px-8 py-3 text-lg font-semibold rounded-lg"
             >
-              Select your technology providers
+              <Link to="/partners">
+                Select your technology providers
+              </Link>
             </Button>
           </div>
         </div>
