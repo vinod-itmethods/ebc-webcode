@@ -171,9 +171,9 @@ export default function PortalLogin() {
 
           {/* Help Links */}
           <div className="flex flex-col gap-3 pt-2">
-            <a href="#" className="text-sm text-primary hover:text-primary/80 font-medium">
+            <Link to="/portal/forgot-password" className="text-sm text-primary hover:text-primary/80 font-medium">
               Forgot password?
-            </a>
+            </Link>
           </div>
 
           {/* Vendor Section */}
