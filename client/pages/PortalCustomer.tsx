@@ -309,10 +309,19 @@ export default function PortalCustomer() {
           </div>
 
           {/* User Info */}
-          <div className="mb-12 p-4 bg-blue-50/50 rounded-lg border border-blue-100">
+          <div className="mb-12 p-4 bg-blue-50/50 rounded-lg border border-blue-100 flex items-center justify-between">
             <p className="text-sm text-foreground/80">
               Logged in as: <span className="font-medium">{userEmail}</span>
             </p>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setShowChangePassword(true)}
+              className="flex items-center gap-2"
+            >
+              <Key className="w-4 h-4" />
+              Change password
+            </Button>
           </div>
 
           {/* Briefing Requests Section */}
