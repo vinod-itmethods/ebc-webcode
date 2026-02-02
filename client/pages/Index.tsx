@@ -54,7 +54,7 @@ export default function Index() {
 
       <div className="bg-white">
       {/* OUR PROGRAM SECTION */}
-      <section id="what" className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/40 to-white">
+      <section id="what" className="py-16 lg:py-20 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-4xl mx-auto px-4">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">Our program</h2>
@@ -73,26 +73,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
-      <TestimonialCarousel />
-
-      {/* Program Image - After Testimonials */}
-      <section className="py-12 lg:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-2xl lg:max-w-3xl">
-          <img
-            src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
-            alt="Multicultural business executives and professionals discussing strategies in a conference room"
-            className="w-full rounded-2xl shadow-lg object-cover aspect-video"
-          />
-        </div>
-      </section>
-
-      {/* WHO IT'S FOR SECTION */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50/60 via-teal-50/30 to-white">
+      {/* WHO IT'S FOR - Personas with Images (moved from below) */}
+      <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">Who it's for</h2>
 
-          <div className="space-y-16">
+          <div className="space-y-14">
             {/* Enterprise Leaders - Image Left */}
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="rounded-lg overflow-hidden shadow-md h-80 md:h-96">
@@ -144,6 +130,20 @@ export default function Index() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS SECTION */}
+      <TestimonialCarousel />
+
+      {/* Program Image - After Testimonials */}
+      <section className="py-8 lg:py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-2xl lg:max-w-3xl">
+          <img
+            src="https://images.pexels.com/photos/6949496/pexels-photo-6949496.jpeg"
+            alt="Multicultural business executives and professionals discussing strategies in a conference room"
+            className="w-full rounded-2xl shadow-lg object-cover aspect-video"
+          />
         </div>
       </section>
 
