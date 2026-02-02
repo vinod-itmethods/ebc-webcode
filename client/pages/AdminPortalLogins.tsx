@@ -92,6 +92,14 @@ export default function AdminPortalLogins() {
         setLogins(defaultLogins);
         localStorage.setItem("portalLogins", JSON.stringify(defaultLogins));
       }
+
+      // Fetch password reset requests
+      const resetResponse = await fetch(`/api/portal-login/reset-requests?adminEmail=${encodeURIComponent(adminEmail || "")}`);
+      if (resetResponse.ok) {
+        const data = await resetResponse.json();
+        setResetRequests(data.requests || []);
+      }
+
       setError(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load portal logins");
