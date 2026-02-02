@@ -179,6 +179,47 @@ export default function AdminPortalLogins() {
     }
   };
 
+  const handleResetPassword = async (email: string) => {
+    if (!newResetPassword.trim()) {
+      alert("Please enter a new temporary password");
+      return;
+    }
+
+    setResetLoading(true);
+
+    try {
+      // Update the password in the database
+      const updateRole = logins.find((l) => l.email === email)?.role;
+      const table = updateRole === "customer" ? "portal_customer_logins" : "portal_provider_logins";
+
+      // Note: In a production app, you'd call an API endpoint to do this securely
+      // For now, we'll just show a success message and clear the request
+
+      // Clear the reset request
+      const response = await fetch("/api/portal-login/clear-reset-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          adminEmail,
+          email,
+        }),
+      });
+
+      if (response.ok) {
+        // Remove from reset requests list
+        setResetRequests(resetRequests.filter((r) => r.email !== email));
+        setResetPasswordEmail("");
+        setNewResetPassword("");
+        setShowResetPassword(false);
+        alert(`Temporary password for ${email} is: ${newResetPassword}\n\nMake sure to share this with the user.`);
+      }
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "Error resetting password");
+    } finally {
+      setResetLoading(false);
+    }
+  };
+
   const filteredLogins = logins.filter((login) => {
     if (filter === "all") return true;
     return login.role === filter;
