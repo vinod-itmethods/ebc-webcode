@@ -5,6 +5,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function FAQ() {
   const faqs = [
     {
+      id: "cost",
+      question: "How much does this event cost?",
+      answer:
+        "These are no cost sessions for organisations that are confirmed for a briefing. Travel, accommodation and meals are all included, where applicable.",
+    },
+    {
       id: "who-can-request",
       question: "Who can request a briefing?",
       answer:
@@ -39,12 +45,6 @@ export default function FAQ() {
       question: "How should we prepare for a briefing?",
       answer:
         "During the pre-alignment session, we'll gather information about your organization's specific challenges, strategic priorities, and decision criteria. This helps us design the most relevant agenda. Bring key stakeholders who are involved in the decisions under consideration, and be prepared to discuss your priorities, constraints, and timeline for decision-making.",
-    },
-    {
-      id: "cost",
-      question: "How much does this event cost?",
-      answer:
-        "These are no cost sessions for organisations that are confirmed for a briefing. Travel, accommodation and meals are all included, where applicable.",
     },
     {
       id: "follow-up",
