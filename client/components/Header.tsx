@@ -67,7 +67,7 @@ export default function Header() {
         </Link>
 
         {/* Nav Links - Centered */}
-        <nav className="hidden md:flex items-center gap-8 ml-8">
+        <nav className="hidden md:flex items-center gap-8 flex-1 justify-center">
           <Link
             to="/partners"
             className={`text-sm font-medium transition-colors ${
