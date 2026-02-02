@@ -225,15 +225,6 @@ export default function PortalProvider() {
                 Program Registration
               </button>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setShowChangePassword(true)}
-              className="flex items-center gap-2 -mb-3"
-            >
-              <Key className="w-4 h-4" />
-              Change password
-            </Button>
           </div>
 
           {/* Profile Tab */}
