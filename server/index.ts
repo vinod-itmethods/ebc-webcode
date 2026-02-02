@@ -20,6 +20,7 @@ import {
 import { rateLimit } from "./lib/rate-limit";
 import { verifyCaptcha } from "./lib/captcha";
 import { getAuditLogs } from "./lib/audit-log";
+import { handlePortalLogin, handleAddPortalLogin } from "./routes/portal-login";
 
 export function createServer() {
   const app = express();
