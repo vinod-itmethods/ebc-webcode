@@ -202,27 +202,38 @@ export default function PortalProvider() {
           </div>
 
           {/* Tab Navigation */}
-          <div className="flex gap-4 mb-8 border-b border-border">
-            <button
-              onClick={() => setActiveTab("profile")}
-              className={`px-4 py-3 font-medium border-b-2 transition-colors ${
-                activeTab === "profile"
-                  ? "border-[hsl(193_45%_45%)] text-[hsl(193_45%_45%)]"
-                  : "border-transparent text-foreground/60 hover:text-[hsl(193_45%_45%)]"
-              }`}
+          <div className="flex gap-4 mb-8 border-b border-border justify-between items-end">
+            <div className="flex gap-4">
+              <button
+                onClick={() => setActiveTab("profile")}
+                className={`px-4 py-3 font-medium border-b-2 transition-colors ${
+                  activeTab === "profile"
+                    ? "border-[hsl(193_45%_45%)] text-[hsl(193_45%_45%)]"
+                    : "border-transparent text-foreground/60 hover:text-[hsl(193_45%_45%)]"
+                }`}
+              >
+                Profile Information
+              </button>
+              <button
+                onClick={() => setActiveTab("registration")}
+                className={`px-4 py-3 font-medium border-b-2 transition-colors ${
+                  activeTab === "registration"
+                    ? "border-[hsl(193_45%_45%)] text-[hsl(193_45%_45%)]"
+                    : "border-transparent text-foreground/60 hover:text-[hsl(193_45%_45%)]"
+                }`}
+              >
+                Program Registration
+              </button>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setShowChangePassword(true)}
+              className="flex items-center gap-2 -mb-3"
             >
-              Profile Information
-            </button>
-            <button
-              onClick={() => setActiveTab("registration")}
-              className={`px-4 py-3 font-medium border-b-2 transition-colors ${
-                activeTab === "registration"
-                  ? "border-[hsl(193_45%_45%)] text-[hsl(193_45%_45%)]"
-                  : "border-transparent text-foreground/60 hover:text-[hsl(193_45%_45%)]"
-              }`}
-            >
-              Program Registration
-            </button>
+              <Key className="w-4 h-4" />
+              Change password
+            </Button>
           </div>
 
           {/* Profile Tab */}
