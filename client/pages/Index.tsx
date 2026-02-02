@@ -362,7 +362,7 @@ export default function Index() {
       </section>
 
       {/* REQUEST A BRIEFING CTA SECTION */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-white">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-white">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Ready to schedule a briefing?</h2>
           <p className="text-lg text-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
