@@ -49,12 +49,25 @@ export default function PortalProvider() {
   useEffect(() => {
     const isAuth = localStorage.getItem("portalAuthenticated") === "true";
     const role = localStorage.getItem("userRole");
-    if (!isAuth || role !== "provider") {
+
+    // Redirect if not authenticated or if user is not a provider
+    if (!isAuth) {
       navigate("/portal");
-    } else {
-      setIsAuthenticated(true);
-      setSelectedProviderId(companyId);
+      return;
     }
+
+    if (role !== "provider") {
+      // Redirect customers to their portal or login page
+      if (role === "customer") {
+        navigate("/portal/customer");
+      } else {
+        navigate("/portal");
+      }
+      return;
+    }
+
+    setIsAuthenticated(true);
+    setSelectedProviderId(companyId);
   }, [navigate, companyId]);
 
   // Load provider profile data when authenticated
