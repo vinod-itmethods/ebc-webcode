@@ -148,7 +148,7 @@ export default function Index() {
       </section>
 
       {/* HOW THE BRIEFING WORKS SECTION */}
-      <section id="how" className="py-20 lg:py-28 bg-gradient-to-b from-white via-purple-50/30 to-blue-50/40">
+      <section id="how" className="py-16 lg:py-20 bg-gradient-to-b from-white via-purple-50/30 to-blue-50/40">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">How the briefing works</h2>
 
