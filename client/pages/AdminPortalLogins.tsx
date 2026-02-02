@@ -22,11 +22,12 @@ interface ResetRequest {
 export default function AdminPortalLogins() {
   const navigate = useNavigate();
   const [logins, setLogins] = useState<PortalLogin[]>([]);
+  const [resetRequests, setResetRequests] = useState<ResetRequest[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [adminEmail, setAdminEmail] = useState<string>("");
   const [filter, setFilter] = useState<"all" | "customer" | "provider">("all");
-  
+
   // Form state
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
@@ -38,6 +39,12 @@ export default function AdminPortalLogins() {
   const [showPassword, setShowPassword] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
+
+  // Reset password state
+  const [resetPasswordEmail, setResetPasswordEmail] = useState<string>("");
+  const [newResetPassword, setNewResetPassword] = useState("");
+  const [showResetPassword, setShowResetPassword] = useState(false);
+  const [resetLoading, setResetLoading] = useState(false);
 
   // Check admin access on mount
   useEffect(() => {
