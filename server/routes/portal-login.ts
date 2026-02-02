@@ -13,6 +13,19 @@ export async function handlePortalLogin(req: Request, res: Response) {
 
     const emailLower = email.toLowerCase();
 
+    // Temporary test account for technology provider
+    if (emailLower === "test@provider.com" && password === "test123") {
+      return res.status(200).json({
+        success: true,
+        user: {
+          id: "test-provider-id",
+          email: "test@provider.com",
+          role: "provider",
+          companyId: null,
+        },
+      });
+    }
+
     // Try customer login first
     const { data: customerData, error: customerError } = await supabase
       .from("portal_customer_logins")
