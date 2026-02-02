@@ -211,7 +211,7 @@ export default function Index() {
                 The Executive Briefing Council is not a vendor showcase or a partner-led program. Instead, we provide access to a curated set of technology vendors across the industry, enabling informed, strategic dialogue.
               </p>
               <p>
-                Vendors are selected based on relevance to your organization's priorities, depth of domain expertise, ability to discuss ecosystem trade-offs, and commitment to confidentiality. Executive teams engage only with the vendors most aligned to their specific needs and objectives.
+                Vendors are selected based on relevance to your organization's priorities, depth of domain expertise, ability to discuss ecosystem trade-offs, and commitment to confidentiality. Executive teams engage only with the technology providers most aligned to their specific needs and objectives.
               </p>
             </div>
 
