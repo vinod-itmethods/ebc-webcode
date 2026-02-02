@@ -272,32 +272,6 @@ export default function Index() {
           </div>
         </section>
 
-        {/* FAQ SECTION */}
-        <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-amber-50/30 to-white">
-          <div className="container max-w-4xl mx-auto px-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">
-              Frequently Asked Questions
-            </h2>
-
-            <div className="space-y-8">
-              {/* Top Questions */}
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-6 text-center">
-                  Top Questions
-                </h3>
-                <div className="bg-white rounded-xl p-8 border border-border/10 shadow-sm">
-                  <h4 className="text-xl font-semibold text-foreground mb-4">
-                    How much does this event cost?
-                  </h4>
-                  <p className="text-foreground/80 leading-relaxed">
-                    These are no cost sessions for organisations that are confirmed for a briefing. Travel, accommodation and meals are all included.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* TECHNOLOGY PARTNERS SECTION */}
         <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-emerald-50/30 to-cyan-50/40">
           <div className="container max-w-4xl mx-auto px-4">
