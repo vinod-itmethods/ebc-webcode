@@ -42,9 +42,9 @@ export default function FAQ() {
     },
     {
       id: "cost",
-      question: "Is there a cost for briefings?",
+      question: "How much does this event cost?",
       answer:
-        "The Executive Briefing Council is offered to qualifying organizations as a confidential forum for strategic dialogue. Costs, if applicable, are discussed during the initial briefing request process based on scope and logistics.",
+        "These are no cost sessions for organisations that are confirmed for a briefing. Travel, accommodation and meals are all included.",
     },
     {
       id: "follow-up",
