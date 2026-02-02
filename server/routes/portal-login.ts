@@ -63,6 +63,79 @@ export async function handlePortalLogin(req: Request, res: Response) {
   }
 }
 
+// Endpoint to change user password (authenticated users)
+export async function handleChangePassword(req: Request, res: Response) {
+  try {
+    const { email, currentPassword, newPassword } = req.body;
+
+    if (!email || !currentPassword || !newPassword) {
+      return res.status(400).json({
+        error: "Email, current password, and new password are required",
+      });
+    }
+
+    const emailLower = email.toLowerCase();
+
+    // Try customer login first
+    const { data: customerData, error: customerError } = await supabase
+      .from("portal_customer_logins")
+      .select("id, email, password_hash, role")
+      .eq("email", emailLower)
+      .single();
+
+    if (!customerError && customerData && customerData.password_hash === currentPassword) {
+      // Update customer password
+      const { error: updateError } = await supabase
+        .from("portal_customer_logins")
+        .update({ password_hash: newPassword })
+        .eq("email", emailLower);
+
+      if (updateError) {
+        throw updateError;
+      }
+
+      return res.status(200).json({
+        success: true,
+        message: "Password updated successfully",
+      });
+    }
+
+    // Try provider login
+    const { data: providerData, error: providerError } = await supabase
+      .from("portal_provider_logins")
+      .select("id, email, password_hash, role")
+      .eq("email", emailLower)
+      .single();
+
+    if (!providerError && providerData && providerData.password_hash === currentPassword) {
+      // Update provider password
+      const { error: updateError } = await supabase
+        .from("portal_provider_logins")
+        .update({ password_hash: newPassword })
+        .eq("email", emailLower);
+
+      if (updateError) {
+        throw updateError;
+      }
+
+      return res.status(200).json({
+        success: true,
+        message: "Password updated successfully",
+      });
+    }
+
+    // Current password is incorrect
+    return res.status(401).json({
+      error: "Current password is incorrect",
+    });
+  } catch (error) {
+    console.error("Error changing password:", error);
+    return res.status(500).json({
+      error: "An error occurred while changing password",
+    });
+  }
+}
+
 // Endpoint to manage portal logins (admin only)
 export async function handleAddPortalLogin(req: Request, res: Response) {
   try {
