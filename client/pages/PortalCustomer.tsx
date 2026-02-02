@@ -436,6 +436,13 @@ export default function PortalCustomer() {
         </div>
       </div>
 
+      {showChangePassword && (
+        <ChangePasswordModal
+          email={userEmail}
+          onClose={() => setShowChangePassword(false)}
+        />
+      )}
+
       <Footer />
     </div>
   );
