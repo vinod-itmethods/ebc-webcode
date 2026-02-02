@@ -728,6 +728,52 @@ export default function PortalProvider() {
             </section>
           )}
 
+          {/* Documents Tab */}
+          {activeTab === "documents" && (
+            <section className="mb-16 space-y-8">
+              <div>
+                <h2 className="text-2xl font-bold text-foreground mb-2">Documents</h2>
+                <p className="text-foreground/70 mb-6">View and download your contracts and other important documents.</p>
+              </div>
+
+              {documents.length > 0 ? (
+                <div className="space-y-3">
+                  {documents.map((doc) => (
+                    <div key={doc.id} className="bg-white rounded-lg border border-border p-4 flex items-center justify-between hover:shadow-md transition-shadow">
+                      <div className="flex items-center gap-3 flex-1">
+                        <FileText className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                        <div className="flex-1 min-w-0">
+                          <p className="font-medium text-foreground truncate">{doc.name}</p>
+                          <p className="text-xs text-foreground/60">{doc.type} • Uploaded {new Date(doc.uploadedAt).toLocaleDateString()}</p>
+                        </div>
+                      </div>
+                      <a
+                        href={doc.url || "#"}
+                        download={doc.name}
+                        className="ml-4 inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 transition-colors flex-shrink-0"
+                      >
+                        <Download className="w-4 h-4" />
+                        <span className="text-sm font-medium">Download</span>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="bg-slate-50 rounded-lg border border-slate-200 p-12 text-center">
+                  <FileText className="w-12 h-12 text-slate-300 mx-auto mb-4" />
+                  <p className="text-foreground/70 mb-2">No documents uploaded yet</p>
+                  <p className="text-sm text-foreground/60">Your contracts and documents will appear here once the admin uploads them.</p>
+                </div>
+              )}
+
+              <div className="p-6 bg-blue-50/50 rounded-lg border border-blue-100">
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  <span className="font-semibold">Note:</span> All documents are confidential and should be treated as such. Do not share these documents with unauthorized parties.
+                </p>
+              </div>
+            </section>
+          )}
+
         </div>
       </div>
 
