@@ -43,7 +43,8 @@ export default function AdminPortalLogins() {
   // Reset password state
   const [resetPasswordEmail, setResetPasswordEmail] = useState<string>("");
   const [newResetPassword, setNewResetPassword] = useState("");
-  const [showResetPassword, setShowResetPassword] = useState(false);
+  const [showResetPasswordModal, setShowResetPasswordModal] = useState(false);
+  const [showResetPasswordField, setShowResetPasswordField] = useState(false);
   const [resetLoading, setResetLoading] = useState(false);
 
   // Check admin access on mount
