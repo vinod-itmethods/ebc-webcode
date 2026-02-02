@@ -179,7 +179,7 @@ export default function PortalLogin() {
           {/* Vendor Section */}
           <div className="p-4 bg-amber-50/50 rounded-lg border border-amber-200 space-y-3">
             <p className="text-sm text-foreground/80 leading-relaxed">
-              Are you a technology vendor interested in joining our ecosystem? We're always looking for innovative partners to participate in our executive briefing program.
+              Are you a technology vendor interested in joining our ecosystem?
             </p>
             <Button
               variant="secondary-outline"
