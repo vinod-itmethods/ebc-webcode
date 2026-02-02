@@ -175,7 +175,24 @@ export default function AdminCustomers() {
       {/* Admin Header */}
       <section className="border-b border-border/10 bg-gradient-to-r from-slate-50 to-blue-50/30 px-4 py-4">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-lg font-semibold text-foreground">Customer Requests</h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-lg font-semibold text-foreground">Customer Requests</h2>
+            <div className="flex gap-3">
+              <a
+                href="/admin/submissions"
+                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                → View Submissions
+              </a>
+              <span className="text-foreground/30">|</span>
+              <a
+                href="/admin/portal-logins"
+                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                → Manage Portal Logins
+              </a>
+            </div>
+          </div>
           <p className="text-sm text-foreground/60">Approve or reject briefing requests from customers</p>
         </div>
       </section>
