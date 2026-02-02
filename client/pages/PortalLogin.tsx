@@ -174,12 +174,19 @@ export default function PortalLogin() {
             <a href="#" className="text-sm text-primary hover:text-primary/80 font-medium">
               Forgot password?
             </a>
+          </div>
+
+          {/* Vendor Section */}
+          <div className="p-4 bg-amber-50/50 rounded-lg border border-amber-200 space-y-3">
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              Are you a technology vendor interested in joining our ecosystem? We're always looking for innovative partners to participate in our executive briefing program.
+            </p>
             <Button
               variant="secondary-outline"
               asChild
               className="w-full"
             >
-              <a href="/request-partner-access">Request provider access</a>
+              <a href="/request-partner-access">Request access</a>
             </Button>
           </div>
         </div>
