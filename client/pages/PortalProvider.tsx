@@ -694,6 +694,13 @@ export default function PortalProvider() {
         </div>
       </div>
 
+      {showChangePassword && (
+        <ChangePasswordModal
+          email={userEmail}
+          onClose={() => setShowChangePassword(false)}
+        />
+      )}
+
       <Footer />
     </div>
   );
