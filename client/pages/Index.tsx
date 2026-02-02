@@ -72,7 +72,7 @@ export default function Index() {
       </section>
 
       {/* WHO IT'S FOR - Personas with Images (moved from below) */}
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-blue-50/40 to-white">
+      <section className="py-8 lg:py-12 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">Who it's for</h2>
 
