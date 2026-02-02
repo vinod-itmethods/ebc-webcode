@@ -27,7 +27,7 @@ export default function Index() {
               One-day executive briefings for enterprise technology leaders
             </h1>
             <p className="text-lg lg:text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              An in-person session designed to help IT leaders build AI, DevOps, and platform strategy using perspectives beyond a single vendor. No sales pitches.
+              An in-person session that brings multiple technology perspectives together to help IT leaders build AI, DevOps, and platform strategy. No sales pitches.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button
