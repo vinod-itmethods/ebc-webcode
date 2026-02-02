@@ -389,7 +389,7 @@ export default function AdminPortalLogins() {
                     <Button
                       onClick={() => {
                         setResetPasswordEmail(request.email);
-                        setShowResetPassword(true);
+                        setShowResetPasswordModal(true);
                       }}
                       size="sm"
                       className="flex items-center gap-2"
@@ -401,7 +401,7 @@ export default function AdminPortalLogins() {
               </div>
 
               {/* Reset Password Modal */}
-              {showResetPassword && (
+              {showResetPasswordModal && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
                   <div className="bg-white rounded-lg max-w-md w-full p-6 space-y-4">
                     <h4 className="text-lg font-semibold text-foreground">
@@ -417,18 +417,18 @@ export default function AdminPortalLogins() {
                       </label>
                       <div className="relative">
                         <Input
-                          type={showResetPassword ? "text" : "password"}
+                          type={showResetPasswordField ? "text" : "password"}
                           value={newResetPassword}
                           onChange={(e) => setNewResetPassword(e.target.value)}
                           placeholder="Enter temporary password"
                           disabled={resetLoading}
                         />
                         <button
-                          onClick={() => setShowResetPassword(!showResetPassword)}
+                          onClick={() => setShowResetPasswordField(!showResetPasswordField)}
                           disabled={resetLoading}
                           className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60"
                         >
-                          {showResetPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                          {showResetPasswordField ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                         </button>
                       </div>
                     </div>
@@ -437,9 +437,10 @@ export default function AdminPortalLogins() {
                       <Button
                         variant="outline"
                         onClick={() => {
-                          setShowResetPassword(false);
+                          setShowResetPasswordModal(false);
                           setResetPasswordEmail("");
                           setNewResetPassword("");
+                          setShowResetPasswordField(false);
                         }}
                         disabled={resetLoading}
                         className="flex-1"
