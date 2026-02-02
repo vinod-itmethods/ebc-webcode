@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChangePasswordModal from "@/components/ChangePasswordModal";
 import { partners, type Partner } from "@/data/partners";
-import { CheckCircle2, Upload, X, Plus } from "lucide-react";
+import { CheckCircle2, Upload, X, Plus, Key } from "lucide-react";
 
 type RegistrationStep = "not-started" | "in-progress" | "complete";
 
