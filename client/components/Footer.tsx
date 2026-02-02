@@ -41,7 +41,7 @@ export default function Footer() {
               Facilitated by iTmethods
             </p>
             <a href="/admin" className="text-xs text-foreground/50 hover:text-foreground/70 transition-colors inline-block">
-              Admin Portal
+              Admin login
             </a>
           </div>
         </div>
