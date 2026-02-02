@@ -93,6 +93,29 @@ export default function AdminLogin() {
                 />
               </div>
 
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">
+                  Password
+                </label>
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Enter password"
+                    className="w-full px-4 py-3 border border-border/15 rounded-lg focus:outline-none focus:border-primary"
+                    disabled={loading}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60 hover:text-foreground transition-colors"
+                  >
+                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
+              </div>
+
               {error && (
                 <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
                   <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
@@ -102,7 +125,7 @@ export default function AdminLogin() {
 
               <Button
                 type="submit"
-                disabled={loading || !email}
+                disabled={loading || !email || !password}
                 className="w-full font-semibold"
               >
                 {loading ? "Verifying..." : "Access Admin Portal"}
