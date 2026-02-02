@@ -137,7 +137,7 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Step 1: Choose Your Focus */}
             <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
-              <div className="flex items-center justify-center w-14 h-14 rounded-full text-white font-bold mb-6 mx-auto" style={{ backgroundColor: "hsl(193 45% 45%)" }}>
+              <div className="flex items-center justify-center w-14 h-14 rounded-full font-bold mb-6 mx-auto border-2" style={{ borderColor: "hsl(193 45% 45%)", color: "hsl(193 45% 45%)" }}>
                 1
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Choose your focus</h3>
