@@ -6,9 +6,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChangePasswordModal from "@/components/ChangePasswordModal";
 import { partners, type Partner } from "@/data/partners";
-import { CheckCircle2, Upload, X, Plus, Key } from "lucide-react";
+import { CheckCircle2, Upload, X, Plus, Key, FileText, Download, Trash2 } from "lucide-react";
 
 type RegistrationStep = "not-started" | "in-progress" | "complete";
+
+interface UploadedDocument {
+  id: string;
+  name: string;
+  type: string;
+  uploadedAt: string;
+  url?: string;
+}
 
 const COVERAGE_AREAS = [
   "AI & Machine Learning",
