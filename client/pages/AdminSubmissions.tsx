@@ -88,12 +88,21 @@ export default function AdminSubmissions() {
         <div className="container max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-semibold text-foreground">Submission History</h2>
-            <a
-              href="/admin/customers"
-              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-            >
-              → Manage Customer Requests
-            </a>
+            <div className="flex gap-3">
+              <a
+                href="/admin/customers"
+                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                → Manage Customer Requests
+              </a>
+              <span className="text-foreground/30">|</span>
+              <a
+                href="/admin/portal-logins"
+                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                → Manage Portal Logins
+              </a>
+            </div>
           </div>
           <p className="text-sm text-foreground/60">View all briefing request submissions</p>
         </div>
