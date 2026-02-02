@@ -32,61 +32,64 @@ export default function PortalLogin() {
     }
   }, [navigate]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
     if (!email || !password) {
       setError("Please enter both email and password.");
+      setLoading(false);
       return;
     }
 
-    if (password === PORTAL_PASSWORD) {
-      // Check if this is an admin email
-      if (email.endsWith("@itmethods.com")) {
-        // Redirect admin to admin portal
-        localStorage.setItem("adminEmail", email);
-        setIsAuthenticated(true);
-        navigate("/admin/submissions");
-        return;
-      }
+    try {
+      // Call the portal login API
+      const response = await fetch("/api/portal-login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.toLowerCase(),
+          password,
+        }),
+      });
 
-      localStorage.setItem("portalAuthenticated", "true");
-      localStorage.setItem("userRole", role);
-      localStorage.setItem("userEmail", email);
+      if (response.ok) {
+        const data = await response.json();
+        const { user } = data;
 
-      if (role === "provider") {
-        // Extract email domain and match to partner
-        const emailDomain = email.split("@")[1]?.toLowerCase();
-        let matchedCompanyId = selectedCompany;
+        // Store authentication data
+        localStorage.setItem("portalAuthenticated", "true");
+        localStorage.setItem("userRole", user.role);
+        localStorage.setItem("userEmail", user.email);
 
-        if (emailDomain) {
-          // Try to find a partner with matching domain
-          const matchedPartner = partners.find(p => p.domain?.toLowerCase() === emailDomain);
-          if (matchedPartner) {
-            matchedCompanyId = matchedPartner.id;
-          }
+        if (user.role === "provider" && user.companyId) {
+          localStorage.setItem("providerCompanyId", user.companyId);
         }
 
-        localStorage.setItem("providerCompanyId", matchedCompanyId);
-      }
-      setIsAuthenticated(true);
+        setIsAuthenticated(true);
 
-      if (role === "customer") {
-        navigate("/portal/customer");
+        // Navigate to the appropriate portal
+        if (user.role === "customer") {
+          navigate("/portal/customer");
+        } else if (user.role === "provider") {
+          navigate("/portal/provider");
+        }
       } else {
-        navigate("/portal/provider");
+        const errorData = await response.json();
+        setError(errorData.error || "Login failed. Please try again.");
+        setPassword("");
       }
-    } else {
-      setError("Invalid email or password. Please try again.");
+    } catch (err) {
+      console.error("Login error:", err);
+      setError("An error occurred during login. Please try again.");
       setPassword("");
+    } finally {
+      setLoading(false);
     }
   };
-
-  const microcopy = 
-    role === "customer"
-      ? "Log in to view your briefing request status and upcoming session details. Access is limited to approved customer accounts."
-      : "Log in to manage participation, opt in to briefing opportunities, and complete your provider registration. Access is limited to approved provider accounts.";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white flex flex-col items-center justify-center p-4">
@@ -111,33 +114,6 @@ export default function PortalLogin() {
       <div className="w-full max-w-lg">
         <div className="bg-white rounded-xl shadow-sm border border-border p-8 space-y-8">
           
-          {/* Role Selector */}
-          <div className="space-y-3">
-            <label className="text-sm font-semibold text-foreground">I am a:</label>
-            <div className="flex gap-3">
-              <button
-                onClick={() => setRole("customer")}
-                className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-all ${
-                  role === "customer"
-                    ? "bg-[hsl(193_45%_45%)] text-white"
-                    : "bg-slate-100 text-foreground hover:bg-slate-200"
-                }`}
-              >
-                Customer
-              </button>
-              <button
-                onClick={() => setRole("provider")}
-                className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-all ${
-                  role === "provider"
-                    ? "bg-[hsl(193_45%_45%)] text-white"
-                    : "bg-slate-100 text-foreground hover:bg-slate-200"
-                }`}
-              >
-                Technology Provider
-              </button>
-            </div>
-          </div>
-
           {/* Login Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
@@ -150,10 +126,10 @@ export default function PortalLogin() {
                 placeholder="your@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
                 className="w-full"
               />
             </div>
-
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
@@ -165,6 +141,7 @@ export default function PortalLogin() {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                disabled={loading}
                 className="w-full"
               />
             </div>
@@ -177,15 +154,19 @@ export default function PortalLogin() {
 
             <Button
               type="submit"
-              className="w-full font-semibold rounded-lg py-2.5"
+              disabled={loading}
+              className="w-full font-semibold rounded-lg py-2.5 flex items-center justify-center gap-2"
             >
-              Log in
+              {loading && <Loader className="w-4 h-4 animate-spin" />}
+              {loading ? "Logging in..." : "Log in"}
             </Button>
           </form>
 
           {/* Microcopy */}
           <div className="p-4 bg-blue-50/50 rounded-lg border border-blue-100">
-            <p className="text-sm text-foreground/80 leading-relaxed">{microcopy}</p>
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              Log in with your email address to access the portal. Your role (customer or technology provider) will be determined based on our records.
+            </p>
           </div>
 
           {/* Help Links */}
@@ -198,7 +179,7 @@ export default function PortalLogin() {
               asChild
               className="w-full"
             >
-              <a href="/request-partner-access">Request access</a>
+              <a href="/request-partner-access">Request provider access</a>
             </Button>
           </div>
         </div>
