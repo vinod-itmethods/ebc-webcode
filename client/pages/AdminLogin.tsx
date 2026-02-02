@@ -44,6 +44,14 @@ export default function AdminLogin() {
       return;
     }
 
+    // Validate password
+    if (password !== ADMIN_PASSWORD) {
+      setError("Invalid email or password");
+      setPassword("");
+      setLoading(false);
+      return;
+    }
+
     // Store email and redirect
     localStorage.setItem("adminEmail", email);
     navigate("/admin/submissions");
