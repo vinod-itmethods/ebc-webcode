@@ -202,7 +202,7 @@ export default function Index() {
       </section>
 
       {/* TECHNOLOGY PARTNERS SECTION */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-white via-emerald-50/30 to-cyan-50/40">
+      <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-emerald-50/30 to-cyan-50/40">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Participating technology providers</h2>
 
