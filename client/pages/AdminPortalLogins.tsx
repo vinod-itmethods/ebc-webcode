@@ -211,7 +211,8 @@ export default function AdminPortalLogins() {
         setResetRequests(resetRequests.filter((r) => r.email !== email));
         setResetPasswordEmail("");
         setNewResetPassword("");
-        setShowResetPassword(false);
+        setShowResetPasswordModal(false);
+        setShowResetPasswordField(false);
         alert(`Temporary password for ${email} is: ${newResetPassword}\n\nMake sure to share this with the user.`);
       }
     } catch (err) {
