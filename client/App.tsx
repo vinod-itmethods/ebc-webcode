@@ -14,6 +14,7 @@ import PartnerDashboard from "./pages/PartnerDashboard";
 import PortalLogin from "./pages/PortalLogin";
 import PortalProvider from "./pages/PortalProvider";
 import PortalCustomer from "./pages/PortalCustomer";
+import ForgotPassword from "./pages/ForgotPassword";
 import RequestPartnerAccess from "./pages/RequestPartnerAccess";
 import AdminLogin from "./pages/AdminLogin";
 import AdminSubmissions from "./pages/AdminSubmissions";
