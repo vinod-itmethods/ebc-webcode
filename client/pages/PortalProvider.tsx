@@ -230,6 +230,23 @@ export default function PortalProvider() {
           {/* Profile Tab */}
           {activeTab === "profile" && (
             <div className="space-y-8">
+              {/* Manage Your Login */}
+              <div className="bg-white rounded-lg border border-border p-6">
+                <h3 className="text-lg font-bold text-foreground mb-4">Manage Your Login</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm text-foreground/70 mb-4">Email: <span className="font-medium text-foreground">{userEmail}</span></p>
+                    <Button
+                      onClick={() => setShowChangePassword(true)}
+                      className="flex items-center gap-2"
+                    >
+                      <Key className="w-4 h-4" />
+                      Change password
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
               {/* Company Info Header */}
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200 p-6">
                 <p className="text-sm text-foreground/70 mb-3">You are editing profile information for:</p>
