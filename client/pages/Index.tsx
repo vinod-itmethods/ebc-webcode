@@ -74,7 +74,7 @@ export default function Index() {
       {/* WHO IT'S FOR - Personas with Images (moved from below) */}
       <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-blue-50/40 to-white">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16">Who it's for</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">Who it's for</h2>
 
           <div className="space-y-12">
             {/* Enterprise Leaders - Image Left */}
@@ -148,7 +148,7 @@ export default function Index() {
       {/* HOW THE BRIEFING WORKS SECTION */}
       <section id="how" className="py-16 lg:py-20 bg-gradient-to-b from-white via-purple-50/30 to-blue-50/40">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16">How the briefing works</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">How the briefing works</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Step 1: Choose Your Focus */}
@@ -202,7 +202,7 @@ export default function Index() {
       {/* TECHNOLOGY PARTNERS SECTION */}
       <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-emerald-50/30 to-cyan-50/40">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">Participating technology providers</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">Participating technology providers</h2>
 
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Partner Philosophy */}
