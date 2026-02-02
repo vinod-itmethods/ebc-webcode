@@ -18,6 +18,7 @@ import RequestPartnerAccess from "./pages/RequestPartnerAccess";
 import AdminLogin from "./pages/AdminLogin";
 import AdminSubmissions from "./pages/AdminSubmissions";
 import AdminCustomers from "./pages/AdminCustomers";
+import AdminPortalLogins from "./pages/AdminPortalLogins";
 import NotFound from "./pages/NotFound";
 
 // Create a single QueryClient instance
