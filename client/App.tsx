@@ -20,6 +20,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminSubmissions from "./pages/AdminSubmissions";
 import AdminCustomers from "./pages/AdminCustomers";
 import AdminPortalLogins from "./pages/AdminPortalLogins";
+import AdminDocuments from "./pages/AdminDocuments";
 import NotFound from "./pages/NotFound";
 
 // Create a single QueryClient instance
