@@ -24,12 +24,10 @@ export default function Index() {
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-8">
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-[1.15]">
-              <span className="block">Executive briefings for</span>
-              <span className="block">enterprise technology leaders</span>
+              One-day executive briefings for enterprise technology leaders
             </h1>
             <p className="text-lg lg:text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              <span className="block">Confidential, curated briefings that help AI, DevOps, and IT leaders</span>
-              <span className="block">navigate complex technology decisions beyond a single vendor's perspective</span>
+              A structured, in-person session designed to help IT leaders build AI, DevOps, and platform strategy using perspectives beyond a single vendor. No sales pitches.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button
