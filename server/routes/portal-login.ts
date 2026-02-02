@@ -26,6 +26,19 @@ export async function handlePortalLogin(req: Request, res: Response) {
       });
     }
 
+    // Temporary test account for customer
+    if (emailLower === "test@customer.com" && password === "test123") {
+      return res.status(200).json({
+        success: true,
+        user: {
+          id: "test-customer-id",
+          email: "test@customer.com",
+          role: "customer",
+          companyId: null,
+        },
+      });
+    }
+
     // Try customer login first
     const { data: customerData, error: customerError } = await supabase
       .from("portal_customer_logins")
