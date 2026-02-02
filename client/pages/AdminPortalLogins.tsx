@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Plus, X, Eye, EyeOff } from "lucide-react";
+import { Plus, X, Eye, EyeOff, AlertCircle } from "lucide-react";
 
 interface PortalLogin {
   id: string;
@@ -12,6 +12,11 @@ interface PortalLogin {
   role: "customer" | "provider";
   companyId?: string;
   createdAt: string;
+}
+
+interface ResetRequest {
+  email: string;
+  requestedAt: string;
 }
 
 export default function AdminPortalLogins() {
