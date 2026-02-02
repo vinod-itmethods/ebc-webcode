@@ -145,60 +145,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* HOW THE BRIEFING WORKS SECTION */}
-      <section id="how" className="py-16 lg:py-20 bg-gradient-to-b from-white via-purple-50/30 to-blue-50/40">
-        <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">How the briefing works</h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Step 1: Choose Your Focus */}
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
-              <div className="flex items-center justify-center w-14 h-14 rounded-full font-bold mb-6 mx-auto border-2" style={{ borderColor: "hsl(193 45% 45%)", color: "hsl(193 45% 45%)" }}>
-                1
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Choose your focus</h3>
-              <p className="text-foreground/80 leading-relaxed text-center">
-                Select the topics you want to explore, such as AI strategy, DevOps, platform architecture, or operating model decisions.
-              </p>
-            </div>
-
-            {/* Step 2: Select Technology Perspectives */}
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
-              <div className="flex items-center justify-center w-14 h-14 rounded-full font-bold mb-6 mx-auto border-2" style={{ borderColor: "hsl(193 45% 45%)", color: "hsl(193 45% 45%)" }}>
-                2
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Select technology perspectives</h3>
-              <p className="text-foreground/80 leading-relaxed text-center">
-                Identify the technology partners and perspectives you want included, based on relevance to your current decisions.
-              </p>
-            </div>
-
-            {/* Step 3: Set the Session Details */}
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-border/10 hover:shadow-lg transition-shadow h-full">
-              <div className="flex items-center justify-center w-14 h-14 rounded-full font-bold mb-6 mx-auto border-2" style={{ borderColor: "hsl(193 45% 45%)", color: "hsl(193 45% 45%)" }}>
-                3
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Set the session details</h3>
-              <p className="text-foreground/80 leading-relaxed text-center">
-                Confirm your preferred location, format, and attendees for a single, in-person executive session.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="mt-12 flex justify-center">
-            <Button
-              asChild
-              className="px-6 py-2 font-medium rounded-lg"
-            >
-              <Link to="/partners">
-                Select your technology providers
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* TECHNOLOGY PARTNERS SECTION */}
       <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-emerald-50/30 to-cyan-50/40">
         <div className="container max-w-4xl mx-auto px-4">
