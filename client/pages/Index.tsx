@@ -90,40 +90,58 @@ export default function Index() {
       {/* WHO IT'S FOR SECTION */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50/60 via-teal-50/30 to-white">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12 text-center">Who it's for</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Enterprise Leaders */}
-            <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: 'rgb(59, 130, 246, 0.12)' }}>
-                <Briefcase className="w-6 h-6" style={{ color: 'rgb(59, 130, 246)' }} strokeWidth={1.5} />
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16 text-center">Who it's for</h2>
+
+          <div className="space-y-16">
+            {/* Enterprise Leaders - Image Left */}
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="rounded-lg overflow-hidden shadow-md h-80 md:h-96">
+                <img
+                  src="https://images.pexels.com/photos/5717626/pexels-photo-5717626.jpeg"
+                  alt="Professional businesswoman in a modern office"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Enterprise leaders</h3>
-              <p className="text-foreground/90 leading-relaxed">
-                CIOs, CTOs, CDOs, and senior business and IT leaders responsible for enterprise-wide technology strategy.
-              </p>
+              <div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">Enterprise leaders</h3>
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  CIOs, CTOs, CDOs, and senior business and IT leaders responsible for enterprise-wide technology strategy.
+                </p>
+              </div>
             </div>
 
-            {/* Active Decision Makers */}
-            <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: 'rgb(168, 85, 247, 0.12)' }}>
-                <CheckCircle2 className="w-6 h-6" style={{ color: 'rgb(168, 85, 247)' }} strokeWidth={1.5} />
+            {/* Active Decision Makers - Image Right */}
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">Active decision makers</h3>
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  Organizations currently evaluating AI initiatives, DevOps modernization, platform architecture, or infrastructure strategy.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Active decision makers</h3>
-              <p className="text-foreground/90 leading-relaxed">
-                Organizations currently evaluating AI initiatives, DevOps modernization, platform architecture, or infrastructure strategy.
-              </p>
+              <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-md h-80 md:h-96">
+                <img
+                  src="https://images.pexels.com/photos/5257005/pexels-photo-5257005.jpeg"
+                  alt="Diverse team collaborating in a business meeting"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
-            {/* Executive Teams */}
-            <div className="bg-white rounded-lg p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: 'rgb(20, 184, 166, 0.12)' }}>
-                <Users className="w-6 h-6" style={{ color: 'rgb(20, 184, 166)' }} strokeWidth={1.5} />
+            {/* Executive Teams - Image Left */}
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="rounded-lg overflow-hidden shadow-md h-80 md:h-96">
+                <img
+                  src="https://images.pexels.com/photos/7433824/pexels-photo-7433824.jpeg"
+                  alt="Diverse professionals in a strategy meeting"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Executive teams</h3>
-              <p className="text-foreground/90 leading-relaxed">
-                Cross-functional leadership teams seeking alignment across technology, operations, and business priorities.
-              </p>
+              <div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">Executive teams</h3>
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  Cross-functional leadership teams seeking alignment across technology, operations, and business priorities.
+                </p>
+              </div>
             </div>
           </div>
         </div>
