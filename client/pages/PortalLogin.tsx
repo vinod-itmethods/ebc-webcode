@@ -165,7 +165,7 @@ export default function PortalLogin() {
           {/* Microcopy */}
           <div className="p-4 bg-blue-50/50 rounded-lg border border-blue-100">
             <p className="text-sm text-foreground/80 leading-relaxed">
-              Log in with your email address to access the portal. Your role (customer or technology provider) will be determined based on our records.
+              Log in with your email address to access your portal.
             </p>
           </div>
 
