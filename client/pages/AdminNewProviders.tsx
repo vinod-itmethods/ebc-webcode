@@ -73,7 +73,7 @@ export default function AdminNewProviders() {
     }
   };
 
-  const handleAddProvider = (e: React.FormEvent) => {
+  const handleAddProvider = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formData.name || !formData.tagline || !formData.description) {
@@ -87,32 +87,40 @@ export default function AdminNewProviders() {
     }
 
     try {
-      const newProvider: CustomProvider = {
-        id: `custom_${Date.now()}`,
-        name: formData.name,
-        tagline: formData.tagline,
-        description: formData.description,
-        logo: formData.logo || "https://via.placeholder.com/200",
-        categories: formData.categories || [],
-        topics: formData.topics || [],
-        benefits: formData.benefits || [],
-        domain: formData.domain,
-      };
+      const providerId = editingId || `custom_${Date.now()}`;
 
-      const updated = editingId
-        ? providers.map((p) => (p.id === editingId ? newProvider : p))
-        : [...providers, newProvider];
+      const response = await fetch("/api/custom-providers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          adminEmail,
+          id: providerId,
+          name: formData.name,
+          tagline: formData.tagline,
+          description: formData.description,
+          logo: formData.logo || "https://via.placeholder.com/200",
+          categories: formData.categories || [],
+          topics: formData.topics || [],
+          benefits: formData.benefits || [],
+          domain: formData.domain,
+        }),
+      });
 
-      setProviders(updated);
-      localStorage.setItem("custom_providers", JSON.stringify(updated));
-
-      // Reset form
-      resetForm();
-      alert(
-        editingId
-          ? "Provider updated successfully!"
-          : "Provider added successfully!",
-      );
+      if (response.ok) {
+        // Reload providers from server
+        await loadProviders();
+        resetForm();
+        alert(
+          editingId
+            ? "Provider updated successfully!"
+            : "Provider added successfully!",
+        );
+      } else {
+        const error = await response.json();
+        alert(error.error || "Failed to save provider");
+      }
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred");
