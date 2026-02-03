@@ -157,6 +157,64 @@ export default function AdminCustomers() {
     }
   };
 
+  const fetchTimelineEvents = async (customerEmail: string) => {
+    try {
+      const response = await fetch(
+        `/api/timeline-events?email=${encodeURIComponent(customerEmail)}`,
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setTimelineEvents((prev) => ({
+          ...prev,
+          [customerEmail]: data.events || [],
+        }));
+      }
+    } catch (error) {
+      console.error("Error fetching timeline events:", error);
+    }
+  };
+
+  const handleAddTimelineEvent = async (customerEmail: string) => {
+    if (!timelineFormData.title || !timelineFormData.date) {
+      alert("Please fill in all required fields");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/admin/timeline-events", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-email": adminEmail,
+        },
+        body: JSON.stringify({
+          customerEmail,
+          title: timelineFormData.title,
+          description: "",
+          eventDate: timelineFormData.date,
+          status: timelineFormData.status,
+          eventType: timelineFormData.type,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add timeline event");
+      }
+
+      // Reset form and refresh timeline
+      setTimelineFormData({
+        title: "",
+        date: "",
+        status: "pending",
+        type: "update",
+      });
+      setShowTimelineForm(null);
+      await fetchTimelineEvents(customerEmail);
+    } catch (error) {
+      alert(error instanceof Error ? error.message : "Failed to add event");
+    }
+  };
+
   const getDisplayCustomers = (): CustomerProfile[] => {
     if (filter === "all") {
       return [
