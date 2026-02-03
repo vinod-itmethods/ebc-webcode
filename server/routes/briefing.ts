@@ -182,29 +182,40 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
     });
   }
 
-  const internalEmails = [
-    "daniel.roberts@itmethods.com",
-    "ava.nguyen@itmethods.com",
-    "sales@itmethods.com",
-  ];
-
-  const internalEmailHtml = formatBriefingEmail(data);
-
   try {
     // Log the form submission for audit trail
     await logFormSubmission(data.email, data.company, req);
 
-    // Send notification to internal team
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || "noreply@itmethods.com",
-      to: internalEmails.join(","),
-      subject: `New Briefing Request Pending Approval from ${data.name} (${data.company})`,
-      html: internalEmailHtml,
-    });
+    // Only send emails if SMTP is properly configured
+    const hasSmtpConfig = process.env.SMTP_USER && process.env.SMTP_PASS && process.env.SMTP_HOST !== "smtp.ethereal.email";
 
-    console.log(
-      `Briefing request notification sent to internal team for ${data.name} from ${data.company}`,
-    );
+    if (hasSmtpConfig) {
+      const internalEmails = [
+        "daniel.roberts@itmethods.com",
+        "ava.nguyen@itmethods.com",
+        "sales@itmethods.com",
+      ];
+
+      const internalEmailHtml = formatBriefingEmail(data);
+
+      try {
+        // Send notification to internal team
+        await transporter.sendMail({
+          from: process.env.SMTP_FROM || "noreply@itmethods.com",
+          to: internalEmails.join(","),
+          subject: `New Briefing Request Pending Approval from ${data.name} (${data.company})`,
+          html: internalEmailHtml,
+        });
+
+        console.log(
+          `Briefing request notification sent to internal team for ${data.name} from ${data.company}`,
+        );
+      } catch (emailError) {
+        console.warn("Email notification failed (non-blocking):", emailError);
+      }
+    } else {
+      console.log("SMTP not configured, skipping email notifications");
+    }
 
     return res.status(200).json({
       success: true,
@@ -212,7 +223,7 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
         "Briefing request submitted successfully. Awaiting admin approval.",
     });
   } catch (error) {
-    console.error("Error sending briefing request notification:", error);
+    console.error("Error processing briefing request:", error);
     return res.status(500).json({
       error: "Failed to process briefing request",
     });
