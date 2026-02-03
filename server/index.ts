@@ -102,6 +102,12 @@ export function createServer() {
   app.post("/api/custom-providers", handleAddCustomProvider);
   app.post("/api/custom-providers/delete", handleDeleteCustomProvider);
 
+  // Timeline management endpoints
+  app.get("/api/timeline-events", handleGetTimelineEvents);
+  app.post("/api/admin/timeline-events", handleAddTimelineEvent);
+  app.post("/api/admin/timeline-events/update", handleUpdateTimelineEvent);
+  app.post("/api/admin/timeline-events/delete", handleDeleteTimelineEvent);
+
   // Audit logs endpoint (admin only)
   app.get("/api/admin/audit-logs", async (req, res) => {
     try {
