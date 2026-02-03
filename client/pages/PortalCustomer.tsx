@@ -102,20 +102,34 @@ export default function PortalCustomer() {
           );
           setBriefingRequests([request]);
 
-          // Generate timeline events
-          const submittedDate = new Date(data.customer.createdAt);
-          const threeDaysLater = new Date(submittedDate);
-          threeDaysLater.setDate(threeDaysLater.getDate() + 3);
-          const fiveDaysLater = new Date(submittedDate);
-          fiveDaysLater.setDate(fiveDaysLater.getDate() + 5);
-          const tenDaysLater = new Date(submittedDate);
-          tenDaysLater.setDate(tenDaysLater.getDate() + 10);
+          // Fetch timeline events from database
+          await fetchTimelineEvents(userEmail);
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching customer profile:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-          const events: TimelineEvent[] = [
+  const fetchTimelineEvents = async (email: string) => {
+    try {
+      const response = await fetch(
+        `/api/timeline-events?email=${encodeURIComponent(email)}`,
+      );
+      if (response.ok) {
+        const data = await response.json();
+        // If no events exist, create default initial events
+        if (data.events && data.events.length > 0) {
+          setTimelineEvents(data.events);
+        } else {
+          // Create default events if none exist yet
+          const defaultEvents: TimelineEvent[] = [
             {
-              id: "1",
+              id: "default-1",
               title: "Briefing Request Submitted",
-              date: submittedDate.toLocaleDateString("en-US", {
+              date: new Date().toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -125,9 +139,9 @@ export default function PortalCustomer() {
               type: "submission",
             },
             {
-              id: "2",
+              id: "default-2",
               title: "Confirmation Email Sent",
-              date: submittedDate.toLocaleDateString("en-US", {
+              date: new Date().toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -137,52 +151,24 @@ export default function PortalCustomer() {
               type: "email",
             },
             {
-              id: "3",
+              id: "default-3",
               title: "Request Under Review",
-              date: threeDaysLater.toLocaleDateString("en-US", {
+              date: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
               }),
               description:
                 "Our team is reviewing your organization's needs and matching technology partners",
-              status: "completed",
-              type: "update",
-            },
-            {
-              id: "4",
-              title: "Briefing Itinerary Added",
-              date: fiveDaysLater.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              }),
-              description:
-                "Briefing agenda and confirmed partners are now available in your portal",
               status: "pending",
               type: "update",
             },
-            {
-              id: "5",
-              title: "Briefing Session Scheduled",
-              date: tenDaysLater.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              }),
-              description: "Your executive briefing is scheduled for this date",
-              status: "upcoming",
-              type: "scheduled",
-            },
           ];
-
-          setTimelineEvents(events);
+          setTimelineEvents(defaultEvents);
         }
       }
     } catch (error) {
-      console.error("Error fetching customer profile:", error);
-    } finally {
-      setLoading(false);
+      console.error("Error fetching timeline events:", error);
     }
   };
 
