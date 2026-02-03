@@ -133,6 +133,13 @@ export default function PortalProvider() {
     setIsSaved(false);
   }, [selectedProviderId]);
 
+  // Handle provider selection change
+  const handleProviderChange = (newProviderId: string) => {
+    setSelectedProviderId(newProviderId);
+    // Save the selected provider to localStorage so it persists
+    localStorage.setItem("providerCompanyId", newProviderId);
+  };
+
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
