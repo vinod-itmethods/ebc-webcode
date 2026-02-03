@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Plus, X, Eye, EyeOff, AlertCircle } from "lucide-react";
+import { partners } from "@/data/partners";
 
 interface PortalLogin {
   id: string;
