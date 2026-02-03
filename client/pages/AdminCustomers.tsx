@@ -117,6 +117,46 @@ export default function AdminCustomers() {
         throw new Error("Failed to approve customer");
       }
 
+      // Create initial timeline events for approved customer
+      const today = new Date().toISOString().split("T")[0];
+      const inReviewDate = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000)
+        .toISOString()
+        .split("T")[0];
+
+      // Add "Request Under Review" event
+      await fetch("/api/admin/timeline-events", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-email": adminEmail,
+        },
+        body: JSON.stringify({
+          customerEmail,
+          title: "Request Approved",
+          description: "Your briefing request has been approved by our team",
+          eventDate: today,
+          status: "completed",
+          eventType: "update",
+        }),
+      }).catch(console.error);
+
+      // Add placeholder for next event
+      await fetch("/api/admin/timeline-events", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-email": adminEmail,
+        },
+        body: JSON.stringify({
+          customerEmail,
+          title: "Briefing Details Being Prepared",
+          description: "We are preparing your briefing itinerary with selected partners",
+          eventDate: inReviewDate,
+          status: "pending",
+          eventType: "update",
+        }),
+      }).catch(console.error);
+
       // Refresh the customer list
       await fetchCustomers(adminEmail);
       setExpandedId(null);
