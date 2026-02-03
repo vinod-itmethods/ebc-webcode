@@ -407,11 +407,17 @@ export default function AdminCustomers() {
                 >
                   {/* Summary Row */}
                   <button
-                    onClick={() =>
-                      setExpandedId(
-                        expandedId === customer.id ? null : customer.id,
-                      )
-                    }
+                    onClick={() => {
+                      if (expandedId === customer.id) {
+                        setExpandedId(null);
+                      } else {
+                        setExpandedId(customer.id);
+                        // Fetch timeline events when expanding
+                        if (customer.approvalStatus === "approved") {
+                          fetchTimelineEvents(customer.email);
+                        }
+                      }
+                    }}
                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/50 transition-colors"
                   >
                     <div className="flex-grow text-left">
