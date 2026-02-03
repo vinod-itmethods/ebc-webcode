@@ -404,7 +404,10 @@ export default function RequestBriefing() {
       });
 
       if (!response.ok) {
-        console.error("Failed to submit briefing request");
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Failed to submit briefing request:", errorData);
+        setEmailError(errorData.error || "Failed to submit briefing request. Please try again.");
+        return;
       } else {
         console.log("Briefing request submitted successfully");
       }
