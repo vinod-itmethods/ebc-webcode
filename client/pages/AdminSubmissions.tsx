@@ -119,6 +119,13 @@ export default function AdminSubmissions() {
               </a>
               <span className="text-foreground/30">|</span>
               <a
+                href="/admin/new-providers"
+                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                → Add Technology Providers
+              </a>
+              <span className="text-foreground/30">|</span>
+              <a
                 href="/admin/documents"
                 className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
               >
