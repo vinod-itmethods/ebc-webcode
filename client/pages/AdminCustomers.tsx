@@ -454,6 +454,160 @@ export default function AdminCustomers() {
                   {/* Expanded Details */}
                   {expandedId === customer.id && (
                     <div className="border-t border-current border-opacity-20 bg-white/50 px-6 py-4 space-y-6">
+                      {/* Timeline Section */}
+                      {customer.approvalStatus === "approved" && (
+                        <div className="bg-blue-50 rounded-lg border border-blue-200 p-4">
+                          <div className="flex items-center justify-between mb-4">
+                            <h4 className="font-semibold text-foreground text-sm">
+                              Timeline & Updates
+                            </h4>
+                            <Button
+                              onClick={() => {
+                                setShowTimelineForm(
+                                  showTimelineForm === customer.email
+                                    ? null
+                                    : customer.email,
+                                );
+                                if (
+                                  !timelineEvents[customer.email] ||
+                                  timelineEvents[customer.email].length === 0
+                                ) {
+                                  fetchTimelineEvents(customer.email);
+                                }
+                              }}
+                              variant="outline"
+                              size="sm"
+                              className="flex items-center gap-1 h-8"
+                            >
+                              <Plus className="w-3 h-3" />
+                              Add Event
+                            </Button>
+                          </div>
+
+                          {/* Timeline Events */}
+                          <div className="space-y-2 mb-4">
+                            {timelineEvents[customer.email]?.length > 0 ? (
+                              timelineEvents[customer.email].map(
+                                (event, idx) => (
+                                  <div
+                                    key={event.id}
+                                    className="bg-white rounded p-3 text-sm"
+                                  >
+                                    <div className="flex items-start justify-between gap-2">
+                                      <div className="flex-1">
+                                        <p className="font-medium text-foreground">
+                                          {event.title}
+                                        </p>
+                                        <p className="text-xs text-foreground/60">
+                                          {event.date}
+                                        </p>
+                                      </div>
+                                      <span
+                                        className={`text-xs font-medium px-2 py-1 rounded-full flex-shrink-0 ${
+                                          event.status === "completed"
+                                            ? "bg-green-100 text-green-700"
+                                            : event.status === "upcoming"
+                                              ? "bg-blue-100 text-blue-700"
+                                              : "bg-amber-100 text-amber-700"
+                                        }`}
+                                      >
+                                        {event.status}
+                                      </span>
+                                    </div>
+                                  </div>
+                                ),
+                              )
+                            ) : (
+                              <p className="text-xs text-foreground/60">
+                                No timeline events yet
+                              </p>
+                            )}
+                          </div>
+
+                          {/* Add Event Form */}
+                          {showTimelineForm === customer.email && (
+                            <div className="bg-white rounded p-3 border border-blue-200 space-y-3">
+                              <input
+                                type="text"
+                                placeholder="Event title (e.g., Briefing Scheduled)"
+                                value={timelineFormData.title}
+                                onChange={(e) =>
+                                  setTimelineFormData({
+                                    ...timelineFormData,
+                                    title: e.target.value,
+                                  })
+                                }
+                                className="w-full px-2 py-1 text-xs border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                              />
+                              <div className="grid grid-cols-2 gap-2">
+                                <input
+                                  type="date"
+                                  value={timelineFormData.date}
+                                  onChange={(e) =>
+                                    setTimelineFormData({
+                                      ...timelineFormData,
+                                      date: e.target.value,
+                                    })
+                                  }
+                                  className="px-2 py-1 text-xs border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                />
+                                <select
+                                  value={timelineFormData.status}
+                                  onChange={(e) =>
+                                    setTimelineFormData({
+                                      ...timelineFormData,
+                                      status: e.target.value as
+                                        | "completed"
+                                        | "pending"
+                                        | "upcoming",
+                                    })
+                                  }
+                                  className="px-2 py-1 text-xs border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                >
+                                  <option value="completed">Completed</option>
+                                  <option value="pending">Pending</option>
+                                  <option value="upcoming">Upcoming</option>
+                                </select>
+                              </div>
+                              <select
+                                value={timelineFormData.type}
+                                onChange={(e) =>
+                                  setTimelineFormData({
+                                    ...timelineFormData,
+                                    type: e.target.value as
+                                      | "submission"
+                                      | "update"
+                                      | "scheduled"
+                                      | "email",
+                                  })
+                                }
+                                className="w-full px-2 py-1 text-xs border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                              >
+                                <option value="update">Update</option>
+                                <option value="email">Email</option>
+                                <option value="submission">Submission</option>
+                                <option value="scheduled">Scheduled</option>
+                              </select>
+                              <div className="flex gap-2">
+                                <button
+                                  onClick={() =>
+                                    handleAddTimelineEvent(customer.email)
+                                  }
+                                  className="flex-1 bg-blue-600 text-white text-xs px-2 py-1 rounded hover:bg-blue-700"
+                                >
+                                  Add Event
+                                </button>
+                                <button
+                                  onClick={() => setShowTimelineForm(null)}
+                                  className="flex-1 bg-slate-200 text-slate-700 text-xs px-2 py-1 rounded hover:bg-slate-300"
+                                >
+                                  Cancel
+                                </button>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
                       {/* Briefing Data */}
                       {customer.briefingData && (
                         <div className="space-y-4">
