@@ -972,10 +972,10 @@ function Step4Vendors({
     <div className="space-y-6">
       <div className="space-y-2">
         <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-          Which technology vendors interest you?
+          Which technology providers interest you?
         </h2>
         <p className="text-foreground/70">
-          Add vendors to your wishlist or explore additional options.
+          Add technology providers to your wishlist or explore additional options.
         </p>
       </div>
 
