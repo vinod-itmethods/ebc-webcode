@@ -46,6 +46,7 @@ export default function AdminNewProviders() {
 
   const [topicInput, setTopicInput] = useState("");
   const [benefitInput, setBenefitInput] = useState("");
+  const [logoPreview, setLogoPreview] = useState<string>("");
 
   useEffect(() => {
     const email = localStorage.getItem("adminEmail");
