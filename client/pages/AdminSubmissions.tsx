@@ -124,13 +124,6 @@ export default function AdminSubmissions() {
               >
                 → Manage Documents
               </a>
-              <span className="text-foreground/30">|</span>
-              <a
-                href="/admin/timeline"
-                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                → Manage Timelines
-              </a>
             </div>
           </div>
           <p className="text-sm text-foreground/60">
