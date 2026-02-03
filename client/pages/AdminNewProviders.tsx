@@ -57,11 +57,14 @@ export default function AdminNewProviders() {
     loadProviders();
   }, [navigate]);
 
-  const loadProviders = () => {
+  const loadProviders = async () => {
     try {
-      const stored = localStorage.getItem("custom_providers");
-      if (stored) {
-        setProviders(JSON.parse(stored));
+      const response = await fetch("/api/custom-providers");
+      if (response.ok) {
+        const data = await response.json();
+        setProviders(data.providers || []);
+      } else {
+        console.error("Failed to load providers");
       }
     } catch (error) {
       console.error("Error loading providers:", error);
