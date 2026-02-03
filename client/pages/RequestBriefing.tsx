@@ -357,19 +357,9 @@ export default function RequestBriefing() {
 
       // Get CAPTCHA token (if available)
       let captchaToken = "";
-      const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-      if ((window as any).grecaptcha && recaptchaSiteKey) {
-        try {
-          captchaToken = await (window as any).grecaptcha.execute(
-            recaptchaSiteKey,
-            {
-              action: "submit",
-            },
-          );
-        } catch (err) {
-          // reCAPTCHA may fail in some environments, continue without it
-          console.warn("reCAPTCHA failed, continuing without CAPTCHA token", err);
-        }
+      const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+      if (recaptchaSiteKey) {
+        captchaToken = await getCaptchaToken(recaptchaSiteKey);
       }
 
       // Only create customer profile for new customers (not returning from portal)
