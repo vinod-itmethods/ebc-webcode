@@ -1012,7 +1012,7 @@ function Step4Vendors({
             className="font-semibold rounded-lg"
           >
             <a href={`/partners?returnTo=briefing&step=${currentStep}`}>
-              Browse more vendors
+              Browse more technology providers
             </a>
           </Button>
         </div>
