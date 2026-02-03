@@ -22,6 +22,7 @@ import AdminCustomers from "./pages/AdminCustomers";
 import AdminPortalLogins from "./pages/AdminPortalLogins";
 import AdminDocuments from "./pages/AdminDocuments";
 import AdminProviders from "./pages/AdminProviders";
+import AdminNewProviders from "./pages/AdminNewProviders";
 import NotFound from "./pages/NotFound";
 
 // Create a single QueryClient instance
