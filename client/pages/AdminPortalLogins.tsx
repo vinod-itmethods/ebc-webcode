@@ -359,10 +359,9 @@ export default function AdminPortalLogins() {
                   {formData.role === "provider" && (
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-1">
-                        Company ID
+                        Company ID (Provider)
                       </label>
-                      <Input
-                        type="text"
+                      <select
                         value={formData.companyId}
                         onChange={(e) =>
                           setFormData({
@@ -370,9 +369,19 @@ export default function AdminPortalLogins() {
                             companyId: e.target.value,
                           })
                         }
-                        placeholder="e.g., google, microsoft"
                         disabled={formLoading}
-                      />
+                        className="w-full px-3 py-2 border border-border rounded-lg bg-white text-foreground"
+                      >
+                        <option value="">-- Select a provider --</option>
+                        {partners.map((partner) => (
+                          <option key={partner.id} value={partner.id}>
+                            {partner.name} ({partner.id})
+                          </option>
+                        ))}
+                      </select>
+                      <p className="text-xs text-foreground/60 mt-1">
+                        Select the technology provider this login belongs to. This determines which profile they see when they log in.
+                      </p>
                     </div>
                   )}
                 </div>
