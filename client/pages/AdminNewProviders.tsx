@@ -154,6 +154,7 @@ export default function AdminNewProviders() {
     });
     setTopicInput("");
     setBenefitInput("");
+    setLogoPreview("");
     setEditingId(null);
   };
 
