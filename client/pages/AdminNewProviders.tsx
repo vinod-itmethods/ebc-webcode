@@ -325,15 +325,38 @@ export default function AdminNewProviders() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Logo URL
+                  Logo (Upload Image)
                 </label>
-                <Input
-                  placeholder="https://example.com/logo.png"
-                  value={formData.logo || ""}
-                  onChange={(e) =>
-                    setFormData({ ...formData, logo: e.target.value })
-                  }
-                />
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleLogoUpload}
+                      className="flex-1 px-3 py-2 border border-border rounded-lg text-foreground text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:font-medium file:cursor-pointer hover:file:bg-primary/80"
+                    />
+                  </div>
+                  {logoPreview && (
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={logoPreview}
+                        alt="Logo preview"
+                        className="h-12 w-12 object-contain rounded border border-border p-1"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setLogoPreview("");
+                          setFormData({ ...formData, logo: "" });
+                        }}
+                        className="text-sm text-red-600 hover:text-red-800 flex items-center gap-1"
+                      >
+                        <X className="w-4 h-4" />
+                        Remove
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div>
