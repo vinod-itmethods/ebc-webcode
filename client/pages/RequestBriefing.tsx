@@ -6,6 +6,42 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, CheckCircle2, X } from "lucide-react";
 import { partners } from "@/data/partners";
 
+// Load reCAPTCHA script dynamically
+const loadRecaptchaScript = (siteKey: string) => {
+  return new Promise<void>((resolve) => {
+    if ((window as any).grecaptcha) {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => resolve();
+    script.onerror = () => resolve(); // Resolve even if script fails
+    document.head.appendChild(script);
+  });
+};
+
+// Get CAPTCHA token safely
+const getCaptchaToken = async (siteKey: string): Promise<string> => {
+  try {
+    if (!(window as any).grecaptcha) {
+      await loadRecaptchaScript(siteKey);
+    }
+
+    if ((window as any).grecaptcha) {
+      return await (window as any).grecaptcha.execute(siteKey, {
+        action: "submit",
+      });
+    }
+  } catch (err) {
+    console.warn("Failed to get CAPTCHA token", err);
+  }
+  return "";
+};
+
 interface FormData {
   interests: string[];
   interestOther?: string;
