@@ -667,7 +667,7 @@ export default function RequestBriefing() {
               />
             )}
 
-            {/* Step 4: Technology Vendors */}
+            {/* Step 4: Technology Providers */}
             {currentStep === 4 && (
               <Step4Vendors
                 vendors={formData.vendors}
