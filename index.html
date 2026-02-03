@@ -4,18 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello world project</title>
-    <!-- Google reCAPTCHA v3 (optional) -->
-    <script>
-      // Only load reCAPTCHA in production with a valid key
-      const siteKey = import.meta?.env?.VITE_RECAPTCHA_SITE_KEY;
-      if (siteKey && siteKey !== '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI') {
-        const script = document.createElement('script');
-        script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
-        script.async = true;
-        script.defer = true;
-        document.head.appendChild(script);
-      }
-    </script>
+    <!-- Google reCAPTCHA v3 (optional - only loads if grecaptcha is called) -->
   </head>
 
   <body>
