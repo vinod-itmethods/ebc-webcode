@@ -91,6 +91,11 @@ export function createServer() {
   app.post("/api/admin/customers/reject", handleRejectCustomer);
   app.post("/api/admin/customers/remove", handleRemoveCustomer);
 
+  // Custom providers endpoints
+  app.get("/api/custom-providers", handleGetCustomProviders);
+  app.post("/api/custom-providers", handleAddCustomProvider);
+  app.post("/api/custom-providers/delete", handleDeleteCustomProvider);
+
   // Audit logs endpoint (admin only)
   app.get("/api/admin/audit-logs", async (req, res) => {
     try {
