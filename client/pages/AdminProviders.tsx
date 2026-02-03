@@ -93,8 +93,12 @@ export default function AdminProviders() {
         setNewProviderId(partners[0]?.id || "");
         alert(`Provider login created for ${provider.name}`);
       } else {
-        const error = await response.json();
-        alert(error.error || "Failed to create provider login");
+        try {
+          const error = await response.json();
+          alert(error.error || "Failed to create provider login");
+        } catch {
+          alert("Failed to create provider login. Please try again.");
+        }
       }
     } catch (error) {
       console.error("Error:", error);
