@@ -27,8 +27,37 @@ export default function Partners() {
     // Initialize from localStorage
     return JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
   });
+  const [customProviders, setCustomProviders] = useState<Partner[]>([]);
   const returnTo = searchParams.get('returnTo'); // Check if coming from briefing form
   const fromStep = searchParams.get('step') || '4'; // Default to step 4
+
+  // Load custom providers from API
+  useEffect(() => {
+    const loadCustomProviders = async () => {
+      try {
+        const response = await fetch("/api/custom-providers");
+        if (response.ok) {
+          const data = await response.json();
+          const converted = (data.providers || []).map((cp: any) => ({
+            id: cp.id,
+            name: cp.name,
+            logo: cp.logo,
+            tagline: cp.tagline,
+            description: cp.description,
+            topics: cp.topics || [],
+            benefits: cp.benefits || [],
+            categories: cp.categories || [],
+            domain: cp.domain,
+          }));
+          setCustomProviders(converted);
+        }
+      } catch (error) {
+        console.error("Error loading custom providers:", error);
+      }
+    };
+
+    loadCustomProviders();
+  }, []);
 
   // Load partners with any edited data from localStorage, plus custom providers
   const partners = useMemo(() => {
@@ -44,28 +73,8 @@ export default function Partners() {
       return partner;
     });
 
-    // Add custom providers from localStorage
-    const customProvidersData = localStorage.getItem('custom_providers');
-    if (customProvidersData) {
-      try {
-        const customProviders = JSON.parse(customProvidersData);
-        // Convert custom providers to Partner format
-        const converted = customProviders.map((cp: any) => ({
-          id: cp.id,
-          name: cp.name,
-          logo: cp.logo,
-          tagline: cp.tagline,
-          description: cp.description,
-          topics: cp.topics || [],
-          benefits: cp.benefits || [],
-          categories: cp.categories || [],
-          domain: cp.domain,
-        }));
-        result = [...result, ...converted];
-      } catch (error) {
-        console.error('Error loading custom providers:', error);
-      }
-    }
+    // Add custom providers from API
+    result = [...result, ...customProviders];
 
     // Filter by selected category
     if (selectedCategory) {
@@ -73,7 +82,7 @@ export default function Partners() {
     }
 
     return result;
-  }, [selectedCategory]);
+  }, [selectedCategory, customProviders]);
 
   const toggleVendor = (vendorId: string) => {
     setSelectedVendors(prev => {
