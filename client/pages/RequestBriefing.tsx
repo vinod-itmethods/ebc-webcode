@@ -335,10 +335,7 @@ export default function RequestBriefing() {
 
       // Get CAPTCHA token (if available)
       let captchaToken = "";
-      const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-      if (recaptchaSiteKey) {
-        captchaToken = await getCaptchaToken(recaptchaSiteKey);
-      }
+      captchaToken = await getCaptchaToken();
 
       // Only create customer profile for new customers (not returning from portal)
       if (!skipContactStep) {
