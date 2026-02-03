@@ -33,6 +33,12 @@ import {
   handleAddCustomProvider,
   handleDeleteCustomProvider,
 } from "./routes/custom-providers";
+import {
+  handleGetTimelineEvents,
+  handleAddTimelineEvent,
+  handleUpdateTimelineEvent,
+  handleDeleteTimelineEvent,
+} from "./routes/timeline";
 
 export function createServer() {
   const app = express();
