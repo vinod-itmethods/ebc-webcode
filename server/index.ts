@@ -28,6 +28,11 @@ import {
   handleGetResetRequests,
   handleClearResetRequest,
 } from "./routes/portal-login";
+import {
+  handleGetCustomProviders,
+  handleAddCustomProvider,
+  handleDeleteCustomProvider,
+} from "./routes/custom-providers";
 
 export function createServer() {
   const app = express();
