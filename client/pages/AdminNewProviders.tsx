@@ -148,13 +148,34 @@ export default function AdminNewProviders() {
     setEditingId(provider.id);
   };
 
-  const handleDeleteProvider = (id: string) => {
+  const handleDeleteProvider = async (id: string) => {
     if (!confirm("Are you sure you want to delete this provider?")) {
       return;
     }
-    const updated = providers.filter((p) => p.id !== id);
-    setProviders(updated);
-    localStorage.setItem("custom_providers", JSON.stringify(updated));
+
+    try {
+      const response = await fetch("/api/custom-providers/delete", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          adminEmail,
+          id,
+        }),
+      });
+
+      if (response.ok) {
+        await loadProviders();
+        alert("Provider deleted successfully");
+      } else {
+        const error = await response.json();
+        alert(error.error || "Failed to delete provider");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred");
+    }
   };
 
   const toggleCategory = (category: string) => {
