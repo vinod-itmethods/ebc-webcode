@@ -67,8 +67,27 @@ export default function PortalLogin() {
         localStorage.setItem("userRole", user.role);
         localStorage.setItem("userEmail", user.email);
 
-        if (user.role === "provider" && user.companyId) {
-          localStorage.setItem("providerCompanyId", user.companyId);
+        if (user.role === "provider") {
+          // Try to find provider ID from company_id field
+          let providerId = user.companyId;
+
+          // If no company_id, try to find it from the provider login mappings
+          if (!providerId) {
+            const mappings = localStorage.getItem("provider_login_mappings");
+            if (mappings) {
+              const parsed = JSON.parse(mappings);
+              const mapping = parsed.find(
+                (m: any) => m.email === user.email.toLowerCase(),
+              );
+              if (mapping) {
+                providerId = mapping.provider_id;
+              }
+            }
+          }
+
+          if (providerId) {
+            localStorage.setItem("providerCompanyId", providerId);
+          }
         }
 
         setIsAuthenticated(true);
