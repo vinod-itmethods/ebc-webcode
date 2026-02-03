@@ -1020,10 +1020,10 @@ function Step4Vendors({
 
       {vendors.length === 0 && (
         <div className="text-center space-y-4 py-8">
-          <p className="text-foreground/70">No vendors added yet.</p>
+          <p className="text-foreground/70">No technology providers added yet.</p>
           <Button asChild className="font-semibold rounded-lg">
             <a href="/partners?returnTo=briefing">
-              Browse and add technology vendors
+              Browse and add technology providers
             </a>
           </Button>
         </div>
