@@ -62,6 +62,8 @@ export default function PortalLogin() {
         const data = await response.json();
         const { user } = data;
 
+        console.log("Login successful. User data:", user);
+
         // Store authentication data
         localStorage.setItem("portalAuthenticated", "true");
         localStorage.setItem("userRole", user.role);
@@ -70,6 +72,7 @@ export default function PortalLogin() {
         if (user.role === "provider") {
           // Try to find provider ID from company_id field
           let providerId = user.companyId;
+          console.log("Provider login detected. companyId from API:", providerId);
 
           // If no company_id, try to find it from the provider login mappings
           if (!providerId) {
@@ -81,12 +84,16 @@ export default function PortalLogin() {
               );
               if (mapping) {
                 providerId = mapping.provider_id;
+                console.log("Found provider ID from mappings:", providerId);
               }
             }
           }
 
           if (providerId) {
+            console.log("Setting providerCompanyId to:", providerId);
             localStorage.setItem("providerCompanyId", providerId);
+          } else {
+            console.warn("No providerId found for provider account!");
           }
         }
 
