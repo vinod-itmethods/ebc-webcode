@@ -132,8 +132,12 @@ export default function AdminNewProviders() {
             : "Provider added successfully!",
         );
       } else {
-        const error = await response.json();
-        alert(error.error || "Failed to save provider");
+        try {
+          const error = await response.json();
+          alert(error.error || "Failed to save provider");
+        } catch {
+          alert("Failed to save provider. Please try again.");
+        }
       }
     } catch (error) {
       console.error("Error:", error);
