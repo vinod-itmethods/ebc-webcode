@@ -7,18 +7,18 @@ import { ChevronLeft, CheckCircle2, X } from "lucide-react";
 import { partners } from "@/data/partners";
 
 // Get CAPTCHA token safely (reCAPTCHA is optional)
+// Note: reCAPTCHA script must be loaded in index.html with a valid site key
 const getCaptchaToken = async (): Promise<string> => {
   try {
-    if ((window as any).grecaptcha) {
-      // If grecaptcha is loaded, try to execute it
-      // The site key should have been provided in the script tag
-      const response = await (window as any).grecaptcha.execute({
+    if ((window as any).grecaptcha && typeof (window as any).grecaptcha.execute === 'function') {
+      // Only attempt to execute if grecaptcha is properly loaded
+      return await (window as any).grecaptcha.execute({
         action: "submit",
       });
-      return response || "";
     }
   } catch (err) {
-    console.warn("reCAPTCHA not available or failed, continuing without CAPTCHA", err);
+    // reCAPTCHA is optional - if it fails, just continue
+    console.warn("reCAPTCHA not available, continuing without CAPTCHA token");
   }
   return "";
 };
