@@ -160,6 +160,7 @@ export default function AdminNewProviders() {
 
   const handleEditProvider = (provider: CustomProvider) => {
     setFormData(provider);
+    setLogoPreview(provider.logo);
     setEditingId(provider.id);
   };
 
