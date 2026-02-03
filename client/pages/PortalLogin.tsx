@@ -90,8 +90,10 @@ export default function PortalLogin() {
           }
 
           if (providerId) {
-            console.log("Setting providerCompanyId to:", providerId);
-            localStorage.setItem("providerCompanyId", providerId);
+            // Convert to lowercase to match partner IDs
+            const normalizedProviderId = providerId.toLowerCase();
+            console.log("Setting providerCompanyId to:", normalizedProviderId);
+            localStorage.setItem("providerCompanyId", normalizedProviderId);
           } else {
             console.warn("No providerId found for provider account!");
           }
