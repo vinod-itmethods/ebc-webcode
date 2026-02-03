@@ -36,6 +36,14 @@ const STEP_NAMES = [
   "Contact Details",
 ];
 
+interface TimelineEvent {
+  id: string;
+  title: string;
+  date: string;
+  status: "completed" | "pending" | "upcoming";
+  type: "submission" | "update" | "scheduled" | "email";
+}
+
 export default function AdminCustomers() {
   const navigate = useNavigate();
   const [customers, setCustomers] = useState<AdminCustomersResponse>({
@@ -51,6 +59,16 @@ export default function AdminCustomers() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [adminEmail, setAdminEmail] = useState<string>("");
   const [actionLoading, setActionLoading] = useState<string | null>(null);
+  const [timelineEvents, setTimelineEvents] = useState<{
+    [key: string]: TimelineEvent[];
+  }>({});
+  const [showTimelineForm, setShowTimelineForm] = useState<string | null>(null);
+  const [timelineFormData, setTimelineFormData] = useState({
+    title: "",
+    date: "",
+    status: "pending" as const,
+    type: "update" as const,
+  });
 
   useEffect(() => {
     const storedEmail = localStorage.getItem("adminEmail");
