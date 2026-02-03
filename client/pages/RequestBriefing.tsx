@@ -792,11 +792,11 @@ function Step1({
 
   return (
     <div className="space-y-6">
-      {/* Vendors Reminder */}
+      {/* Technology Providers Reminder */}
       {vendors.length > 0 && (
         <div className="bg-blue-50/60 border border-blue-200 rounded-lg p-4">
           <p className="text-sm font-semibold text-foreground mb-2">
-            Selected vendors:
+            Selected technology providers:
           </p>
           <div className="flex flex-wrap gap-2">
             {vendors.map((vendorId) => {
