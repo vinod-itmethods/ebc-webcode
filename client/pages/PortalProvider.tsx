@@ -318,6 +318,32 @@ export default function PortalProvider() {
                 </div>
               </div>
 
+              {/* Provider Selection */}
+              <div className="mb-12 bg-white rounded-lg border border-border p-6">
+                <h3 className="text-lg font-bold text-foreground mb-4">
+                  Select Your Provider Profile
+                </h3>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Technology Provider
+                  </label>
+                  <select
+                    value={selectedProviderId}
+                    onChange={(e) => handleProviderChange(e.target.value)}
+                    className="w-full px-3 py-2 border border-border rounded-lg bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    {partners.map((partner) => (
+                      <option key={partner.id} value={partner.id}>
+                        {partner.name}
+                      </option>
+                    ))}
+                  </select>
+                  <p className="text-xs text-foreground/60 mt-2">
+                    Select your technology provider to see the correct profile
+                  </p>
+                </div>
+              </div>
+
               {/* Company Info Header */}
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200 p-6">
                 <p className="text-sm text-foreground/70 mb-3">
