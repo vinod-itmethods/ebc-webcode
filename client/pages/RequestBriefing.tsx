@@ -10,12 +10,15 @@ import { partners } from "@/data/partners";
 const getCaptchaToken = async (): Promise<string> => {
   try {
     if ((window as any).grecaptcha) {
-      return await (window as any).grecaptcha.execute(
-        { action: "submit" }
-      );
+      // If grecaptcha is loaded, try to execute it
+      // The site key should have been provided in the script tag
+      const response = await (window as any).grecaptcha.execute({
+        action: "submit",
+      });
+      return response || "";
     }
   } catch (err) {
-    console.warn("reCAPTCHA not available, continuing without CAPTCHA", err);
+    console.warn("reCAPTCHA not available or failed, continuing without CAPTCHA", err);
   }
   return "";
 };
