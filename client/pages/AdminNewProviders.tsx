@@ -189,8 +189,12 @@ export default function AdminNewProviders() {
         await loadProviders();
         alert("Provider deleted successfully");
       } else {
-        const error = await response.json();
-        alert(error.error || "Failed to delete provider");
+        try {
+          const error = await response.json();
+          alert(error.error || "Failed to delete provider");
+        } catch {
+          alert("Failed to delete provider. Please try again.");
+        }
       }
     } catch (error) {
       console.error("Error:", error);
