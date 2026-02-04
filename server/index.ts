@@ -160,5 +160,50 @@ export function createServer() {
     }
   });
 
+  // Partner access request endpoint
+  app.post("/api/partner-access-request", async (req, res) => {
+    try {
+      const { companyName, contactName, contactEmail, contactPhone, expertise, description } = req.body;
+
+      // Validate required fields
+      if (!companyName || !contactName || !contactEmail || !description) {
+        return res.status(400).json({
+          error: "Missing required fields",
+        });
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(contactEmail)) {
+        return res.status(400).json({
+          error: "Invalid email format",
+        });
+      }
+
+      // Log the partner access request
+      await logFormSubmission(contactEmail, companyName, req);
+
+      console.log("Partner access request received:", {
+        companyName,
+        contactName,
+        contactEmail,
+        contactPhone,
+        expertise,
+        description,
+        timestamp: new Date().toISOString(),
+      });
+
+      return res.status(200).json({
+        success: true,
+        message: "Partner access request submitted successfully",
+      });
+    } catch (error) {
+      console.error("Error processing partner access request:", error);
+      return res.status(500).json({
+        error: "Failed to process request",
+      });
+    }
+  });
+
   return app;
 }
