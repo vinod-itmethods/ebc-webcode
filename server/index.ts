@@ -181,7 +181,27 @@ export function createServer() {
         });
       }
 
-      // Log the partner access request
+      // Save to database
+      const { error: dbError } = await supabase
+        .from("partner_access_requests")
+        .insert({
+          company_name: companyName,
+          contact_name: contactName,
+          contact_email: contactEmail,
+          contact_phone: contactPhone || null,
+          expertise: expertise || [],
+          description,
+          status: "pending",
+        });
+
+      if (dbError) {
+        console.error("Error saving partner access request:", dbError);
+        return res.status(500).json({
+          error: "Failed to process request",
+        });
+      }
+
+      // Log the partner access request for audit trail
       await logFormSubmission(contactEmail, companyName, req);
 
       console.log("Partner access request received:", {
@@ -203,6 +223,80 @@ export function createServer() {
       return res.status(500).json({
         error: "Failed to process request",
       });
+    }
+  });
+
+  // Get partner access requests (admin only)
+  app.get("/api/admin/partner-requests", async (req, res) => {
+    try {
+      const { adminEmail } = req.query;
+
+      // Verify admin access
+      if (!adminEmail || !adminEmail.toString().endsWith("@itmethods.com")) {
+        return res.status(403).json({
+          error: "Unauthorized: only @itmethods.com emails can view partner requests",
+        });
+      }
+
+      const { data, error } = await supabase
+        .from("partner_access_requests")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+      if (error) {
+        console.error("Error fetching partner requests:", error);
+        return res.status(500).json({ error: "Failed to fetch requests" });
+      }
+
+      return res.status(200).json({
+        success: true,
+        requests: data || [],
+      });
+    } catch (error) {
+      console.error("Error in partner requests endpoint:", error);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
+  // Update partner access request status (admin only)
+  app.post("/api/admin/partner-requests/update", async (req, res) => {
+    try {
+      const { requestId, status, notes } = req.body;
+      const adminEmail = req.headers["x-admin-email"] as string;
+
+      // Verify admin access
+      if (!adminEmail || !adminEmail.endsWith("@itmethods.com")) {
+        return res.status(403).json({
+          error: "Unauthorized: only @itmethods.com emails can update requests",
+        });
+      }
+
+      if (!requestId || !status) {
+        return res.status(400).json({ error: "Missing required fields" });
+      }
+
+      const { error: dbError } = await supabase
+        .from("partner_access_requests")
+        .update({
+          status,
+          notes: notes || null,
+          reviewed_at: new Date().toISOString(),
+          reviewed_by: adminEmail,
+        })
+        .eq("id", requestId);
+
+      if (dbError) {
+        console.error("Error updating partner request:", dbError);
+        return res.status(500).json({ error: "Failed to update request" });
+      }
+
+      return res.status(200).json({
+        success: true,
+        message: "Request updated successfully",
+      });
+    } catch (error) {
+      console.error("Error in update partner request:", error);
+      return res.status(500).json({ error: "Internal server error" });
     }
   });
 
