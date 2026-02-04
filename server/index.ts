@@ -40,6 +40,10 @@ import {
   handleUpdateTimelineEvent,
   handleDeleteTimelineEvent,
 } from "./routes/timeline";
+import {
+  handleSaveProviderProfile,
+  handleGetProviderProfile,
+} from "./routes/provider-profiles";
 
 export function createServer() {
   const app = express();
