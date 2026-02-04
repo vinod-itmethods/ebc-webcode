@@ -28,8 +28,37 @@ export default function Partners() {
     return JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
   });
   const [customProviders, setCustomProviders] = useState<Partner[]>([]);
+  const [providerProfiles, setProviderProfiles] = useState<Record<string, any>>({});
   const returnTo = searchParams.get('returnTo'); // Check if coming from briefing form
   const fromStep = searchParams.get('step') || '4'; // Default to step 4
+
+  // Load provider profiles from API
+  useEffect(() => {
+    const loadProviderProfiles = async () => {
+      try {
+        const profilesMap: Record<string, any> = {};
+
+        // Fetch profiles for all original partners
+        const fetchPromises = originalPartners.map(partner =>
+          fetch(`/api/provider-profile?providerId=${encodeURIComponent(partner.id)}`)
+            .then(res => res.ok ? res.json() : null)
+            .then(data => {
+              if (data?.profile) {
+                profilesMap[partner.id] = data.profile;
+              }
+            })
+            .catch(error => console.error(`Error loading profile for ${partner.id}:`, error))
+        );
+
+        await Promise.all(fetchPromises);
+        setProviderProfiles(profilesMap);
+      } catch (error) {
+        console.error("Error loading provider profiles:", error);
+      }
+    };
+
+    loadProviderProfiles();
+  }, []);
 
   // Load custom providers from API
   useEffect(() => {
