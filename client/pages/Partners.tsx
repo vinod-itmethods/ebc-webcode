@@ -88,9 +88,23 @@ export default function Partners() {
     loadCustomProviders();
   }, []);
 
-  // Load partners with any edited data from localStorage, plus custom providers
+  // Load partners with API data, then localStorage, plus custom providers
   const partners = useMemo(() => {
     let result = originalPartners.map(partner => {
+      // Priority: API data > localStorage > original data
+      const profile = providerProfiles[partner.id];
+      if (profile) {
+        return {
+          ...partner,
+          speakerName: profile.speaker_name || partner.speakerName,
+          speakerTitle: profile.speaker_title || partner.speakerTitle,
+          speakerBio: profile.speaker_bio || partner.speakerBio,
+          speakerQuote: profile.speaker_quote || partner.speakerQuote,
+          speakerImage: profile.speaker_image || partner.speakerImage,
+        };
+      }
+
+      // Fallback to localStorage
       const savedData = localStorage.getItem(`partner_${partner.id}`);
       if (savedData) {
         try {
@@ -111,7 +125,7 @@ export default function Partners() {
     }
 
     return result;
-  }, [selectedCategory, customProviders]);
+  }, [selectedCategory, customProviders, providerProfiles]);
 
   const toggleVendor = (vendorId: string) => {
     setSelectedVendors(prev => {
