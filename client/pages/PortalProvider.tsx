@@ -110,27 +110,59 @@ export default function PortalProvider() {
 
   // Load provider profile data when authenticated
   useEffect(() => {
-    const selected = partners.find((p) => p.id === selectedProviderId);
-    if (selected) {
-      const savedData = localStorage.getItem(`partner_${selectedProviderId}`);
-      if (savedData) {
+    const loadProviderData = async () => {
+      const selected = partners.find((p) => p.id === selectedProviderId);
+      if (selected) {
         try {
-          const parsed = JSON.parse(savedData);
-          setProviderData(parsed);
-          setTopics(parsed.topics || []);
-          setAdditionalTopic(parsed.additionalTopic || "");
-        } catch {
-          setProviderData(selected);
-          setTopics(selected.topics || []);
-          setAdditionalTopic("");
+          // Try to fetch from API first (server has most up-to-date data)
+          const response = await fetch(
+            `/api/provider-profile?providerId=${encodeURIComponent(selectedProviderId)}`
+          );
+          if (response.ok) {
+            const data = await response.json();
+            if (data.profile) {
+              // Merge API data with base partner data
+              const mergedData = {
+                ...selected,
+                speakerName: data.profile.speaker_name || selected.speakerName,
+                speakerTitle: data.profile.speaker_title || selected.speakerTitle,
+                speakerBio: data.profile.speaker_bio || selected.speakerBio,
+                speakerQuote: data.profile.speaker_quote || selected.speakerQuote,
+                speakerImage: data.profile.speaker_image || selected.speakerImage,
+              };
+              setProviderData(mergedData);
+              setTopics(mergedData.topics || selected.topics || []);
+              setAdditionalTopic("");
+              return;
+            }
+          }
+        } catch (error) {
+          console.error("Error fetching provider profile from API:", error);
         }
-      } else {
+
+        // Fallback to localStorage
+        const savedData = localStorage.getItem(`partner_${selectedProviderId}`);
+        if (savedData) {
+          try {
+            const parsed = JSON.parse(savedData);
+            setProviderData(parsed);
+            setTopics(parsed.topics || []);
+            setAdditionalTopic(parsed.additionalTopic || "");
+            return;
+          } catch {
+            // Fall through to default
+          }
+        }
+
+        // Default to original partner data
         setProviderData(selected);
         setTopics(selected.topics || []);
         setAdditionalTopic("");
       }
-    }
-    setIsSaved(false);
+      setIsSaved(false);
+    };
+
+    loadProviderData();
   }, [selectedProviderId]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
