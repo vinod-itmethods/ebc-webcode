@@ -150,7 +150,8 @@ export default function AdminCustomers() {
         body: JSON.stringify({
           customerEmail,
           title: "Briefing Details Being Prepared",
-          description: "We are preparing your briefing itinerary with selected partners",
+          description:
+            "We are preparing your briefing itinerary with selected partners",
           eventDate: inReviewDate,
           status: "pending",
           eventType: "update",

@@ -10,7 +10,10 @@ import { partners } from "@/data/partners";
 // Note: reCAPTCHA script must be loaded in index.html with a valid site key
 const getCaptchaToken = async (): Promise<string> => {
   try {
-    if ((window as any).grecaptcha && typeof (window as any).grecaptcha.execute === 'function') {
+    if (
+      (window as any).grecaptcha &&
+      typeof (window as any).grecaptcha.execute === "function"
+    ) {
       // Only attempt to execute if grecaptcha is properly loaded
       return await (window as any).grecaptcha.execute({
         action: "submit",
@@ -406,7 +409,10 @@ export default function RequestBriefing() {
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
         console.error("Failed to submit briefing request:", errorData);
-        setEmailError(errorData.error || "Failed to submit briefing request. Please try again.");
+        setEmailError(
+          errorData.error ||
+            "Failed to submit briefing request. Please try again.",
+        );
         return;
       } else {
         console.log("Briefing request submitted successfully");
@@ -978,7 +984,8 @@ function Step4Vendors({
           Which technology providers interest you?
         </h2>
         <p className="text-foreground/70">
-          Add technology providers to your wishlist or explore additional options.
+          Add technology providers to your wishlist or explore additional
+          options.
         </p>
       </div>
 
@@ -1023,7 +1030,9 @@ function Step4Vendors({
 
       {vendors.length === 0 && (
         <div className="text-center space-y-4 py-8">
-          <p className="text-foreground/70">No technology providers added yet.</p>
+          <p className="text-foreground/70">
+            No technology providers added yet.
+          </p>
           <Button asChild className="font-semibold rounded-lg">
             <a href="/partners?returnTo=briefing">
               Browse and add technology providers

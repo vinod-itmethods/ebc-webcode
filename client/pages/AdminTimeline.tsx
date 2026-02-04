@@ -61,7 +61,7 @@ export default function AdminTimeline() {
     try {
       setLoading(true);
       const response = await fetch(
-        `/api/timeline-events?email=${encodeURIComponent(selectedCustomer)}`
+        `/api/timeline-events?email=${encodeURIComponent(selectedCustomer)}`,
       );
       if (response.ok) {
         const data = await response.json();
@@ -100,15 +100,16 @@ export default function AdminTimeline() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.title || !formData.event_date) {
       alert("Please fill in all required fields");
       return;
     }
 
     try {
-      const adminEmail = localStorage.getItem("userEmail") || "admin@itmethods.com";
-      
+      const adminEmail =
+        localStorage.getItem("userEmail") || "admin@itmethods.com";
+
       if (editingEvent) {
         // Update existing event
         const response = await fetch("/api/admin/timeline-events/update", {
@@ -174,8 +175,9 @@ export default function AdminTimeline() {
     }
 
     try {
-      const adminEmail = localStorage.getItem("userEmail") || "admin@itmethods.com";
-      
+      const adminEmail =
+        localStorage.getItem("userEmail") || "admin@itmethods.com";
+
       const response = await fetch("/api/admin/timeline-events/delete", {
         method: "POST",
         headers: {
@@ -234,8 +236,13 @@ export default function AdminTimeline() {
         {selectedCustomer && (
           <div className="bg-white rounded-lg border border-slate-200 p-6">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold text-slate-900">Timeline Events</h2>
-              <Button onClick={handleAddEvent} className="flex items-center gap-2">
+              <h2 className="text-xl font-bold text-slate-900">
+                Timeline Events
+              </h2>
+              <Button
+                onClick={handleAddEvent}
+                className="flex items-center gap-2"
+              >
                 <Plus className="w-4 h-4" />
                 Add Event
               </Button>
@@ -378,7 +385,10 @@ export default function AdminTimeline() {
                     onChange={(e) =>
                       setFormData({
                         ...formData,
-                        status: e.target.value as "completed" | "pending" | "upcoming",
+                        status: e.target.value as
+                          | "completed"
+                          | "pending"
+                          | "upcoming",
                       })
                     }
                     className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -398,7 +408,11 @@ export default function AdminTimeline() {
                     onChange={(e) =>
                       setFormData({
                         ...formData,
-                        event_type: e.target.value as "submission" | "update" | "scheduled" | "email",
+                        event_type: e.target.value as
+                          | "submission"
+                          | "update"
+                          | "scheduled"
+                          | "email",
                       })
                     }
                     className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"

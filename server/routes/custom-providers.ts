@@ -29,7 +29,18 @@ export async function handleGetCustomProviders(req: Request, res: Response) {
 
 export async function handleAddCustomProvider(req: Request, res: Response) {
   try {
-    const { adminEmail, id, name, tagline, description, logo, domain, categories, topics, benefits } = req.body;
+    const {
+      adminEmail,
+      id,
+      name,
+      tagline,
+      description,
+      logo,
+      domain,
+      categories,
+      topics,
+      benefits,
+    } = req.body;
 
     // Verify admin access
     if (!adminEmail || !adminEmail.endsWith("@itmethods.com")) {
@@ -38,7 +49,14 @@ export async function handleAddCustomProvider(req: Request, res: Response) {
       });
     }
 
-    if (!id || !name || !tagline || !description || !categories || categories.length === 0) {
+    if (
+      !id ||
+      !name ||
+      !tagline ||
+      !description ||
+      !categories ||
+      categories.length === 0
+    ) {
       return res.status(400).json({
         error: "Missing required fields",
       });

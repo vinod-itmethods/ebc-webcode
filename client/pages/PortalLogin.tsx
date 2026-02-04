@@ -72,7 +72,10 @@ export default function PortalLogin() {
         if (user.role === "provider") {
           // Try to find provider ID from company_id field
           let providerId = user.companyId;
-          console.log("Provider login detected. companyId from API:", providerId);
+          console.log(
+            "Provider login detected. companyId from API:",
+            providerId,
+          );
 
           // If no company_id, try to find it from the provider login mappings
           if (!providerId) {

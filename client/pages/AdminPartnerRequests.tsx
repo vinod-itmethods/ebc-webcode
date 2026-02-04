@@ -29,7 +29,9 @@ export default function AdminPartnerRequests() {
   const [adminEmail, setAdminEmail] = useState<string>("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [editStatus, setEditStatus] = useState<"pending" | "reviewed" | "approved" | "rejected">("pending");
+  const [editStatus, setEditStatus] = useState<
+    "pending" | "reviewed" | "approved" | "rejected"
+  >("pending");
   const [editNotes, setEditNotes] = useState("");
   const [updating, setUpdating] = useState(false);
 
@@ -47,7 +49,7 @@ export default function AdminPartnerRequests() {
     try {
       setLoading(true);
       const response = await fetch(
-        `/api/admin/partner-requests?adminEmail=${encodeURIComponent(email)}`
+        `/api/admin/partner-requests?adminEmail=${encodeURIComponent(email)}`,
       );
 
       if (!response.ok) {
@@ -127,7 +129,8 @@ export default function AdminPartnerRequests() {
   };
 
   const displayRequests = getDisplayRequests().sort(
-    (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    (a, b) =>
+      new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
   );
 
   return (
@@ -158,7 +161,8 @@ export default function AdminPartnerRequests() {
             </div>
           </div>
           <p className="text-sm text-foreground/60">
-            Manage requests from technology providers wanting to join the ecosystem
+            Manage requests from technology providers wanting to join the
+            ecosystem
           </p>
         </div>
       </section>
@@ -170,7 +174,9 @@ export default function AdminPartnerRequests() {
           <div className="grid grid-cols-4 gap-4 mb-8">
             <div className="bg-blue-50 rounded-lg p-4">
               <p className="text-sm text-foreground/70">Total</p>
-              <p className="text-3xl font-bold text-foreground">{requests.length}</p>
+              <p className="text-3xl font-bold text-foreground">
+                {requests.length}
+              </p>
             </div>
             <div className="bg-amber-50 rounded-lg p-4">
               <p className="text-sm text-foreground/70">Pending</p>
@@ -239,13 +245,15 @@ export default function AdminPartnerRequests() {
                 <div
                   key={request.id}
                   className={`border rounded-lg overflow-hidden hover:shadow-md transition-shadow ${getStatusColor(
-                    request.status
+                    request.status,
                   )}`}
                 >
                   {/* Summary Row */}
                   <button
                     onClick={() =>
-                      setExpandedId(expandedId === request.id ? null : request.id)
+                      setExpandedId(
+                        expandedId === request.id ? null : request.id,
+                      )
                     }
                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/50 transition-colors"
                   >
@@ -382,7 +390,7 @@ export default function AdminPartnerRequests() {
                                     | "pending"
                                     | "reviewed"
                                     | "approved"
-                                    | "rejected"
+                                    | "rejected",
                                 )
                               }
                               className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"

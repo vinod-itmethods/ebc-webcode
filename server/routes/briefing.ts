@@ -187,7 +187,10 @@ export async function handleBriefingSubmission(req: Request, res: Response) {
     await logFormSubmission(data.email, data.company, req);
 
     // Only send emails if SMTP is properly configured
-    const hasSmtpConfig = process.env.SMTP_USER && process.env.SMTP_PASS && process.env.SMTP_HOST !== "smtp.ethereal.email";
+    const hasSmtpConfig =
+      process.env.SMTP_USER &&
+      process.env.SMTP_PASS &&
+      process.env.SMTP_HOST !== "smtp.ethereal.email";
 
     if (hasSmtpConfig) {
       const internalEmails = [

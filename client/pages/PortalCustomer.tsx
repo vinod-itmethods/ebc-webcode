@@ -153,7 +153,9 @@ export default function PortalCustomer() {
             {
               id: "default-3",
               title: "Request Under Review",
-              date: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toLocaleDateString("en-US", {
+              date: new Date(
+                Date.now() + 3 * 24 * 60 * 60 * 1000,
+              ).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
                 day: "numeric",

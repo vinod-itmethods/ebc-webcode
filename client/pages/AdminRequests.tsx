@@ -47,7 +47,9 @@ type RequestType = "all" | "customer" | "partner";
 export default function AdminRequests() {
   const navigate = useNavigate();
   const [requestType, setRequestType] = useState<RequestType>("all");
-  const [customerRequests, setCustomerRequests] = useState<CustomerRequest[]>([]);
+  const [customerRequests, setCustomerRequests] = useState<CustomerRequest[]>(
+    [],
+  );
   const [partnerRequests, setPartnerRequests] = useState<PartnerRequest[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -64,7 +66,9 @@ export default function AdminRequests() {
     type: "update" as const,
   });
   const [editingPartnerId, setEditingPartnerId] = useState<string | null>(null);
-  const [editPartnerStatus, setEditPartnerStatus] = useState<"pending" | "reviewed" | "approved" | "rejected">("pending");
+  const [editPartnerStatus, setEditPartnerStatus] = useState<
+    "pending" | "reviewed" | "approved" | "rejected"
+  >("pending");
   const [editPartnerNotes, setEditPartnerNotes] = useState("");
   const [updating, setUpdating] = useState(false);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
@@ -84,7 +88,9 @@ export default function AdminRequests() {
       setLoading(true);
       const [customerRes, partnerRes] = await Promise.all([
         fetch(`/api/admin/customers?adminEmail=${encodeURIComponent(email)}`),
-        fetch(`/api/admin/partner-requests?adminEmail=${encodeURIComponent(email)}`),
+        fetch(
+          `/api/admin/partner-requests?adminEmail=${encodeURIComponent(email)}`,
+        ),
       ]);
 
       const customerData = customerRes.ok ? await customerRes.json() : {};
@@ -152,7 +158,8 @@ export default function AdminRequests() {
         body: JSON.stringify({
           customerEmail,
           title: "Briefing Details Being Prepared",
-          description: "We are preparing your briefing itinerary with selected partners",
+          description:
+            "We are preparing your briefing itinerary with selected partners",
           eventDate: inReviewDate,
           status: "pending",
           eventType: "update",
@@ -200,7 +207,7 @@ export default function AdminRequests() {
   const fetchTimelineEvents = async (customerEmail: string) => {
     try {
       const response = await fetch(
-        `/api/timeline-events?email=${encodeURIComponent(customerEmail)}`
+        `/api/timeline-events?email=${encodeURIComponent(customerEmail)}`,
       );
       if (response.ok) {
         const data = await response.json();
@@ -292,7 +299,7 @@ export default function AdminRequests() {
           ...r,
           _type: "customer",
           _id: r.id,
-        }))
+        })),
       );
     }
 
@@ -302,7 +309,7 @@ export default function AdminRequests() {
           ...r,
           _type: "partner",
           _id: r.id,
-        }))
+        })),
       );
     }
 
@@ -315,10 +322,10 @@ export default function AdminRequests() {
 
   const displayRequests = getDisplayRequests();
   const customerPendingCount = customerRequests.filter(
-    (r) => r.approvalStatus === "pending"
+    (r) => r.approvalStatus === "pending",
   ).length;
   const partnerPendingCount = partnerRequests.filter(
-    (r) => r.status === "pending"
+    (r) => r.status === "pending",
   ).length;
 
   return (
@@ -332,7 +339,8 @@ export default function AdminRequests() {
             Manage Requests
           </h2>
           <p className="text-sm text-foreground/60">
-            Review and approve customer briefing requests and technology provider access requests
+            Review and approve customer briefing requests and technology
+            provider access requests
           </p>
         </div>
       </section>
@@ -456,7 +464,9 @@ export default function AdminRequests() {
                         <div className="flex-grow">
                           <div className="flex items-center gap-3 mb-1">
                             <span className="inline-block bg-slate-200 text-slate-700 text-xs font-medium px-2 py-1 rounded">
-                              {request._type === "customer" ? "Customer" : "Provider"}
+                              {request._type === "customer"
+                                ? "Customer"
+                                : "Provider"}
                             </span>
                             <h3 className="font-semibold text-foreground">
                               {request._type === "customer"
@@ -472,7 +482,7 @@ export default function AdminRequests() {
                           <p className="text-xs text-foreground/50 mt-1 ml-20">
                             Submitted{" "}
                             {new Date(
-                              request.createdAt || request.created_at
+                              request.createdAt || request.created_at,
                             ).toLocaleString()}
                           </p>
                         </div>
@@ -521,7 +531,7 @@ export default function AdminRequests() {
                                     setShowTimelineForm(
                                       showTimelineForm === request.email
                                         ? null
-                                        : request.email
+                                        : request.email,
                                     );
                                     if (
                                       !timelineEvents[request.email] ||
@@ -617,7 +627,9 @@ export default function AdminRequests() {
                                       }
                                       className="px-2 py-1 text-xs border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                     >
-                                      <option value="completed">Completed</option>
+                                      <option value="completed">
+                                        Completed
+                                      </option>
                                       <option value="pending">Pending</option>
                                       <option value="upcoming">Upcoming</option>
                                     </select>
@@ -638,7 +650,9 @@ export default function AdminRequests() {
                                   >
                                     <option value="update">Update</option>
                                     <option value="email">Email</option>
-                                    <option value="submission">Submission</option>
+                                    <option value="submission">
+                                      Submission
+                                    </option>
                                     <option value="scheduled">Scheduled</option>
                                   </select>
                                   <div className="flex gap-2">
@@ -651,9 +665,7 @@ export default function AdminRequests() {
                                       Add Event
                                     </button>
                                     <button
-                                      onClick={() =>
-                                        setShowTimelineForm(null)
-                                      }
+                                      onClick={() => setShowTimelineForm(null)}
                                       className="flex-1 bg-slate-200 text-slate-700 text-xs px-2 py-1 rounded hover:bg-slate-300"
                                     >
                                       Cancel
@@ -790,7 +802,7 @@ export default function AdminRequests() {
                                         | "pending"
                                         | "reviewed"
                                         | "approved"
-                                        | "rejected"
+                                        | "rejected",
                                     )
                                   }
                                   className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"

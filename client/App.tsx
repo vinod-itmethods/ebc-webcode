@@ -89,9 +89,15 @@ export default function App() {
             />
             <Route path="/admin/documents" element={<AdminDocuments />} />
             <Route path="/admin/providers" element={<AdminProviders />} />
-            <Route path="/admin/new-providers" element={<AdminNewProviders />} />
+            <Route
+              path="/admin/new-providers"
+              element={<AdminNewProviders />}
+            />
             <Route path="/admin/timeline" element={<AdminTimeline />} />
-            <Route path="/admin/partner-requests" element={<AdminPartnerRequests />} />
+            <Route
+              path="/admin/partner-requests"
+              element={<AdminPartnerRequests />}
+            />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

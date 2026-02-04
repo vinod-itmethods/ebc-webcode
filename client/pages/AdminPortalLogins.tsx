@@ -380,7 +380,8 @@ export default function AdminPortalLogins() {
                         ))}
                       </select>
                       <p className="text-xs text-foreground/60 mt-1">
-                        Select the technology provider this login belongs to. This determines which profile they see when they log in.
+                        Select the technology provider this login belongs to.
+                        This determines which profile they see when they log in.
                       </p>
                     </div>
                   )}

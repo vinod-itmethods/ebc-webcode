@@ -263,10 +263,14 @@ export default function AdminNewProviders() {
                 Add Technology Providers
               </h1>
               <p className="text-foreground/60 mt-2">
-                Create new technology provider profiles for the briefing platform
+                Create new technology provider profiles for the briefing
+                platform
               </p>
             </div>
-            <Button variant="secondary-outline" onClick={() => navigate("/admin")}>
+            <Button
+              variant="secondary-outline"
+              onClick={() => navigate("/admin")}
+            >
               Back to Admin
             </Button>
           </div>
@@ -278,7 +282,11 @@ export default function AdminNewProviders() {
         {/* Add/Edit Form */}
         <div className="bg-white rounded-lg border border-border p-8 mb-8">
           <h2 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-            {editingId ? <Edit2 className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+            {editingId ? (
+              <Edit2 className="w-5 h-5" />
+            ) : (
+              <Plus className="w-5 h-5" />
+            )}
             {editingId ? "Edit Provider" : "Add New Provider"}
           </h2>
 

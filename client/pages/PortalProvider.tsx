@@ -116,7 +116,7 @@ export default function PortalProvider() {
         try {
           // Try to fetch from API first (server has most up-to-date data)
           const response = await fetch(
-            `/api/provider-profile?providerId=${encodeURIComponent(selectedProviderId)}`
+            `/api/provider-profile?providerId=${encodeURIComponent(selectedProviderId)}`,
           );
           if (response.ok) {
             const data = await response.json();
@@ -125,10 +125,13 @@ export default function PortalProvider() {
               const mergedData = {
                 ...selected,
                 speakerName: data.profile.speaker_name || selected.speakerName,
-                speakerTitle: data.profile.speaker_title || selected.speakerTitle,
+                speakerTitle:
+                  data.profile.speaker_title || selected.speakerTitle,
                 speakerBio: data.profile.speaker_bio || selected.speakerBio,
-                speakerQuote: data.profile.speaker_quote || selected.speakerQuote,
-                speakerImage: data.profile.speaker_image || selected.speakerImage,
+                speakerQuote:
+                  data.profile.speaker_quote || selected.speakerQuote,
+                speakerImage:
+                  data.profile.speaker_image || selected.speakerImage,
               };
               setProviderData(mergedData);
               setTopics(mergedData.topics || selected.topics || []);

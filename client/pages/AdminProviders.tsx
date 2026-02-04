@@ -87,7 +87,10 @@ export default function AdminProviders() {
 
         const updated = [...providerLogins, newMapping];
         setProviderLogins(updated);
-        localStorage.setItem("provider_login_mappings", JSON.stringify(updated));
+        localStorage.setItem(
+          "provider_login_mappings",
+          JSON.stringify(updated),
+        );
 
         setNewEmail("");
         setNewProviderId(partners[0]?.id || "");
@@ -142,7 +145,10 @@ export default function AdminProviders() {
                 Map provider emails to their technology provider profiles
               </p>
             </div>
-            <Button variant="secondary-outline" onClick={() => navigate("/admin")}>
+            <Button
+              variant="secondary-outline"
+              onClick={() => navigate("/admin")}
+            >
               Back to Admin
             </Button>
           </div>
@@ -209,7 +215,9 @@ export default function AdminProviders() {
 
           {providerLogins.length === 0 ? (
             <div className="px-8 py-12 text-center">
-              <p className="text-foreground/60">No provider logins configured yet</p>
+              <p className="text-foreground/60">
+                No provider logins configured yet
+              </p>
             </div>
           ) : (
             <div className="overflow-x-auto">
@@ -229,8 +237,13 @@ export default function AdminProviders() {
                 </thead>
                 <tbody className="divide-y divide-border">
                   {providerLogins.map((login) => (
-                    <tr key={login.id} className="hover:bg-slate-50 transition-colors">
-                      <td className="px-8 py-4 text-foreground">{login.email}</td>
+                    <tr
+                      key={login.id}
+                      className="hover:bg-slate-50 transition-colors"
+                    >
+                      <td className="px-8 py-4 text-foreground">
+                        {login.email}
+                      </td>
                       <td className="px-8 py-4 text-foreground">
                         {login.provider_name}
                       </td>
@@ -238,9 +251,7 @@ export default function AdminProviders() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          onClick={() =>
-                            handleDeleteProviderLogin(login.id)
-                          }
+                          onClick={() => handleDeleteProviderLogin(login.id)}
                           className="text-red-600 hover:bg-red-50"
                         >
                           <Trash2 className="w-4 h-4" />

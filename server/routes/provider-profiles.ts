@@ -3,13 +3,13 @@ import { supabase } from "../lib/supabase";
 
 export async function handleSaveProviderProfile(req: Request, res: Response) {
   try {
-    const { 
-      providerId, 
-      speakerName, 
-      speakerTitle, 
-      speakerBio, 
-      speakerQuote, 
-      speakerImage 
+    const {
+      providerId,
+      speakerName,
+      speakerTitle,
+      speakerBio,
+      speakerQuote,
+      speakerImage,
     } = req.body;
 
     if (!providerId) {

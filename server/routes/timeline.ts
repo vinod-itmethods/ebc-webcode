@@ -28,9 +28,7 @@ export async function handleGetTimelineEvents(req: Request, res: Response) {
 
     if (error) {
       console.error("Error fetching timeline events:", error);
-      return res
-        .status(500)
-        .json({ error: "Failed to fetch timeline events" });
+      return res.status(500).json({ error: "Failed to fetch timeline events" });
     }
 
     // Format dates
@@ -78,7 +76,8 @@ export async function handleAddTimelineEvent(req: Request, res: Response) {
       .order("event_order", { ascending: false })
       .limit(1);
 
-    const nextOrder = lastEvent && lastEvent.length > 0 ? lastEvent[0].event_order + 1 : 1;
+    const nextOrder =
+      lastEvent && lastEvent.length > 0 ? lastEvent[0].event_order + 1 : 1;
 
     const { data, error } = await supabase
       .from("briefing_timeline_events")

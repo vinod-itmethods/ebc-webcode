@@ -7,7 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 
-type CategoryType = "cloud" | "ai" | "devops" | "platform" | "security" | "data";
+type CategoryType =
+  | "cloud"
+  | "ai"
+  | "devops"
+  | "platform"
+  | "security"
+  | "data";
 
 const categories: { id: CategoryType; label: string }[] = [
   { id: "cloud", label: "Cloud & Infrastructure" },
@@ -22,15 +28,21 @@ export default function Partners() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<CategoryType | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<CategoryType | null>(
+    null,
+  );
   const [selectedVendors, setSelectedVendors] = useState<string[]>(() => {
     // Initialize from localStorage
-    return JSON.parse(localStorage.getItem('vendor_wishlist') || '[]') as string[];
+    return JSON.parse(
+      localStorage.getItem("vendor_wishlist") || "[]",
+    ) as string[];
   });
   const [customProviders, setCustomProviders] = useState<Partner[]>([]);
-  const [providerProfiles, setProviderProfiles] = useState<Record<string, any>>({});
-  const returnTo = searchParams.get('returnTo'); // Check if coming from briefing form
-  const fromStep = searchParams.get('step') || '4'; // Default to step 4
+  const [providerProfiles, setProviderProfiles] = useState<Record<string, any>>(
+    {},
+  );
+  const returnTo = searchParams.get("returnTo"); // Check if coming from briefing form
+  const fromStep = searchParams.get("step") || "4"; // Default to step 4
 
   // Load provider profiles from API
   useEffect(() => {
@@ -39,15 +51,19 @@ export default function Partners() {
         const profilesMap: Record<string, any> = {};
 
         // Fetch profiles for all original partners
-        const fetchPromises = originalPartners.map(partner =>
-          fetch(`/api/provider-profile?providerId=${encodeURIComponent(partner.id)}`)
-            .then(res => res.ok ? res.json() : null)
-            .then(data => {
+        const fetchPromises = originalPartners.map((partner) =>
+          fetch(
+            `/api/provider-profile?providerId=${encodeURIComponent(partner.id)}`,
+          )
+            .then((res) => (res.ok ? res.json() : null))
+            .then((data) => {
               if (data?.profile) {
                 profilesMap[partner.id] = data.profile;
               }
             })
-            .catch(error => console.error(`Error loading profile for ${partner.id}:`, error))
+            .catch((error) =>
+              console.error(`Error loading profile for ${partner.id}:`, error),
+            ),
         );
 
         await Promise.all(fetchPromises);
@@ -90,7 +106,7 @@ export default function Partners() {
 
   // Load partners with API data, then localStorage, plus custom providers
   const partners = useMemo(() => {
-    let result = originalPartners.map(partner => {
+    let result = originalPartners.map((partner) => {
       // Priority: API data > localStorage > original data
       const profile = providerProfiles[partner.id];
       if (profile) {
@@ -121,16 +137,18 @@ export default function Partners() {
 
     // Filter by selected category
     if (selectedCategory) {
-      result = result.filter(partner => partner.categories.includes(selectedCategory));
+      result = result.filter((partner) =>
+        partner.categories.includes(selectedCategory),
+      );
     }
 
     return result;
   }, [selectedCategory, customProviders, providerProfiles]);
 
   const toggleVendor = (vendorId: string) => {
-    setSelectedVendors(prev => {
+    setSelectedVendors((prev) => {
       if (prev.includes(vendorId)) {
-        return prev.filter(id => id !== vendorId);
+        return prev.filter((id) => id !== vendorId);
       } else {
         return [...prev, vendorId];
       }
@@ -139,11 +157,11 @@ export default function Partners() {
 
   // Save selected vendors to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem('vendor_wishlist', JSON.stringify(selectedVendors));
+    localStorage.setItem("vendor_wishlist", JSON.stringify(selectedVendors));
   }, [selectedVendors]);
 
   const handleAddSelectedAndReturn = () => {
-    if (returnTo === 'briefing') {
+    if (returnTo === "briefing") {
       navigate(`/request-briefing?step=${fromStep}`);
     }
   };
@@ -157,10 +175,12 @@ export default function Partners() {
       <Header />
 
       {/* Back to Briefing Bar */}
-      {returnTo === 'briefing' && (
+      {returnTo === "briefing" && (
         <section className="sticky top-16 z-40 bg-blue-50 border-b border-blue-200 py-3 shadow-sm">
           <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
-            <p className="text-sm text-foreground/70">Browsing more vendors for your briefing request</p>
+            <p className="text-sm text-foreground/70">
+              Browsing more vendors for your briefing request
+            </p>
             <Button
               onClick={handleBackToBriefing}
               variant="secondary"
@@ -181,9 +201,13 @@ export default function Partners() {
 
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center space-y-4">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground">Technology providers</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground">
+              Technology providers
+            </h1>
             <p className="text-lg text-foreground/90 max-w-2xl mx-auto">
-              Executive Briefings bring perspectives from a broad range of leading technology providers, selected for relevance to your organization's strategic priorities.
+              Executive Briefings bring perspectives from a broad range of
+              leading technology providers, selected for relevance to your
+              organization's strategic priorities.
             </p>
           </div>
         </div>
@@ -193,13 +217,20 @@ export default function Partners() {
       <section className="py-4 bg-white border-b border-border/10">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
-            <label htmlFor="category-filter" className="text-sm font-semibold text-foreground">
+            <label
+              htmlFor="category-filter"
+              className="text-sm font-semibold text-foreground"
+            >
               Filter by category:
             </label>
             <select
               id="category-filter"
               value={selectedCategory || ""}
-              onChange={(e) => setSelectedCategory(e.target.value ? (e.target.value as CategoryType) : null)}
+              onChange={(e) =>
+                setSelectedCategory(
+                  e.target.value ? (e.target.value as CategoryType) : null,
+                )
+              }
               className="px-4 py-2 rounded-lg border border-border bg-white text-foreground font-medium transition-all hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
             >
               <option value="">All categories</option>
@@ -224,7 +255,9 @@ export default function Partners() {
                   key={partner.id}
                   onClick={() => setSelectedPartner(partner)}
                   className={`flex flex-col items-center justify-center bg-slate-50 rounded-xl p-4 transition-all ${
-                    isSelected ? 'ring-2 ring-primary shadow-lg bg-primary/5' : 'hover:shadow-lg hover:bg-white'
+                    isSelected
+                      ? "ring-2 ring-primary shadow-lg bg-primary/5"
+                      : "hover:shadow-lg hover:bg-white"
                   }`}
                   style={{ height: "160px" }}
                 >
@@ -232,7 +265,11 @@ export default function Partners() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
+                    style={{
+                      maxWidth: "90%",
+                      maxHeight: "90%",
+                      objectFit: "contain",
+                    }}
                     onError={(e) => {
                       const el = e.currentTarget;
                       el.style.display = "none";
@@ -278,8 +315,12 @@ export default function Partners() {
                   />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-foreground">{selectedPartner.name}</h2>
-                  <p className="text-foreground/70 mt-1">{selectedPartner.tagline}</p>
+                  <h2 className="text-2xl font-bold text-foreground">
+                    {selectedPartner.name}
+                  </h2>
+                  <p className="text-foreground/70 mt-1">
+                    {selectedPartner.tagline}
+                  </p>
                 </div>
               </div>
               <button
@@ -294,7 +335,9 @@ export default function Partners() {
             <div className="p-6 space-y-6">
               {/* Description */}
               <div>
-                <p className="text-foreground/70 leading-relaxed">{selectedPartner.description}</p>
+                <p className="text-foreground/70 leading-relaxed">
+                  {selectedPartner.description}
+                </p>
               </div>
 
               {/* Example Discussion Topics */}
@@ -333,7 +376,11 @@ export default function Partners() {
                   {/* Speaker Header */}
                   <div>
                     <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-4">
-                      Featured Speaker: <span className="text-foreground font-bold">{selectedPartner.speakerName}, {selectedPartner.speakerTitle?.split(',')[0]}</span>
+                      Featured Speaker:{" "}
+                      <span className="text-foreground font-bold">
+                        {selectedPartner.speakerName},{" "}
+                        {selectedPartner.speakerTitle?.split(",")[0]}
+                      </span>
                     </p>
                     <div className="flex gap-4 items-start">
                       <img
@@ -364,17 +411,26 @@ export default function Partners() {
                 }}
                 className="flex-1 font-semibold rounded-lg"
               >
-                {selectedVendors.includes(selectedPartner.id) ? "Remove from wishlist" : "Add to wishlist"}
+                {selectedVendors.includes(selectedPartner.id)
+                  ? "Remove from wishlist"
+                  : "Add to wishlist"}
               </Button>
               <Button
                 onClick={() => {
                   // Calculate the updated vendors list before navigating
-                  const updatedVendors = selectedVendors.includes(selectedPartner.id)
-                    ? selectedVendors.filter(id => id !== selectedPartner.id)
+                  const updatedVendors = selectedVendors.includes(
+                    selectedPartner.id,
+                  )
+                    ? selectedVendors.filter((id) => id !== selectedPartner.id)
                     : [...selectedVendors, selectedPartner.id];
 
-                  localStorage.setItem('vendor_wishlist', JSON.stringify(updatedVendors));
-                  navigate(`/request-briefing?step=${returnTo === 'briefing' ? fromStep : '4'}`);
+                  localStorage.setItem(
+                    "vendor_wishlist",
+                    JSON.stringify(updatedVendors),
+                  );
+                  navigate(
+                    `/request-briefing?step=${returnTo === "briefing" ? fromStep : "4"}`,
+                  );
                 }}
                 variant="secondary-outline"
                 className="flex-1 font-semibold rounded-lg"
@@ -393,33 +449,39 @@ export default function Partners() {
             Ready to plan your briefing?
           </h2>
           <p className="text-foreground/70">
-            Select the technology partners you'd like to engage with and we'll design a briefing around your priorities.
+            Select the technology partners you'd like to engage with and we'll
+            design a briefing around your priorities.
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="font-semibold px-8 rounded-lg"
-          >
+          <Button asChild size="lg" className="font-semibold px-8 rounded-lg">
             <Link to="/request-briefing">Request a briefing</Link>
           </Button>
         </div>
       </section>
 
       {/* Action Buttons - Only show when coming from briefing */}
-      {returnTo === 'briefing' && (
+      {returnTo === "briefing" && (
         <section className="py-8 bg-blue-50 border-t border-border/10">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="max-w-2xl mx-auto space-y-4">
               <div className="bg-white rounded-lg p-6 space-y-4">
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2">Selected vendors</h3>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    Selected vendors
+                  </h3>
                   {selectedVendors.length > 0 ? (
                     <div className="flex flex-wrap gap-2">
-                      {selectedVendors.map(vendorId => {
-                        const vendor = originalPartners.find(p => p.id === vendorId);
+                      {selectedVendors.map((vendorId) => {
+                        const vendor = originalPartners.find(
+                          (p) => p.id === vendorId,
+                        );
                         return vendor ? (
-                          <div key={vendorId} className="flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full">
-                            <span className="text-sm font-medium text-foreground">{vendor.name}</span>
+                          <div
+                            key={vendorId}
+                            className="flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full"
+                          >
+                            <span className="text-sm font-medium text-foreground">
+                              {vendor.name}
+                            </span>
                             <button
                               onClick={() => toggleVendor(vendorId)}
                               className="text-primary hover:text-primary/70 transition-colors"
@@ -431,7 +493,9 @@ export default function Partners() {
                       })}
                     </div>
                   ) : (
-                    <p className="text-sm text-foreground/60">No vendors selected yet</p>
+                    <p className="text-sm text-foreground/60">
+                      No vendors selected yet
+                    </p>
                   )}
                 </div>
 

@@ -172,7 +172,14 @@ export function createServer() {
   // Partner access request endpoint
   app.post("/api/partner-access-request", async (req, res) => {
     try {
-      const { companyName, contactName, contactEmail, contactPhone, expertise, description } = req.body;
+      const {
+        companyName,
+        contactName,
+        contactEmail,
+        contactPhone,
+        expertise,
+        description,
+      } = req.body;
 
       // Validate required fields
       if (!companyName || !contactName || !contactEmail || !description) {
@@ -242,7 +249,8 @@ export function createServer() {
       // Verify admin access
       if (!adminEmail || !adminEmail.toString().endsWith("@itmethods.com")) {
         return res.status(403).json({
-          error: "Unauthorized: only @itmethods.com emails can view partner requests",
+          error:
+            "Unauthorized: only @itmethods.com emails can view partner requests",
         });
       }
 
