@@ -113,6 +113,10 @@ export function createServer() {
   app.post("/api/admin/timeline-events/update", handleUpdateTimelineEvent);
   app.post("/api/admin/timeline-events/delete", handleDeleteTimelineEvent);
 
+  // Provider profile endpoints
+  app.get("/api/provider-profile", handleGetProviderProfile);
+  app.post("/api/provider-profile", handleSaveProviderProfile);
+
   // Audit logs endpoint (admin only)
   app.get("/api/admin/audit-logs", async (req, res) => {
     try {
