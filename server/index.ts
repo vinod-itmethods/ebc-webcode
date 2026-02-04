@@ -20,6 +20,7 @@ import {
 import { rateLimit } from "./lib/rate-limit";
 import { verifyCaptcha } from "./lib/captcha";
 import { getAuditLogs, logFormSubmission } from "./lib/audit-log";
+import { supabase } from "./lib/supabase";
 import {
   handlePortalLogin,
   handleAddPortalLogin,
