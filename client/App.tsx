@@ -81,6 +81,7 @@ export default function App() {
             <Route path="/portal" element={<PortalLogin />} />
             <Route path="/admin" element={<AdminLogin />} />
             <Route path="/admin/submissions" element={<AdminSubmissions />} />
+            <Route path="/admin/requests" element={<AdminRequests />} />
             <Route path="/admin/customers" element={<AdminCustomers />} />
             <Route
               path="/admin/portal-logins"
