@@ -150,10 +150,10 @@ export default function AdminPartnerRequests() {
               </a>
               <span className="text-foreground/30">|</span>
               <a
-                href="/admin/customers"
+                href="/admin/requests"
                 className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
               >
-                → Customer Requests
+                → Manage All Requests
               </a>
             </div>
           </div>
