@@ -195,18 +195,45 @@ export default function PortalProvider() {
     }));
   };
 
-  const handleSaveProfile = () => {
-    const dataToSave = {
-      ...providerData,
-      topics,
-      additionalTopic,
-    };
-    localStorage.setItem(
-      `partner_${selectedProviderId}`,
-      JSON.stringify(dataToSave),
-    );
-    setIsSaved(true);
-    setTimeout(() => setIsSaved(false), 2000);
+  const handleSaveProfile = async () => {
+    try {
+      // Save speaker profile to database
+      const response = await fetch("/api/provider-profile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          providerId: selectedProviderId,
+          speakerName: providerData.speakerName,
+          speakerTitle: providerData.speakerTitle,
+          speakerBio: providerData.speakerBio,
+          speakerQuote: providerData.speakerQuote,
+          speakerImage: providerData.speakerImage,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to save profile");
+      }
+
+      // Also save to localStorage for backward compatibility
+      const dataToSave = {
+        ...providerData,
+        topics,
+        additionalTopic,
+      };
+      localStorage.setItem(
+        `partner_${selectedProviderId}`,
+        JSON.stringify(dataToSave),
+      );
+
+      setIsSaved(true);
+      setTimeout(() => setIsSaved(false), 2000);
+    } catch (error) {
+      console.error("Error saving profile:", error);
+      alert("Failed to save profile. Please try again.");
+    }
   };
 
   const toggleArea = (area: string) => {
