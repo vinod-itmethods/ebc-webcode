@@ -258,10 +258,10 @@ export default function AdminPortalLogins() {
               Portal Login Management
             </h2>
             <a
-              href="/admin/customers"
+              href="/admin/requests"
               className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
             >
-              → Manage Customers
+              → Manage Requests
             </a>
           </div>
           <p className="text-sm text-foreground/60">
