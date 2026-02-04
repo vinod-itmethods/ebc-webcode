@@ -98,10 +98,10 @@ export default function AdminSubmissions() {
             </h2>
             <div className="flex gap-3">
               <a
-                href="/admin/customers"
+                href="/admin/requests"
                 className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
               >
-                → Manage Customer Requests
+                → Manage Requests
               </a>
               <span className="text-foreground/30">|</span>
               <a
@@ -123,13 +123,6 @@ export default function AdminSubmissions() {
                 className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
               >
                 → Manage Documents
-              </a>
-              <span className="text-foreground/30">|</span>
-              <a
-                href="/admin/partner-requests"
-                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                → Partner Requests
               </a>
             </div>
           </div>
