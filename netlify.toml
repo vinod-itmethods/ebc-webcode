@@ -9,5 +9,11 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/api:splat"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# SPA fallback - serve index.html for all routes so React Router can handle client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
