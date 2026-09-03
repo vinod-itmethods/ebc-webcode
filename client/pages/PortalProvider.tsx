@@ -44,6 +44,8 @@ const REGISTRATION_STEPS = [
   "Participation preferences",
 ];
 
+const VALID_PROVIDER_IDS = new Set(partners.map((p) => p.id));
+
 export default function PortalProvider() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [activeTab, setActiveTab] = useState<
@@ -111,6 +113,10 @@ export default function PortalProvider() {
   // Load provider profile data when authenticated
   useEffect(() => {
     const loadProviderData = async () => {
+      if (!VALID_PROVIDER_IDS.has(selectedProviderId)) {
+        setIsSaved(false);
+        return;
+      }
       const selected = partners.find((p) => p.id === selectedProviderId);
       if (selected) {
         try {
