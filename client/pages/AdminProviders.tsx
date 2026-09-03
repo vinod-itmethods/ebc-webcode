@@ -12,6 +12,10 @@ interface ProviderLogin {
   provider_name: string;
 }
 
+function sanitizeString(value: string): string {
+  return value.replace(/[<>"'&]/g, "");
+}
+
 export default function AdminProviders() {
   const navigate = useNavigate();
   const [adminEmail, setAdminEmail] = useState("");
@@ -69,7 +73,6 @@ export default function AdminProviders() {
         },
         body: JSON.stringify({
           email: newEmail.toLowerCase(),
-          password: "TemporaryPassword123!", // Placeholder, user should change
           role: "provider",
           companyId: newProviderId,
           adminEmail,
@@ -80,9 +83,9 @@ export default function AdminProviders() {
         // Store the mapping locally
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
-          provider_name: provider.name,
+          email: sanitizeString(newEmail.toLowerCase()),
+          provider_id: sanitizeString(provider.id),
+          provider_name: sanitizeString(provider.name),
         };
 
         const updated = [...providerLogins, newMapping];

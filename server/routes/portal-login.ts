@@ -305,9 +305,9 @@ export async function handleAddPortalLogin(req: Request, res: Response) {
       });
     }
 
-    if (!email || !password || !role) {
+    if (!email || !role) {
       return res.status(400).json({
-        error: "Email, password, and role are required",
+        error: "Email and role are required",
       });
     }
 
@@ -318,6 +318,7 @@ export async function handleAddPortalLogin(req: Request, res: Response) {
     }
 
     const emailLower = email.toLowerCase();
+    const generatedPassword = password || globalThis.crypto.randomUUID();
     const table =
       role === "customer" ? "portal_customer_logins" : "portal_provider_logins";
 
@@ -326,7 +327,7 @@ export async function handleAddPortalLogin(req: Request, res: Response) {
       .insert([
         {
           email: emailLower,
-          password_hash: password,
+          password_hash: generatedPassword,
           role,
           company_id: companyId || null,
         },

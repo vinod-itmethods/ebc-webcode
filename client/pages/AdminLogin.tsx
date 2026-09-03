@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
 
-const ADMIN_PASSWORD = "executive2024";
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
@@ -41,8 +41,9 @@ export default function AdminLogin() {
     setError(null);
     setLoading(true);
 
-    // Validate email is @itmethods.com
-    if (!email.endsWith("@itmethods.com")) {
+    // Validate email format and domain
+    const emailMatch = email.match(/^([a-zA-Z0-9._%+-]+)@itmethods\.com$/);
+    if (!emailMatch) {
       setError(
         "Only @itmethods.com email addresses can access the admin portal",
       );
@@ -58,8 +59,9 @@ export default function AdminLogin() {
       return;
     }
 
-    // Store email and redirect
-    localStorage.setItem("adminEmail", email);
+    // Store validated email and redirect
+    const validatedEmail = emailMatch[1] + "@itmethods.com";
+    localStorage.setItem("adminEmail", validatedEmail);
     navigate("/admin/submissions");
   };
 
