@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { randomInt } from 'node:crypto';
 import fs from 'fs';
 import path from 'path';
 
@@ -171,7 +172,7 @@ export function generateCredentials() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
   let password = '';
   for (let i = 0; i < 14; i++) {
-    password += chars.charAt(Math.floor(Math.random() * chars.length));
+    password += chars.charAt(randomInt(chars.length));
   }
   return {
     password,
