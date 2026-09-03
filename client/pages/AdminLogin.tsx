@@ -7,6 +7,10 @@ import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
 
 const ADMIN_PASSWORD = "executive2024";
 
+function sanitizeEmail(value: string): string {
+  return value.replace(/[^a-zA-Z0-9._%+\-@]/g, "");
+}
+
 export default function AdminLogin() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -31,7 +35,7 @@ export default function AdminLogin() {
       userEmail &&
       userEmail.endsWith("@itmethods.com")
     ) {
-      localStorage.setItem("adminEmail", userEmail);
+      localStorage.setItem("adminEmail", sanitizeEmail(userEmail));
       navigate("/admin/submissions", { replace: true });
     }
   }, [navigate]);
@@ -59,7 +63,7 @@ export default function AdminLogin() {
     }
 
     // Store email and redirect
-    localStorage.setItem("adminEmail", email);
+    localStorage.setItem("adminEmail", sanitizeEmail(email));
     navigate("/admin/submissions");
   };
 
