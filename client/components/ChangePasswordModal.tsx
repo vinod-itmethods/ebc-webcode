@@ -122,11 +122,15 @@ export default function ChangePasswordModal({
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Current Password */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="current-password"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Current Password
               </label>
               <div className="relative">
                 <Input
+                  id="current-password"
                   type={showCurrentPassword ? "text" : "password"}
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
@@ -150,11 +154,15 @@ export default function ChangePasswordModal({
 
             {/* New Password */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="new-password"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 New Password
               </label>
               <div className="relative">
                 <Input
+                  id="new-password"
                   type={showNewPassword ? "text" : "password"}
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
@@ -178,11 +186,15 @@ export default function ChangePasswordModal({
 
             {/* Confirm Password */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="confirm-password"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Confirm New Password
               </label>
               <div className="relative">
                 <Input
+                  id="confirm-password"
                   type={showConfirmPassword ? "text" : "password"}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
