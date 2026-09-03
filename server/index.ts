@@ -49,7 +49,10 @@ export function createServer() {
   const app = express();
 
   // Middleware
-  app.use(cors());
+  const allowedOrigins = process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(",")
+    : [];
+  app.use(cors({ origin: allowedOrigins }));
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
