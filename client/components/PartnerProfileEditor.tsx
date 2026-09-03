@@ -124,10 +124,14 @@ export default function PartnerProfileEditor() {
         <h3 className="text-lg font-bold text-foreground mb-6">Company Information</h3>
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">
+            <label
+              htmlFor="partner-company-name"
+              className="block text-sm font-medium text-foreground mb-2"
+            >
               Company Name
             </label>
             <Input
+              id="partner-company-name"
               value={partnerData.name}
               onChange={(e) => handleInputChange("name", e.target.value)}
               placeholder="Your company name"
@@ -138,7 +142,10 @@ export default function PartnerProfileEditor() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">
+            <label
+              htmlFor="partner-company-logo"
+              className="block text-sm font-medium text-foreground mb-2"
+            >
               Company Logo
             </label>
             <div className="flex items-center gap-4">
@@ -160,6 +167,7 @@ export default function PartnerProfileEditor() {
                   <label>
                     <span>Upload Logo</span>
                     <input
+                      id="partner-company-logo"
                       type="file"
                       accept="image/*"
                       className="hidden"
@@ -180,7 +188,10 @@ export default function PartnerProfileEditor() {
         <div className="space-y-4">
           {/* Photo Upload */}
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">
+            <label
+              htmlFor="partner-speaker-photo"
+              className="block text-sm font-medium text-foreground mb-2"
+            >
               Speaker Photo
             </label>
             <div className="flex items-center gap-4">
@@ -200,6 +211,7 @@ export default function PartnerProfileEditor() {
                   <span>Upload Photo</span>
                 </Button>
                 <input
+                  id="partner-speaker-photo"
                   type="file"
                   accept="image/*"
                   onChange={handleImageUpload}
@@ -211,10 +223,14 @@ export default function PartnerProfileEditor() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="partner-speaker-name"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Speaker Name
               </label>
               <Input
+                id="partner-speaker-name"
                 value={partnerData.speakerName || ""}
                 onChange={(e) => handleInputChange("speakerName", e.target.value)}
                 placeholder="Full name"
@@ -223,10 +239,14 @@ export default function PartnerProfileEditor() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="partner-speaker-title"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Title / Role
               </label>
               <Input
+                id="partner-speaker-title"
                 value={partnerData.speakerTitle || ""}
                 onChange={(e) => handleInputChange("speakerTitle", e.target.value)}
                 placeholder="CEO, Founder, etc."
