@@ -1,3 +1,4 @@
+import { randomBytes } from "node:crypto";
 import { supabase } from "../lib/supabase";
 
 // Note: JSON file support removed in favor of Supabase
@@ -62,7 +63,7 @@ export async function createCustomerProfile(
   }
 
   const now = new Date().toISOString();
-  const customerId = `cust_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  const customerId = `cust_${Date.now()}_${randomBytes(7).toString("hex").slice(0, 9)}`;
 
   // Check if customer already exists
   const { data: existing } = await supabase
