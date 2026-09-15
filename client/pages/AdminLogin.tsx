@@ -45,8 +45,9 @@ export default function AdminLogin() {
     setError(null);
     setLoading(true);
 
-    // Validate email is @itmethods.com
-    if (!email.endsWith("@itmethods.com")) {
+    // Validate email is a valid @itmethods.com address
+    const sanitized = email.replace(/[^a-zA-Z0-9._%+@-]/g, "");
+    if (!/^[a-zA-Z0-9._%+@-]+@itmethods\.com$/.test(sanitized)) {
       setError(
         "Only @itmethods.com email addresses can access the admin portal",
       );
@@ -62,8 +63,8 @@ export default function AdminLogin() {
       return;
     }
 
-    // Store email and redirect
-    localStorage.setItem("adminEmail", sanitizeEmail(email));
+    // Store validated and sanitized email
+    localStorage.setItem("adminEmail", sanitized);
     navigate("/admin/submissions");
   };
 
