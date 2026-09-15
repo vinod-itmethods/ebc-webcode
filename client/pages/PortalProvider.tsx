@@ -111,12 +111,20 @@ export default function PortalProvider() {
   // Load provider profile data when authenticated
   useEffect(() => {
     const loadProviderData = async () => {
+      // Validate selectedProviderId against the allowlist of known partner IDs
+      const validProviderIds = partners.map((p) => p.id);
+      if (!validProviderIds.includes(selectedProviderId)) {
+        setIsSaved(false);
+        return;
+      }
       const selected = partners.find((p) => p.id === selectedProviderId);
       if (selected) {
+        // Use the validated ID from the trusted partners list
+        const validatedId = selected.id;
         try {
           // Try to fetch from API first (server has most up-to-date data)
           const response = await fetch(
-            `/api/provider-profile?providerId=${encodeURIComponent(selectedProviderId)}`,
+            `/api/provider-profile?providerId=${encodeURIComponent(validatedId)}`,
           );
           if (response.ok) {
             const data = await response.json();
@@ -144,7 +152,7 @@ export default function PortalProvider() {
         }
 
         // Fallback to localStorage
-        const savedData = localStorage.getItem(`partner_${selectedProviderId}`);
+        const savedData = localStorage.getItem(`partner_${validatedId}`);
         if (savedData) {
           try {
             const parsed = JSON.parse(savedData);
