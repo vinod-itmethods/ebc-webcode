@@ -1,0 +1,103 @@
+name: SonarCloud
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  analyze:
+    name: Coverage, tests and SonarCloud scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history is required for accurate new-code detection.
+          # With the default shallow clone the new-code quality gate is wrong.
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      # Produces coverage/lcov.info and reports/test-report.xml.
+      # Runs even on failure so Sonar still receives the test results.
+      - name: Test with coverage
+        run: pnpm test:ci
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-and-coverage-reports
+          path: |
+            coverage/lcov.info
+            reports/test-report.xml
+          if-no-files-found: warn
+
+      # Reads sonar-project.properties, imports LCOV + test execution XML,
+      # and (because the project is bound to the repo in SonarCloud) writes the
+      # PR decoration: the quality gate check and the summary comment.
+      - name: SonarCloud scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      # Fails the job if the quality gate fails, so the PR check goes red.
+      - name: Quality gate
+        id: qg
+        uses: SonarSource/sonarqube-quality-gate-action@v1
+        timeout-minutes: 5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          scanMetadataReportFile: .scannerwork/report-task.txt
+
+      # Explicit PR comment with the gate result. SonarCloud's own decoration
+      # already posts a summary; this is a belt-and-braces status line that also
+      # survives decoration being misconfigured. Skipped for forked PRs, which
+      # have no write token.
+      - name: Comment quality gate status on PR
+        if: always() && github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = '${{ steps.qg.outputs.quality-gate-status }}' || 'UNKNOWN';
+            const icon = status === 'PASSED' ? '✅' : status === 'FAILED' ? '❌' : '⚠️';
+            const org = 'CHANGE_ME_ORG_KEY';
+            const key = 'vinod-itmethods_ebc-webcode';
+            const url = `https://sonarcloud.io/summary/new_code?id=${key}&pullRequest=${context.issue.number}`;
+            const body = [
+              `## ${icon} SonarCloud quality gate: **${status}**`,
+              '',
+              `[View the full analysis on SonarCloud](${url})`,
+            ].join('\n');
+
+            const marker = 'SonarCloud quality gate';
+            const { data: comments } = await github.rest.issues.listComments({
+              ...context.repo, issue_number: context.issue.number, per_page: 100,
+            });
+            const existing = comments.find(
+              (c) => c.user.type === 'Bot' && c.body.includes(marker),
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({ ...context.repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({
+                ...context.repo, issue_number: context.issue.number, body,
+              });
+            }
