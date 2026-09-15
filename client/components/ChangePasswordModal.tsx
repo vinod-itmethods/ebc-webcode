@@ -178,11 +178,12 @@ export default function ChangePasswordModal({
 
             {/* Confirm Password */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-foreground mb-2">
                 Confirm New Password
               </label>
               <div className="relative">
                 <Input
+                  id="confirmPassword"
                   type={showConfirmPassword ? "text" : "password"}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
