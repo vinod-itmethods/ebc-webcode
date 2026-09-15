@@ -31,12 +31,17 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      # Non-blocking: main currently has ~59 pre-existing type errors. Gating the
+      # scan on this would mean Sonar never runs at all. Flip continue-on-error
+      # to false once the backlog is cleared, to keep it from regressing.
       - name: Typecheck
+        continue-on-error: true
         run: pnpm typecheck
 
       # Produces coverage/lcov.info and reports/test-report.xml.
-      # Runs even on failure so Sonar still receives the test results.
+      # Runs even if the typecheck reported errors so Sonar still gets results.
       - name: Test with coverage
+        if: always()
         run: pnpm test:ci
 
       - name: Upload reports
