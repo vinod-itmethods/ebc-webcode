@@ -7,9 +7,7 @@ import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
 
 const ADMIN_PASSWORD = "executive2024";
 
-function sanitizeEmail(value: string): string {
-  return value.replace(/[^a-zA-Z0-9._%+\-@]/g, "");
-}
+const VALID_EMAIL_PATTERN = /^[a-zA-Z0-9._%+-]+@itmethods\.com$/;
 
 export default function AdminLogin() {
   const navigate = useNavigate();
@@ -30,13 +28,12 @@ export default function AdminLogin() {
       navigate("/admin/submissions", { replace: true });
     }
     // If authenticated as customer with @itmethods.com email, auto-authenticate as admin
-    else if (
-      customerAuth &&
-      userEmail &&
-      userEmail.endsWith("@itmethods.com")
-    ) {
-      localStorage.setItem("adminEmail", sanitizeEmail(userEmail));
-      navigate("/admin/submissions", { replace: true });
+    else if (customerAuth && userEmail) {
+      const match = VALID_EMAIL_PATTERN.exec(userEmail);
+      if (match) {
+        localStorage.setItem("adminEmail", match[0]);
+        navigate("/admin/submissions", { replace: true });
+      }
     }
   }, [navigate]);
 
@@ -45,8 +42,9 @@ export default function AdminLogin() {
     setError(null);
     setLoading(true);
 
-    // Validate email is @itmethods.com
-    if (!email.endsWith("@itmethods.com")) {
+    // Validate email format and domain against allowlist pattern
+    const emailMatch = VALID_EMAIL_PATTERN.exec(email);
+    if (!emailMatch) {
       setError(
         "Only @itmethods.com email addresses can access the admin portal",
       );
@@ -62,8 +60,8 @@ export default function AdminLogin() {
       return;
     }
 
-    // Store email and redirect
-    localStorage.setItem("adminEmail", sanitizeEmail(email));
+    // Store validated email and redirect
+    localStorage.setItem("adminEmail", emailMatch[0]);
     navigate("/admin/submissions");
   };
 
