@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Briefcase, Home } from "lucide-react";
 
-const PARTNER_PASSWORD = "executive2024";
+const PARTNER_PASSWORD = import.meta.env.VITE_PARTNER_PASSWORD;
 
 export default function PartnerLogin() {
   const [password, setPassword] = useState("");
