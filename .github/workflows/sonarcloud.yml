@@ -78,7 +78,6 @@ jobs:
           script: |
             const status = '${{ steps.qg.outputs.quality-gate-status }}' || 'UNKNOWN';
             const icon = status === 'PASSED' ? '✅' : status === 'FAILED' ? '❌' : '⚠️';
-            const org = 'CHANGE_ME_ORG_KEY';
             const key = 'vinod-itmethods_ebc-webcode';
             const url = `https://sonarcloud.io/summary/new_code?id=${key}&pullRequest=${context.issue.number}`;
             const body = [
