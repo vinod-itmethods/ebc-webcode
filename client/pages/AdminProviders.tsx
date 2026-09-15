@@ -77,11 +77,12 @@ export default function AdminProviders() {
       });
 
       if (response.ok) {
-        // Store the mapping locally
+        // Store the mapping locally using validated values from the partners list
+        const sanitizedEmail = newEmail.toLowerCase().replace(/[^a-z0-9@._+-]/g, "");
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
+          email: sanitizedEmail,
+          provider_id: provider.id,
           provider_name: provider.name,
         };
 
