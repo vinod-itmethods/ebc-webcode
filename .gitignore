@@ -25,3 +25,8 @@ dist-ssr
 
 .config/
 !.env
+
+# Test and coverage reports
+coverage
+reports
+.scannerwork

@@ -16,6 +16,18 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist/spa",
   },
   plugins: [react(), expressPlugin()],
+  test: {
+    // Sonar imports coverage as LCOV and test results via the generic
+    // test execution format produced by vitest-sonar-reporter.
+    reporters: ["default", "vitest-sonar-reporter"],
+    outputFile: { "vitest-sonar-reporter": "reports/test-report.xml" },
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "lcov"],
+      reportsDirectory: "coverage",
+      include: ["client/**", "server/**", "shared/**"],
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
