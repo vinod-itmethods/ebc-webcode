@@ -6,9 +6,20 @@ import { Button } from "@/components/ui/button";
 import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
 
 const ADMIN_PASSWORD = "executive2024";
+const ADMIN_DOMAIN = "@itmethods.com";
+const LOCAL_PART_PATTERN = /^[a-zA-Z0-9._%+-]+$/;
+const ALLOWED_LOCAL_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._%+-";
 
-function sanitizeEmail(value: string): string {
-  return value.replace(/[^a-zA-Z0-9._%+\-@]/g, "");
+function toSafeAdminEmail(rawEmail: string): string | null {
+  if (!rawEmail.endsWith(ADMIN_DOMAIN)) return null;
+  const localPart = rawEmail.slice(0, -ADMIN_DOMAIN.length);
+  if (!localPart || !LOCAL_PART_PATTERN.test(localPart)) return null;
+  // Reconstruct local part through allowlist to sanitize before storage
+  const sanitized = Array.from(localPart)
+    .filter((c) => ALLOWED_LOCAL_CHARS.includes(c))
+    .join("");
+  if (sanitized.length !== localPart.length) return null;
+  return sanitized + ADMIN_DOMAIN;
 }
 
 export default function AdminLogin() {
@@ -26,17 +37,16 @@ export default function AdminLogin() {
     const customerAuth = localStorage.getItem("portalAuthenticated") === "true";
 
     // If authenticated as admin, go to submissions
-    if (adminEmail && adminEmail.endsWith("@itmethods.com")) {
+    if (adminEmail && adminEmail.endsWith(ADMIN_DOMAIN)) {
       navigate("/admin/submissions", { replace: true });
     }
     // If authenticated as customer with @itmethods.com email, auto-authenticate as admin
-    else if (
-      customerAuth &&
-      userEmail &&
-      userEmail.endsWith("@itmethods.com")
-    ) {
-      localStorage.setItem("adminEmail", sanitizeEmail(userEmail));
-      navigate("/admin/submissions", { replace: true });
+    else if (customerAuth && userEmail) {
+      const safeEmail = toSafeAdminEmail(userEmail);
+      if (safeEmail) {
+        localStorage.setItem("adminEmail", safeEmail);
+        navigate("/admin/submissions", { replace: true });
+      }
     }
   }, [navigate]);
 
@@ -45,8 +55,9 @@ export default function AdminLogin() {
     setError(null);
     setLoading(true);
 
-    // Validate email is @itmethods.com
-    if (!email.endsWith("@itmethods.com")) {
+    // Validate email is @itmethods.com with strict format check
+    const safeEmail = toSafeAdminEmail(email);
+    if (!safeEmail) {
       setError(
         "Only @itmethods.com email addresses can access the admin portal",
       );
@@ -62,8 +73,8 @@ export default function AdminLogin() {
       return;
     }
 
-    // Store email and redirect
-    localStorage.setItem("adminEmail", sanitizeEmail(email));
+    // Store validated email and redirect
+    localStorage.setItem("adminEmail", safeEmail);
     navigate("/admin/submissions");
   };
 
