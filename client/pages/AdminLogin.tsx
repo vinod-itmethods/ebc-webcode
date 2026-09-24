@@ -5,10 +5,16 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
 
-const ADMIN_PASSWORD = "executive2024";
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "";
+
+const VALID_ADMIN_EMAIL = /^[a-zA-Z0-9._%+-]+@itmethods[.]com$/;
+
+function isValidAdminEmail(value: string): boolean {
+  return VALID_ADMIN_EMAIL.test(value);
+}
 
 function sanitizeEmail(value: string): string {
-  return value.replace(/[^a-zA-Z0-9._%+\-@]/g, "");
+  return value.replace(/[^a-zA-Z0-9._%+@-]/g, "");
 }
 
 export default function AdminLogin() {
@@ -26,15 +32,11 @@ export default function AdminLogin() {
     const customerAuth = localStorage.getItem("portalAuthenticated") === "true";
 
     // If authenticated as admin, go to submissions
-    if (adminEmail && adminEmail.endsWith("@itmethods.com")) {
+    if (adminEmail && isValidAdminEmail(adminEmail)) {
       navigate("/admin/submissions", { replace: true });
     }
     // If authenticated as customer with @itmethods.com email, auto-authenticate as admin
-    else if (
-      customerAuth &&
-      userEmail &&
-      userEmail.endsWith("@itmethods.com")
-    ) {
+    else if (customerAuth && userEmail && isValidAdminEmail(userEmail)) {
       localStorage.setItem("adminEmail", sanitizeEmail(userEmail));
       navigate("/admin/submissions", { replace: true });
     }
@@ -45,8 +47,8 @@ export default function AdminLogin() {
     setError(null);
     setLoading(true);
 
-    // Validate email is @itmethods.com
-    if (!email.endsWith("@itmethods.com")) {
+    // Validate email is a valid @itmethods.com address
+    if (!isValidAdminEmail(email)) {
       setError(
         "Only @itmethods.com email addresses can access the admin portal",
       );
@@ -62,7 +64,7 @@ export default function AdminLogin() {
       return;
     }
 
-    // Store email and redirect
+    // Store validated and sanitized email and redirect
     localStorage.setItem("adminEmail", sanitizeEmail(email));
     navigate("/admin/submissions");
   };
