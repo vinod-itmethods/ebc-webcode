@@ -157,7 +157,11 @@ export default function AdminPortalLogins() {
 
       // Add to local list
       const newLogin: PortalLogin = {
-        id: Math.random().toString(36).substr(2, 9),
+        id: Array.from(crypto.getRandomValues(new Uint8Array(7)), (b) =>
+          b.toString(36),
+        )
+          .join("")
+          .slice(0, 9),
         email: formData.email,
         role: formData.role,
         companyId: formData.companyId || undefined,
