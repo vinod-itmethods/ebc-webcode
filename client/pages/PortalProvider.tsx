@@ -115,9 +115,15 @@ export default function PortalProvider() {
       if (selected) {
         try {
           // Try to fetch from API first (server has most up-to-date data)
-          const response = await fetch(
-            `/api/provider-profile?providerId=${encodeURIComponent(selectedProviderId)}`,
+          const apiUrl = new URL(
+            "/api/provider-profile",
+            window.location.origin,
           );
+          apiUrl.searchParams.set("providerId", selectedProviderId);
+          if (apiUrl.origin !== window.location.origin) {
+            throw new Error("Invalid request origin");
+          }
+          const response = await fetch(apiUrl.href);
           if (response.ok) {
             const data = await response.json();
             if (data.profile) {
