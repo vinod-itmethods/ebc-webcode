@@ -29,10 +29,6 @@ export default function AdminProviders() {
       return;
     }
     setAdminEmail(email);
-    loadProviderLogins();
-  }, [navigate]);
-
-  const loadProviderLogins = () => {
     try {
       setLoading(true);
       // Get stored provider mappings from localStorage
@@ -45,7 +41,7 @@ export default function AdminProviders() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [navigate]);
 
   const handleAddProviderLogin = async (e: React.FormEvent) => {
     e.preventDefault();
