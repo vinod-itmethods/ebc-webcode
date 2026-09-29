@@ -116,7 +116,7 @@ export default function PortalProvider() {
         try {
           // Try to fetch from API first (server has most up-to-date data)
           const response = await fetch(
-            `/api/provider-profile?providerId=${encodeURIComponent(selectedProviderId)}`,
+            `/api/provider-profile?providerId=${encodeURIComponent(selected.id)}`,
           );
           if (response.ok) {
             const data = await response.json();
@@ -165,7 +165,7 @@ export default function PortalProvider() {
       setIsSaved(false);
     };
 
-    loadProviderData();
+    void loadProviderData();
   }, [selectedProviderId]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
