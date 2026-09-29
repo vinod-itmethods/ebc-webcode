@@ -62,7 +62,7 @@ export default function AdminPortalLogins() {
   // Fetch logins when adminEmail is set
   useEffect(() => {
     if (adminEmail) {
-      fetchLogins();
+      void fetchLogins();
     }
   }, [adminEmail]);
 
@@ -180,7 +180,7 @@ export default function AdminPortalLogins() {
     }
   };
 
-  const handleRemoveLogin = async (email: string) => {
+  const handleRemoveLogin = (email: string) => {
     if (!confirm(`Are you sure you want to remove ${email}?`)) {
       return;
     }
