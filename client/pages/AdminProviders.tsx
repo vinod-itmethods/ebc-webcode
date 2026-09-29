@@ -54,6 +54,13 @@ export default function AdminProviders() {
       return;
     }
 
+    const normalizedEmail = newEmail.trim().toLowerCase();
+    const emailPattern = /^[^\s@<>"'`]+@[^\s@<>"'`.]+(?:\.[^\s@<>"'`.]+)+$/;
+    if (!emailPattern.test(normalizedEmail)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
     const provider = partners.find((p) => p.id === newProviderId);
     if (!provider) {
       alert("Provider not found");
@@ -80,8 +87,8 @@ export default function AdminProviders() {
         // Store the mapping locally
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
+          email: normalizedEmail,
+          provider_id: provider.id,
           provider_name: provider.name,
         };
 
