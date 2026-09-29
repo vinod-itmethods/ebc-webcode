@@ -29,10 +29,6 @@ export default function AdminProviders() {
       return;
     }
     setAdminEmail(email);
-    loadProviderLogins();
-  }, [navigate]);
-
-  const loadProviderLogins = async () => {
     try {
       setLoading(true);
       // Get stored provider mappings from localStorage
@@ -45,12 +41,19 @@ export default function AdminProviders() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [navigate]);
 
   const handleAddProviderLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newEmail || !newProviderId) {
       alert("Please fill in all fields");
+      return;
+    }
+
+    const normalizedEmail = newEmail.trim().toLowerCase();
+    const emailPattern = /^[^\s@<>"'`]+@[^\s@<>"'`.]+(?:\.[^\s@<>"'`.]+)+$/;
+    if (!emailPattern.test(normalizedEmail)) {
+      alert("Please enter a valid email address");
       return;
     }
 
@@ -80,8 +83,8 @@ export default function AdminProviders() {
         // Store the mapping locally
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
+          email: normalizedEmail,
+          provider_id: provider.id,
           provider_name: provider.name,
         };
 
@@ -109,7 +112,7 @@ export default function AdminProviders() {
     }
   };
 
-  const handleDeleteProviderLogin = async (id: string) => {
+  const handleDeleteProviderLogin = (id: string) => {
     if (!confirm("Are you sure you want to delete this provider login?")) {
       return;
     }
