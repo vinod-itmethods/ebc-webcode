@@ -1,5 +1,6 @@
 import { supabase } from "./supabase";
 import { Request } from "express";
+import { randomBytes } from "node:crypto";
 
 export interface AuditLogEntry {
   action: string;
@@ -16,7 +17,7 @@ export interface AuditLogEntry {
  */
 export async function logAudit(entry: AuditLogEntry): Promise<void> {
   try {
-    const id = `audit_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const id = `audit_${Date.now()}_${randomBytes(6).toString("hex").slice(0, 9)}`;
     const now = new Date().toISOString();
 
     const { error } = await supabase.from("audit_logs").insert({
