@@ -49,7 +49,17 @@ export function createServer() {
   const app = express();
 
   // Middleware
-  app.use(cors());
+  // Restrict CORS to trusted origins (comma-separated in ALLOWED_ORIGINS).
+  // When not configured, cross-origin requests are not allowed.
+  const allowedOrigins = (process.env.ALLOWED_ORIGINS ?? "")
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter((origin) => origin.length > 0);
+  app.use(
+    cors({
+      origin: allowedOrigins.length > 0 ? allowedOrigins : false,
+    }),
+  );
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
