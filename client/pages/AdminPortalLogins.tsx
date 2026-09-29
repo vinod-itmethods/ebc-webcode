@@ -62,7 +62,7 @@ export default function AdminPortalLogins() {
   // Fetch logins when adminEmail is set
   useEffect(() => {
     if (adminEmail) {
-      fetchLogins();
+      void fetchLogins();
     }
   }, [adminEmail]);
 
@@ -157,7 +157,7 @@ export default function AdminPortalLogins() {
 
       // Add to local list
       const newLogin: PortalLogin = {
-        id: Math.random().toString(36).substr(2, 9),
+        id: crypto.randomUUID(),
         email: formData.email,
         role: formData.role,
         companyId: formData.companyId || undefined,
@@ -180,7 +180,7 @@ export default function AdminPortalLogins() {
     }
   };
 
-  const handleRemoveLogin = async (email: string) => {
+  const handleRemoveLogin = (email: string) => {
     if (!confirm(`Are you sure you want to remove ${email}?`)) {
       return;
     }
