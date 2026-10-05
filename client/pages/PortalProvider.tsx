@@ -165,7 +165,9 @@ export default function PortalProvider() {
       setIsSaved(false);
     };
 
-    loadProviderData();
+    loadProviderData().catch((error) => {
+      console.error("Error loading provider data:", error);
+    });
   }, [selectedProviderId]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
