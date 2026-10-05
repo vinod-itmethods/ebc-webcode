@@ -115,9 +115,9 @@ export default function PortalProvider() {
       if (selected) {
         try {
           // Try to fetch from API first (server has most up-to-date data)
-          const response = await fetch(
-            `/api/provider-profile?providerId=${encodeURIComponent(selectedProviderId)}`,
-          );
+          // Use the id from the trusted partners list rather than raw storage input
+          const params = new URLSearchParams({ providerId: selected.id });
+          const response = await fetch(`/api/provider-profile?${params}`);
           if (response.ok) {
             const data = await response.json();
             if (data.profile) {
