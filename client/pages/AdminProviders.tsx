@@ -32,7 +32,7 @@ export default function AdminProviders() {
     loadProviderLogins();
   }, [navigate]);
 
-  const loadProviderLogins = async () => {
+  const loadProviderLogins = () => {
     try {
       setLoading(true);
       // Get stored provider mappings from localStorage
@@ -51,6 +51,13 @@ export default function AdminProviders() {
     e.preventDefault();
     if (!newEmail || !newProviderId) {
       alert("Please fill in all fields");
+      return;
+    }
+
+    const normalizedEmail = newEmail.toLowerCase();
+    const safeEmail = normalizedEmail.replace(/[^a-z0-9._%+@-]/g, "");
+    if (safeEmail !== normalizedEmail || !safeEmail.includes("@")) {
+      alert("Please enter a valid email address");
       return;
     }
 
@@ -80,8 +87,8 @@ export default function AdminProviders() {
         // Store the mapping locally
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
+          email: safeEmail,
+          provider_id: provider.id.replace(/[^a-z0-9_-]/gi, ""),
           provider_name: provider.name,
         };
 
@@ -109,7 +116,7 @@ export default function AdminProviders() {
     }
   };
 
-  const handleDeleteProviderLogin = async (id: string) => {
+  const handleDeleteProviderLogin = (id: string) => {
     if (!confirm("Are you sure you want to delete this provider login?")) {
       return;
     }
