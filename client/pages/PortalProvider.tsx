@@ -165,7 +165,7 @@ export default function PortalProvider() {
       setIsSaved(false);
     };
 
-    loadProviderData();
+    void loadProviderData();
   }, [selectedProviderId]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
