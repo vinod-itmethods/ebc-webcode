@@ -32,7 +32,7 @@ export default function AdminProviders() {
     loadProviderLogins();
   }, [navigate]);
 
-  const loadProviderLogins = async () => {
+  const loadProviderLogins = () => {
     try {
       setLoading(true);
       // Get stored provider mappings from localStorage
@@ -60,6 +60,12 @@ export default function AdminProviders() {
       return;
     }
 
+    const normalizedEmail = newEmail.trim().toLowerCase();
+    if (!/^[^\s@<>"']+@[^\s@<>"'.]+(\.[^\s@<>"'.]+)+$/.test(normalizedEmail)) {
+      alert("Invalid email address");
+      return;
+    }
+
     try {
       // Add to Supabase portal_provider_logins table
       const response = await fetch("/api/portal-login/add", {
@@ -80,8 +86,8 @@ export default function AdminProviders() {
         // Store the mapping locally
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
+          email: normalizedEmail,
+          provider_id: provider.id,
           provider_name: provider.name,
         };
 
@@ -109,7 +115,7 @@ export default function AdminProviders() {
     }
   };
 
-  const handleDeleteProviderLogin = async (id: string) => {
+  const handleDeleteProviderLogin = (id: string) => {
     if (!confirm("Are you sure you want to delete this provider login?")) {
       return;
     }

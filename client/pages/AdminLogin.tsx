@@ -7,8 +7,10 @@ import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
 
 const ADMIN_PASSWORD = "executive2024";
 
-function sanitizeEmail(value: string): string {
-  return value.replace(/[^a-zA-Z0-9._%+\-@]/g, "");
+const ADMIN_EMAIL_PATTERN = /^[a-zA-Z0-9._%+-]+@itmethods\.com$/;
+
+function isValidAdminEmail(value: string): boolean {
+  return ADMIN_EMAIL_PATTERN.test(value);
 }
 
 export default function AdminLogin() {
@@ -30,12 +32,8 @@ export default function AdminLogin() {
       navigate("/admin/submissions", { replace: true });
     }
     // If authenticated as customer with @itmethods.com email, auto-authenticate as admin
-    else if (
-      customerAuth &&
-      userEmail &&
-      userEmail.endsWith("@itmethods.com")
-    ) {
-      localStorage.setItem("adminEmail", sanitizeEmail(userEmail));
+    else if (customerAuth && userEmail && isValidAdminEmail(userEmail)) {
+      localStorage.setItem("adminEmail", userEmail);
       navigate("/admin/submissions", { replace: true });
     }
   }, [navigate]);
@@ -62,8 +60,15 @@ export default function AdminLogin() {
       return;
     }
 
+    // Only store an email that strictly matches the allowed admin format
+    if (!isValidAdminEmail(email)) {
+      setError("Invalid email or password");
+      setLoading(false);
+      return;
+    }
+
     // Store email and redirect
-    localStorage.setItem("adminEmail", sanitizeEmail(email));
+    localStorage.setItem("adminEmail", email);
     navigate("/admin/submissions");
   };
 
