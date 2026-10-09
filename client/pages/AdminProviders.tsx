@@ -60,6 +60,12 @@ export default function AdminProviders() {
       return;
     }
 
+    const normalizedEmail = newEmail.trim().toLowerCase();
+    if (!/^[^\s@<>"']+@[^\s@<>"'.]+(\.[^\s@<>"'.]+)+$/.test(normalizedEmail)) {
+      alert("Invalid email address");
+      return;
+    }
+
     try {
       // Add to Supabase portal_provider_logins table
       const response = await fetch("/api/portal-login/add", {
@@ -80,8 +86,8 @@ export default function AdminProviders() {
         // Store the mapping locally
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
+          email: normalizedEmail,
+          provider_id: provider.id,
           provider_name: provider.name,
         };
 
