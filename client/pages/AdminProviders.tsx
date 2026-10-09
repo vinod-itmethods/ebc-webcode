@@ -32,7 +32,7 @@ export default function AdminProviders() {
     loadProviderLogins();
   }, [navigate]);
 
-  const loadProviderLogins = async () => {
+  const loadProviderLogins = () => {
     try {
       setLoading(true);
       // Get stored provider mappings from localStorage
@@ -115,7 +115,7 @@ export default function AdminProviders() {
     }
   };
 
-  const handleDeleteProviderLogin = async (id: string) => {
+  const handleDeleteProviderLogin = (id: string) => {
     if (!confirm("Are you sure you want to delete this provider login?")) {
       return;
     }
