@@ -44,6 +44,46 @@ interface TimelineEvent {
 
 type RequestType = "all" | "customer" | "partner";
 
+function getRequestStatus(request: any): string {
+  return request._type === "customer" ? request.approvalStatus : request.status;
+}
+
+function getStatusColorKey(request: any): string {
+  const status = getRequestStatus(request);
+  if (status === "approved") {
+    return "green";
+  }
+  if (status === "rejected") {
+    return "red";
+  }
+  if (status === "reviewed" && request._type !== "customer") {
+    return "blue";
+  }
+  return "amber";
+}
+
+const CARD_STATUS_CLASSES: Record<string, string> = {
+  green: "bg-green-50 border-green-200",
+  red: "bg-red-50 border-red-200",
+  blue: "bg-blue-50 border-blue-200",
+  amber: "bg-amber-50 border-amber-200",
+};
+
+const BADGE_STATUS_CLASSES: Record<string, string> = {
+  green: "bg-green-100 text-green-700",
+  red: "bg-red-100 text-red-700",
+  blue: "bg-blue-100 text-blue-700",
+  amber: "bg-amber-100 text-amber-700",
+};
+
+function getCardStatusClass(request: any): string {
+  return CARD_STATUS_CLASSES[getStatusColorKey(request)];
+}
+
+function getBadgeStatusClass(request: any): string {
+  return BADGE_STATUS_CLASSES[getStatusColorKey(request)];
+}
+
 export default function AdminRequests() {
   const navigate = useNavigate();
   const [requestType, setRequestType] = useState<RequestType>("all");
@@ -426,21 +466,9 @@ export default function AdminRequests() {
               {displayRequests.map((request) => (
                 <div
                   key={`${request._type}-${request._id}`}
-                  className={`border rounded-lg overflow-hidden hover:shadow-md transition-shadow ${
-                    request._type === "customer"
-                      ? request.approvalStatus === "approved"
-                        ? "bg-green-50 border-green-200"
-                        : request.approvalStatus === "rejected"
-                          ? "bg-red-50 border-red-200"
-                          : "bg-amber-50 border-amber-200"
-                      : request.status === "approved"
-                        ? "bg-green-50 border-green-200"
-                        : request.status === "rejected"
-                          ? "bg-red-50 border-red-200"
-                          : request.status === "reviewed"
-                            ? "bg-blue-50 border-blue-200"
-                            : "bg-amber-50 border-amber-200"
-                  }`}
+                  className={`border rounded-lg overflow-hidden hover:shadow-md transition-shadow ${getCardStatusClass(
+                    request,
+                  )}`}
                 >
                   {/* Summary Row */}
                   <button
@@ -488,25 +516,11 @@ export default function AdminRequests() {
                         </div>
                         <div className="flex items-center gap-3 flex-shrink-0">
                           <span
-                            className={`px-3 py-1 rounded-full text-xs font-medium capitalize ${
-                              request._type === "customer"
-                                ? request.approvalStatus === "approved"
-                                  ? "bg-green-100 text-green-700"
-                                  : request.approvalStatus === "rejected"
-                                    ? "bg-red-100 text-red-700"
-                                    : "bg-amber-100 text-amber-700"
-                                : request.status === "approved"
-                                  ? "bg-green-100 text-green-700"
-                                  : request.status === "rejected"
-                                    ? "bg-red-100 text-red-700"
-                                    : request.status === "reviewed"
-                                      ? "bg-blue-100 text-blue-700"
-                                      : "bg-amber-100 text-amber-700"
-                            }`}
+                            className={`px-3 py-1 rounded-full text-xs font-medium capitalize ${getBadgeStatusClass(
+                              request,
+                            )}`}
                           >
-                            {request._type === "customer"
-                              ? request.approvalStatus
-                              : request.status}
+                            {getRequestStatus(request)}
                           </span>
                         </div>
                       </div>

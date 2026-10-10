@@ -6,6 +6,38 @@ import { Lock, ChevronLeft, Loader } from "lucide-react";
 
 type UserRole = "customer" | "provider";
 
+function findProviderIdFromMappings(email: string): string | undefined {
+  const mappings = localStorage.getItem("provider_login_mappings");
+  if (!mappings) {
+    return undefined;
+  }
+  const parsed = JSON.parse(mappings);
+  const mapping = parsed.find((m: any) => m.email === email.toLowerCase());
+  if (!mapping) {
+    return undefined;
+  }
+  console.log("Found provider ID from mappings:", mapping.provider_id);
+  return mapping.provider_id;
+}
+
+function storeProviderCompanyId(user: any): void {
+  // Try to find provider ID from company_id field
+  console.log("Provider login detected. companyId from API:", user.companyId);
+
+  // If no company_id, try to find it from the provider login mappings
+  const providerId = user.companyId || findProviderIdFromMappings(user.email);
+
+  if (!providerId) {
+    console.warn("No providerId found for provider account!");
+    return;
+  }
+
+  // Convert to lowercase to match partner IDs
+  const normalizedProviderId = providerId.toLowerCase();
+  console.log("Setting providerCompanyId to:", normalizedProviderId);
+  localStorage.setItem("providerCompanyId", normalizedProviderId);
+}
+
 export default function PortalLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -70,36 +102,7 @@ export default function PortalLogin() {
         localStorage.setItem("userEmail", user.email);
 
         if (user.role === "provider") {
-          // Try to find provider ID from company_id field
-          let providerId = user.companyId;
-          console.log(
-            "Provider login detected. companyId from API:",
-            providerId,
-          );
-
-          // If no company_id, try to find it from the provider login mappings
-          if (!providerId) {
-            const mappings = localStorage.getItem("provider_login_mappings");
-            if (mappings) {
-              const parsed = JSON.parse(mappings);
-              const mapping = parsed.find(
-                (m: any) => m.email === user.email.toLowerCase(),
-              );
-              if (mapping) {
-                providerId = mapping.provider_id;
-                console.log("Found provider ID from mappings:", providerId);
-              }
-            }
-          }
-
-          if (providerId) {
-            // Convert to lowercase to match partner IDs
-            const normalizedProviderId = providerId.toLowerCase();
-            console.log("Setting providerCompanyId to:", normalizedProviderId);
-            localStorage.setItem("providerCompanyId", normalizedProviderId);
-          } else {
-            console.warn("No providerId found for provider account!");
-          }
+          storeProviderCompanyId(user);
         }
 
         setIsAuthenticated(true);
