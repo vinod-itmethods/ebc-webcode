@@ -29,7 +29,7 @@ export async function handleValidateEmail(req: Request, res: Response) {
     }
 
     // Check if customer already exists
-    const existingCustomer = getCustomerByEmail(email);
+    const existingCustomer = await getCustomerByEmail(email);
 
     return res.status(200).json({
       success: true,

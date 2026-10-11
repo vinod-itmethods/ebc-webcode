@@ -49,7 +49,18 @@ export function createServer() {
   const app = express();
 
   // Middleware
-  app.use(cors());
+  // Only allow cross-origin requests from trusted origins (comma-separated
+  // list in ALLOWED_ORIGINS). If none are configured, only same-origin
+  // requests are permitted.
+  const allowedOrigins = (process.env.ALLOWED_ORIGINS ?? "")
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter((origin) => origin.length > 0);
+  app.use(
+    cors({
+      origin: allowedOrigins.length > 0 ? allowedOrigins : false,
+    }),
+  );
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
@@ -189,7 +200,7 @@ export function createServer() {
       }
 
       // Validate email format
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/;
       if (!emailRegex.test(contactEmail)) {
         return res.status(400).json({
           error: "Invalid email format",
