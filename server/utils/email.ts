@@ -169,9 +169,15 @@ Submitted: ${new Date().toLocaleString()}
 export function generateCredentials() {
   // Generate a random password (14 characters)
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+  // Use the global Web Crypto CSPRNG with rejection sampling to avoid bias
+  const limit = Math.floor(0x100000000 / chars.length) * chars.length;
+  const buffer = new Uint32Array(1);
   let password = '';
-  for (let i = 0; i < 14; i++) {
-    password += chars.charAt(Math.floor(Math.random() * chars.length));
+  while (password.length < 14) {
+    globalThis.crypto.getRandomValues(buffer);
+    if (buffer[0] < limit) {
+      password += chars.charAt(buffer[0] % chars.length);
+    }
   }
   return {
     password,
