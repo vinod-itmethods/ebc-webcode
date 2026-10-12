@@ -294,10 +294,14 @@ export default function AdminNewProviders() {
             {/* Basic Info */}
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="provider-name"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Provider Name *
                 </label>
                 <Input
+                  id="provider-name"
                   placeholder="e.g., Vercel"
                   value={formData.name || ""}
                   onChange={(e) =>
@@ -308,10 +312,14 @@ export default function AdminNewProviders() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="provider-tagline"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Tagline *
                 </label>
                 <Input
+                  id="provider-tagline"
                   placeholder="e.g., Serverless platform for web applications"
                   value={formData.tagline || ""}
                   onChange={(e) =>
@@ -324,10 +332,14 @@ export default function AdminNewProviders() {
 
             {/* Description */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="provider-description"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Description *
               </label>
               <textarea
+                id="provider-description"
                 placeholder="Detailed description of what this provider does"
                 value={formData.description || ""}
                 onChange={(e) =>
@@ -342,12 +354,16 @@ export default function AdminNewProviders() {
             {/* Logo and Domain */}
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="provider-logo"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Logo (Upload Image)
                 </label>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <input
+                      id="provider-logo"
                       type="file"
                       accept="image/*"
                       onChange={handleLogoUpload}
@@ -378,10 +394,14 @@ export default function AdminNewProviders() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="provider-domain"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Domain
                 </label>
                 <Input
+                  id="provider-domain"
                   placeholder="example.com"
                   value={formData.domain || ""}
                   onChange={(e) =>
