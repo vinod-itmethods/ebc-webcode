@@ -55,7 +55,7 @@ export default function AdminNewProviders() {
       return;
     }
     setAdminEmail(email);
-    loadProviders();
+    void loadProviders();
   }, [navigate]);
 
   const loadProviders = async () => {
