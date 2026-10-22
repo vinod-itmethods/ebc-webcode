@@ -60,6 +60,8 @@ export default function AdminProviders() {
       return;
     }
 
+    const normalizedEmail = newEmail.toLowerCase();
+
     try {
       // Add to Supabase portal_provider_logins table
       const response = await fetch("/api/portal-login/add", {
@@ -68,7 +70,7 @@ export default function AdminProviders() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email: newEmail.toLowerCase(),
+          email: normalizedEmail,
           password: "TemporaryPassword123!", // Placeholder, user should change
           role: "provider",
           companyId: newProviderId,
@@ -80,8 +82,8 @@ export default function AdminProviders() {
         // Store the mapping locally
         const newMapping: ProviderLogin = {
           id: Date.now().toString(),
-          email: newEmail.toLowerCase(),
-          provider_id: newProviderId,
+          email: normalizedEmail,
+          provider_id: provider.id,
           provider_name: provider.name,
         };
 

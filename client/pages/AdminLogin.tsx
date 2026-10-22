@@ -7,8 +7,10 @@ import { AlertCircle, Home, Eye, EyeOff } from "lucide-react";
 
 const ADMIN_PASSWORD = "executive2024";
 
-function sanitizeEmail(value: string): string {
-  return value.replace(/[^a-zA-Z0-9._%+\-@]/g, "");
+const ADMIN_EMAIL_PATTERN = /^[a-zA-Z0-9._%+-]{1,64}@itmethods\.com$/;
+
+function isValidAdminEmail(value: string): boolean {
+  return ADMIN_EMAIL_PATTERN.test(value);
 }
 
 export default function AdminLogin() {
@@ -30,12 +32,8 @@ export default function AdminLogin() {
       navigate("/admin/submissions", { replace: true });
     }
     // If authenticated as customer with @itmethods.com email, auto-authenticate as admin
-    else if (
-      customerAuth &&
-      userEmail &&
-      userEmail.endsWith("@itmethods.com")
-    ) {
-      localStorage.setItem("adminEmail", sanitizeEmail(userEmail));
+    else if (customerAuth && userEmail && isValidAdminEmail(userEmail)) {
+      localStorage.setItem("adminEmail", userEmail);
       navigate("/admin/submissions", { replace: true });
     }
   }, [navigate]);
@@ -46,7 +44,7 @@ export default function AdminLogin() {
     setLoading(true);
 
     // Validate email is @itmethods.com
-    if (!email.endsWith("@itmethods.com")) {
+    if (!isValidAdminEmail(email)) {
       setError(
         "Only @itmethods.com email addresses can access the admin portal",
       );
@@ -62,8 +60,12 @@ export default function AdminLogin() {
       return;
     }
 
+    // Rebuild the email from allowlisted characters and a fixed domain
+    const localPart = email.split("@")[0].replace(/[^a-zA-Z0-9._%+-]/g, "");
+    const sanitizedEmail = `${localPart}@itmethods.com`;
+
     // Store email and redirect
-    localStorage.setItem("adminEmail", sanitizeEmail(email));
+    localStorage.setItem("adminEmail", sanitizedEmail);
     navigate("/admin/submissions");
   };
 
