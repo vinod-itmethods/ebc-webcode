@@ -53,7 +53,7 @@ export default function AdminTimeline() {
   // Fetch timeline events for selected customer
   useEffect(() => {
     if (selectedCustomer) {
-      fetchTimelineEvents();
+      void fetchTimelineEvents();
     }
   }, [selectedCustomer]);
 
@@ -131,7 +131,7 @@ export default function AdminTimeline() {
         if (response.ok) {
           alert("Event updated successfully");
           setShowForm(false);
-          fetchTimelineEvents();
+          await fetchTimelineEvents();
         } else {
           const error = await response.json();
           alert(error.error || "Failed to update event");
@@ -157,7 +157,7 @@ export default function AdminTimeline() {
         if (response.ok) {
           alert("Event added successfully");
           setShowForm(false);
-          fetchTimelineEvents();
+          await fetchTimelineEvents();
         } else {
           const error = await response.json();
           alert(error.error || "Failed to add event");
@@ -189,7 +189,7 @@ export default function AdminTimeline() {
 
       if (response.ok) {
         alert("Event deleted successfully");
-        fetchTimelineEvents();
+        await fetchTimelineEvents();
       } else {
         const error = await response.json();
         alert(error.error || "Failed to delete event");
