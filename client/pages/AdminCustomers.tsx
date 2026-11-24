@@ -415,7 +415,7 @@ export default function AdminCustomers() {
                         setExpandedId(customer.id);
                         // Fetch timeline events when expanding
                         if (customer.approvalStatus === "approved") {
-                          fetchTimelineEvents(customer.email);
+                          void fetchTimelineEvents(customer.email);
                         }
                       }
                     }}
@@ -479,7 +479,7 @@ export default function AdminCustomers() {
                                   !timelineEvents[customer.email] ||
                                   timelineEvents[customer.email].length === 0
                                 ) {
-                                  fetchTimelineEvents(customer.email);
+                                  void fetchTimelineEvents(customer.email);
                                 }
                               }}
                               variant="outline"
