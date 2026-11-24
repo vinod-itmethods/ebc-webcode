@@ -81,7 +81,7 @@ export default function PortalCustomer() {
     }
 
     setIsAuthenticated(true);
-    fetchCustomerProfile();
+    void fetchCustomerProfile();
   }, [navigate, userEmail]);
 
   const fetchCustomerProfile = async () => {

@@ -47,7 +47,7 @@ export default function AdminTimeline() {
         console.error("Error fetching customers:", error);
       }
     };
-    fetchCustomers();
+    void fetchCustomers();
   }, []);
 
   // Fetch timeline events for selected customer
