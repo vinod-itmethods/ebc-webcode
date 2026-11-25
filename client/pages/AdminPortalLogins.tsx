@@ -62,7 +62,7 @@ export default function AdminPortalLogins() {
   // Fetch logins when adminEmail is set
   useEffect(() => {
     if (adminEmail) {
-      fetchLogins();
+      void fetchLogins();
     }
   }, [adminEmail]);
 

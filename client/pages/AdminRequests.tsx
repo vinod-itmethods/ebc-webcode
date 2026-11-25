@@ -80,7 +80,7 @@ export default function AdminRequests() {
       return;
     }
     setAdminEmail(storedEmail);
-    fetchAllRequests(storedEmail);
+    void fetchAllRequests(storedEmail);
   }, [navigate]);
 
   const fetchAllRequests = async (email: string) => {
@@ -453,7 +453,7 @@ export default function AdminRequests() {
                           request._type === "customer" &&
                           request.approvalStatus === "approved"
                         ) {
-                          fetchTimelineEvents(request.email);
+                          void fetchTimelineEvents(request.email);
                         }
                       }
                     }}
@@ -537,7 +537,7 @@ export default function AdminRequests() {
                                       !timelineEvents[request.email] ||
                                       timelineEvents[request.email].length === 0
                                     ) {
-                                      fetchTimelineEvents(request.email);
+                                      void fetchTimelineEvents(request.email);
                                     }
                                   }}
                                   variant="outline"
