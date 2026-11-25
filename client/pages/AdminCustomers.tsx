@@ -77,7 +77,7 @@ export default function AdminCustomers() {
       return;
     }
     setAdminEmail(storedEmail);
-    fetchCustomers(storedEmail);
+    void fetchCustomers(storedEmail);
   }, [navigate]);
 
   const fetchCustomers = async (email: string) => {
